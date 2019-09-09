@@ -4,6 +4,7 @@ import NavBar from "./components/navBar";
 import NotFound from "./components/notFound";
 import AboutPage from './components/about';
 import HomePage from './components/homePage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 
