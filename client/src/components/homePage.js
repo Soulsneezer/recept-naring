@@ -1,7 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 
-const HomePage = () => {
-    return <h1>Start sida</h1>;
-};
+class HomePage extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>HomePage</h1>
+      </div>
+    );
+  }
+}
 
 export default HomePage;
