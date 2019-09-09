@@ -23,14 +23,9 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/"></Nav.Link>
-            <Nav.Link href="/">Start</Nav.Link>
-            <Nav.Link href="/about">Om oss</Nav.Link>
           </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Sök recept här..." className="mr-sm-2" />
-            <Button variant="outline-success">Sök</Button>
-          </Form>
-          <Nav.Link href="/login">Logga in</Nav.Link>
+          <Button variant="outline-secondary">Lägg Nytt Recept</Button>
+            <Button variant="outline-secondary">Logga in</Button>
         </Navbar.Collapse>
       </Navbar>
     </React.Fragment>

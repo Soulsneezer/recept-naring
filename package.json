@@ -1,0 +1,24 @@
+{
+  "name": "recept-naring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Soulsneezer/recept-naring.git"
+  },
+  "author": "Grupp3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Soulsneezer/recept-naring/issues"
+  },
+  "homepage": "https://github.com/Soulsneezer/recept-naring#readme",
+  "dependencies": {
+    "mongoose": "^5.6.13",
+    "parser": "^0.1.4",
+    "xml2json": "^0.11.2"
+  }
+}
