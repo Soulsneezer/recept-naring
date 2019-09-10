@@ -1,11 +1,32 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
+.navbar {
+	background-color: #f5f5f5;
+}
+
 .logo {
-  padding-right: 1rem;
+	padding-right: 5px;
 }
 
 .logoHeader {
-  font-family: 'Parisienne', cursive;
-  font-size: 30px;
+	font-family: 'Cinzel Decorative', cursive;
+	font-size: 20px;
+	font-weight: bold;
+}
+.recipeButton {
+	margin-right: 1rem;
+	border-radius: 20px;
+	padding: 7px 10px;
+	font-size: 20px;
+}
+.logInButton {
+	padding: 7px 35px;
+	font-size: 20px;
+	border-radius: 20px;
+}
+.navButtons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
