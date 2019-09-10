@@ -4,6 +4,7 @@ import NavBar from "./components/navBar";
 import NotFound from "./components/notFound";
 import AboutPage from './components/about';
 import HomePage from './components/homePage';
+import Footer from './components/footer';
 
 import './App.css';
 
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path="/not-found" component={NotFound} />
             <Route path="/about" component={AboutPage} />
           </Switch>
+          <Footer/>
         </div>
       </Router>
     );

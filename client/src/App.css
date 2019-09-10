@@ -4,3 +4,29 @@
 .logo {
   padding-right: 1rem;
 }
+
+
+
+/*----- Footer ------*/
+
+.footer-content-box{
+  margin-top:20px;
+  padding-bottom:20px;
+}
+.footer-content-box.icons{
+  
+}
+.footer-content-box .icon{
+  width:30px;
+  height:30px;
+}
+
+@media (min-width: 576px)  {
+  .footer-content-box.icons{
+    margin-top:30px;
+  }
+}
+
+
+
+
