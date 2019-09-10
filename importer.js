@@ -1,5 +1,5 @@
 // This program needs to be run once
-// to import our book data from JSON to MongoDB
+// to import our  data from JSON to MongoDB
  
 const mongoose = require('mongoose');
  
