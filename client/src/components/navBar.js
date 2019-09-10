@@ -22,7 +22,7 @@ class NavBar extends Component {
               <Nav.Link href="/"></Nav.Link>
               <div className="navButtons">
                 <Button className="recipeButton" variant="outline-secondary" href="/recipe">Lägg Nytt Recept</Button>
-                <Button className="logInButton" variant="outline-secondary" href="/logIn"> <img src={LogInUser} height="30" width="30" alt="Nav-Logo" /> Logga in</Button>
+                <Button className="logInButton" variant="outline-secondary" href="/logIn"> <img className="personLogo" src={LogInUser} height="30" width="30" alt="Nav-Logo" /> Logga in</Button>
               </div>
             </Nav>
 
