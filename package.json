@@ -19,6 +19,7 @@
   "dependencies": {
     "mongoose": "^5.6.13",
     "parser": "^0.1.4",
+    "react-bootstrap": "^1.0.0-beta.12",
     "xml2json": "^0.11.2"
   }
 }
