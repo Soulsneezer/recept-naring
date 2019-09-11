@@ -9,21 +9,29 @@
 
 /*----- Footer ------*/
 
-.footer-content-box .icon{
+footer .box{
+  border:solid black 1px;
+}
+
+footer .icon{
   width:30px;
   height:30px;
   cursor:pointer;
 }
 
-@media (max-width: 576px)  {
-  .footer-content-box{
-    height:50px;
-  }
-  .footer-content-box.icons .icon{
-    display:block;
+@media (min-width: 577px) and (max-width: 641px)  {
+  footer .icon{
+    width:26px;
+    height:26px;
   }
 }
 
+@media (max-width: 576px)  {
+footer .icons .icon{
+    display:block;
+    padding-top:5px;
+  }
+}
 
 
 
