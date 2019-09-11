@@ -1,5 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const CreateRestRoutes = require('./CreateRestRoutes');
 
 // Connect to db
 let dbName = "Makronutrient";
@@ -20,12 +22,21 @@ function startWebServer() {
 
   // Create a web server
   const app = express();
+  
+  app.use(bodyParser.json());
 
   // A route that returns all books from Mongo
-  app.get('/json/makronutrients', async (req, res) => {
+ /* app.get('/json/makronutrients', async (req, res) => {
     let makronutrients = await Makronutrient.find();
     res.json(makronutrients);
-  });
+  });*/
+  const models = {
+    Makronutrients: require('./models/Makronutrient.js'),
+    Recipes: require('./models/Recipe.js')
+  };
+
+  // create all necessary rest routes for the models
+  new CreateRestRoutes(app, global.db, models);
 
 
   // Start the web server
