@@ -1,8 +1,49 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
+.navbar {
+	background-color: #f5f5f5;
+}
+
 .logo {
-  padding-right: 1rem;
+	padding-right: 5px;
+}
+
+.logoHeader {
+	font-family: 'Parisienne', cursive;
+	font-size: 20px;
+	font-weight: bold;
+}
+.recipeButton {
+	margin-right: 1rem;
+	border-radius: 20px;
+	padding: 7px 10px;
+	font-size: 20px;
+}
+.logInButton {
+	padding: 7px 35px;
+	font-size: 20px;
+	border-radius: 20px;
+}
+.navButtons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media only screen and (max-width: 400px) {
+	.recipeButton {
+		padding: 2px 10px;
+		font-size: 15px;
+	}
+	.logInButton {
+		padding: 2px 15px;
+		font-size: 15px;
+	}
+	.personLogo {
+		height: 18px;
+		width: 18px;
+	}
 }
 
 

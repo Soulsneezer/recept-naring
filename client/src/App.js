@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./components/navBar";
 import NotFound from "./components/notFound";
-import AboutPage from './components/about';
 import HomePage from './components/homePage';
+import Recipe from './components/recipe';
+import LogIn from './components/logIn';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -17,8 +19,9 @@ class App extends Component {
           <NavBar />
           <Switch>
             <Route path="/" exact component={HomePage} />
+            <Route path="/recipe" component={Recipe} />
+            <Route path="/logIn" component={LogIn} />
             <Route path="/not-found" component={NotFound} />
-            <Route path="/about" component={AboutPage} />
           </Switch>
         </div>
       </Router>
