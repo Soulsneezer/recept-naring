@@ -8,7 +8,7 @@ let recipeSchema = new Schema(  {
  "step": [String],
  "ingredient": [Ingredient.schema],
  "img": String,
- "Portion": Number,
+ "portion": Number,
  "startText": String,
 });
-module.exports = db.model('Recipie', recipeSchema); 
+module.exports = db.model('Recipe', recipeSchema); 
