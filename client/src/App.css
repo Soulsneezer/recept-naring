@@ -7,3 +7,15 @@
 .PersonChoices {
   margin-top: 20px !important;
 }
+#dropdown-item-button {
+  margin-right: 1rem;
+  border-radius: 20px;
+  padding: 7px 10px;
+  font-size: 20px;
+}
+@media only screen and (max-width: 400px) {
+  #dropdown-item-button {
+    padding: 2px 10px;
+    font-size: 15px;
+  }
+}
