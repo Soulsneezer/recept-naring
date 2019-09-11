@@ -3,16 +3,16 @@ const Schema = mongoose.Schema;
 
 // 1. Create a schema for a livsmedel
 let makronutrientSchema = new Schema(  {
- "Namn": String,
- "Huvudgrupp": String,
- "Naringsvarden": {
- "Summa mättade fettsyror": Number,
- "Summa enkelomättade fettsyror": Number,
-   "Summa fleromättade fettsyror": Number,
-   "Kolhydrater": Number,
-   "Protein": Number,
-   "Salt": Number,
-   "Energi (kcal)": Number
+ "name": String,
+ "headGroup": String,
+ "nutrients": {
+ "saturatedFats": Number,
+ "monoSaturatedFats": Number,
+   "monoUnSaturatedFats": Number,
+   "carbs": Number,
+   "prots": Number,
+   "salt": Number,
+   "kcal": Number
  },
 });
 // 3. Create the model and export it
