@@ -26,7 +26,8 @@ async function importJsonDataToDb(){
     console.log('Deleted old makronutrient', await Makronutrient.remove({}));
   }
   for(let data of makronutrientData){
-    let makronutrient = new Makronutrient(data);
+    let engObj = {name: data.Namn, headGroup: data.Huvudgrupp , nutrients: {saturatedFats: data.Naringsvarden["Summa mättade fettsyror"], monoSaturatedFats: data.Naringsvarden['Summa enkelomättade fettsyror'],monoUnSaturatedFats: data.Naringsvarden["Summa fleromättade fettsyror"], carbs: data.Naringsvarden["Kolhydrater"] , prots: data.Naringsvarden["Protein"] , salt: data.Naringsvarden["Salt"], kcal: data.Naringsvarden["Energi (kcal)"]} }
+    let makronutrient = new Makronutrient(engObj);
     // save the makronutrient to MongoDB
     await makronutrient.save();
   }
