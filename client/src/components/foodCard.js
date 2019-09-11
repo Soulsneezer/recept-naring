@@ -20,7 +20,7 @@ export default class FoodCard extends Component {
               <Card.Title>Recept Namn</Card.Title>
               <Card.Text>
                 En beskrivande text till recepten.
-          </Card.Text>
+               </Card.Text>
             </Card.Body>
           </Card>
         </Col>

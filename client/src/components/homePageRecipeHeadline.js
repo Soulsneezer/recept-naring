@@ -10,7 +10,6 @@ const HomePageRecipeHeadline = () => {
                     <h2 className="recipeHeadlineH2">Ett urval utav våra recept</h2>
                 </Col>
             </Row>
-
         </div>
     );
 };
