@@ -1,9 +1,11 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
 import React from 'react';
-import { Button, Modal, ButtonToolbar } from 'react-bootstrap';
+import { Button, Modal } from 'react-bootstrap';
+import AddRecipeForm from './AddRecipeForm';
 
-function AddRecipeModal(props) {
+
+export default function AddRecipeModal(props) {
   return (
     <Modal
       {...props}
@@ -13,37 +15,15 @@ function AddRecipeModal(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          Lägg till ett nytt recept här...
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+        <AddRecipeForm />
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button onClick={props.onHide}>Lägg till</Button>
       </Modal.Footer>
     </Modal>
-  );
-}
-
-export default function App() {
-  const [modalShow, setModalShow] = React.useState(false);
-
-  return (
-    <ButtonToolbar>
-      <Button variant="primary" onClick={() => setModalShow(true)}>
-        Launch vertically centered modal
-      </Button>
-
-      <AddRecipeModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
-    </ButtonToolbar>
   );
 }

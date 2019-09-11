@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import Logo from '../images/logo.png';
-import App from "./AddRecipeModal";
+import AddRecipe from "./AddRecipe";
 
 
 const NavBar = () => {
@@ -23,7 +23,7 @@ const NavBar = () => {
           <Nav className="mr-auto">
             <Nav.Link href="/"></Nav.Link>
           </Nav>
-          <App>lägg till</App>
+          <AddRecipe>lägg till</AddRecipe>
           <Button variant="outline-secondary">Lägg Nytt Recept</Button>
           <Button variant="outline-secondary">Logga in</Button>
         </Navbar.Collapse>
