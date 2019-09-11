@@ -1,198 +1,333 @@
 [
-    {
-        "name": "Krämig italiensk kycklinggratäng",
-        "category": ["Enkelt", "Kyckling", "Snabbt", "Vardagsmiddag"],
-        "step": "",
-        "ingredients": [
-            {"name": " Kycklinglårfiléer", "qty": 8, "type": "st"},
-            {"name": "Flingsalt", "qty": 1, "type": "nypa"},
-            {"name": " Svartpeppar", "qty": 8, "type": "st"},
-            {"name": "Flingsalt", "qty": 1, "type": "nypa"},
-            {"name": " Kycklinglårfiléer", "qty": 8, "type": "st"},
-            {"name": "Flingsalt", "qty": 1, "type": "nypa"}
-        ],
-        "Img": "",
-        "portion": 4,
-        "startText": "Italiensk kycklinggratäng med soltorkade tomater, parmesan och örter som egentligen inte har något med Italien att göra, utan är vår version på italiensk mat på 90-talet. /Tareq",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },  
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    },
-    {
-        "name": "",
-        "category": [],
-        "step": "",
-        "ingredients": "",
-        "Img": "",
-        "portion": 4,
-        "startText": "",
-    }
-  ]
+	{
+		"name": "Krämig italiensk kycklinggratäng",
+		"category": [
+			"Enkelt",
+			"Kyckling",
+			"Snabbt",
+			"Vardagsmiddag"
+		],
+		"step": [
+			"Koka pastan enligt anvisningar på förpackningen.",
+			"Fräs kycklingen på medelvärme tills den får lite färg runt om i cirka 5 minuter. Salta och peppra.",
+			"Finhacka vitlöken och chilin och stek med kycklingen i cirka 2 minuter.",
+			"Krydda med timjan och oregano och häll i buljongen, grädden och kokta upp, dra till sidan och tillsätt parmesanen."
+		],
+		"ingredients": [
+			{
+				"name": " kycklinglårfiléer",
+				"qty": 8,
+				"type": "st"
+			},
+			{
+				"name": "flingsalt",
+				"qty": 1,
+				"type": "nypa"
+			},
+			{
+				"name": " svartpeppar",
+				"qty": 1,
+				"type": "nypa"
+			},
+			{
+				"name": " vitlök",
+				"qty": 1,
+				"type": "st"
+			},
+			{
+				"name": "chilifrukt",
+				"qty": 0.5,
+				"type": "st"
+			},
+			{
+				"name": "torkad timjan",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": " torkad oregano",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "kycklingbuljong",
+				"qty": 3,
+				"type": "dl"
+			},
+			{
+				"name": " vispgrädde",
+				"qty": 1.5,
+				"type": "dl"
+			},
+			{
+				"name": "parmesan",
+				"qty": 1,
+				"type": "dl"
+			},
+			{
+				"name": "pasta",
+				"qty": 4,
+				"type": "port"
+			}
+		],
+		"img": "chickenParmesan.jpg",
+		"portion": 4,
+		"startText": "Italiensk kycklinggratäng med parmesan och örter som egentligen inte har något med Italien att göra, utan är vår version på italiensk mat på 90-talet. /Tareq"
+	},
+	{
+		"name": "Pannkakor",
+		"category": [
+			"Enkelt",
+			"Snabbt"
+		],
+		"step": [
+			"Blanda mjöl och salt i en bunke. Vispa i hälften av mjölken och vispa till en slät smet. Vispa i resten av mjölken och äggen.",
+			"Smält smöret i stekpannan och vispa ner i smeten. Stek tunna pannkakor av smeten i en stek- eller pannkakspanna."
+		],
+		"ingredients": [
+			{
+				"name": "mjölk",
+				"qty": 6,
+				"type": "dl"
+			},
+			{
+				"name": " mjöl",
+				"qty": 2.5,
+				"type": "dl"
+			},
+			{
+				"name": "ägg",
+				"qty": 3,
+				"type": "st"
+			},
+			{
+				"name": "smör",
+				"qty": 3,
+				"type": "msk"
+			},
+			{
+				"name": "salt",
+				"qty": 0.5,
+				"type": "tsk"
+			}
+		],
+		"img": "pancakes.jpg",
+		"portion": 4,
+		"startText": "Gör traditionella tunna pannkakor genom att blanda mjöl, mjölk och ägg och lite salt till en jämn smet. Stek smeten till tunna och smarriga pannkakor och servera med en söt sylt."
+	},
+	{
+		"name": "Nutellabollar",
+		"category": [
+			"Choklad",
+			"Fika"
+		],
+		"step": [
+			"Vispa smör och socker fluffigt med elvisp. Häll i grädden och vispa på hög hastighet tills du har en fluffig och ljus smet, ca 2 minuter.",
+			"Tillsätt vaniljsocker, kakao, obóypulver, salt och nutella. Vispa ihop till en jämn smet.",
+			"Tillsätt till sist havregryn och vispa på medelhög hastighet med elvispen. Meningen är att havregrynet ska krossas med elvispens hjälp.",
+			"Ställ sedan smeten i kylskåpet i minst 30 minuter.",
+			"Rulla till bollar och rulla sedan i t.ex. pärlsocker eller strössel och sätt på pinnar."
+		],
+		"ingredients": [
+			{
+				"name": "strösocker",
+				"qty": 2,
+				"type": "dl"
+			},
+			{
+				"name": " vispgrädde",
+				"qty": 1.5,
+				"type": "dl"
+			},
+			{
+				"name": "vaniljsocker",
+				"qty": 2,
+				"type": "tsk"
+			},
+			{
+				"name": "kakao",
+				"qty": 2.5,
+				"type": "msk"
+			},
+			{
+				"name": "oboypulver",
+				"qty": 6,
+				"type": "msk"
+			},
+			{
+				"name": "Nutella",
+				"qty": 2,
+				"type": "dl"
+			},
+			{
+				"name": "havregryn",
+				"qty": 15,
+				"type": "dl"
+			}
+		],
+		"img": "chocolatePops.jpg",
+		"portion": 4,
+		"startText": "Underbart krämiga chokladbollar med nutella och oboy. Testa dessa och du kommer aldrig vilja baka några andra chokladbollar igen!"
+	},
+	{
+		"name": "Fish and chips",
+		"category": [
+			"Enkelt",
+			"Snabbt"
+		],
+		"step": [
+			"Blanda nästan allt vetemjöl (ta undan lite att vända fiskbitarna i), maizena och bakpulver i en skål.",
+			"Finhacka dillen och blanda med öl och limesaft.",
+			"Häll försiktigt ner ölblandningen i mjölblandningen. Salta och peppra. Rör om och låt svälla i 20 minuter innan fritering.",
+			"Skär potatisarna på längden i jämna, centimetertjocka skivor och sen till 1/2 centimeter tjocka stavar.",
+			"Hetta upp oljan till 160 grader i en kastrull med höga kanter.",
+			"Vänd varje fiskbit först i mjöl och sedan i smeten. Fritera dem gyllenbruna, cirka 5-7 minuter.",
+			"Upprepa samma procedur med potatisen.",
+			"Servera, helst i en strut av tidningspapper, tillsammans med aioli och citron."
+		],
+		"ingredients": [
+			{
+				"name": "torsk",
+				"qty": 600,
+				"type": "g"
+			},
+			{
+				"name": "bakpotatis",
+				"qty": 4,
+				"type": "st"
+			},
+			{
+				"name": "bakpulver",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "maizena",
+				"qty": 1,
+				"type": "msk"
+			},
+			{
+				"name": "vetemjöl",
+				"qty": 2,
+				"type": "dl"
+			},
+			{
+				"name": "lime",
+				"qty": 2,
+				"type": "st"
+			},
+			{
+				"name": "dillkvist",
+				"qty": 2,
+				"type": "st"
+			},
+			{
+				"name": "salt",
+				"qty": 1,
+				"type": "nypa"
+			},
+			{
+				"name": "öl",
+				"qty": 1,
+				"type": "dl"
+			},
+			{
+				"name": "peppar",
+				"qty": 1,
+				"type": "nypa"
+			},
+			{
+				"name": "matolja",
+				"qty": 3,
+				"type": "dl"
+			}
+		],
+		"img": "fishNChip.jpg",
+		"portion": 4,
+		"startText": "Den här engelska klassikern är farligt god! Servera den i tidningspapper för att få den rätta känslan."
+	},
+	{
+		"name": "Taco chicken nuggets i tortillabröd ",
+		"category": [
+			"Spicy",
+			"Fräscht"
+		],
+		"step": [
+			"Tillbehör: Skölj salladen och lägg upp hela salladsblad på ett fat. Skölj och tärna gurka och tomater och lägg upp i skålar.",
+			"Taconuggets: Salta kycklingfiléerna lite lätt.",
+			"Vispa upp äggen i en djup tallrik. Blanda ströbröd med spiskummin, paprikapulver, oregano, salt och peppar på en tallrik. Vänd kycklingfiléerna först i äggen och sedan i ströbrödsblandningen.",
+			"Hetta upp oljan i en stekpanna och stek kycklingen ca 3-4 minuter på varje sida så att den får en knaprig och gyllenbrun stekyta. Kontrollera att de är helt genomstekta innan du serverar.",
+			"Montering: Fyll tortillabröden med sallad, kyckling, gurka, tomat, riven ost, gräddfil och tacosås. Vik ihop och ät."
+		],
+		"ingredients": [
+			{
+				"name": "kycklingfilé",
+				"qty": 700,
+				"type": "g"
+			},
+			{
+				"name": "ägg",
+				"qty": 2,
+				"type": "st"
+			},
+			{
+				"name": "ströbröd",
+				"qty": 2.5,
+				"type": "dl"
+			},
+			{
+				"name": "spiskummin",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "paprikapulver",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "oregano",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "tomat",
+				"qty": 2,
+				"type": "st"
+			},
+			{
+				"name": "gurka",
+				"qty": 1,
+				"type": "st"
+			},
+			{
+				"name": "salt",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "svartpeppar",
+				"qty": 3,
+				"type": "krm"
+			},
+			{
+				"name": "romansallad",
+				"qty": 0.5,
+				"type": "st"
+			},
+			{
+				"name": "gräddfil",
+				"qty": 2,
+				"type": "dl"
+			},
+			{
+				"name": "rapsolja",
+				"qty": 0.5,
+				"type": "dl"
+			}
+		],
+		"img": "chickenTaco.jpg",
+		"portion": 4,
+		"startText": "Hemmagjorda chicken nuggets med tacosmak som kommer göra succé vid matbordet!"
+	}
+]
