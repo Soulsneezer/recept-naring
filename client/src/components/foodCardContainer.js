@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import FoodCard from './foodCard.js'
-import { Col, Row } from 'react-bootstrap';
-
+import { Col, Row, Button } from 'react-bootstrap';
 
 export default class FoodCardContainer extends Component {
   constructor(props) {
     super(props);
     Object.assign(this, props);
     this.state = {};
+    // this.handleClick = this.handleClick.bind(this);
   }
 
   render() {
@@ -37,6 +37,9 @@ export default class FoodCardContainer extends Component {
             </div>
         </Col>
         </Row>
+        
+        <Button  class="visaMerButton" onClick={this.handleClick}>Visa fler recept</Button>
+        
         </div>
       </React.Fragment>
     );

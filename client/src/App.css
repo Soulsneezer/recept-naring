@@ -36,6 +36,16 @@
   margin-top: 50px;
   border: 1px solid grey;
 }
+.btn-primary {
+  background-color: #5CB85C;
+  margin-bottom:-20px;
+  color:#080808;
+  border-radius:32px;
+  display: inline-block;
+}
+
+.btn-primary:hover { background-color: grey }
+
 .innerFoodCardContainer{
   padding: 50px;
 }
