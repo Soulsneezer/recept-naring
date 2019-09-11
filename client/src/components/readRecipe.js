@@ -1,15 +1,16 @@
 import React, { Component } from "react";
+import PersonChoices from "./PersonChoices";
+import { Container, Col, Row, Dropdown, DropdownButton } from "react-bootstrap";
 
-class ReadRecipe extends Component {
+class ReadRecipe extends React.Component {
   constructor(props) {
     super(props);
   }
-
   render() {
     return (
-      <div>
-        <h1>Read Recipe</h1>
-      </div>
+      <React.Fragment>
+        <PersonChoices />
+      </React.Fragment>
     );
   }
 }
