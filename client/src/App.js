@@ -7,7 +7,8 @@ import LogIn from "./components/logIn";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReadRecipe from "./components/readRecipe";
 
-import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 class App extends Component {
   render() {
