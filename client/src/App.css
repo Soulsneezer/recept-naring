@@ -132,9 +132,11 @@
 	justify-content: center;
 	align-items: center;
 }
+.search-field {
+  width: 40%;
+}
 .search-input {
   z-index: 1;
-  width: 40%;
   height: 55px;
   border-radius: 30px;
   font-size: 20px;
@@ -158,11 +160,13 @@
 	}
 }
 @media only screen and (max-width: 760px) {
-	.search-input {
-		height: 35px;
-		padding-left: 40px;
-		width: 60%;
-		font-size: 16px;
+  .search-field {
+    width: 60%;
+  }
+  .search-input {
+    height: 35px;
+    padding-left: 40px;
+    font-size: 16px;
 
     background-size: 20px;
     border: 1px solid rgb(148, 148, 148);

@@ -15,18 +15,34 @@ db.once('open', () => {
 // Import Makronutrient mongoose model
 const Makronutrient = require('./models/Makronutrient');
 
+// Import Recipe mongoose model
+const Recipe = require('./models/Recipe');
+
 
 function startWebServer() {
 
   // Create a web server
   const app = express();
 
-  // A route that returns all books from Mongo
+  // A route that returns all makronutrients from Mongo
   app.get('/json/makronutrients', async (req, res) => {
     let makronutrients = await Makronutrient.find();
     res.json(makronutrients);
   });
 
+  // A route that returns all recipes from Mongo
+  app.get('/json/recipes', async (req, res) => {
+    let recipes = await Recipe.find();
+    res.json(recipes);
+  });
+
+  app.get('/json/recipes/:partialRecipe', async (req, res) => {
+    const regExpression = new RegExp(req.params.partialRecipe, "i");
+    let recipes = await Recipe.find({ name: regExpression }).catch((err) => {
+      res.json({ error: err });
+    });
+    res.json(recipes);
+  });
 
   // Start the web server
   app.listen(5000, () => console.log('Listening on port 5000'));
