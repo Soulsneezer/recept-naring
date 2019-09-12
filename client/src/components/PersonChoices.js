@@ -30,3 +30,6 @@ export default class PersonChoices extends React.Component {
     );
   }
 }
+
+// Someone else: <PersonChoices btnColor="blue"></PersonChoices>
+// I can read it from this.props.btnColor

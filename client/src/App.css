@@ -7,9 +7,16 @@
 .PersonChoices {
   margin-top: 20px !important;
 }
+.dropdown-menu {
+  width: 6px;
+}
+.dropdown-item {
+  padding: 3px;
+}
 #dropdown-item-button {
   margin-right: 1rem;
   border-radius: 20px;
+  border-color: black;
   padding: 7px 10px;
   font-size: 20px;
 }
