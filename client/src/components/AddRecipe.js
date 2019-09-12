@@ -1,11 +1,11 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
-import React from 'react';
+import React, { Component } from 'react';
 import { Button, ButtonToolbar } from 'react-bootstrap';
 import AddRecipeModal from './AddRecipeModal'
-import { Component } from 'react';
 
- class AddRecipe extends Component {
+
+ class AddRecipe extends React.Component {
   
   state = {
     modalShow: false
