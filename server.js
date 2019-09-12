@@ -36,6 +36,14 @@ function startWebServer() {
     res.json(recipes);
   });
 
+  app.get('/json/recipes/:partialRecipe', async (req, res) => {
+    const regExpression = new RegExp(req.params.partialRecipe, "i");
+    let recipes = await Recipe.find({ name: regExpression }).catch((err) => {
+      res.json({ error: err });
+    });
+    res.json(recipes);
+  });
+
   // Start the web server
   app.listen(5000, () => console.log('Listening on port 5000'));
 }

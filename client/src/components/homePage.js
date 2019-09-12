@@ -13,19 +13,31 @@ class HomePage extends Component {
   constructor(props) {
     super(props);
 
-    this.showJson = this.showJson.bind(this);
-    this.state = {recipes: []}
+    this.searchHandler = this.searchHandler.bind(this);
+
+    this.state = {
+      recipes: [],
+      searchInput:''
+    }
   }
 
-  async componentDidMount(){
-    let recipesDB = await Recipe.find();
+  async searchHandler(e) {
+    let searchInput = e.target.value;
     this.setState({
-      recipes: recipesDB
-    });
-  }
+      searchInput: e.target.value
+    })
 
-  showJson() {
-    console.log(this.state.recipes);
+    let recipes = await Recipe.find('/' + searchInput);
+    if(searchInput){
+      this.setState({
+        recipes: recipes
+      });
+    } else {
+      this.setState({
+        recipes: []
+      });
+    }
+    
   }
 
   render() {
@@ -35,14 +47,14 @@ class HomePage extends Component {
           <InputGroup className="search-field">
             <FormControl
               className="search-input"
+              onChange={this.searchHandler}
+              value={this.state.searchInput}
               placeholder="Sök efter recept här..."
               aria-label="Sök efter recept här..."
               aria-describedby="Sök efter recept här..."
             />
           </InputGroup>
-        </div>
-        <button onClick={this.showJson}>Show Json</button>
-        
+        </div>        
 
         {this.state.recipes.map(recipe => (
           <Card key={recipe._id} style={{ width: '18rem' }}>            
@@ -52,11 +64,10 @@ class HomePage extends Component {
               <Card.Text>
                 {recipe.startText}
               </Card.Text>
-              <Button href="/recipe" variant="primary">Go somewhere</Button>
+              <Button href={"/recipe/" + recipe._id} variant="primary">Go somewhere</Button>
             </Card.Body>
           </Card>
         ))}
-
 
       </div>
     );
