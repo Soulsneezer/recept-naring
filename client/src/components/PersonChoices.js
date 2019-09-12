@@ -9,23 +9,17 @@ export default class PersonChoices extends React.Component {
     }
     return (
       <Container className='PersonChoices'>
-        <Row>
-          <Col></Col>
-          <Col md='auto'></Col>
-          <Col xs lg='2'>
-            <DropdownButton
-              variant='Secondary'
-              id='dropdown-item-button'
-              title='Person'
-            >
-              {choices.map(i => (
-                <Dropdown.Item key={i} as='button'>
-                  {i}
-                </Dropdown.Item>
-              ))}
-            </DropdownButton>
-          </Col>
-        </Row>
+        <DropdownButton
+          variant='Secondary'
+          id='dropdown-item-button'
+          title='Person'
+        >
+          {choices.map(i => (
+            <Dropdown.Item key={i} as='button'>
+              {i}
+            </Dropdown.Item>
+          ))}
+        </DropdownButton>
       </Container>
     );
   }

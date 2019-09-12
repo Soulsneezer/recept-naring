@@ -1,23 +1,25 @@
 import React, { Component } from "react";
-import test from "../images/ReadRecipeImages/test.jpg";
 import { Col, Row, Image } from "react-bootstrap";
 
-class ReadRecipe extends React.Component {
+class ReadRecipeImages extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      images: ["url(../images/ReadRecipeImages/test.jpg)", "image2"]
-    };
+
+    // this.state = {
+    //   imageUrl: ["../images/ReadRecipeImages/test.jpg", "image2"]
+    // };
+
+    // imageUrlHandler = event => {
+    //   this.setState({
+    //     imageUrl: event.target.imageUrl[0]
+    //   });
+    // };
   }
   render() {
     return (
-      <Row>
-        <Col xs={6} md={4}>
-          <Image src={test} rounded />
-        </Col>
-      </Row>
+      <img className='testImg' src='../images/ReadRecipeImages/test.jpg' />
     );
   }
 }
 
-export default ReadRecipe;
+export default ReadRecipeImages;
