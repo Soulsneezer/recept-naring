@@ -10,10 +10,9 @@ class HomePage extends Component {
         "url('/images/backgroundImages/background-img1.jpg')",
        
         "url('/images/backgroundImages/chickenTaco.jpg')"
-       /*  "url('https://picsum.photos/200/300/?image=523')",
-        "url('https://picsum.photos/200/300/?image=524')" */
+       
       ],
-      // selectedImage: "url('https://picsum.photos/200/300/?image=523')"
+     
      selectedImage: "url('/images/backgroundImages/background-img1.jpg')"
       
     };
