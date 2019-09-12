@@ -9,59 +9,63 @@ class AddRecipeForm extends React.Component {
   render() {
     return (
       <Form>
-        <Row>
-          <Col>
+        
+          <Col md={3}>
             bild här
           </Col>
-          <Col>
-            <Form.Control placeholder="vad heter ditt recept?" />
+          <Row>
+          <Col md={4}>
+            <Form.Control className="recipe-name" placeholder="vad heter ditt recept?" />
           </Col>
-          <Col>
+          <Col md={1}>
+            <CategoryChoices />
+          </Col>
+          <Col md={1}>
+            <CategoryChoices />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col md={2}>
+            <Form.Control className="recipe-name" placeholder="mängden" />
+          </Col>
+          <Col md={1}>
             <CategoryChoices />
           </Col>
           <Col>
+            <Form.Control className="recipe-name" placeholder="ingrediensen" />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col md={2}>
+            <Form.Control className="recipe-name" placeholder="mängden" />
+          </Col>
+          <Col md={2}>
             <CategoryChoices />
           </Col>
-        </Row>
-        <Row>
           <Col>
-            <Form.Control placeholder="mängden" />
-          </Col>
-          <Col>
-            <Button className="logInButton" variant="outline-secondary">ml</Button>
-          </Col>
-          <Col>
-            <Form.Control placeholder="ingrediensen" />
+            <Form.Control className="recipe-name" placeholder="ingrediensen" />
           </Col>
         </Row>
         <Row>
-          <Col>
-            <Form.Control placeholder="mängden" />
+          <Col md={2}>
+            <Form.Control className="recipe-name" placeholder="mängden" />
+          </Col>
+          <Col md={2}>
+            <CategoryChoices />
           </Col>
           <Col>
-            <Button className="logInButton" variant="outline-secondary">ml</Button>
-          </Col>
-          <Col>
-            <Form.Control placeholder="ingrediensen" />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Form.Control placeholder="mängden" />
-          </Col>
-          <Col>
-            <Button className="logInButton" variant="outline-secondary">ml</Button>
-          </Col>
-          <Col>
-            <Form.Control placeholder="ingrediensen" />
+            <Form.Control className="recipe-name" placeholder="ingrediensen" />
           </Col>
         </Row>
+       
         <Row>
           <Table striped bordered hover responsive>
             <tbody>
               <tr>
-                <td>1.</td>
-                <td>Steg for steg</td>
+                <td className="recipe-name">1.</td>
+                <td className="recipe-name">Steg for steg</td>
               </tr>
             </tbody>
           </Table>

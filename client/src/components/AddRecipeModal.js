@@ -9,7 +9,7 @@ export default function AddRecipeModal(props) {
   return (
     <Modal
       {...props}
-      size="lg"
+      size="xl"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
@@ -22,7 +22,7 @@ export default function AddRecipeModal(props) {
         <AddRecipeForm />
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Lägg till</Button>
+        <Button className="recipeButton" variant="outline-secondary" onClick={props.onHide}>Lägg till</Button>
       </Modal.Footer>
     </Modal>
   );
