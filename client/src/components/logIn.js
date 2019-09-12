@@ -1,4 +1,7 @@
 import React from "react";
+import { Modal, Dialog, Header, Title, Body, Footer, Button } from 'react-bootstrap';
+import closeButton from '../images/close-button.png';
+
 
 class LogIn extends React.Component{
 
@@ -10,7 +13,8 @@ class LogIn extends React.Component{
             usernameErrorBox: 'none',
             passwordErrorBox: 'none',
             loginBox: 'block',
-            loggedInSucceededBox: 'none'
+            loggedInSucceededBox: 'none',
+            modalVisibility: 'block'
         }
     }
 
@@ -63,15 +67,125 @@ class LogIn extends React.Component{
             });
 
             /*alert('logged in as'+this.state.username);*/
-        }
-      
-
+        }      
          
     }
 
+
+    async heandleCloseModalButton(){
+        await this.setState({
+            modalVisibility: 'none'
+        });
+    }
+
+
+
+
     render(){
         return (
-            <div className="container loginpage-container">
+            <div>
+
+                        <Modal.Dialog style={{display: this.state.modalVisibility}}>
+                            <Modal.Header>
+                               
+                                <img
+                                    src={closeButton}
+                                    style={{marginLeft:'400px', width:'40px', height: '40px', cursor: 'pointer'}}
+                                    onClick={this.heandleCloseModalButton.bind(this)}
+                                />
+                                   
+                               
+                            </Modal.Header>
+
+                            <Modal.Body>
+                                
+
+
+
+                            <div className="login-box" style={{display: this.state.loginBox}}>
+                    <form onSubmit={this.onSubmit.bind(this)}>
+
+                        <div className="form-group">
+
+                            <label>Användarnamn:</label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                onChange={this.onChangeUserName.bind(this)}
+                            >                       
+                            </input>
+                            <div className="username-error-box" style={{display: this.state.usernameErrorBox}}>
+                                <p style={{color:'red'}}>
+                                    Användarnamn får bara innehålla bokstäver och siffror, 
+                                    samt måste vara minst sex tecken långt !
+                                </p>
+                            </div>
+
+                            <label>Lösenord:</label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                onChange={this.onChangePassword.bind(this)}
+                            >
+                            </input>
+                            <div className="password-error-box" style={{display: this.state.passwordErrorBox}}>
+                                <p style={{color:'red'}}>
+                                    Lösenord får bara innehålla bokstäver och siffror, 
+                                    samt måste vara minst sex tecken långt !
+                                </p>
+                            </div>
+
+                            <button 
+                                type="submit"
+                                className="form-control"
+                                style={{width:'120px', margin:'auto', marginTop: '50px'}}
+                            >
+                                Logga in
+                            </button>
+
+                        </div>
+                        
+                    </form>
+                </div>
+
+                <div className="login-succeeded-box" style={{display: this.state.loggedInSucceededBox}}>
+                    <h3> Du är nu inloggad som {this.state.username} ! </h3>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </Modal.Body>
+
+                     
+                        </Modal.Dialog>
+                
+                
+
+            </div>
+        )
+    }
+
+}
+    
+export default LogIn;
+
+
+/*
+
 
                 <h1>Logga in sida</h1>
 
@@ -124,14 +238,27 @@ class LogIn extends React.Component{
                 <div className="login-succeeded-box" style={{display: this.state.loggedInSucceededBox}}>
                     <h3> Du är nu inloggad som {this.state.username} ! </h3>
 
-                </div>
-                
-                
+                </div>  */
 
-            </div>
-        )
-    }
 
-}
-    
-export default LogIn;
+
+                /*
+
+
+                <Modal.Dialog>
+  <Modal.Header closeButton>
+    <Modal.Title>Modal title</Modal.Title>
+  </Modal.Header>
+
+  <Modal.Body>
+    <p>Modal body text goes here.</p>
+  </Modal.Body>
+
+  <Modal.Footer>
+    <Button variant="secondary">Close</Button>
+    <Button variant="primary">Save changes</Button>
+  </Modal.Footer>
+</Modal.Dialog>
+
+
+*/
