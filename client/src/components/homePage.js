@@ -1,21 +1,23 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import FoodCardContainer from "./foodCardContainer.js"
+import FoodCardContainer from "./foodCardContainer";
+import HomePageRecipeHeadline from "./homePageRecipeHeadline";
 
 class HomePage extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
       images: [
         "url('/images/backgroundImages/background-img1.jpg')",
-       
+
         "url('/images/backgroundImages/chickenTaco.jpg')"
-       /*  "url('https://picsum.photos/200/300/?image=523')",
-        "url('https://picsum.photos/200/300/?image=524')" */
+        /*  "url('https://picsum.photos/200/300/?image=523')",
+         "url('https://picsum.photos/200/300/?image=524')" */
       ],
       // selectedImage: "url('https://picsum.photos/200/300/?image=523')"
-     selectedImage: "url('/images/backgroundImages/background-img1.jpg')"
-      
+      selectedImage: "url('/images/backgroundImages/background-img1.jpg')"
+
     };
   }
 
@@ -35,11 +37,11 @@ class HomePage extends Component {
   render() {
     return (
       <React.Fragment>
-
         <div className="search-bar" style={{ backgroundImage: this.state.selectedImage }}>
-
           <input className="form-control search-input" type="text" placeholder="Sök efter recept här..." aria-label="Sök efter recept här..." />
-          
+        </div>
+        <div>
+          <HomePageRecipeHeadline />
         </div>
         <FoodCardContainer />
       </React.Fragment>

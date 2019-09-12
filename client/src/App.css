@@ -84,13 +84,53 @@
     width: 18px;
   }
 }
+
+.foodCardContainer {
+	width: 90%;
+	margin: auto;
+	/* margin-top: 2px; */
+	border: 0.1px solid #707070;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+	box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+}
+
+.innerFoodCardContainer {
+	padding: 40px;
+}
+
+.recipeHeadline {
+	margin-top: 20px;
+	text-align: center;
+	margin-right: 15px;
+}
+
+.recipeHeadlineH2 {
+	font-family: 'Parisienne', cursive;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+}
+@media only screen and (max-width: 400px) {
+	.recipeHeadlineH2 {
+		font-size: 30px;
+		text-align: center;
+	}
+}
+
 .search-bar {
-  /* background: url(./images/background-img1.jpg) no-repeat;  */
-  height: 30vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	background: url(./images/background-img1.jpg) no-repeat;
+	height: 30vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background: url(./images/background-img1.jpg) no-repeat;  */
+	height: 30vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .search-input {
   z-index: 1;
@@ -109,20 +149,20 @@
   background-position-x: 10px;
 }
 @media only screen and (max-width: 920px) {
-  .search-input {
-    height: 45px;
-  }
-  .search-bar {
-    height: 20vh;
-    background-size: 100%;
-  }
+	.search-input {
+		height: 45px;
+	}
+	.search-bar {
+		height: 20vh;
+		background-size: 100%;
+	}
 }
 @media only screen and (max-width: 760px) {
-  .search-input {
-    height: 35px;
-    padding-left: 40px;
-    width: 60%;
-    font-size: 16px;
+	.search-input {
+		height: 35px;
+		padding-left: 40px;
+		width: 60%;
+		font-size: 16px;
 
     background-size: 20px;
     border: 1px solid rgb(148, 148, 148);
