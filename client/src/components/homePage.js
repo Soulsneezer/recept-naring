@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import FoodCardContainer from "./foodCardContainer";
 import HomePageRecipeHeadline from "./homePageRecipeHeadline";
+import RecipeImageLoader from "./recipeImageLoader";
 
 class HomePage extends Component {
 
@@ -44,6 +45,9 @@ class HomePage extends Component {
           <HomePageRecipeHeadline />
         </div>
         <FoodCardContainer />
+        <div>
+          <RecipeImageLoader />
+        </div>
       </React.Fragment>
     );
   }
