@@ -2,24 +2,23 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./components/navBar";
 import NotFound from "./components/notFound";
-import HomePage from './components/homePage';
-import LogIn from './components/logIn';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import ReadRecipe from './components/readRecipe';
+import HomePage from "./components/homePage";
+import LogIn from "./components/logIn";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ReadRecipe from "./components/readRecipe";
 
-
-import './App.css';
-
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div className='App'>
           <NavBar />
           <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/not-found" component={NotFound} />
+            <Route path='/' exact component={HomePage} />
+            <Route path='/not-found' component={NotFound} />
+            <Route path='/read-recipe' component={ReadRecipe} />
           </Switch>
         </div>
       </Router>
