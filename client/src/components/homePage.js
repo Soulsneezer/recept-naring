@@ -1,57 +1,63 @@
 import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.css";
-import axios from 'axios';
+import {InputGroup, FormControl, Button, Card, Img, Body, Title, Text} from 'react-bootstrap';
 import REST from "../REST.js";
+import { Link } from "react-router-dom";
 
-class Makronutrient extends REST {
+class Recipe extends REST {
   static get baseRoute() {
-    return "makronutrients";
+    return "recipes";
   }
 }
-
 
 class HomePage extends Component {
   constructor(props) {
     super(props);
 
-    // this.importJson = this.importJson.bind(this);
     this.showJson = this.showJson.bind(this);
-
-    this.state = {livsmedel: []}
-
+    this.state = {recipes: []}
   }
 
   async componentDidMount(){
-    let user = await Makronutrient.find();
-    console.log(user)
+    let recipesDB = await Recipe.find();
+    this.setState({
+      recipes: recipesDB
+    });
   }
 
-  // importJson() {
-  //   console.log('Import Json')
-  //   axios.get('http://localhost:3000/json/makronutrients')
-  //   .then(response => {
-  //     this.setState({ livsmedel: response.data });
-  //   })
-  //   .catch(function (error){
-  //     console.log(error);
-  //   })
-  // }
-
   showJson() {
-    console.log(Makronutrient);
-    console.log('Show Json');
-    console.log(this.state.livsmedel);
+    console.log(this.state.recipes);
   }
 
   render() {
     return (
       <div>
         <div className="search-bar">
-          <input className="form-control search-input" type="text" placeholder="Sök efter recept här..." aria-label="Sök efter recept här..."/>
+          <InputGroup className="search-field">
+            <FormControl
+              className="search-input"
+              placeholder="Sök efter recept här..."
+              aria-label="Sök efter recept här..."
+              aria-describedby="Sök efter recept här..."
+            />
+          </InputGroup>
         </div>
-        <button onClick={this.importJson}>Import Json</button>
         <button onClick={this.showJson}>Show Json</button>
         
+
+        {this.state.recipes.map(recipe => (
+          <Card key={recipe._id} style={{ width: '18rem' }}>            
+            <Card.Img variant="top" src={require("../images/"+ recipe.img)} alt={recipe.img} />
+            <Card.Body>
+              <Card.Title>{recipe.name}</Card.Title>
+              <Card.Text>
+                {recipe.startText}
+              </Card.Text>
+              <Button href="/recipe" variant="primary">Go somewhere</Button>
+            </Card.Body>
+          </Card>
+        ))}
+
+
       </div>
     );
   }
