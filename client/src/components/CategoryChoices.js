@@ -5,10 +5,11 @@ class CategoryChoices extends React.Component {
 
   render() {
     return (
-      <Dropdown>
-        <Dropdown.Toggle variant="outline-secondary" id="category-dropdown">
+      <Dropdown className="d-inline-block">
+        <Dropdown.Toggle variant="outline-secondary" className="category-dropdown">
           Kategorier
       </Dropdown.Toggle>
+
         <Dropdown.Menu className="dropdown-menu">
           <InputGroup.Prepend>
             <InputGroup.Checkbox className="category-checkbox mt-2" aria-label="Checkbox" />

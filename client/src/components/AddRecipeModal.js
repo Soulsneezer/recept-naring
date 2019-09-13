@@ -9,7 +9,7 @@ export default function AddRecipeModal(props) {
   return (
     <Modal
       {...props}
-      size="xl"
+      size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
