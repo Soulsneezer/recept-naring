@@ -3,6 +3,8 @@ import { Navbar, Nav, Button, Row, Col } from 'react-bootstrap';
 import Logo from '../images/logo.png';
 import LogInUser from '../images/user.png';
 
+import LogIn from './logIn.js';
+
 
 class NavBar extends Component {
 
@@ -22,7 +24,8 @@ class NavBar extends Component {
               <Nav.Link href="/"></Nav.Link>
               <div className="navButtons">
                 <Button className="recipeButton" variant="outline-secondary" href="/recipe">Lägg Nytt Recept</Button>
-                <Button className="logInButton" variant="outline-secondary" href="/logIn"> <img className="personLogo" src={LogInUser} height="30" width="30" alt="Nav-Logo" /> Logga in</Button>
+                {/*<Button className="logInButton" variant="outline-secondary" href="/logIn"> <img className="personLogo" src={LogInUser} height="30" width="30" alt="Nav-Logo" /> Logga in</Button>*/}
+                <LogIn />
               </div>
             </Nav>
 
