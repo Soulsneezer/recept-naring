@@ -3,7 +3,6 @@ import React from 'react';
 import { Button, ButtonToolbar } from 'react-bootstrap';
 import LoginModal from './loginModal.js' 
 
-
  class logIn extends React.Component {
   
   state = {
@@ -14,14 +13,16 @@ import LoginModal from './loginModal.js'
 
     return (
       <ButtonToolbar>
+          
         <Button className="recipeButton" variant="outline-secondary" onClick={() => this.setState({modalShow:true})}>
         Logga in
         </Button>
   
-       <LoginModal
+        <LoginModal
           show={this.state.modalShow}
           onHide={() => this.setState({modalShow:false})}
-      /> 
+        /> 
+
       </ButtonToolbar>
     );
   }

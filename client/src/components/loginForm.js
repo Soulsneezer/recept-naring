@@ -129,6 +129,11 @@ class LogInForm extends React.Component{
                         </div>
                         
                     </form>
+
+                    <div className="login-succeeded-box" style={{display: this.state.loggedInSucceededBox}}>
+                    <h3> Du är nu inloggad som {this.state.username} ! </h3>
+
+                    </div>
                 </div>
 
     

@@ -8,7 +8,7 @@ export default function loginModal (props) {
   return (
     <Modal
         {...props}
-        size="xl"
+        size="sm"
         aria-labelledby="contained-modal-title-vcenter"
         centered
     >
@@ -28,29 +28,6 @@ export default function loginModal (props) {
   );
 }
 
-/*
- <AddRecipeForm /> */
 
 
-/*
 
-  <Modal
-      {...props}
-      size="xl"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Lägg till ett nytt recept här...
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <AddRecipeForm />
-      </Modal.Body>
-      <Modal.Footer>
-        <Button className="recipeButton" variant="outline-secondary" onClick={props.onHide}>Lägg till</Button>
-      </Modal.Footer>
-    </Modal>
-
-    */
