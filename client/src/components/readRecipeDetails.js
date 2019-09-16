@@ -1,24 +1,42 @@
 import React, { Component } from "react";
 import { Card, ListGroupItem, ListGroup } from "react-bootstrap";
-//import REST from "../../REST";
+import REST from "../REST";
 
-class ReadRecipeDetails extends React.Component {
+class Recipe extends REST {}
+
+class ReadRecipeDetails extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {};
+    this.recipe = {};
+    this.getRecipe();
   }
+  //componentDidMount() {}
+
+  async getRecipe() {
+    // this.recipe = await Recipe.find(
+    // `.findOne({_id: '5d7c8d55bc02e31a7cce67d6'})`
+    // );
+
+    console.log(await Recipe.find({}));
+    // let recipe = await Recipe.find(this.props._id);
+    this.setState({ state: this.state });
+    this.render();
+
+    console.log("this.recipe deatails", this.recipe);
+  }
+
   render() {
     return (
       <Card style={{ width: "100%" }}>
         <Card.Body>
-          <Card.Title>prop.recipe.name</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
+          <Card.Title>"this.recipe.name"</Card.Title>
+          <Card.Text>"this.recipe.startText"</Card.Text>
         </Card.Body>
         <ListGroup className='list-group-flush'>
-          <ListGroupItem>Cras justo odio</ListGroupItem>
-          <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
+          <ListGroupItem>"this.recipe.category"</ListGroupItem>
+          <ListGroupItem>"this.recipe.time"</ListGroupItem>
         </ListGroup>
       </Card>
     );
