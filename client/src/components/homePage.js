@@ -82,7 +82,6 @@ class HomePage extends Component {
         "Italiensk kycklinggratäng med parmesan och örter som egentligen inte har något med Italien att göra, utan är vår version på italiensk mat på 90-talet. /Tareq",
       time: 40
     });
-    console.log(await recipe.save());
     // let hittarEttRecept = await Recipe.find(
     //   `.findOne({_id:''})`
     // );
