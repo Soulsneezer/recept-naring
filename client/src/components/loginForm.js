@@ -1,7 +1,4 @@
 import React from "react";
-import { Modal, Dialog, Header, Title, Body, Footer, Button } from 'react-bootstrap';
-
-
 
 class LogInForm extends React.Component{
 
@@ -13,8 +10,7 @@ class LogInForm extends React.Component{
             usernameErrorBox: 'none',
             passwordErrorBox: 'none',
             loginBox: 'block',
-            loggedInSucceededBox: 'none',
-            modalVisibility: 'block'
+            loggedInSucceededBox: 'none'
         }
     }
 
@@ -35,6 +31,11 @@ class LogInForm extends React.Component{
     async onSubmit(e){
 
         e.preventDefault();
+
+        await this.setState({
+            passwordErrorBox: 'none',
+            usernameErrorBox: 'none',
+        });
 
         let regularx = /^[\w ]+$/;
 
@@ -57,103 +58,71 @@ class LogInForm extends React.Component{
             await this.setState({
                 passwordErrorBox: 'block'
             });
-        } 
+        }  
         else{
             await this.setState({
-                passwordErrorBox: 'none',
-                usernameErrorBox: 'none',
                 loginBox: 'none',
                 loggedInSucceededBox: 'block'
             });
-
-            /*alert('logged in as'+this.state.username);*/
-        }      
-         
+        }
+        
     }
-
-
-    async heandleCloseModalButton(){
-        await this.setState({
-            modalVisibility: 'none'
-        });
-    }
-
-
-
 
     render(){
         return (
             <div>
+                <form onSubmit={this.onSubmit.bind(this)}>
 
-              {/*}  <div className="login-box" style={{display: this.state.loginBox}}> */}
-                    <form onSubmit={this.onSubmit.bind(this)}>
+                    <div className="form-group login-box" style={{display:this.state.loginBox}}>
 
-                        <div className="form-group">
-
-                            <label>Användarnamn:</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                onChange={this.onChangeUserName.bind(this)}
-                            >                       
-                            </input>
-                            <div className="username-error-box" style={{display: this.state.usernameErrorBox}}>
-                                <p style={{color:'red'}}>
-                                    Användarnamn får bara innehålla bokstäver och siffror, 
-                                    samt måste vara minst sex tecken långt !
-                                </p>
-                            </div>
-
-                            <label>Lösenord:</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                onChange={this.onChangePassword.bind(this)}
-                            >
-                            </input>
-                            <div className="password-error-box" style={{display: this.state.passwordErrorBox}}>
-                                <p style={{color:'red'}}>
-                                    Lösenord får bara innehålla bokstäver och siffror, 
-                                    samt måste vara minst sex tecken långt !
-                                </p>
-                            </div>
-
-                            <button 
-                                type="submit"
-                                className="form-control"
-                                style={{width:'120px', margin:'auto', marginTop: '50px'}}
-                            >
-                                Logga in
-                            </button>
-
+                        <label>Användarnamn:</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            onChange={this.onChangeUserName.bind(this)}
+                        >                       
+                        </input>
+                        <div className="username-error-box" style={{display: this.state.usernameErrorBox}}>
+                            <p style={{color:'red',fontSize:'11px'}}>
+                                Användarnamn får bara innehålla bokstäver och siffror, 
+                                samt måste vara minst sex tecken långt !
+                            </p>
                         </div>
-                        
-                    </form>
 
-                    <div className="login-succeeded-box" style={{display: this.state.loggedInSucceededBox}}>
-                    <h3> Du är nu inloggad som {this.state.username} ! </h3>
+                        <label>Lösenord:</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            onChange={this.onChangePassword.bind(this)}
+                        >
+                        </input>
+                        <div className="password-error-box" style={{display: this.state.passwordErrorBox}}>
+                            <p style={{color:'red',fontSize:'11px'}}>
+                                Lösenord får bara innehålla bokstäver och siffror, 
+                                samt måste vara minst sex tecken långt !
+                            </p>
+                        </div>
 
-                    </div>
+                        <button 
+                            type="submit"
+                            className="form-control"
+                            style={{width:'120px', margin:'auto', marginTop: '50px'}}
+                        >
+                            Logga in
+                        </button>
+
+                    </div>                      
+                </form>
+
+                <div className="login-succeeded-box" style={{display: this.state.loggedInSucceededBox}}>
+                <h4> Du är nu inloggad som <span style={{color:'green'}}> {this.state.username} </span> </h4>
+                <h3 style={{color:'red'}}> Obs! Inloggning under utveckling </h3>
                 </div>
 
-    
-
-
-                
-                
-
-            
+            </div>           
         )
     }
-
 }
     
 export default LogInForm;
 
-
-/*
-
-             {/*}   <div className="login-succeeded-box" style={{display: this.state.loggedInSucceededBox}}>
-                    <h3> Du är nu inloggad som {this.state.username} ! </h3>
-
-        </div>  */

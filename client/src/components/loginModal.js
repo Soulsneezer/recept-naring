@@ -20,9 +20,9 @@ export default function loginModal (props) {
         <Modal.Body>
             <LogInForm />
         </Modal.Body>
-        <Modal.Footer>
-        <Button className="recipeButton" variant="outline-secondary" onClick={props.onHide}>Lägg till</Button>
-        </Modal.Footer>
+        {/*<Modal.Footer>
+        <Button className="recipeButton center-block" variant="outline-secondary" onClick={props.onHide}>Lägg till</Button>
+        </Modal.Footer>*/}
     </Modal>
 
   );
