@@ -1,5 +1,13 @@
-import React, { Fragment, useState } from 'react'
-import axios from 'axios';
+import React, { Component, Fragment, useState } from 'react'
+import REST from '../REST';
+
+
+class Upload extends REST {
+
+    constructor(props) {
+        super(props);
+    }
+}
 
 const FileUpload = () => {
     const [file, setFile] = useState('');
@@ -16,25 +24,35 @@ const FileUpload = () => {
         const formData = new FormData();
         formData.append('file', file);
 
-        try {
-            const res = await axios.post('/upload', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            });
-
-            const { fileName, filePath } = res.data;
-            setUploadedFile({ fileName, filePath });
 
 
-        } catch (err) {
-            if (err.response.status === 500) {
-                console.log('Nope! Comp says Nooo');
-            } else {
-                console.log(err.response.data.msg);
-                console.log('bild som skulle laddas upp');
-            }
-        }
+        // try {
+        //     const res = await axios.post('/upload', formData, {
+        //         headers: {
+        //             'Content-Type': 'multipart/form-data'
+        //         }
+        //     });
+
+        // const { fileName, filePath } = res.data;
+        // setUploadedFile({ fileName, filePath });
+
+
+        // } catch (err) {
+        //     if (err.response.status === 500) {
+        //         console.log('Nope! Comp says Nooo');
+        //     } else {
+        //         console.log(err.response.data.msg);
+        //         console.log('bild som skulle laddas upp');
+        //     }
+        // }
+
+        let addUploads = new Upload({
+            url: "hellothere"
+        });
+
+        let uploads = await addUploads.save();
+
+        console.log(uploads)
     };
     return (
         <Fragment>
