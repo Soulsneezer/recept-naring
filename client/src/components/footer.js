@@ -10,7 +10,7 @@ class Footer extends React.Component{
 
     render(){
         return(
-            <footer className="container-fluid bg-light">
+            <footer className="container-fluid bg-light mt-5">
 
             <div className="row ">
 
