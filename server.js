@@ -15,7 +15,6 @@ db.once('open', () => {
 
 
 // Import Makronutrient mongoose model
-const Makronutrient = require('./models/Makronutrient');
 
 
 function startWebServer() {

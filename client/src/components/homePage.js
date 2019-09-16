@@ -10,8 +10,8 @@ class HomePage extends Component {
     this.test();
   }
   async test(){
-  let recipe = new Recipe ({
-		"name": "Krämig italiensk kyckling",
+  let recipe = new Recipe({
+		"name": "mells italiensk kycklinggryta med kokosnötter",
 		"category": [
 			"Enkelt",
 			"Kyckling",
@@ -85,9 +85,9 @@ class HomePage extends Component {
 		"portion": 4,
 		"startText": "Italiensk kycklinggratäng med parmesan och örter som egentligen inte har något med Italien att göra, utan är vår version på italiensk mat på 90-talet. /Tareq"
   })
-  //await recipe.save();
+  console.log(await recipe.save())
   let hittarEttRecept = await Recipe.find(
-    `.find({_id:'5d7948561ffa6d403e3c3976'})`
+    `.findOne({_id:'5d7948561ffa6d403e3c3976'})`
   );
   console.log(hittarEttRecept)
 
