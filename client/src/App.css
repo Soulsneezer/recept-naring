@@ -60,6 +60,20 @@
 	padding: 40px;
 }
 
+.innerContainerUploadPhoto {
+	border: 0.5px solid #6e6d6d;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	padding: 30px;
+	align-items: center;
+}
+.cameraIcon {
+	display: center;
+	justify-content: center;
+	padding: 10px;
+}
 .recipeHeadline {
 	margin-top: 20px;
 	text-align: center;
