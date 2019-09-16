@@ -15,11 +15,10 @@ class ReadRecipeDetails extends Component {
   //componentDidMount() {}
 
   async getRecipe() {
-    // this.recipe = await Recipe.find(
-    // `.findOne({_id: '5d7c8d55bc02e31a7cce67d6'})`
-    // );
-
-    console.log(await Recipe.find({}));
+    this.recipe = await Recipe.find(
+      `.findOne({_id: '5d7f43782a775422100e0770'})`
+    );
+    console.log(this.recipe);
     // let recipe = await Recipe.find(this.props._id);
     this.setState({ state: this.state });
     this.render();
@@ -31,7 +30,7 @@ class ReadRecipeDetails extends Component {
     return (
       <Card style={{ width: "100%" }}>
         <Card.Body>
-          <Card.Title>"this.recipe.name"</Card.Title>
+          <Card.Title>{this.recipe.name}</Card.Title>
           <Card.Text>"this.recipe.startText"</Card.Text>
         </Card.Body>
         <ListGroup className='list-group-flush'>
