@@ -123,3 +123,42 @@
   float:right;
 }
 
+
+
+
+/*----- Footer ------*/
+
+footer .icon{
+  width:30px;
+  height:30px;
+  cursor:pointer;
+}
+
+@media (min-width: 577px) and (max-width: 641px)  {
+  footer .icon{
+    width:26px;
+    height:26px;
+  }
+}
+
+@media (max-width: 576px)  {
+footer .icons .icon{
+    display:block;
+    padding-top:5px;
+  }
+}
+
+@media (max-width: 322px)  {
+  footer .icons{
+  
+    }
+ footer p{
+      font-size:12px;
+      border:solid orange 2px;
+    }
+  }
+
+
+
+
+
