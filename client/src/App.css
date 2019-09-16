@@ -148,3 +148,7 @@
 		background-size: 100%;
 	}
 }
+
+.show-recipe {
+	display: inline-block;
+}
