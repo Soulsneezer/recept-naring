@@ -12,12 +12,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { read } from "fs";
 
-
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div className='App'>
           <NavBar />
           <Switch>
             <Route path="/" exact component={HomePage} />
