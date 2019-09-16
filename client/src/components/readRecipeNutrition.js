@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card from "react-bootstrap/Card";
+import { Row, Col, Card, ListGroupItem, ListGroup } from "react-bootstrap";
 
 class ReadRecipeNutrition extends React.Component {
   constructor(props) {
@@ -17,22 +17,25 @@ class ReadRecipeNutrition extends React.Component {
     }
 
     return (
-      <Card className='m-t-4' bg='light' style={{ width: "7rem" }}>
+      <Card
+        className='m-1 offset-3'
+        style={{ display: "inline-block", width: "9rem" }}
+      >
         <Card.Header>{name}</Card.Header>
         <Card.Body>
           {name !== "Fat" ? (
-            <Card.Title>
+            <Card.Text>
               {value}
               {name !== "Kcal" ? " g" : ""}
-            </Card.Title>
+            </Card.Text>
           ) : (
-            <Card.Title>
+            <Card>
               {Object.keys(value).map(key => (
                 <div key={key}>
                   {key} {value[key]} g
                 </div>
               ))}
-            </Card.Title>
+            </Card>
           )}
         </Card.Body>
       </Card>

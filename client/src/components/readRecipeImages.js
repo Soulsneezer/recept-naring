@@ -21,14 +21,7 @@ class ReadRecipeImages extends React.Component {
     console.log("this.recipe Image component", this.recipe.img);
   }
   render() {
-    return (
-      <img
-        className='readRecipeImg'
-        src={
-          window.location.origin + "/images/readRecipeImages/" + this.recipe.img
-        }
-      />
-    );
+    return <Col className='readRecipeImg mt-2' />;
   }
 }
 

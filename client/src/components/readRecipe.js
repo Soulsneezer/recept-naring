@@ -12,22 +12,24 @@ class ReadRecipe extends React.Component {
   }
   render() {
     return (
-      <React.Fragment>
-        <Row className='m-3'>
+      <Container>
+        <Row className='mt-3'>
           <Col className='col-md-4'>
             <ReadRecipeImages />
           </Col>
-          <Col className='col-md-5 auto'>
-            <ReadRecipeDetails />
-          </Col>
-          <Col className='col-md-3 xs lg-2'>
-            <PersonChoices />
+
+          <Col className='col-md-8'>
+            <Row>
+              <Col className='md-2 xs-12 offset-10'>
+                <PersonChoices />
+              </Col>
+              <Col className='md-10'>
+                <ReadRecipeDetails />
+              </Col>
+            </Row>
           </Col>
         </Row>
-        <Row className='m-3'>
-          <Col className='offset-2'>Näring per portion</Col>
-        </Row>
-      </React.Fragment>
+      </Container>
     );
   }
 }

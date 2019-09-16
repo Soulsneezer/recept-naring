@@ -33,12 +33,7 @@
   font-size: 20px;
   font-weight: bold;
 }
-.recipeButton {
-  margin-right: 1rem;
-  border-radius: 20px;
-  padding: 7px 10px;
-  font-size: 20px;
-}
+
 .logInButton {
   padding: 7px 35px;
   font-size: 20px;
@@ -177,57 +172,58 @@
     background-size: 100%;
   }
 }
+/*----------- Read Recipe Page -----------*/
+.recipeButton {
+  margin-right: 1rem;
+  border-radius: 20px;
+  padding: 7px 10px;
+  font-size: 20px;
+}
 .readRecipeImg {
-  width: 100%;
+  /* background: url(window.location.origin+"/images/readRecipeImages/"+this.recipe.img) 
+    no-repeat right;*/
+  background: url(./images/background-img1.jpg) no-repeat right;
   height: 80vh;
+  background-size: cover;
+  background-position: center;
 }
 
-
-
-
+.text-styling {
+  text-align: left !important;
+  max-width: 80%;
+}
 
 /*------- Login Page -------*/
 
-.close-modal-button{
-  float:right;
+.close-modal-button {
+  float: right;
 }
-
-
-
 
 /*----- Footer ------*/
 
-footer .icon{
-  width:30px;
-  height:30px;
-  cursor:pointer;
+footer .icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
-@media (min-width: 577px) and (max-width: 641px)  {
-  footer .icon{
-    width:26px;
-    height:26px;
+@media (min-width: 577px) and (max-width: 641px) {
+  footer .icon {
+    width: 26px;
+    height: 26px;
   }
 }
 
-@media (max-width: 576px)  {
-footer .icons .icon{
-    display:block;
-    padding-top:5px;
+@media (max-width: 576px) {
+  footer .icons .icon {
+    display: block;
+    padding-top: 5px;
   }
 }
 
-@media (max-width: 322px)  {
-  footer .icons{
-  
-    }
- footer p{
-      font-size:12px;
-      border:solid orange 2px;
-    }
+@media (max-width: 322px) {
+  footer p {
+    font-size: 12px;
+    border: solid orange 2px;
   }
-
-
-
-
-
+}

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Col, Row, Dropdown, DropdownButton } from "react-bootstrap";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 
 export default class PersonChoices extends React.Component {
   constructor() {
@@ -34,16 +34,19 @@ export default class PersonChoices extends React.Component {
       choices.push(i);
     }
     return (
-      <Container className='PersonChoices'>
-        <DropdownButton onClick={this.showMenu}>
-          variant='Secondary' id='dropdown-item-button' title={selector}>
-          {choices.map(i => (
-            <Dropdown.Item key={i} as='button'>
-              {i}
-            </Dropdown.Item>
-          ))}
-        </DropdownButton>
-      </Container>
+      <DropdownButton
+        className='offset-8'
+        onClick={this.showMenu}
+        variant='Secondary'
+        id='dropdown-item-button'
+        title='Personer'
+      >
+        {choices.map(i => (
+          <Dropdown.Item key={i} as='button'>
+            {i}
+          </Dropdown.Item>
+        ))}
+      </DropdownButton>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, ListGroupItem, ListGroup } from "react-bootstrap";
+import { Row, Col, Card, ListGroupItem, ListGroup } from "react-bootstrap";
 import REST from "../REST";
 import ReadRecipeNutrition from "./readRecipeNutrition";
 class Recipe extends REST {}
@@ -44,27 +44,32 @@ class ReadRecipeDetails extends Component {
 
   render() {
     return (
-      <Card style={{ width: "100%" }}>
-        <Card.Body>
-          <Card.Title>{this.recipe.name}</Card.Title>
-          <Card.Text>{this.recipe.startText}</Card.Text>
-        </Card.Body>
-        <ListGroup className='list-group-flush'>
-          <ListGroupItem>Tag: {this.recipe.category}</ListGroupItem>
-          <ListGroupItem>Tid: {this.recipe.time}</ListGroupItem>
-        </ListGroup>
-        <ListGroup className='list-group-flush'>
-          <ListGroupItem>
-            {Object.keys(this.state.nutritions).map(key => (
-              <ReadRecipeNutrition
-                key={key}
-                nutrientName={key}
-                nutrientValue={this.state.nutritions[key]}
-              />
-            ))}
-          </ListGroupItem>
-        </ListGroup>
-      </Card>
+      <React.Fragment left>
+        <Row mt-2>
+          <h2>{this.recipe.name}</h2>
+        </Row>
+        <Row className='mt-2 text-styling'>
+          <p>{this.recipe.startText}</p>
+        </Row>
+        <Row className='mt-4'>
+          <h4>Tag: {this.recipe.category}</h4>
+        </Row>
+        <Row className='mt-4'>
+          <h4> Tid: {this.recipe.time}min</h4>
+        </Row>
+        <Row className='mt-4 text-styling'>
+          <h4>Näring per portion</h4>
+        </Row>
+        <Row>
+          {Object.keys(this.state.nutritions).map(key => (
+            <ReadRecipeNutrition
+              key={key}
+              nutrientName={key}
+              nutrientValue={this.state.nutritions[key]}
+            />
+          ))}
+        </Row>
+      </React.Fragment>
     );
   }
 }
