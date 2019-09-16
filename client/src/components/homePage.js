@@ -85,10 +85,10 @@ class HomePage extends Component {
 		"portion": 4,
 		"startText": "Italiensk kycklinggratäng med parmesan och örter som egentligen inte har något med Italien att göra, utan är vår version på italiensk mat på 90-talet. /Tareq"
   })
-  console.log(await recipe.save())
-  let hittarEttRecept = await Recipe.find(
-    `.findOne({_id:'5d7948561ffa6d403e3c3976'})`
-  );
+	let hittarEttRecept = 
+	console.log(await Recipe.find(
+    `.find({_id:'5d7948561ffa6d403e3c3976'})`
+  ))
   console.log(hittarEttRecept)
 
 }

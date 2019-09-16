@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import { Card, } from 'react-bootstrap';
+import { Card, Button} from 'react-bootstrap';
 
 
 export default class FoodCard extends Component {
@@ -17,6 +17,7 @@ export default class FoodCard extends Component {
             <Card.Body>
                 <Card.Title>Card Title</Card.Title>
                 <Card.Text>
+                <Button href="/read-recipe/5d7b7f878935305306e67bc6">Till ett recept</Button>
                 Some quick example text to build on the card title and make up the bulk of
                 the card's content.
                 </Card.Text>
