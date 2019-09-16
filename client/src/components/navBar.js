@@ -4,6 +4,8 @@ import Logo from '../images/logo.png';
 import LogInUser from '../images/user.png';
 import AddRecipe from './AddRecipe';
 
+import LogIn from './logIn.js';
+
 
 class NavBar extends Component {
 
@@ -25,7 +27,7 @@ class NavBar extends Component {
 
                 <AddRecipe />
       
-                <Button className="logInButton" variant="outline-secondary" href="/logIn"> <img className="personLogo" src={LogInUser} height="30" width="30" alt="Nav-Logo" /> Logga in</Button>
+                <LogIn />
               </div>
             </Nav>
 

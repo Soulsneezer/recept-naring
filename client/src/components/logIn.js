@@ -1,7 +1,30 @@
-import React from "react";
 
-const LogIn = () => {
-    return <h1>Logga in sida</h1>;
-};
+import React from 'react';
+import { Button, ButtonToolbar } from 'react-bootstrap';
+import LoginModal from './loginModal.js' 
 
-export default LogIn;
+ class logIn extends React.Component {
+  
+  state = {
+    modalShow: false
+  }
+
+  render(){
+
+    return (
+      <ButtonToolbar>
+          
+        <Button className="recipeButton" variant="outline-secondary" onClick={() => this.setState({modalShow:true})}>
+        Logga in
+        </Button>
+  
+        <LoginModal
+          show={this.state.modalShow}
+          onHide={() => this.setState({modalShow:false})}
+        /> 
+
+      </ButtonToolbar>
+    );
+  }
+}
+export default logIn;
