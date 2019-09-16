@@ -4,9 +4,9 @@ import REST from '../REST';
 
 class Upload extends REST {
 
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 }
 
 const FileUpload = () => {
