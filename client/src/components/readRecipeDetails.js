@@ -37,6 +37,8 @@ class ReadRecipeDetails extends Component {
   }
 
   render() {
+    if (this.props.category === null) return null;
+
     return (
       <Card style={{ width: "100%" }}>
         <Card.Body>
@@ -44,7 +46,7 @@ class ReadRecipeDetails extends Component {
           <Card.Text>{this.props.startText}</Card.Text>
         </Card.Body>
         <ListGroup className='list-group-flush'>
-          <ListGroupItem>Tag: {this.props.category}</ListGroupItem>
+          <ListGroupItem>Tag: {this.props.category.join(", ")}</ListGroupItem>
           <ListGroupItem>Tid: {this.props.time}</ListGroupItem>
         </ListGroup>
         <ListGroup className='list-group-flush'>

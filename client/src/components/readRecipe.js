@@ -29,7 +29,7 @@ class ReadRecipe extends React.Component {
              <ReadRecipeImages  img={this.recipe.img} />          
           </Col>
           <Col className='col-md-5 auto'>
-          <ReadRecipeDetails {...this.recipe}/>
+          {this.recipe ? <ReadRecipeDetails {...this.recipe}/> : null}
           </Col>
           <Col className='col-md-3 xs lg-2'>
             <PersonChoices {...this.recipe} />
