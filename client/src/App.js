@@ -8,6 +8,7 @@ import ReadRecipe from './components/readRecipe'
 import LogIn from './components/logIn';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { read } from "fs";
 
