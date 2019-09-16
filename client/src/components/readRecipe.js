@@ -19,7 +19,6 @@ class ReadRecipe extends React.Component {
           </Col>
           <Col className='col-md-5 auto'>
             <ReadRecipeDetails />
-            <ReadRecipeNutrition />
           </Col>
           <Col className='col-md-3 xs lg-2'>
             <PersonChoices />
