@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormControl, InputGroup, Dropdown } from 'react-bootstrap'
+import { InputGroup, Dropdown } from 'react-bootstrap'
 
 class CategoryChoices extends React.Component {
 
