@@ -63,6 +63,7 @@
 .recipeHeadline {
 	margin-top: 20px;
 	text-align: center;
+	margin-right: 15px;
 }
 
 .recipeHeadlineH2 {
@@ -85,12 +86,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  /* background: url(./images/background-img1.jpg) no-repeat;  */
-  height: 30vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	/* background: url(./images/background-img1.jpg) no-repeat;  */
+	height: 30vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .search-input {
 	z-index: 1;
