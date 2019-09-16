@@ -37,8 +37,6 @@ class ReadRecipeDetails extends Component {
   }
 
   render() {
-    if (this.props.category === null) return null;
-
     return (
       <Card style={{ width: "100%" }}>
         <Card.Body>
