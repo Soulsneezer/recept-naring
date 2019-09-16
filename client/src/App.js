@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./components/navBar";
 import NotFound from "./components/notFound";
-import HomePage from "./components/homePage";
-import LogIn from "./components/logIn";
-import "bootstrap/dist/css/bootstrap.min.css";
-import ReadRecipe from "./components/readRecipe";
+import HomePage from './components/homePage';
+import Recipe from './components/recipe';
+import LogIn from './components/logIn';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './components/footer';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -21,6 +22,7 @@ class App extends Component {
             <Route path='/not-found' component={NotFound} />
             <Route path='/read-recipe' component={ReadRecipe} />
           </Switch>
+          <Footer/>
         </div>
       </Router>
     );
