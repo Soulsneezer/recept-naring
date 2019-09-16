@@ -7,6 +7,7 @@ import Recipe from './components/recipe';
 import ReadRecipe from './components/readRecipe'
 import LogIn from './components/logIn';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './components/footer';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -25,6 +26,7 @@ class App extends Component {
             <Route path="/read-recipe/:id" component={ReadRecipe} />
             <Route path="/not-found" component={NotFound} />
           </Switch>
+          <Footer/>
         </div>
       </Router>
     );
