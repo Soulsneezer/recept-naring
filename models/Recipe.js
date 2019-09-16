@@ -10,5 +10,6 @@ let recipeSchema = new Schema(  {
  "img": String,
  "portion": Number,
  "startText": String,
+ "time": Number
 });
 module.exports = db.model('Recipe', recipeSchema); 

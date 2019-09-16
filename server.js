@@ -1,9 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const fileUpload = require('express-fileupload');
-
-
-
+const bodyParser = require('body-parser');
+const CreateRestRoutes = require('./CreateRestRoutes');
 
 // Connect to db
 let dbName = "Makronutrient";
@@ -11,46 +9,35 @@ mongoose.connect(`mongodb://localhost/${dbName}`);
 global.db = mongoose.connection;
 db.on('error', () => console.log('Could not connect to DB'));
 db.once('open', () => {
-    console.log('Connected to DB');
-    startWebServer();
+  console.log('Connected to DB');
+  startWebServer();
 })
 
 
 // Import Makronutrient mongoose model
-const Makronutrient = require('./models/Makronutrient');
 
 
 function startWebServer() {
 
-    // Create a web server
-    const app = express();
+  // Create a web server
+  const app = express();
+  
+  app.use(bodyParser.json());
 
-    // setup for fileupload
-    app.use(fileUpload());
+  // A route that returns all books from Mongo
+ /* app.get('/json/makronutrients', async (req, res) => {
+    let makronutrients = await Makronutrient.find();
+    res.json(makronutrients);
+  });*/
+  const models = {
+    Makronutrients: require('./models/Makronutrient.js'),
+    Recipes: require('./models/Recipe.js')
+  };
 
-    // the upload
-    app.post('/json/recipes', (req, res) => {
-        if (req.files === null) {
-            return res.status(400).json({ msg: 'No file was uploaded, buuu' });
-        }
-
-        const file = req.files.file;
-        file.mv(`${__dirname}/client/public/uploads/${file.name}`, err => {
-            if (err) {
-                console.error(err);
-                return res.status(500).send(err);
-            }
-            res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
-        });
-    });
-
-    // A route that returns all books from Mongo
-    app.get('/json/makronutrients', async (req, res) => {
-        let makronutrients = await Makronutrient.find();
-        res.json(makronutrients);
-    });
+  // create all necessary rest routes for the models
+  new CreateRestRoutes(app, global.db, models);
 
 
-    // Start the web server
-    app.listen(5000, () => console.log('Listening on port 5000'));
+  // Start the web server
+  app.listen(5000, () => console.log('Listening on port 5000'));
 }
