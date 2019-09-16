@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Navbar, Nav, Button, Row, Col } from 'react-bootstrap';
 import Logo from '../images/logo.png';
 import LogInUser from '../images/user.png';
+import AddRecipe from './AddRecipe';
 
 import LogIn from './logIn.js';
 
@@ -23,8 +24,9 @@ class NavBar extends Component {
             <Nav className="ml-auto">
               <Nav.Link href="/"></Nav.Link>
               <div className="navButtons">
-                <Button className="recipeButton" variant="outline-secondary" href="/recipe">Lägg Nytt Recept</Button>
-               
+
+                <AddRecipe />
+      
                 <LogIn />
               </div>
             </Nav>

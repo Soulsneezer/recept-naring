@@ -8,6 +8,7 @@ import LogIn from './components/logIn';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/footer';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 
