@@ -180,9 +180,9 @@
   font-size: 20px;
 }
 .readRecipeImg {
-  /* background: url(window.location.origin+"/images/readRecipeImages/"+this.recipe.img) 
-    no-repeat right;*/
-  background: url(./images/background-img1.jpg) no-repeat right;
+  background: url(`window.location.origin+/images/readRecipeImages/+${this.recipe.img}`)
+    no-repeat right;
+  /* background: url(./images/background-img1.jpg) no-repeat right; */
   height: 80vh;
   background-size: cover;
   background-position: center;
@@ -190,7 +190,7 @@
 
 .text-styling {
   text-align: left !important;
-  max-width: 80%;
+  max-width: 90%;
 }
 
 /*------- Login Page -------*/

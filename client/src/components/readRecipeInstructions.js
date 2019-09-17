@@ -24,7 +24,13 @@ class ReadRecipeInstructions extends Component {
   }
 
   render() {
-    return <h1>Instructionssssssssssss {this.recipe.step}</h1>;
+    return (
+      <React.Fragment>
+        <ol>
+          <li>{this.recipe.step}</li>
+        </ol>
+      </React.Fragment>
+    );
   }
 }
 

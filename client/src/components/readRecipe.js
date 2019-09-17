@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import PersonChoices from "./PersonChoices";
 import ReadRecipeImages from "./readRecipeImages";
 import ReadRecipeDetails from "./readRecipeDetails";
-import ReadRecipeNutrition from "./readRecipeNutrition";
 import ReadRecipeInstructions from "./readRecipeInstructions";
+import ReadRecipeIngredients from "./readRecipeIngredients";
+
 import { Container, Col, Row, Dropdown, DropdownButton } from "react-bootstrap";
 import REST from "../REST";
 
@@ -30,8 +31,15 @@ class ReadRecipe extends React.Component {
             </Row>
           </Col>
         </Row>
-        <Row>
-          <ReadRecipeInstructions />
+        <Row className='m-t-5 text-styling'>
+          <Col className='md-3 text-styling'>
+            <h3 className='m-b-2 offset-1'> Ingredienser</h3>
+            <ReadRecipeIngredients />
+          </Col>
+          <Col className='md-9 text-styling'>
+            <h3 className='m-b-2 offset-1'> Steg för steg</h3>
+            <ReadRecipeInstructions />
+          </Col>
         </Row>
       </Container>
     );
