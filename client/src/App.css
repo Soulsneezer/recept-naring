@@ -44,7 +44,23 @@
   display: inline-block;
 }
 
-.btn-primary:hover { background-color: grey }
+.btn-primary:hover {
+   background-color: grey
+ }
+ 
+#dropdown-basic  {
+  border-radius: 20px;
+	padding: 7px 10px;
+	font-size: 20px;
+}
+
+.dropdown-menu {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  min-width: 110px;
+  align-items:center;
+  padding-left:20px;
+}
 
 .innerFoodCardContainer{
   padding: 50px;
@@ -64,7 +80,7 @@
 	}
 }
 .search-bar {
-  /* background: url(./images/background-img1.jpg) no-repeat;  */
+  background:no-repeat;
   height: 30vh;
   width: 100%;
   display: flex;
