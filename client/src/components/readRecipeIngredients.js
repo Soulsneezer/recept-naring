@@ -36,11 +36,14 @@ class ReadRecipeIngredients extends Component {
         <ol>
           {/* <li>{this.recipe.step}</li> */}
           <li>
-            Koka pastan enligt anvisningar på förpackningen.Fräs kycklingen på
-            medelvärme tills den får lite färg runt om i cirka 5 minuter. Salta
-            och peppra.Finhacka vitlöken och chilin och stek med kycklingen i
-            cirka 2 minuter.Krydda med timjan och oregano och häll i buljongen,
-            grädden och kokta upp, dra till sidan och tillsätt parmesanen.
+            <p>
+              Koka pastan enligt anvisningar på förpackningen.Fräs kycklingen på
+              medelvärme tills den får lite färg runt om i cirka 5 minuter.
+              Salta och peppra.Finhacka vitlöken och chilin och stek med
+              kycklingen i cirka 2 minuter.Krydda med timjan och oregano och
+              häll i buljongen, grädden och kokta upp, dra till sidan och
+              tillsätt parmesanen.
+            </p>
           </li>
         </ol>
       </React.Fragment>

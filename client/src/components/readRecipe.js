@@ -31,12 +31,12 @@ class ReadRecipe extends React.Component {
             </Row>
           </Col>
         </Row>
-        <Row className='m-t-5 text-styling'>
-          <Col className='md-3 text-styling'>
+        <Row className='m-t-5 font-styling'>
+          <Col className='md-3  mt-5'>
             <h3 className='m-b-2 offset-1'> Ingredienser</h3>
             <ReadRecipeIngredients />
           </Col>
-          <Col className='md-9 text-styling'>
+          <Col className='md-9 mt-5'>
             <h3 className='m-b-2 offset-1'> Steg för steg</h3>
             <ReadRecipeInstructions />
           </Col>

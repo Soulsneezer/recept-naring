@@ -21,7 +21,16 @@ class ReadRecipeImages extends React.Component {
     console.log("this.recipe Image component", this.recipe.img);
   }
   render() {
-    return <Image className='readRecipeImg mt-2' />;
+    return (
+      <Image
+        style={{
+          backgroundImage: `url(window.location.origin+/images/readRecipeImages/+${this.recipe.img})`,
+          background: "no-repeat right",
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+      />
+    );
   }
 }
 

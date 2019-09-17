@@ -27,7 +27,9 @@ class ReadRecipeInstructions extends Component {
     return (
       <React.Fragment>
         <ol>
-          <li>{this.recipe.step}</li>
+          <li>
+            <p>{this.recipe.step}</p>
+          </li>
         </ol>
       </React.Fragment>
     );

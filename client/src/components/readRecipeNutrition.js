@@ -21,22 +21,24 @@ class ReadRecipeNutrition extends React.Component {
         className='m-1 offset-3'
         style={{ display: "inline-block", width: "9rem" }}
       >
-        <Card.Header className='light'>{name}</Card.Header>
+        <Card.Text className='m-3 border-styling fat-list'>{name}</Card.Text>
         <Card.Body>
-          {name !== "Fat" ? (
-            <Card.Text>
-              {value}
-              {name !== "Kcal" ? " g" : ""}
-            </Card.Text>
-          ) : (
-            <Card>
-              {Object.keys(value).map(key => (
-                <div key={key}>
-                  {key} {value[key]} g
-                </div>
-              ))}
-            </Card>
-          )}
+          <ul className='fat-list'>
+            {name !== "Fat" ? (
+              <Card.Text className='fat-list'>
+                {value}
+                {name !== "Kcal" ? " g" : ""}
+              </Card.Text>
+            ) : (
+              <div>
+                {Object.keys(value).map(key => (
+                  <li className='m-t-3 fat-list' key={key}>
+                    {key} {value[key]} g
+                  </li>
+                ))}
+              </div>
+            )}
+          </ul>
         </Card.Body>
       </Card>
     );

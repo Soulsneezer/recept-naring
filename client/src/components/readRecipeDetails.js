@@ -46,19 +46,20 @@ class ReadRecipeDetails extends Component {
     return (
       <React.Fragment>
         <Row className='mt-2'>
-          <h2>{this.recipe.name}</h2>
+          <h1>{this.recipe.name}</h1>
         </Row>
-        <Row className='mt-2 text-styling'>
+        <Row className='mt-2 font-styling'>
           <p>{this.recipe.startText}</p>
         </Row>
         <Row className='mt-4'>
-          <h4>Tag: {this.recipe.category}</h4>
+          <h3>Tag: {this.recipe.category}</h3>
         </Row>
         <Row className='mt-4'>
-          <h4> Tid: {this.recipe.time}min</h4>
+          <h3> Tid: {this.recipe.time}min</h3>
         </Row>
-        <Row className='mt-4 text-styling'>
-          <h4>Näring per portion</h4>
+        <Row>
+          <h3 className='mt-5'>Näring per portion </h3>
+          {/* <h5> Näring per portion </h5> */}
         </Row>
         <Row>
           {Object.keys(this.state.nutritions).map(key => (
