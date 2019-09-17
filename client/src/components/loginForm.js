@@ -91,7 +91,7 @@ class LogInForm extends React.Component{
 
                         <label>Lösenord:</label>
                         <input
-                            type="text"
+                            type="password"
                             className="form-control"
                             onChange={this.onChangePassword.bind(this)}
                         >
