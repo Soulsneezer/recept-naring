@@ -36,15 +36,29 @@
 	border-radius: 20px;
 	padding: 7px 10px;
 	font-size: 10px;
+	cursor: pointer;
 }
 
-.recipe-name {
-	border-radius: 60px;
+
+.add-button {
+	cursor: copy;
+}
+
+.remove-button {
+	cursor: copy;
+}
+
+
+.recipe-name,
+.list-group-item:last-child {
+	border-radius: 30px;
 	font-size: 10px;
+	cursor: text;
 }
 
 .dropdown-menu {
 	min-width: 30px;
+	cursor: pointer;
 }
 
 @media only screen and (max-width: 400px) {
