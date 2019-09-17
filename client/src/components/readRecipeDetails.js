@@ -32,20 +32,20 @@ class ReadRecipeDetails extends Component {
 
   async getRecipe() {
     this.recipe = await Recipe.find(
-      `.findOne({_id: '5d7f46312a775422100e07c4'})`
+      `.findOne({_id: "5d80ae6cbfb4181b341ebdf3"})`
     );
-    console.log(this.recipe);
+    //console.log(this.recipe);
     // let recipe = await Recipe.find(this.props._id);
     this.setState({ state: this.state });
     this.render();
 
-    console.log("this.recipe deatails", this.recipe);
+    //console.log("this.recipe deatails", this.recipe);
   }
 
   render() {
     return (
-      <React.Fragment left>
-        <Row mt-2>
+      <React.Fragment>
+        <Row className='mt-2'>
           <h2>{this.recipe.name}</h2>
         </Row>
         <Row className='mt-2 text-styling'>

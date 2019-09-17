@@ -3,6 +3,7 @@ import PersonChoices from "./PersonChoices";
 import ReadRecipeImages from "./readRecipeImages";
 import ReadRecipeDetails from "./readRecipeDetails";
 import ReadRecipeNutrition from "./readRecipeNutrition";
+import ReadRecipeInstructions from "./readRecipeInstructions";
 import { Container, Col, Row, Dropdown, DropdownButton } from "react-bootstrap";
 import REST from "../REST";
 
@@ -28,6 +29,9 @@ class ReadRecipe extends React.Component {
               </Col>
             </Row>
           </Col>
+        </Row>
+        <Row>
+          <ReadRecipeInstructions />
         </Row>
       </Container>
     );
