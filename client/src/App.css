@@ -90,6 +90,20 @@
 	padding: 40px;
 }
 
+.innerContainerUploadPhoto {
+	border: 0.5px solid #6e6d6d;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	padding: 30px;
+	align-items: center;
+}
+.cameraIcon {
+	display: center;
+	justify-content: center;
+	padding: 10px;
+}
 .recipeHeadline {
 	margin-top: 20px;
 	text-align: center;
@@ -164,3 +178,58 @@
 		background-size: 100%;
 	}
 }
+
+.show-recipe {
+	display: inline-block;
+}
+
+
+
+
+
+/*------- Login Page -------*/
+
+.close-modal-button{
+  float:right;
+}
+
+
+
+
+/*----- Footer ------*/
+
+footer .icon{
+  width:30px;
+  height:30px;
+  cursor:pointer;
+}
+
+@media (min-width: 577px) and (max-width: 641px)  {
+  footer .icon{
+    width:26px;
+    height:26px;
+  }
+}
+
+@media (max-width: 576px)  {
+footer .icons .icon{
+    display:block;
+    padding-top:5px;
+  }
+}
+
+@media (max-width: 322px)  {
+  footer .icons{
+  
+    }
+ footer p{
+      font-size:12px;
+      border:solid orange 2px;
+    }
+  }
+
+
+
+
+
+

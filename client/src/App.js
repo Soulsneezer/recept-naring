@@ -6,6 +6,7 @@ import HomePage from './components/homePage';
 import Recipe from './components/recipe';
 import LogIn from './components/logIn';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './components/footer';
 import './App.css';
 
 
@@ -21,6 +22,7 @@ class App extends Component {
             <Route path="/logIn" component={LogIn} />
             <Route path="/not-found" component={NotFound} />
           </Switch>
+          <Footer/>
         </div>
       </Router>
     );
