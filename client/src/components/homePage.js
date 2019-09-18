@@ -117,6 +117,8 @@ class HomePage extends Component {
           </DropdownButton>
         </div>
 
+        <FoodCardContainer />
+
 
         {this.state.myAlternative === 'Titel'? 
           this.state.recipes.length === 0 ?
