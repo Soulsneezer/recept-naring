@@ -96,17 +96,6 @@ class HomePage extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <div className='search-bar'>
-          <input
-            className='form-control search-input'
-            type='text'
-            placeholder='Sök efter recept här...'
-            aria-label='Sök efter recept här...'
-          />
-        </div>
-        <FoodCardContainer />
-      </React.Fragment>
       <div>
         <div className="search-bar">
           <InputGroup className="search-field">
