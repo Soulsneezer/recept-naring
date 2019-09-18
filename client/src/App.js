@@ -26,7 +26,7 @@ class App extends Component {
             <Route path="/read-recipe/:id" component={ReadRecipe} />
             <Route path="/not-found" component={NotFound} />
           </Switch>
-          <Footer/>
+          <Footer />
         </div>
       </Router>
     );
