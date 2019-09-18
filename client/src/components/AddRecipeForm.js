@@ -1,6 +1,7 @@
 import React from 'react';
-import { Form, Col, Row } from 'react-bootstrap';
+import { Container, Form, Col, Row } from 'react-bootstrap';
 import CategoryChoices from './CategoryChoices';
+import FileUpload from './FileUpload';
 import AddRecipeIngredientRow from './AddRecipeIngredientRow';
 import AddRecipeRowButton from './AddRecipeRowButton';
 import AddRecipeStepByStep from './AddRecipeStepByStep';
@@ -13,7 +14,7 @@ class AddRecipeForm extends React.Component {
     // Create three rows initially
     let ingredientRows = [];
     for (let i = 0; i < 3; i++) {
-      ingredientRows.push(<AddRecipeIngredientRow key={i} index={i} deleteMe={e => this.deleteRecipeRow(e)}/>)
+      ingredientRows.push(<AddRecipeIngredientRow key={i} index={i} deleteMe={e => this.deleteRecipeRow(e)} />)
     }
     this.state = {
       ingredientRows: ingredientRows,
@@ -23,10 +24,12 @@ class AddRecipeForm extends React.Component {
 
   addRecipeRow() {
     let i = this.state.ingredientRows.length
-    this.setState({ ingredientRows: [
-      ...this.state.ingredientRows,
-      <AddRecipeIngredientRow key={i} index={i} deleteMe={e => this.deleteRecipeRow(e)}/>
-    ]});
+    this.setState({
+      ingredientRows: [
+        ...this.state.ingredientRows,
+        <AddRecipeIngredientRow key={i} index={i} deleteMe={e => this.deleteRecipeRow(e)} />
+      ]
+    });
   }
 
   deleteRecipeRow(key) {
@@ -36,7 +39,7 @@ class AddRecipeForm extends React.Component {
     console.log('l',modified.length)
     */
 
-    this.setState({ingredientRows: this.state.ingredientRows.filter((item, i) => i !== key)});
+    this.setState({ ingredientRows: this.state.ingredientRows.filter((item, i) => i !== key) });
     //this.setState({ numberOfIngredientsRow: this.state.numberOfIngredientsRow - i });
   }
 
@@ -58,43 +61,40 @@ class AddRecipeForm extends React.Component {
     }
 
     return (
-      <React.Fragment>
+      <Container className="add-recipe m-3" style={{ width: 'auto' }} >
         <Row>
-          <Col lg={3}>
-            <div>ladda upp en bild här</div>
+          <Col lg={3} md={12} sm={12}>
+            <FileUpload />
           </Col>
-          <Col lg={9}>
+          <Col lg={9} md={12} sm={12}>
             <Form>
-              <Row className="mb-3">
-                <Col lg={5} md={11} sm={11} className="mb-3 pl-3">
+              <Row className="recipe-name-input">
+                <Col lg={4}  md={12} sm={12} className="m-3 pl-3">
                   <Form.Control input="true" className="recipe-name" placeholder="Vad heter ditt recept?" />
                 </Col>
-                <Col className="mb-3" lg={6} md={11} sm={11}>
+                <Col className="my-3" lg={4} md={12} sm={6}>
                   <CategoryChoices />
+                </Col>
+                <Col className="my-3" lg={4} md={12} sm={6}>
                   <CategoryChoices />
                 </Col>
               </Row>
 
-              <Row className="mb-3">
-                <Col lg={2} md={2} sm={1} className="clock pl-3">
+              <Row className="cooking-time-row my-3">
+
+                <Col lg={9} md={12} sm={12} className="pl-1">
                   <MdQueryBuilder />
-                </Col>
-                <Col lg={8} md={9} sm={10} className="pl-1">
                   <Form.Control input="true" className="recipe-name pl-3" placeholder="Tillagningstiden i minuter..." />
                 </Col>
               </Row>
-
               {this.state.ingredientRows}
               <AddRecipeRowButton onClick={e => this.addRecipeRow()} />
-
-
               {stepByStepRows}
               <AddRecipeStepByStepAddRow onClick={e => this.addStepByStepRow()} />
-
             </Form>
           </Col>
         </Row>
-      </React.Fragment>
+      </Container>
     )
   }
 }

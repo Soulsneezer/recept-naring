@@ -4,13 +4,12 @@ import { MdAddCircleOutline } from 'react-icons/md';
 
 const AddRecipeStepByStepRowButton = (props) => {
   return (
-    <Row className="mb-3" onClick={props.onClick}>
+    <Row className="add-row-button mb-3" >
       <Col lg={{ offset: 10 }}>
-        <MdAddCircleOutline className="add-button"/>
+        <MdAddCircleOutline onClick={props.onClick}/>
       </Col>
     </Row>
   );
-
 }
 
 export default AddRecipeStepByStepRowButton;

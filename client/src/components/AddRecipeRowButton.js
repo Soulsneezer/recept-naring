@@ -4,9 +4,9 @@ import { Row, Col } from 'react-bootstrap';
 
 const AddRecipeRowButton = (props) => {
   return (
-    <Row className="add-button mb-3" onClick={props.onClick}>
+    <Row className="add-row-button mb-3">
       <Col md={{ offset: 10 }} >
-        <MdAddCircleOutline />
+        <MdAddCircleOutline onClick={props.onClick} />
       </Col>
     </Row>
   );

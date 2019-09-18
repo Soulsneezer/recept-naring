@@ -1,235 +1,218 @@
 .App {
-	text-align: center;
+  text-align: center;
 }
 .navbar {
-	background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .logo {
-	padding-right: 5px;
+  padding-right: 5px;
 }
 
 .logoHeader {
-	font-family: 'Parisienne', cursive;
-	font-size: 20px;
-	font-weight: bold;
+  font-family: "Parisienne", cursive;
+  font-size: 20px;
+  font-weight: bold;
 }
 .recipeButton {
-	margin-right: 1rem;
-	border-radius: 20px;
-	padding: 7px 10px;
-	font-size: 20px;
+  margin-right: 1rem;
+  border-radius: 20px;
+  padding: 7px 10px;
+  font-size: 20px;
 }
 .logInButton {
-	padding: 7px 35px;
-	font-size: 20px;
-	border-radius: 20px;
+  padding: 7px 35px;
+  font-size: 20px;
+  border-radius: 20px;
 }
 .navButtons {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remove-row-button,
+.dropdown-button {
+  display: inline-flex;
 }
 
 .category-dropdown {
-	margin-right: 1rem;
-	border-radius: 20px;
-	padding: 7px 10px;
-	font-size: 10px;
-	cursor: pointer;
+  margin-right: 1rem;
+  border-radius: 20px;
+  padding: 7px 10px;
+  font-size: 9px;
+  cursor: pointer;
 }
-
-
-.add-button {
-	cursor: copy;
-}
-
-.remove-button {
-	cursor: copy;
-}
-
-
+.amount-input,
 .recipe-name,
 .list-group-item:last-child {
-	border-radius: 30px;
-	font-size: 10px;
+  border-radius: 30px;
+	font-size: 9px;
 	cursor: text;
 }
 
 .dropdown-menu {
-	min-width: 30px;
-	cursor: pointer;
+  min-width: 30px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 400px) {
-	.recipeButton {
-		padding: 2px 10px;
-		font-size: 15px;
-	}
-	.logInButton {
-		padding: 2px 15px;
-		font-size: 15px;
-	}
-	.personLogo {
-		height: 18px;
-		width: 18px;
-	}
+  .recipeButton {
+    padding: 2px 10px;
+    font-size: 15px;
+  }
+  .logInButton {
+    padding: 2px 15px;
+    font-size: 15px;
+  }
+  .personLogo {
+    height: 18px;
+    width: 18px;
+  }
 }
 
 .foodCardContainer {
-	width: 90%;
-	margin: auto;
-	/* margin-top: 2px; */
-	border: 0.1px solid #707070;
-	-webkit-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
-	-moz-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
-	box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+  width: 90%;
+  margin: auto;
+  /* margin-top: 2px; */
+  border: 0.1px solid #707070;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+  box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
 }
 
 .innerFoodCardContainer {
-	padding: 40px;
+  padding: 40px;
 }
 
 .innerContainerUploadPhoto {
-	border: 0.5px solid #6e6d6d;
-	width: 90%;
-	margin: auto;
-	display: flex;
-	justify-content: center;
-	padding: 30px;
-	align-items: center;
+  border: 0.5px solid #6e6d6d;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  align-items: center;
 }
 .cameraIcon {
-	display: center;
-	justify-content: center;
-	padding: 10px;
+  display: center;
+  justify-content: center;
+  padding: 10px;
 }
 .recipeHeadline {
-	margin-top: 20px;
-	text-align: center;
-	margin-right: 15px;
+  margin-top: 20px;
+  text-align: center;
+  margin-right: 15px;
 }
 
 .recipeHeadlineH2 {
-	font-family: 'Parisienne', cursive;
-	font-size: 50px;
-	font-weight: bold;
-	text-align: center;
+  font-family: "Parisienne", cursive;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
 }
 @media only screen and (max-width: 400px) {
-	.recipeHeadlineH2 {
-		font-size: 30px;
-		text-align: center;
-	}
+  .recipeHeadlineH2 {
+    font-size: 30px;
+    text-align: center;
+  }
 }
 
 .search-bar {
-	background: url(./images/background-img1.jpg) no-repeat;
-	height: 30vh;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/* background: url(./images/background-img1.jpg) no-repeat;  */
-	height: 30vh;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  background: url(./images/background-img1.jpg) no-repeat;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: url(./images/background-img1.jpg) no-repeat;  */
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .search-input {
-	z-index: 1;
-	width: 40%;
-	height: 55px;
-	border-radius: 30px;
-	font-size: 20px;
-	padding-left: 60px;
-	backdrop-filter: blur(3px);
-	border: 1px solid rgb(148, 148, 148);
+  z-index: 1;
+  width: 40%;
+  height: 55px;
+  border-radius: 30px;
+  font-size: 20px;
+  padding-left: 60px;
+  backdrop-filter: blur(3px);
+  border: 1px solid rgb(148, 148, 148);
 
-	background: url(./images/magnifying-glass.svg) rgba(255, 255, 255, 0.7);
-	background-repeat: no-repeat;
-	background-size: 30px;
-	background-position-y: center;
-	background-position-x: 10px;
+  background: url(./images/magnifying-glass.svg) rgba(255, 255, 255, 0.7);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-y: center;
+  background-position-x: 10px;
 }
 @media only screen and (max-width: 920px) {
-	.search-input {
-		height: 45px;
-	}
-	.search-bar {
-		height: 20vh;
-		background-size: 100%;
-	}
+  .search-input {
+    height: 45px;
+  }
+  .search-bar {
+    height: 20vh;
+    background-size: 100%;
+  }
 }
 @media only screen and (max-width: 760px) {
-	.search-input {
-		height: 35px;
-		padding-left: 40px;
-		width: 60%;
-		font-size: 16px;
+  .search-input {
+    height: 35px;
+    padding-left: 40px;
+    width: 60%;
+    font-size: 16px;
 
-		background-size: 20px;
-		border: 1px solid rgb(148, 148, 148);
-	}
-	.search-bar {
-		background: url(./images/background-img1.jpg) no-repeat right;
-		height: 15vh;
-		background-size: 100%;
-	}
+    background-size: 20px;
+    border: 1px solid rgb(148, 148, 148);
+  }
+  .search-bar {
+    background: url(./images/background-img1.jpg) no-repeat right;
+    height: 15vh;
+    background-size: 100%;
+  }
 }
 
 .show-recipe {
-	display: inline-block;
+  display: inline-block;
 }
-
-
-
-
 
 /*------- Login Page -------*/
 
-.close-modal-button{
-  float:right;
+.close-modal-button {
+  float: right;
 }
-
-
-
 
 /*----- Footer ------*/
 
-footer .icon{
-  width:30px;
-  height:30px;
-  cursor:pointer;
+footer .icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
-@media (min-width: 577px) and (max-width: 641px)  {
-  footer .icon{
-    width:26px;
-    height:26px;
+@media (min-width: 577px) and (max-width: 641px) {
+  footer .icon {
+    width: 26px;
+    height: 26px;
   }
 }
 
-@media (max-width: 576px)  {
-footer .icons .icon{
-    display:block;
-    padding-top:5px;
+@media (max-width: 576px) {
+  footer .icons .icon {
+    display: block;
+    padding-top: 5px;
   }
 }
 
-@media (max-width: 322px)  {
-  footer .icons{
-  
-    }
- footer p{
-      font-size:12px;
-      border:solid orange 2px;
-    }
+@media (max-width: 322px) {
+  footer .icons {
+    display: block;
+    padding-top: 5px;
   }
-
-
-
-
-
-
+  footer p {
+    font-size: 12px;
+    border: solid orange 2px;
+  }
+}

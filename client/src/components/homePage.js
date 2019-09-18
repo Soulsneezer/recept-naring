@@ -131,9 +131,6 @@ class HomePage extends Component {
 					<HomePageRecipeHeadline />
 				</div>
 				<FoodCardContainer />
-				<div>
-					<FileUpload />
-				</div>
 			</React.Fragment>
 		);
 	}

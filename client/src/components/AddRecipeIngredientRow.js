@@ -7,16 +7,18 @@ const AddRecipeIngredientRow = (props) => {
   return (
     <React.Fragment>
       <Row className="mb-3">
-        <Col lg={2} md={3} sm={3}>
-          <Form.Control input="true" className="recipe-name pl-3" placeholder="mängden" />
+        <Col lg={2} md={4} sm={2}>
+          <Form.Control className="recipe-name pl-3 my-2 w-25" input="true" placeholder="mängden" />
         </Col>
         <Col lg={2} md={2} sm={2}>
           <CategoryChoices />
         </Col>
-        <Col lg={6} md={5} sm={5}>
-          <Form.Control input="true" className="recipe-name pl-3" placeholder="ingrediensen" />
+        <Col lg={5} md={6} sm={7}>
+          <Form.Control className="recipe-name pl-3 my-2" input="true" placeholder="ingrediensen" />
         </Col>
-        <RemoveRowButton onClick={e => props.deleteMe(props.index)} lg={2} md={2} sm={2} className="ml-0"/>
+        <Col>
+          <RemoveRowButton lg={2} md={2} sm={1} className="my-2" onClick={e => props.deleteMe(props.index)} />
+        </Col>
       </Row>
     </React.Fragment>
   );

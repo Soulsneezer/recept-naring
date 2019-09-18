@@ -5,7 +5,7 @@ class CategoryChoices extends React.Component {
 
   render() {
     return (
-      <Dropdown className="d-inline-block">
+      <Dropdown className="dropdown-button">
         <Dropdown.Toggle variant="outline-secondary" className="category-dropdown">
           Kategorier
       </Dropdown.Toggle>
