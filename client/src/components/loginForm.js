@@ -85,13 +85,13 @@ class LogInForm extends React.Component{
                         <div className="username-error-box" style={{display: this.state.usernameErrorBox}}>
                             <p style={{color:'red',fontSize:'11px'}}>
                                 Användarnamn får bara innehålla bokstäver och siffror, 
-                                samt måste vara minst sex tecken långt !
+                                samt måste vara minst 6 tecken långt !
                             </p>
                         </div>
 
                         <label>Lösenord:</label>
                         <input
-                            type="text"
+                            type="password"
                             className="form-control"
                             onChange={this.onChangePassword.bind(this)}
                         >
@@ -99,7 +99,7 @@ class LogInForm extends React.Component{
                         <div className="password-error-box" style={{display: this.state.passwordErrorBox}}>
                             <p style={{color:'red',fontSize:'11px'}}>
                                 Lösenord får bara innehålla bokstäver och siffror, 
-                                samt måste vara minst sex tecken långt !
+                                samt måste vara minst 6 tecken långt !
                             </p>
                         </div>
 
