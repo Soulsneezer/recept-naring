@@ -4,12 +4,14 @@ import NavBar from "./components/navBar";
 import NotFound from "./components/notFound";
 import HomePage from './components/homePage';
 import Recipe from './components/recipe';
+import ReadRecipe from './components/readRecipe'
 import LogIn from './components/logIn';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/footer';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { read } from "fs";
 
 class App extends Component {
   render() {
@@ -18,9 +20,11 @@ class App extends Component {
         <div className='App'>
           <NavBar />
           <Switch>
-            <Route path='/' exact component={HomePage} />
-            <Route path='/not-found' component={NotFound} />
-            <Route path='/read-recipe' component={ReadRecipe} />
+            <Route path="/" exact component={HomePage} />
+            <Route path="/recipe" component={Recipe} />
+            <Route path="/logIn" component={LogIn} />
+            <Route path="/read-recipe/:id" component={ReadRecipe} />
+            <Route path="/not-found" component={NotFound} />
           </Switch>
           <Footer/>
         </div>

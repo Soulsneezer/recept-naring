@@ -5,6 +5,7 @@ class ReadRecipeNutrition extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    Object.assign(this, props);
   }
   render() {
     let name = this.props.nutrientName;
@@ -18,7 +19,7 @@ class ReadRecipeNutrition extends React.Component {
 
     return (
       <Card className='m-t-4' bg='light' style={{ width: "7rem" }}>
-        <Card.Header>{name}</Card.Header>
+        <Card.Header>{this.name}</Card.Header>
         <Card.Body>
           {name !== "Fat" ? (
             <Card.Title>

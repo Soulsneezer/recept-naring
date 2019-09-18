@@ -3,7 +3,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 let uploadsSchema = new Schema({
-    url: { type: String, required: true },
+    "url": String
 
 })
-module.exports = mongoose.model('Uploads', uploadsSchema);
+module.exports = mongoose.model('Upload', uploadsSchema);
