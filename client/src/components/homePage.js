@@ -109,6 +109,7 @@ class HomePage extends Component {
     return (
       <div>
         <div className='search-bar'>
+      	<HomePageBackground />
           <InputGroup className='search-field'>
             <FormControl
               className='search-input'

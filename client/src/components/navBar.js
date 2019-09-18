@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Navbar, Nav, Button, Row, Col } from 'react-bootstrap';
+import { Navbar, Nav, Row, Col } from 'react-bootstrap';
 import Logo from '../images/logo.png';
-import LogInUser from '../images/user.png';
 import AddRecipe from './AddRecipe';
 
 import LogIn from './logIn.js';
@@ -15,7 +14,7 @@ class NavBar extends Component {
         <Navbar bg="light" expand="lg">
           <Row className="logo">
             <Col xs={6} md={4}>
-              <img src={Logo} height="55" width="55" alt="Nav-Logo" />
+              <img src={Logo} height="60" width="60" alt="Nav-Logo" />
             </Col>
           </Row>
           <Navbar.Brand className='logoHeader' href="/">Recept & Näring</Navbar.Brand>
@@ -26,7 +25,7 @@ class NavBar extends Component {
               <div className="navButtons">
 
                 <AddRecipe />
-      
+
                 <LogIn />
               </div>
             </Nav>
