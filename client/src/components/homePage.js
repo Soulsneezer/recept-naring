@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {InputGroup, FormControl, Button, Container, Row, Col, Card, DropdownButton, Dropdown, ButtonGroup} from 'react-bootstrap';
+import {InputGroup, FormControl, Button, Container, Row, Col, Card, DropdownButton, Dropdown} from 'react-bootstrap';
 import REST from "../REST.js";
 
 
@@ -13,7 +13,7 @@ class HomePage extends Component {
     this.searchHandler = this.searchHandler.bind(this);
     this.showMoreRecipes = this.showMoreRecipes.bind(this);
     this.showMoreRecipeCategorys = this.showMoreRecipeCategorys.bind(this);
-    this.dropDownAlternative = this.dropDownAlternative.bind(this);
+    this.selectDropdownAlternative = this.selectDropdownAlternative.bind(this);
 
     this.state = {
       recipes: [],
@@ -35,22 +35,25 @@ class HomePage extends Component {
         countRecipe: 4,
         recipesCategory: [],
         countCategory: 4
-      });    
+      });
     }
     this.setState({
       searchInput: e.target.value
     })
 
-    let recipes = await Recipe.find('/' + searchInput);
-    let recipesLength = recipes.length;
-
-    let recipesCategory = await Recipeswiththiscategory.find('/' + searchInput);
-    let recipesCategorysLength = recipesCategory.length;
-
-    recipesCategory = recipesCategory.slice(0, this.state.countCategory)
-    recipes = recipes.slice(0, this.state.countRecipe);
-
-    if(searchInput){
+    if(searchInput == 0) {
+      return;
+    }
+    if(searchInput) {
+      let recipes = await Recipe.find(searchInput);
+      let recipesLength = recipes.length;
+  
+      let recipesCategory = await Recipeswiththiscategory.find(searchInput);
+      let recipesCategorysLength = recipesCategory.length;
+  
+      recipesCategory = recipesCategory.slice(0, this.state.countCategory)
+      recipes = recipes.slice(0, this.state.countRecipe);
+      
       this.setState({
         recipes: recipes,
         recipesLength: recipesLength,
@@ -62,7 +65,7 @@ class HomePage extends Component {
 
   async showMoreRecipes() {
     this.state.countRecipe += 4;
-    let recipes = await Recipe.find('/' + this.state.searchInput);
+    let recipes = await Recipe.find(this.state.searchInput);
     recipes = recipes.splice(0, this.state.countRecipe);
 
     this.setState({
@@ -73,7 +76,7 @@ class HomePage extends Component {
 
   async showMoreRecipeCategorys() {
     this.state.countCategory += 4;
-    let recipesCategory = await Recipeswiththiscategory.find('/' + this.state.searchInput);
+    let recipesCategory = await Recipeswiththiscategory.find(this.state.searchInput);
     recipesCategory = recipesCategory.splice(0, this.state.countCategory);
 
     this.setState({
@@ -82,7 +85,7 @@ class HomePage extends Component {
     })
   }
 
-  dropDownAlternative(e) {
+  selectDropdownAlternative(e) {
     let myAlternative = e.target.id;
     this.setState({
       myAlternative: myAlternative
@@ -103,10 +106,10 @@ class HomePage extends Component {
               />
           </InputGroup>
           <DropdownButton title={this.state.myAlternative} className="dropdown-btn" alignRight>
-            <Dropdown.Item id="Titel" onClick={this.dropDownAlternative}>
+            <Dropdown.Item id="Titel" onClick={this.selectDropdownAlternative}>
               Titel
             </Dropdown.Item>
-            <Dropdown.Item id="Kategori" onClick={this.dropDownAlternative}>
+            <Dropdown.Item id="Kategori" onClick={this.selectDropdownAlternative}>
               Kategori
             </Dropdown.Item>
           </DropdownButton>
@@ -140,7 +143,7 @@ class HomePage extends Component {
                       <h5 className="card-p">{recipe.name}</h5>
                     </Card.Title>
                   <Button className="card-button" href={"/recipe/" + recipe._id}>Gå till recept</Button>
-                  </div>           
+                  </div>
                 </div>
               ))}
             </Row>

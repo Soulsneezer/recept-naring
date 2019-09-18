@@ -45,19 +45,11 @@ function startWebServer() {
   });
 
   app.get('/json/recipeswiththiscategorys/:partialCategory', async (req, res) => {
-    let recipes = await Recipe.find();
     const regExpression = new RegExp(req.params.partialCategory, "i");
-    let recipesWithThisCategory = [];
-
-    for(recipe of recipes) {
-      for(let category of recipe.category){
-        if(category.match(regExpression)){
-          recipesWithThisCategory.push(recipe);
-          break;
-        }
-      }
-    };
-    res.json(recipesWithThisCategory);
+    let recipes = await Recipe.find({ category: regExpression }).catch((err) => {
+      res.json({ error: err});
+    });
+    res.json(recipes);
   });
 
   // Start the web server
