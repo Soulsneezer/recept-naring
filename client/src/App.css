@@ -1,31 +1,12 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 .navbar {
-  background-color: #f5f5f5;
+	background-color: #f5f5f5;
 }
 
 .logo {
-  padding-right: 5px;
-}
-.dropdown-menu {
-  width: 6px;
-}
-.dropdown-item {
-  padding: 3px;
-}
-#dropdown-item-button {
-  margin-right: 1rem;
-  border-radius: 20px;
-  border-color: black;
-  padding: 7px 10px;
-  font-size: 20px;
-}
-@media only screen and (max-width: 400px) {
-  #dropdown-item-button {
-    padding: 2px 10px;
-    font-size: 15px;
-  }
+	padding-right: 5px;
 }
 
 .logoHeader {
@@ -34,37 +15,20 @@
 	font-weight: bold;
 }
 .recipeButton {
-  margin-right: 1rem;
-  border-radius: 20px;
-  padding: 7px 10px;
-  font-size: 20px;
+	margin-right: 1rem;
+	border-radius: 20px;
+	padding: 7px 10px;
+	font-size: 20px;
 }
 .logInButton {
-  padding: 7px 35px;
-  font-size: 20px;
-  border-radius: 20px;
+	padding: 7px 35px;
+	font-size: 20px;
+	border-radius: 20px;
 }
 .navButtons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.foodCardContainer {
-  width: 80%;
-  margin: auto;
-  margin-top: 50px;
-  border: 1px solid grey;
-}
-.btn-primary {
-  background-color: #5cb85c;
-  margin-bottom: -20px;
-  color: #080808;
-  border-radius: 32px;
-  display: inline-block;
-}
-
-.btn-primary:hover {
-  background-color: grey;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .personLogo {
 	height: 22px;
@@ -72,9 +36,6 @@
 	margin-right: 10px;
 }
 
-.innerFoodCardContainer {
-  padding: 50px;
-}
 @media only screen and (max-width: 400px) {
 	.recipeButton {
 		padding: 2px 10px;
@@ -94,21 +55,20 @@
 		font-size: 20px;
 		font-weight: bold;
 	}
-
 }
 
 .foodCardContainer {
-  width: 90%;
-  margin: auto;
-  /* margin-top: 2px; */
-  border: 0.1px solid #707070;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
-  box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+	width: 90%;
+	margin: auto;
+	/* margin-top: 2px; */
+	border: 0.1px solid #707070;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+	box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
 }
 
 .innerFoodCardContainer {
-  padding: 40px;
+	padding: 40px;
 }
 
 .innerContainerUploadPhoto {
@@ -126,22 +86,22 @@
 	padding: 10px;
 }
 .recipeHeadline {
-  margin-top: 20px;
-  text-align: center;
-  margin-right: 15px;
+	margin-top: 20px;
+	text-align: center;
+	margin-right: 15px;
 }
 
 .recipeHeadlineH2 {
-  font-family: "Parisienne", cursive;
-  font-size: 50px;
-  font-weight: bold;
-  text-align: center;
+	font-family: 'Parisienne', cursive;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
 }
 @media only screen and (max-width: 400px) {
-  .recipeHeadlineH2 {
-    font-size: 30px;
-    text-align: center;
-  }
+	.recipeHeadlineH2 {
+		font-size: 30px;
+		text-align: center;
+	}
 }
 
 .search-bar {
@@ -166,22 +126,22 @@
 	transition: 2s;
 }
 .search-input {
-  z-index: 1;
-  height: 55px;
-  border-radius: 30px;
-  font-size: 20px;
-  padding-left: 60px;
-  backdrop-filter: blur(3px);
-  border: 1px solid rgb(148, 148, 148);
+	z-index: 1;
+	width: 40%;
+	height: 55px;
+	border-radius: 30px;
+	font-size: 20px;
+	padding-left: 60px;
+	backdrop-filter: blur(3px);
+	border: 1px solid rgb(148, 148, 148);
 
-  background: url(./images/magnifying-glass.svg) rgba(255, 255, 255, 0.7);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position-y: center;
-  background-position-x: 10px;
+	background: url(./images/magnifying-glass.svg) rgba(255, 255, 255, 0.7);
+	background-repeat: no-repeat;
+	background-size: 30px;
+	background-position-y: center;
+	background-position-x: 10px;
 }
 @media only screen and (max-width: 920px) {
-
 	.search-input {
 		height: 45px;
 	}
@@ -208,6 +168,7 @@
 		padding-left: 40px;
 		width: 60%;
 		font-size: 16px;
+
 		background-size: 20px;
 		border: 1px solid rgb(148, 148, 148);
 	}
@@ -227,7 +188,6 @@
 		opacity: 2;
 		transition: 2s;
 	}
-
 }
 
 .show-recipe {
@@ -263,99 +223,11 @@ footer .icon {
 }
 
 @media (max-width: 322px) {
-
- footer p{
-      font-size:12px;
-      border:solid orange 2px;
-    }
-  }
-
-.card-button {
-  background-color: rgba(0,0,0,0.8);
-  color: rgb(254,254,254);
-  border-radius: 0px 0px 3px 3px;
-  margin-bottom: 0;
-  border: none;
-  width: 100%;
-  font-size: 20px;
+	/* footer .icons{
+  
+    } */
+	footer p {
+		font-size: 12px;
+		border: solid orange 2px;
+	}
 }
-.card-outer {
-  display: inline-block;
-  width: 250px;
-  margin: 6px;
-
-  animation: fade ease-out 1s;
-  -webkit-animation: fade ease-out 1s;
-  -moz-animation: fade ease-out 1s;
-  -o-animation: fade ease-out 1s;
-  -ms-animation: fade ease-out 1s;
-}
-.card-inner {
-  position: relative;
-}
-.card-title {
-  position: absolute;
-  left: 0;
-  bottom: 50px;
-  color: rgb(0,0,0);
-  background-color: rgba(254,254,254,0.7);
-  width: 100%;
-  font-size: 20px;
-  text-align: bottom;
-  text-align: left;
-  height: 60px;
-}
-.card-img {
-  height: 200px;
-  width: 100%;
-  border-radius: 3px 3px 0px 0px;
-}
-.container-outer {
-  border: 1px solid rgb(200, 200, 200);
-  border-radius: 3px 3px 3px 3px;
-  box-shadow: 0px 5px 8px rgb(200, 200, 200);
-  margin-bottom: 50px;
-  position: relative;
-  margin-top: 3vh; 
-}
-@-webkit-keyframes fade {
-  0% {opacity: 0.2;} 
-  50% {opacity: 1;}
-  100% {opacity:0.2;}
-}
-@-moz-keyframes fade {
-  0% {opacity: 0.2;} 
-  50% {opacity: 1;}
-  100% {opacity:0;}  
-}
-@keyframes fade {
-  0% {opacity: 0.2;} 
-  100% {opacity: 1;}  
-}
-@-o-keyframes fade {
-  0% {opacity: 0.2;} 
-  50% {opacity: 1;}
-  100%{opacity: 0.2;}
-}
-.container-inner {
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: center;
-}
-.card-p {
-  margin-left: 10px;
-}
-.card-h1 {
-  margin-bottom: 20px;
-  margin-top: 10px;
-}
-.show-more-btn {
-  position: absolute;
-  bottom: -5px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-}
-
-
