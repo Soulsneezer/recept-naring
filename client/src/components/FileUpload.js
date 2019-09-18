@@ -1,73 +1,57 @@
-import React, { Component, Fragment, useState } from 'react'
+import React, { Component, Fragment } from 'react'
 import REST from '../REST';
+import { Container } from 'react-bootstrap';
+import Camera from '../images/camera.png';
 
 
-class Upload extends REST {
+class Upload extends REST { }
+
+class FileUpload extends Component {
 
     constructor(props) {
         super(props);
-    }
-}
-
-const FileUpload = () => {
-    const [file, setFile] = useState('');
-    const [filename, setFilename] = useState('Välj en bild');
-    const [uploadedFile, setUploadedFile] = useState({});
-
-    const onChange = e => {
-        setFile(e.target.files[0]);
-        setFilename(e.target.files[0].name);
+        this.state = {
+            selectedFile: null
+        }
     }
 
-    const onSubmit = async e => {
-        e.preventDefault();
-        const formData = new FormData();
-        formData.append('file', file);
+    onChangeHandler = event => {
+        this.setState({
+            selectedFile: event.target.files[0],
+            loaded: 0,
+        });
+    }
 
-
-
-        // try {
-        //     const res = await axios.post('/upload', formData, {
-        //         headers: {
-        //             'Content-Type': 'multipart/form-data'
-        //         }
-        //     });
-
-        // const { fileName, filePath } = res.data;
-        // setUploadedFile({ fileName, filePath });
-
-
-        // } catch (err) {
-        //     if (err.response.status === 500) {
-        //         console.log('Nope! Comp says Nooo');
-        //     } else {
-        //         console.log(err.response.data.msg);
-        //         console.log('bild som skulle laddas upp');
-        //     }
-        // }
+    onClickHandler = async () => {
+        const data = new FormData();
+        data.append('file', this.state.selectedFile);
 
         let addUploads = new Upload({
-            url: "hellothere"
+            url: this.state.selectedFile.name
         });
 
         let uploads = await addUploads.save();
-
         console.log(uploads)
     };
-    return (
-        <Fragment>
-            <form onSubmit={onSubmit}>
-                <div className="custom-file mb-4">
-                    <input type="file" className="custom-file-input" id="customFile" onChange=
-                        {onChange} />
-                    <label className="custom-file-label" htmlFor="customFile">
-                        {filename}
-                    </label>
+    render() {
+        return (
+            <Fragment>
+                <div className="innerContainerUploadPhoto" sm={8} md={8} lg={8}>
+                    <Container style={{ width: 'auto' }}>
+                        <img className="cameraIcon" src={Camera} height="100" width="100" alt="Camera Logo" />
+                        <form>
+                            <div className="custom-file mb-4">
+                                <input type="file" className="custom-file-input" id="customFile" onChange=
+                                    {this.onChangeHandler} />
+                                <label className="custom-file-label" htmlFor="customFile"></label>
+                            </div>
+                            <button type="button" className="btn btn-success btn-block" onClick={this.onClickHandler}>ladda upp</button>
+                        </form>
+                    </Container>
                 </div>
-                <input type="submit" value="Ladda upp" className="btn btn-primary btn-block mt-4" />
-            </form>
-        </Fragment>
-    )
+            </Fragment>
+        )
+    }
 }
 
 export default FileUpload

@@ -5,6 +5,7 @@ class ReadRecipeNutrition extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    Object.assign(this, props);
   }
   render() {
     let name = this.props.nutrientName;

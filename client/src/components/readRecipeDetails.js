@@ -7,6 +7,7 @@ class Recipe extends REST {}
 class ReadRecipeDetails extends Component {
   constructor(props) {
     super(props);
+    Object.assign(this, props);
 
     let fatDetails = () => {
       return {
@@ -25,7 +26,6 @@ class ReadRecipeDetails extends Component {
         Salt: 3
       }
     };
-    this.recipe = {};
     this.getRecipe();
   }
   //componentDidMount() {}
@@ -36,8 +36,7 @@ class ReadRecipeDetails extends Component {
     );
     //console.log(this.recipe);
     // let recipe = await Recipe.find(this.props._id);
-    this.setState({ state: this.state });
-    this.render();
+    console.log(this)
 
     //console.log("this.recipe deatails", this.recipe);
   }
