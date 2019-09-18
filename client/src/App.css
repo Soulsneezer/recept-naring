@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Gayathri&display=swap');
+
 .App {
   text-align: center;
 }
@@ -149,11 +151,25 @@
 .search-field {
   width: 40%;
 }
+.dropdown-btn > .btn-primary {
+  height: 55px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgb(148, 148, 148);
+  border-left: none;
+  border-radius: 0 30px 30px 0;
+  margin-bottom: 0;
+  font-size: 25px;
+  text-align: center;
+  color: rgb(92, 92, 92);
+  width: 160px;
+  backdrop-filter: blur(3px);
+}
 .search-input {
   z-index: 1;
   height: 55px;
-  border-radius: 30px;
-  font-size: 20px;
+  border-radius: 30px 0 0 30px;
+  font-size: 25px;
   padding-left: 60px;
   backdrop-filter: blur(3px);
   border: 1px solid rgb(148, 148, 148);
@@ -172,10 +188,14 @@
     height: 20vh;
     background-size: 100%;
   }
+  .dropdown-btn > .btn-primary {
+    height: 45px;
+    width: 150px;
+  }
 }
 @media only screen and (max-width: 760px) {
   .search-field {
-    width: 60%;
+    width: 50%;
   }
   .search-input {
     height: 35px;
@@ -190,67 +210,38 @@
     height: 15vh;
     background-size: 100%;
   }
+  .dropdown-btn > .btn-primary {
+    height: 35px;
+    font-size: 16px;
+  }
 }
 .readRecipeImg {
   width: 100%;
   height: 80vh;
 }
-
-.show-recipe {
-	display: inline-block;
-}
-
-
-
-
-
-/*------- Login Page -------*/
-
-.close-modal-button{
-  float:right;
-}
-
-
-
-
-/*----- Footer ------*/
-
-footer .icon{
-  width:30px;
-  height:30px;
-  cursor:pointer;
-}
-
-@media (min-width: 577px) and (max-width: 641px)  {
-  footer .icon{
-    width:26px;
-    height:26px;
+@media only screen and (max-width: 400px) {
+	.recipeButton {
+		padding: 2px 10px;
+		font-size: 15px;
+	}
+	.logInButton {
+		padding: 2px 15px;
+		font-size: 15px;
+	}
+	.personLogo {
+		height: 18px;
+		width: 18px;
+  }
+  .container-outer {
+    margin-top: 0!important;
+  }
+  .dropdown-btn > .btn-primary {
+    width: 110px;
+  }
+  .card-h1 {
+    font-size: 32px;
   }
 }
-
-@media (max-width: 576px)  {
-footer .icons .icon{
-    display:block;
-    padding-top:5px;
-  }
-}
-
-@media (max-width: 322px)  {
-  footer .icons{
-  
-    }
- footer p{
-      font-size:12px;
-      border:solid orange 2px;
-    }
-  }
-
-
-
-
-
-
-
 .card-button {
   background-color: rgba(0,0,0,0.8);
   color: rgb(254,254,254);
@@ -338,4 +329,51 @@ footer .icons .icon{
   left: 0;
   right: 0;
 }
+.show-recipe {
+	display: inline-block;
+}
 
+
+
+
+
+/*------- Login Page -------*/
+
+.close-modal-button{
+  float:right;
+}
+
+
+
+
+/*----- Footer ------*/
+
+footer .icon{
+  width:30px;
+  height:30px;
+  cursor:pointer;
+}
+
+@media (min-width: 577px) and (max-width: 641px)  {
+  footer .icon{
+    width:26px;
+    height:26px;
+  }
+}
+
+@media (max-width: 576px)  {
+footer .icons .icon{
+    display:block;
+    padding-top:5px;
+  }
+}
+
+@media (max-width: 322px)  {
+  footer .icons{
+  
+    }
+ footer p{
+      font-size:12px;
+      border:solid orange 2px;
+    }
+  }
