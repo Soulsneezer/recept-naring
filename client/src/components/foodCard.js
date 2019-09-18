@@ -1,27 +1,34 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import { Card, } from 'react-bootstrap';
+import { Card, Row, Col, Button } from 'react-bootstrap';
 
 
 export default class FoodCard extends Component {
   constructor(props) {
     super(props);
     Object.assign(this, props);
+    this.hej()
     this.state = {};
+  }
+  hej(){
+    console.log(this)
   }
 
   render() {
     return (
-        <Card style={{ width: '15rem' }}>
-            <Card.Img variant="top" src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" />
-            <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
-                </Card.Text>
-            </Card.Body>
-        </Card>
+      <Row className="flex">
+        <Col sm={4} md={7} lg={6} xl={6}>
+          <div className="card-outer special"> 
+                  <div className="card-inner">
+                    <img className="card-img" src={require("../images/"+ this.img)} alt={"En bild på " + this.name} />
+                    <Card.Title className="card-title">
+                      <h5 className="card-p">{this.name}</h5>
+                    </Card.Title>
+                  <Button className="card-button" href={"/read-recipe/" + this._id}>Gå till recept</Button>
+                  </div>           
+                </div>
+        </Col>
+      </Row>
     );
   }
 }

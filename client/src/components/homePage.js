@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import {InputGroup, FormControl, Button, Container, Row, Col, Card, DropdownButton, Dropdown} from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.css";
+import FoodCardContainer from "./foodCardContainer.js";
 import REST from "../REST.js";
 
 
@@ -94,6 +96,17 @@ class HomePage extends Component {
 
   render() {
     return (
+      <React.Fragment>
+        <div className='search-bar'>
+          <input
+            className='form-control search-input'
+            type='text'
+            placeholder='Sök efter recept här...'
+            aria-label='Sök efter recept här...'
+          />
+        </div>
+        <FoodCardContainer />
+      </React.Fragment>
       <div>
         <div className="search-bar">
           <InputGroup className="search-field">

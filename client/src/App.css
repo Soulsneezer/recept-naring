@@ -1,58 +1,147 @@
 @import url('https://fonts.googleapis.com/css?family=Gayathri&display=swap');
 
 .App {
-	text-align: center;
+  text-align: center;
 }
 .navbar {
-	background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .logo {
-	padding-right: 5px;
+  padding-right: 5px;
+}
+.dropdown-menu {
+  width: 6px;
+}
+.dropdown-item {
+  padding: 3px;
+}
+#dropdown-item-button {
+  margin-right: 1rem;
+  border-radius: 20px;
+  border-color: black;
+  padding: 7px 10px;
+  font-size: 20px;
+}
+@media only screen and (max-width: 400px) {
+  #dropdown-item-button {
+    padding: 2px 10px;
+    font-size: 15px;
+  }
 }
 
 .logoHeader {
-	font-family: 'Parisienne', cursive;
-	font-size: 20px;
-	font-weight: bold;
+  font-family: "Parisienne", cursive;
+  font-size: 20px;
+  font-weight: bold;
 }
 .recipeButton {
-	margin-right: 1rem;
-	border-radius: 20px;
-	padding: 7px 10px;
-	font-size: 20px;
+  margin-right: 1rem;
+  border-radius: 20px;
+  padding: 7px 10px;
+  font-size: 20px;
 }
 .logInButton {
-	padding: 7px 35px;
-	font-size: 20px;
-	border-radius: 20px;
+  padding: 7px 35px;
+  font-size: 20px;
+  border-radius: 20px;
 }
 .navButtons {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.foodCardContainer{
+.foodCardContainer {
   width: 80%;
   margin: auto;
   margin-top: 50px;
   border: 1px solid grey;
 }
 .btn-primary {
-  background-color: #5CB85C;
-  margin-bottom:-20px;
-  color:#080808;
-  border-radius:32px;
+  background-color: #5cb85c;
+  margin-bottom: -20px;
+  color: #080808;
+  border-radius: 32px;
   display: inline-block;
 }
 
-.btn-primary:hover { background-color: grey }
+.btn-primary:hover {
+  background-color: grey;
+}
 
-.innerFoodCardContainer{
+.innerFoodCardContainer {
   padding: 50px;
 }
+@media only screen and (max-width: 400px) {
+  .recipeButton {
+    padding: 2px 10px;
+    font-size: 15px;
+  }
+  .logInButton {
+    padding: 2px 15px;
+    font-size: 15px;
+  }
+  .personLogo {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+.foodCardContainer {
+  width: 90%;
+  margin: auto;
+  /* margin-top: 2px; */
+  border: 0.1px solid #707070;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+  box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+}
+
+.innerFoodCardContainer {
+  padding: 40px;
+}
+
+.innerContainerUploadPhoto {
+	border: 0.5px solid #6e6d6d;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	padding: 30px;
+	align-items: center;
+}
+.cameraIcon {
+	display: center;
+	justify-content: center;
+	padding: 10px;
+}
+.recipeHeadline {
+  margin-top: 20px;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.recipeHeadlineH2 {
+  font-family: "Parisienne", cursive;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+@media only screen and (max-width: 400px) {
+  .recipeHeadlineH2 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
 .search-bar {
   background: url(./images/background-img1.jpg) no-repeat;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: url(./images/background-img1.jpg) no-repeat;  */
   height: 30vh;
   width: 100%;
   display: flex;
@@ -84,8 +173,8 @@
   padding-left: 60px;
   backdrop-filter: blur(3px);
   border: 1px solid rgb(148, 148, 148);
-  
-  background: url(./images/magnifying-glass.svg) rgba(255, 255, 255,0.7);
+
+  background: url(./images/magnifying-glass.svg) rgba(255, 255, 255, 0.7);
   background-repeat: no-repeat;
   background-size: 30px;
   background-position-y: center;
@@ -113,7 +202,7 @@
     padding-left: 40px;
     font-size: 16px;
 
-    background-size:20px;
+    background-size: 20px;
     border: 1px solid rgb(148, 148, 148);
   }
   .search-bar {
@@ -125,6 +214,10 @@
     height: 35px;
     font-size: 16px;
   }
+}
+.readRecipeImg {
+  width: 100%;
+  height: 80vh;
 }
 @media only screen and (max-width: 400px) {
 	.recipeButton {
@@ -236,5 +329,51 @@
   left: 0;
   right: 0;
 }
+.show-recipe {
+	display: inline-block;
+}
 
 
+
+
+
+/*------- Login Page -------*/
+
+.close-modal-button{
+  float:right;
+}
+
+
+
+
+/*----- Footer ------*/
+
+footer .icon{
+  width:30px;
+  height:30px;
+  cursor:pointer;
+}
+
+@media (min-width: 577px) and (max-width: 641px)  {
+  footer .icon{
+    width:26px;
+    height:26px;
+  }
+}
+
+@media (max-width: 576px)  {
+footer .icons .icon{
+    display:block;
+    padding-top:5px;
+  }
+}
+
+@media (max-width: 322px)  {
+  footer .icons{
+  
+    }
+ footer p{
+      font-size:12px;
+      border:solid orange 2px;
+    }
+  }
