@@ -189,12 +189,8 @@ footer .icons .icon{
 }
 
 @media (max-width: 322px)  {
-  footer .icons{
-  
-    }
  footer p{
       font-size:12px;
-      border:solid orange 2px;
     }
   }
 
