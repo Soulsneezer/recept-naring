@@ -4,6 +4,11 @@ import FoodCardContainer from "./foodCardContainer.js"
 import REST from "../REST.js"
 import HomePageRecipeHeadline from "./homePageRecipeHeadline";
 import FileUpload from './FileUpload';
+import HomePageBackground from './homePageBackground';
+
+
+
+
 
 class Recipe extends REST { }
 class HomePage extends Component {
@@ -11,32 +16,9 @@ class HomePage extends Component {
 	constructor(props) {
 		super(props);
 		this.test();
-		this.state = {
-			images: [
-				"url('/images/backgroundImages/background-img1.jpg')",
-
-				"url('/images/backgroundImages/chickenTaco.jpg')"
-				/*  "url('https://picsum.photos/200/300/?image=523')",
-				 "url('https://picsum.photos/200/300/?image=524')" */
-			],
-			// selectedImage: "url('https://picsum.photos/200/300/?image=523')"
-			selectedImage: "url('/images/backgroundImages/background-img1.jpg')"
-
-		};
+		this.state = {};
 	}
 
-	componentDidMount() {
-		setInterval(() => {
-			this.setState(prevState => {
-				return { selectedImage: prevState.selectedImage === this.state.images[0] ? this.state.images[1] : this.state.images[0] };
-
-			});
-		}, 5000);
-	}
-
-	componentWillUnmount() {
-		clearInterval(this.interval);
-	}
 	async test() {
 		let recipe = new Recipe({
 			"name": "mells italiensk kycklinggryta med kokosnötter",
@@ -124,7 +106,8 @@ class HomePage extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<div className="search-bar" style={{ backgroundImage: this.state.selectedImage }}>
+				<div className="search-bar">
+					<HomePageBackground />
 					<input className="form-control search-input" type="text" placeholder="Sök efter recept här..." aria-label="Sök efter recept här..." />
 				</div>
 				<div>
