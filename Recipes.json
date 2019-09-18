@@ -13,7 +13,7 @@
 			"Finhacka vitlöken och chilin och stek med kycklingen i cirka 2 minuter.",
 			"Krydda med timjan och oregano och häll i buljongen, grädden och kokta upp, dra till sidan och tillsätt parmesanen."
 		],
-		"ingredients": [
+		"ingredient": [
 			{
 				"name": " kycklinglårfiléer",
 				"qty": 8,
@@ -72,7 +72,8 @@
 		],
 		"img": "chickenParmesan.jpg",
 		"portion": 4,
-		"startText": "Italiensk kycklinggratäng med parmesan och örter som egentligen inte har något med Italien att göra, utan är vår version på italiensk mat på 90-talet. /Tareq"
+		"startText": "Italiensk kycklinggratäng med parmesan och örter som egentligen inte har något med Italien att göra, utan är vår version på italiensk mat på 90-talet. /Tareq",
+		"time": 60
 	},
 	{
 		"name": "Pannkakor",
@@ -84,7 +85,7 @@
 			"Blanda mjöl och salt i en bunke. Vispa i hälften av mjölken och vispa till en slät smet. Vispa i resten av mjölken och äggen.",
 			"Smält smöret i stekpannan och vispa ner i smeten. Stek tunna pannkakor av smeten i en stek- eller pannkakspanna."
 		],
-		"ingredients": [
+		"ingredient": [
 			{
 				"name": "mjölk",
 				"qty": 6,
@@ -111,9 +112,10 @@
 				"type": "tsk"
 			}
 		],
-		"img": "pancakes.jpg",
+		"img": "pancakes.jpeg",
 		"portion": 4,
-		"startText": "Gör traditionella tunna pannkakor genom att blanda mjöl, mjölk och ägg och lite salt till en jämn smet. Stek smeten till tunna och smarriga pannkakor och servera med en söt sylt."
+		"startText": "Gör traditionella tunna pannkakor genom att blanda mjöl, mjölk och ägg och lite salt till en jämn smet. Stek smeten till tunna och smarriga pannkakor och servera med en söt sylt.",
+		"time": 60
 	},
 	{
 		"name": "Nutellabollar",
@@ -128,7 +130,7 @@
 			"Ställ sedan smeten i kylskåpet i minst 30 minuter.",
 			"Rulla till bollar och rulla sedan i t.ex. pärlsocker eller strössel och sätt på pinnar."
 		],
-		"ingredients": [
+		"ingredient": [
 			{
 				"name": "strösocker",
 				"qty": 2,
@@ -167,7 +169,8 @@
 		],
 		"img": "chocolatePops.jpg",
 		"portion": 4,
-		"startText": "Underbart krämiga chokladbollar med nutella och oboy. Testa dessa och du kommer aldrig vilja baka några andra chokladbollar igen!"
+		"startText": "Underbart krämiga chokladbollar med nutella och oboy. Testa dessa och du kommer aldrig vilja baka några andra chokladbollar igen!",
+		"time": 60
 	},
 	{
 		"name": "Fish and chips",
@@ -185,7 +188,7 @@
 			"Upprepa samma procedur med potatisen.",
 			"Servera, helst i en strut av tidningspapper, tillsammans med aioli och citron."
 		],
-		"ingredients": [
+		"ingredient": [
 			{
 				"name": "torsk",
 				"qty": 600,
@@ -244,7 +247,8 @@
 		],
 		"img": "fishNChip.jpg",
 		"portion": 4,
-		"startText": "Den här engelska klassikern är farligt god! Servera den i tidningspapper för att få den rätta känslan."
+		"startText": "Den här engelska klassikern är farligt god! Servera den i tidningspapper för att få den rätta känslan.",
+		"time": 60
 	},
 	{
 		"name": "Taco chicken nuggets i tortillabröd ",
@@ -259,7 +263,7 @@
 			"Hetta upp oljan i en stekpanna och stek kycklingen ca 3-4 minuter på varje sida så att den får en knaprig och gyllenbrun stekyta. Kontrollera att de är helt genomstekta innan du serverar.",
 			"Montering: Fyll tortillabröden med sallad, kyckling, gurka, tomat, riven ost, gräddfil och tacosås. Vik ihop och ät."
 		],
-		"ingredients": [
+		"ingredient": [
 			{
 				"name": "kycklingfilé",
 				"qty": 700,
@@ -328,6 +332,7 @@
 		],
 		"img": "chickenTaco.jpg",
 		"portion": 4,
-		"startText": "Hemmagjorda chicken nuggets med tacosmak som kommer göra succé vid matbordet!"
+		"startText": "Hemmagjorda chicken nuggets med tacosmak som kommer göra succé vid matbordet!",
+		"time": 60
 	}
 ]
