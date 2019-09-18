@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import FoodCardContainer from "./foodCardContainer.js"
 import REST from "../REST.js"
 import HomePageRecipeHeadline from "./homePageRecipeHeadline";
-import FileUpload from './FileUpload';
 import HomePageBackground from './homePageBackground';
 
 
@@ -114,9 +113,6 @@ class HomePage extends Component {
 					<HomePageRecipeHeadline />
 				</div>
 				<FoodCardContainer />
-				<div>
-					<FileUpload />
-				</div>
 			</React.Fragment>
 		);
 	}
