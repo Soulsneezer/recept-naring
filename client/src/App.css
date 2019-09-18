@@ -6,7 +6,6 @@
 .navbar {
   background-color: #f5f5f5;
 }
-
 .logo {
   padding-right: 5px;
 }
@@ -29,7 +28,6 @@
     font-size: 15px;
   }
 }
-
 .logoHeader {
   font-family: "Parisienne", cursive;
   font-size: 20px;
@@ -64,11 +62,9 @@
   border-radius: 32px;
   display: inline-block;
 }
-
 .btn-primary:hover {
   background-color: grey;
 }
-
 .innerFoodCardContainer {
   padding: 50px;
 }
@@ -86,7 +82,6 @@
     width: 18px;
   }
 }
-
 .foodCardContainer {
   width: 90%;
   margin: auto;
@@ -96,11 +91,9 @@
   -moz-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
   box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
 }
-
 .innerFoodCardContainer {
   padding: 40px;
 }
-
 .innerContainerUploadPhoto {
 	border: 0.5px solid #6e6d6d;
 	width: 90%;
@@ -120,7 +113,6 @@
   text-align: center;
   margin-right: 15px;
 }
-
 .recipeHeadlineH2 {
   font-family: "Parisienne", cursive;
   font-size: 50px;
@@ -133,7 +125,6 @@
     text-align: center;
   }
 }
-
 .search-bar {
   background: url(./images/background-img1.jpg) no-repeat;
   height: 30vh;
@@ -333,17 +324,11 @@
 	display: inline-block;
 }
 
-
-
-
-
 /*------- Login Page -------*/
 
 .close-modal-button{
   float:right;
 }
-
-
 
 
 /*----- Footer ------*/
@@ -360,20 +345,15 @@ footer .icon{
     height:26px;
   }
 }
-
 @media (max-width: 576px)  {
 footer .icons .icon{
     display:block;
     padding-top:5px;
   }
 }
-
 @media (max-width: 322px)  {
-  footer .icons{
-  
-    }
- footer p{
-      font-size:12px;
-      border:solid orange 2px;
-    }
+  footer p{
+    font-size:12px;
+    border:solid orange 2px;
   }
+}
