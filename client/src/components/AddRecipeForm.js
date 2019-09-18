@@ -7,6 +7,8 @@ import AddRecipeRowButton from './AddRecipeRowButton';
 import AddRecipeStepByStep from './AddRecipeStepByStep';
 import AddRecipeStepByStepAddRow from './AddRecipeStepByStepAddRow';
 import { MdQueryBuilder } from "react-icons/md";
+import uuidv4 from "uuid/v4"
+
 class AddRecipeForm extends React.Component {
   constructor(props) {
     super(props)
@@ -14,7 +16,8 @@ class AddRecipeForm extends React.Component {
     // Create three rows initially
     let ingredientRows = [];
     for (let i = 0; i < 3; i++) {
-      ingredientRows.push(<AddRecipeIngredientRow key={i} index={i} deleteMe={e => this.deleteRecipeRow(e)} />)
+      const id = uuidv4()
+      ingredientRows.push(<AddRecipeIngredientRow key={id} remove={id} index={i} deleteMe={i => this.deleteRecipeRow(i)} />)
     }
     this.state = {
       ingredientRows: ingredientRows,
@@ -24,10 +27,11 @@ class AddRecipeForm extends React.Component {
 
   addRecipeRow() {
     let i = this.state.ingredientRows.length
+    const id = uuidv4()
     this.setState({
       ingredientRows: [
         ...this.state.ingredientRows,
-        <AddRecipeIngredientRow key={i} index={i} deleteMe={e => this.deleteRecipeRow(e)} />
+        <AddRecipeIngredientRow key={id} remove={id} index={i} deleteMe={i => this.deleteRecipeRow(i)} />
       ]
     });
   }
@@ -38,8 +42,7 @@ class AddRecipeForm extends React.Component {
     let modified = this.state.ingredientRows.slice().splice(index, 1);
     console.log('l',modified.length)
     */
-
-    this.setState({ ingredientRows: this.state.ingredientRows.filter((item, i) => i !== key) });
+    this.setState({ ingredientRows: this.state.ingredientRows.filter((item, i) => item.key !== key) });
     //this.setState({ numberOfIngredientsRow: this.state.numberOfIngredientsRow - i });
   }
 

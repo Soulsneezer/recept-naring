@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Col, Row } from 'react-bootstrap';
 import CategoryChoices from './CategoryChoices';
 import RemoveRowButton from './AddRecipeRemoveButton';
+import { MdRemoveCircleOutline } from "react-icons/md";
 
 const AddRecipeIngredientRow = (props) => {
   return (
@@ -17,7 +18,7 @@ const AddRecipeIngredientRow = (props) => {
           <Form.Control className="recipe-name pl-3 my-2" input="true" placeholder="ingrediensen" />
         </Col>
         <Col>
-          <RemoveRowButton lg={2} md={2} sm={1} className="my-2" onClick={e => props.deleteMe(props.index)} />
+          <RemoveRowButton lg={2} md={2} sm={1} className="my-2" onClick={() => props.deleteMe(props.remove)} />
         </Col>
       </Row>
     </React.Fragment>
