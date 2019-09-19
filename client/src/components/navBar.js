@@ -14,7 +14,7 @@ class NavBar extends Component {
         <Navbar bg="light" expand="lg">
           <Row className="logo">
             <Col xs={6} md={4}>
-              <img src={Logo} height="60" width="60" alt="Nav-Logo" />
+              <img src={Logo} height="60" width="60" alt="Nav-Logo" className="navbar-logo"/>
             </Col>
           </Row>
           <Navbar.Brand className='logoHeader' href="/">Recept & Näring</Navbar.Brand>

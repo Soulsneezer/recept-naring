@@ -42,7 +42,7 @@ class HomePageBackground extends Component {
     render() {
 
         return (
-            <div className="homePageBackgroundShow" style={{ backgroundImage: this.state.selectedImage }}>
+            <div className="homePageBackgroundShow" style={{ backgroundImage: this.state.selectedImage }} alt="Bakgrundsbilder på mat som skiftar var femte sekund">
 
             </div>
         );

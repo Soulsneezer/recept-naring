@@ -9,9 +9,7 @@ export default class FoodCard extends Component {
     Object.assign(this, props);
     this.state = {};
   }
-  hej(){
-    // console.log(this)
-  }
+
 
   render() {
     return (
