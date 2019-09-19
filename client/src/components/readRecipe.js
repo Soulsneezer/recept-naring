@@ -3,6 +3,7 @@ import PersonChoices from "./PersonChoices";
 import ReadRecipeDetails from "./readRecipeDetails";
 import ReadRecipeInstructions from "./readRecipeInstructions";
 import ReadRecipeIngredients from "./readRecipeIngredients";
+// import images from "./images/";
 import ReadRecipeNutrition from "./readRecipeNutrition";
 import {
   Container,
@@ -20,14 +21,18 @@ class ReadRecipe extends React.Component {
     super(props);
     this.loadFromUrl();
     this.recipe = "";
-    this.state = {};
+    this.state = {
+      // image: [`url('./images/${this.recipe.img}')`]
+      image: ""
+    };
   }
   async loadFromUrl() {
     let data = await Recipe.find(
       `.find({_id:'${this.props.match.params.id}'})`
     );
     this.recipe = data.pop();
-    this.setState({ state: this.state });
+    console.log(this.recipe.img);
+    this.setState({ state: this.state, image: this.recipe.img });
   }
 
   render() {
@@ -35,7 +40,11 @@ class ReadRecipe extends React.Component {
       <Container>
         <Row className='mt-3'>
           <Col className='col-md-4'>
-            <Image src={this.props.img} alt={this.recipe.name} fluid />
+            <img
+              src={require("../images/" + this.state.image)}
+              alt={this.recipe.name}
+            />
+            console.log({this.recipe.img})
           </Col>
 
           <Col className='col-md-8'>
