@@ -52,11 +52,11 @@ class ReadRecipe extends React.Component {
         <Row className='mt-5'>
           <Col className='md-3 mt-5'>
             <h3 className='mb-2 offset-1'> Ingredienser</h3>
-            <ReadRecipeIngredients {...this.recipe} />
+            {this.recipe  ? <ReadRecipeIngredients ingredients={this.recipe.ingredient} /> : null}
           </Col>
           <Col className='md-9 mt-5'>
             <h3 className='mb-2 offset-1'> Steg för steg</h3>
-            <ReadRecipeInstructions {...this.recipe} />
+            {this.recipe.step ? <ReadRecipeInstructions steps={this.recipe.step} /> : null}
           </Col>
         </Row>
       </Container>

@@ -10,9 +10,14 @@ class ReadRecipeInstructions extends Component {
     this.state = {};
     this.recipe = {};
   }
-
+ 
   render() {
-    return <p>List of ReadRecipeInstructions should show here</p>;
+    return( <ListGroup>
+      {this.props.steps.map((step, i)=>{
+        return <ListGroupItem key={i}>{i + 1}: {step} </ListGroupItem>
+      })}
+    </ListGroup>
+  )
   }
 }
 

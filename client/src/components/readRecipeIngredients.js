@@ -10,11 +10,17 @@ class ReadRecipeIngredients extends Component {
     this.state = {};
     this.recipe = {};
   }
+ 
 
   render() {
     return (
       <ListGroup>
-        <ListGroup.Item>{this.props.steps}</ListGroup.Item>
+        {this.props.ingredients.map((ing, i) => { 
+          return(
+        <ListGroup.Item key={i}>{ing.qty} {ing.type} {ing.name}</ListGroup.Item>
+        )}
+    )
+    }
       </ListGroup>
     );
   }
