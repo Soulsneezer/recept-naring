@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import FoodCard from './foodCard.js'
 import { Col, Row } from 'react-bootstrap';
+import HomePageRecipeHeadline from './homePageRecipeHeadline';
 
 export default class FoodCardContainer extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ export default class FoodCardContainer extends Component {
           <Row>
             <Col sm={8} md={8} lg={8}>
               <div className="innerFoodCardContainer">
+                <HomePageRecipeHeadline />
                 <FoodCard />
               </div>
             </Col>

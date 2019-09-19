@@ -37,10 +37,10 @@
 }
 
 .btn-primary:hover {
-  background-color: grey;
+	background-color: grey;
 }
 .innerFoodCardContainer {
-  padding: 50px;
+	padding: 50px;
 }
 
 @media only screen and (max-width: 400px) {
@@ -63,17 +63,24 @@
 		font-weight: bold;
 	}
 }
+@media only screen and (max-width: 300px) {
+	.logoHeader {
+		font-family: 'Parisienne', cursive;
+		font-size: 20px;
+		font-weight: bold;
+	}
+}
 .foodCardContainer {
 	width: 90%;
 	margin: auto;
-	/* margin-top: 2px; */
+	margin-top: 25px;
 	border: 0.1px solid #707070;
 	-webkit-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
 	-moz-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
 	box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
 }
 .innerFoodCardContainer {
-	padding: 40px;
+	padding: 30px;
 }
 .innerContainerUploadPhoto {
 	border: 0.5px solid #6e6d6d;
@@ -90,19 +97,28 @@
 	padding: 10px;
 }
 .recipeHeadline {
-	margin-top: 20px;
+	margin-top: 5px;
 	text-align: center;
-	margin-right: 15px;
+	display: center;
+	justify-content: center;
 }
 .recipeHeadlineH2 {
 	font-family: 'Parisienne', cursive;
 	font-size: 50px;
 	font-weight: bold;
 	text-align: center;
+	display: center;
+	justify-content: center;
 }
 @media only screen and (max-width: 400px) {
 	.recipeHeadlineH2 {
-		font-size: 30px;
+		font-size: 15px;
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 920px) {
+	.recipeHeadlineH2 {
+		font-size: 40px;
 		text-align: center;
 	}
 }
@@ -112,6 +128,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.logoHeader {
+	font-family: 'Parisienne', cursive;
+	font-size: 30px;
+	font-weight: bold;
 }
 
 .homePageBackgroundShow {
@@ -126,30 +147,32 @@
 	opacity: 2;
 	transition: 2s;
 }
+.search-field {
+	width: 40%;
+}
+
 .dropdown-btn > .btn-primary {
-  height: 55px;
-  color: rgb(0, 0, 0);
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgb(148, 148, 148);
-  border-left: none;
-  border-radius: 0 30px 30px 0;
-  margin-bottom: 0;
-  font-size: 25px;
-  text-align: center;
-  color: rgb(92, 92, 92);
-  width: 160px;
-  backdrop-filter: blur(3px);
+	height: 55px;
+	color: rgb(0, 0, 0);
+	background-color: rgba(255, 255, 255, 0.7);
+	border: 1px solid rgb(148, 148, 148);
+	border-left: none;
+	border-radius: 0 30px 30px 0;
+	margin-bottom: 0;
+	font-size: 25px;
+	text-align: center;
+	color: rgb(92, 92, 92);
+	width: 160px;
+	backdrop-filter: blur(3px);
 }
 .search-input {
 	z-index: 1;
-	width: 40%;
 	height: 55px;
-	border-radius: 30px;
-	font-size: 20px;
+	border-radius: 30px 0 0 30px;
+	font-size: 25px;
 	padding-left: 60px;
 	backdrop-filter: blur(3px);
 	border: 1px solid rgb(148, 148, 148);
-
 	background: url(./images/magnifying-glass.svg) rgba(255, 255, 255, 0.7);
 	background-repeat: no-repeat;
 	background-size: 30px;
@@ -209,61 +232,57 @@
 	display: inline-block;
 }
 
-
-
 .search-input {
-  z-index: 1;
-  height: 55px;
-  border-radius: 30px 0 0 30px;
-  font-size: 25px;
-  padding-left: 60px;
-  backdrop-filter: blur(3px);
-  border: 1px solid rgb(148, 148, 148);
+	z-index: 1;
+	height: 55px;
+	border-radius: 30px 0 0 30px;
+	font-size: 25px;
+	padding-left: 60px;
+	backdrop-filter: blur(3px);
+	border: 1px solid rgb(148, 148, 148);
 
-  background: url(./images/magnifying-glass.svg) rgba(255, 255, 255, 0.7);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position-y: center;
-  background-position-x: 10px;
+	background: url(./images/magnifying-glass.svg) rgba(255, 255, 255, 0.7);
+	background-repeat: no-repeat;
+	background-size: 30px;
+	background-position-y: center;
+	background-position-x: 10px;
 }
 @media only screen and (max-width: 920px) {
-  .search-input {
-    height: 45px;
-  }
-  .search-bar {
-    height: 20vh;
-    background-size: 100%;
-  }
-  .dropdown-btn > .btn-primary {
-    height: 45px;
-    width: 150px;
-  }
+	.search-input {
+		height: 45px;
+	}
+	.search-bar {
+		height: 20vh;
+		background-size: 100%;
+	}
+	.dropdown-btn > .btn-primary {
+		height: 45px;
+		width: 150px;
+	}
 }
 @media only screen and (max-width: 760px) {
-  .search-field {
-    width: 50%;
-  }
-  .search-input {
-    height: 35px;
-    padding-left: 40px;
-    font-size: 16px;
-
-    background-size: 20px;
-    border: 1px solid rgb(148, 148, 148);
-  }
-  .search-bar {
-    background: url(./images/background-img1.jpg) no-repeat right;
-    height: 15vh;
-    background-size: 100%;
-  }
-  .dropdown-btn > .btn-primary {
-    height: 35px;
-    font-size: 16px;
-  }
+	.search-field {
+		width: 50%;
+	}
+	.search-input {
+		height: 35px;
+		padding-left: 40px;
+		font-size: 16px;
+		background-size: 20px;
+		border: 1px solid rgb(148, 148, 148);
+	}
+	.search-bar {
+		height: 15vh;
+		background-size: 100%;
+	}
+	.dropdown-btn > .btn-primary {
+		height: 35px;
+		font-size: 16px;
+	}
 }
 .readRecipeImg {
-  width: 100%;
-  height: 80vh;
+	width: 100%;
+	height: 80vh;
 }
 @media only screen and (max-width: 400px) {
 	.recipeButton {
@@ -277,103 +296,125 @@
 	.personLogo {
 		height: 18px;
 		width: 18px;
-  }
-  .container-outer {
-    margin-top: 0!important;
-  }
-  .dropdown-btn > .btn-primary {
-    width: 110px;
-  }
-  .card-h1 {
-    font-size: 32px;
-  }
+	}
+	.container-outer {
+		margin-top: 0 !important;
+	}
+	.dropdown-btn > .btn-primary {
+		width: 110px;
+	}
+	.card-h1 {
+		font-size: 32px;
+	}
 }
 .card-button {
-  background-color: rgba(0,0,0,0.8);
-  color: rgb(254,254,254);
-  border-radius: 0px 0px 3px 3px;
-  margin-bottom: 0;
-  border: none;
-  width: 100%;
-  font-size: 20px;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: rgb(254, 254, 254);
+	border-radius: 0px 0px 3px 3px;
+	margin-bottom: 0;
+	border: none;
+	width: 100%;
+	font-size: 20px;
 }
 .card-outer {
-  display: inline-block;
-  width: 250px;
-  margin: 6px;
+	display: inline-block;
+	width: 250px;
+	margin: 6px;
 
-  animation: fade ease-out 1s;
-  -webkit-animation: fade ease-out 1s;
-  -moz-animation: fade ease-out 1s;
-  -o-animation: fade ease-out 1s;
-  -ms-animation: fade ease-out 1s;
+	animation: fade ease-out 1s;
+	-webkit-animation: fade ease-out 1s;
+	-moz-animation: fade ease-out 1s;
+	-o-animation: fade ease-out 1s;
+	-ms-animation: fade ease-out 1s;
 }
 .card-inner {
-  position: relative;
+	position: relative;
 }
 .card-title {
-  position: absolute;
-  left: 0;
-  bottom: 50px;
-  color: rgb(0,0,0);
-  background-color: rgba(254,254,254,0.7);
-  width: 100%;
-  font-size: 20px;
-  text-align: bottom;
-  text-align: left;
-  height: 60px;
+	position: absolute;
+	left: 0;
+	bottom: 50px;
+	color: rgb(0, 0, 0);
+	background-color: rgba(254, 254, 254, 0.7);
+	width: 100%;
+	font-size: 20px;
+	text-align: bottom;
+	text-align: left;
+	height: 60px;
 }
 .card-img {
-  height: 200px;
-  width: 100%;
-  border-radius: 3px 3px 0px 0px;
+	height: 200px;
+	width: 100%;
+	border-radius: 3px 3px 0px 0px;
 }
 .container-outer {
-  border: 1px solid rgb(200, 200, 200);
-  border-radius: 3px 3px 3px 3px;
-  box-shadow: 0px 5px 8px rgb(200, 200, 200);
-  margin-bottom: 50px;
-  position: relative;
-  margin-top: 3vh; 
+	border: 1px solid rgb(200, 200, 200);
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 0px 5px 8px rgb(200, 200, 200);
+	margin-bottom: 50px;
+	position: relative;
+	margin-top: 3vh;
 }
 @-webkit-keyframes fade {
-  0% {opacity: 0.2;} 
-  50% {opacity: 1;}
-  100% {opacity:0.2;}
+	0% {
+		opacity: 0.2;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.2;
+	}
 }
 @-moz-keyframes fade {
-  0% {opacity: 0.2;} 
-  50% {opacity: 1;}
-  100% {opacity:0;}  
+	0% {
+		opacity: 0.2;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 @keyframes fade {
-  0% {opacity: 0.2;} 
-  100% {opacity: 1;}  
+	0% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 @-o-keyframes fade {
-  0% {opacity: 0.2;} 
-  50% {opacity: 1;}
-  100%{opacity: 0.2;}
+	0% {
+		opacity: 0.2;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.2;
+	}
 }
 .container-inner {
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: center;
+	margin-bottom: 40px;
+	display: flex;
+	justify-content: center;
 }
 .card-p {
-  margin-left: 10px;
+	margin-left: 10px;
 }
 .card-h1 {
-  margin-bottom: 20px;
-  margin-top: 10px;
+	margin-bottom: 20px;
+	margin-top: 10px;
 }
 .show-more-btn {
-  position: absolute;
-  bottom: -5px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
+	position: absolute;
+	bottom: -5px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
 }
 .show-recipe {
 	display: inline-block;
@@ -381,35 +422,33 @@
 
 /*------- Login Page -------*/
 
-.close-modal-button{
-  float:right;
+.close-modal-button {
+	float: right;
 }
-
 
 /*----- Footer ------*/
 
-footer .icon{
-  width:30px;
-  height:30px;
-  cursor:pointer;
+footer .icon {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
 }
 
-@media (min-width: 577px) and (max-width: 641px)  {
-  footer .icon{
-    width:26px;
-    height:26px;
-  }
+@media (min-width: 577px) and (max-width: 641px) {
+	footer .icon {
+		width: 26px;
+		height: 26px;
+	}
 }
-@media (max-width: 576px)  {
-footer .icons .icon{
-    display:block;
-    padding-top:5px;
-  }
+@media (max-width: 576px) {
+	footer .icons .icon {
+		display: block;
+		padding-top: 5px;
+	}
 }
-@media (max-width: 322px)  {
-  footer p{
-    font-size:12px;
-    border:solid orange 2px;
-  }
+@media (max-width: 322px) {
+	footer p {
+		font-size: 12px;
+		border: solid orange 2px;
+	}
 }
-
