@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 import Camera from '../images/camera.png';
 
 
+
 class Upload extends REST { }
 
 class FileUpload extends Component {
@@ -54,4 +55,4 @@ class FileUpload extends Component {
     }
 }
 
-export default FileUpload
+export default FileUpload;

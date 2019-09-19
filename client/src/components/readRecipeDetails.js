@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import {
-  ReactFragment,
-  Row,
-  Col,
-  Card,
-  ListGroupItem,
-  ListGroup
-} from "react-bootstrap";
+import { Card, ListGroupItem, ListGroup } from "react-bootstrap";
 import REST from "../REST";
 import ReadRecipeNutrition from "./readRecipeNutrition";
 class Recipe extends REST {}
@@ -33,36 +26,39 @@ class ReadRecipeDetails extends Component {
         Salt: 3
       }
     };
+    this.getRecipe();
+  }
+  //componentDidMount() {}
+
+   getRecipe() {
+    // let recipe = await Recipe.find(this.props._id);
+    console.log(this)
+
   }
 
   render() {
     return (
-      <React.Fragment>
-        <Row className='mt-2'>
-          <h1>{this.props.name}</h1>
-        </Row>
-        <Row className='mt-2 font-styling'>
-          <p>{this.props.startText}</p>
-        </Row>
-        <Row className='mt-4'>
-          <h3>Tag: {this.props.category}</h3>
-        </Row>
-        <Row className='mt-4'>
-          <h3> Tid: {this.props.time} min</h3>
-        </Row>
-        <Row>
-          <h3 className='mt-5'>Näring per portion </h3>
-        </Row>
-        <Row>
-          {Object.keys(this.state.nutritions).map(key => (
-            <ReadRecipeNutrition
-              key={key}
-              nutrientName={key}
-              nutrientValue={this.state.nutritions[key]}
-            />
-          ))}
-        </Row>
-      </React.Fragment>
+      <Card style={{ width: "100%" }}>
+        <Card.Body>
+          <Card.Title>{this.props.name}</Card.Title>
+          <Card.Text>{this.props.startText}</Card.Text>
+        </Card.Body>
+        <ListGroup className='list-group-flush'>
+          <ListGroupItem>Tag: {this.props.category.join(", ")}</ListGroupItem>
+          <ListGroupItem>Tid: {this.props.time}</ListGroupItem>
+        </ListGroup>
+        <ListGroup className='list-group-flush'>
+          <ListGroupItem>
+            {Object.keys(this.state.nutritions).map(key => (
+              <ReadRecipeNutrition
+                key={key}
+                nutrientName={key}
+                nutrientValue={this.state.nutritions[key]}
+              />
+            ))}
+          </ListGroupItem>
+        </ListGroup>
+      </Card>
     );
   }
 }

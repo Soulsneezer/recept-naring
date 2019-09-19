@@ -11,19 +11,18 @@ import Footer from "./components/footer";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { read } from "fs";
+
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className='App'>
+        <div className="App">
           <NavBar />
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/recipe" component={Recipe} />
             <Route path="/logIn" component={LogIn} />
-            <Route path="/read-recipe/:id" component={ReadRecipe} />
             <Route path="/not-found" component={NotFound} />
           </Switch>
           <Footer />

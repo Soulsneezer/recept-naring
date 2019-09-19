@@ -1,47 +1,52 @@
 import React, { Component } from "react";
-import { Dropdown, DropdownButton } from "react-bootstrap";
+import { Container, Col, Row, Dropdown, DropdownButton } from "react-bootstrap";
 
 export default class PersonChoices extends React.Component {
   constructor() {
     super();
     this.state = {
-      showMenu: false,
-      myAlternative: ""
+      showMenu: false
     };
-    this.dropDownAlternative = this.dropDownAlternative.bind(this);
+    this.showMenu = this.showMenu.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
   }
 
-  dropDownAlternative(e) {
-    let myAlternative = e.target.id;
-    this.setState({
-      myAlternative: myAlternative
+  showMenu(event) {
+    event.preventDefault();
+
+    this.setState({ showMenu: true }, () => {
+      document.addEventListener("click", this.closeMenu);
+    });
+  }
+
+  closeMenu() {
+    this.setState({ showMenu: false }, () => {
+      document.removeEventListener("click", this.closeMenu);
     });
   }
 
   render() {
     let choices = [];
-    //method to select the number of people from the dropdown menu
+    let selector;
+    //method to select the number from the dropdown menu
 
-    for (let i = 2; i <= 10; i++) {
+    for (let i = 1; i <= 10; i++) {
       choices.push(i);
     }
     return (
-      <Dropdown className='dropdown'>
-        <Dropdown.Toggle variant='outline-secondary' id='dropdown-basic'>
-          {this.state.myAlternative + " Personer"}
-        </Dropdown.Toggle>
-        <Dropdown.Menu className='dropdown-menu'>
+      <Container className='PersonChoices'>
+        <DropdownButton onClick={this.showMenu}>
+          variant='Secondary' id='dropdown-item-button' title={selector}>
           {choices.map(i => (
-            <Dropdown.Item
-              className='ddd'
-              id={i}
-              onClick={this.dropDownAlternative}
-            >
+            <Dropdown.Item key={i} as='button'>
               {i}
             </Dropdown.Item>
           ))}
-        </Dropdown.Menu>
-      </Dropdown>
+        </DropdownButton>
+      </Container>
     );
   }
 }
+
+// Someone else: <PersonChoices btnColor="blue"></PersonChoices>
+// I can read it from this.props
