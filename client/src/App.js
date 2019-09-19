@@ -4,7 +4,6 @@ import NavBar from "./components/navBar";
 import NotFound from "./components/notFound";
 import HomePage from './components/homePage';
 import Recipe from './components/recipe';
-import AddRecipeUnits from './components/addRecipeUnits';
 import LogIn from './components/logIn';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/footer';
@@ -20,7 +19,7 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={HomePage} />
             {/* <Route path="/recipe" component={Recipe} /> */}
-            <Route path="/recipe" component={AddRecipeUnits}/>
+            {/* <Route path="/recipe" component={AddRecipeUnits}/> */}
             <Route path="/logIn" component={LogIn} />
             <Route path="/not-found" component={NotFound} />
           </Switch>
