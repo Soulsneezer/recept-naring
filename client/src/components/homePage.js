@@ -87,9 +87,7 @@ class HomePage extends Component {
 
   async showMoreRecipeCategorys() {
     this.state.countCategory += 4;
-    let recipesCategory = await Recipeswiththiscategory.find(
-      this.state.searchInput
-    );
+    let recipesCategory = await Recipeswiththiscategory.find(this.state.searchInput);
     recipesCategory = recipesCategory.splice(0, this.state.countCategory);
 
     this.setState({

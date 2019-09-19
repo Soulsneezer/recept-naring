@@ -11,7 +11,7 @@ export default class FoodCard extends Component {
     this.state = {};
   }
   hej(){
-    console.log(this)
+    // console.log(this)
   }
 
   render() {

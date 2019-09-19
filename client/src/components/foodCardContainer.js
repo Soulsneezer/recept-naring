@@ -17,7 +17,7 @@ export default class FoodCardContainer extends Component {
     this.recipesFound = await Recipe.find(`.find()`);
     this.setState({ state: this.state });
 
-    console.log(this.recipesFound)
+    // console.log(this.recipesFound)
   }
   render() {
     return (
