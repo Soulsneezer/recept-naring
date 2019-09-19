@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import Card from "react-bootstrap/Card";
+import { Row, Col, Card, ListGroupItem, ListGroup } from "react-bootstrap";
 
 class ReadRecipeNutrition extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    Object.assign(this, props);
   }
   render() {
     let name = this.props.nutrientName;
@@ -18,23 +17,28 @@ class ReadRecipeNutrition extends React.Component {
     }
 
     return (
-      <Card className='m-t-4' bg='light' style={{ width: "7rem" }}>
-        <Card.Header>{this.name}</Card.Header>
+      <Card
+        className='m-1 offset-3'
+        style={{ display: "inline-block", width: "9rem" }}
+      >
+        <Card.Text className='m-3 border-styling fat-list'>{name}</Card.Text>
         <Card.Body>
-          {name !== "Fat" ? (
-            <Card.Title>
-              {value}
-              {name !== "Kcal" ? " g" : ""}
-            </Card.Title>
-          ) : (
-            <Card.Title>
-              {Object.keys(value).map(key => (
-                <div key={key}>
-                  {key} {value[key]} g
-                </div>
-              ))}
-            </Card.Title>
-          )}
+          <ul className='fat-list'>
+            {name !== "Fat" ? (
+              <Card.Text className='fat-list'>
+                {value}
+                {name !== "Kcal" ? " g" : ""}
+              </Card.Text>
+            ) : (
+              <div>
+                {Object.keys(value).map(key => (
+                  <li className='m-t-3 fat-list' key={key}>
+                    {key} {value[key]} g
+                  </li>
+                ))}
+              </div>
+            )}
+          </ul>
         </Card.Body>
       </Card>
     );

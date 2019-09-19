@@ -9,21 +9,21 @@ import ReadRecipe from "./components/readRecipe";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/footer";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import ReadRecipeNutrition from "./components/readRecipeNutrition";
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div className='App'>
           <NavBar />
           <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/recipe" component={Recipe} />
-            <Route path="/logIn" component={LogIn} />
-            <Route path="/not-found" component={NotFound} />
+            <Route path='/' exact component={HomePage} />
+            <Route path='/recipe/:id' component={ReadRecipe} />
+            <Route path='/logIn' component={LogIn} />
+            <Route path='/not-found' component={NotFound} />
           </Switch>
           <Footer />
         </div>
