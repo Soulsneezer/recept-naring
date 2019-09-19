@@ -7,14 +7,19 @@ import AddRecipeRowButton from './AddRecipeRowButton';
 import AddRecipeStepByStep from './AddRecipeStepByStep';
 import AddRecipeStepByStepAddRow from './AddRecipeStepByStepAddRow';
 import { MdQueryBuilder } from "react-icons/md";
+
+const uuid4 = require('uuid/v4');
+
 class AddRecipeForm extends React.Component {
   constructor(props) {
     super(props)
 
     // Create three rows initially
     let ingredientRows = [];
+
     for (let i = 0; i < 3; i++) {
-      ingredientRows.push(<AddRecipeIngredientRow key={i} index={i} deleteMe={e => this.deleteRecipeRow(e)} />)
+      const uuid = uuid4();
+      ingredientRows.push(<AddRecipeIngredientRow key={uuid} index={uuid} deleteMe={() => this.deleteRecipeRow(i)} />)
     }
     this.state = {
       ingredientRows: ingredientRows,
@@ -23,23 +28,26 @@ class AddRecipeForm extends React.Component {
   }
 
   addRecipeRow() {
-    let i = this.state.ingredientRows.length
+    let key = this.state.ingredientRows.length;
+    const uuid = uuid4();
     this.setState({
       ingredientRows: [
         ...this.state.ingredientRows,
-        <AddRecipeIngredientRow key={i} index={i} deleteMe={e => this.deleteRecipeRow(e)} />
+        <AddRecipeIngredientRow key={uuid} index={uuid} deleteMe={() => this.deleteRecipeRow(key)} />
       ]
     });
   }
+
 
   deleteRecipeRow(key) {
     /*console.log(index)
     console.log('k',this.state.ingredientRows.length, index, typeof index )
     let modified = this.state.ingredientRows.slice().splice(index, 1);
-    console.log('l',modified.length)
-    */
+    console.log('l',modified.length)*/
+    const remainder = this.state.ingredientRows.filter((item, i) => i !== key)
+    console.log('key', key);
 
-    this.setState({ ingredientRows: this.state.ingredientRows.filter((item, i) => i !== key) });
+    this.setState({ ingredientRows: remainder });
     //this.setState({ numberOfIngredientsRow: this.state.numberOfIngredientsRow - i });
   }
 
@@ -47,54 +55,60 @@ class AddRecipeForm extends React.Component {
     this.setState({ numberOfStepByStepRow: this.state.numberOfStepByStepRow + 1 });
   }
 
-  deleteStepByStepRow() {
-    this.setState({ numberOfStepByStepRow: this.state.numberOfStepByStepRow - 1 });
+  deleteStepByStepRow(key) {
+    const remainder = this.state.numberOfStepByStepRow.filter((item, i) => i !== key)
+    console.log('key', key);
+
+    this.setState({ numberOfStepByStepRow: remainder });
   }
 
   render() {
 
     // make an empty array that  has as many empty elements as numberofinngredientrow
-
     let stepByStepRows = [];
     for (let j = 1; j <= this.state.numberOfStepByStepRow; j++) {
       stepByStepRows.push(<AddRecipeStepByStep key={j} />)
     }
 
+
     return (
-      <Container className="add-recipe m-3" style={{ width: 'auto' }} >
+      <React.Fragment className="add-recipe my-3" style={{ width: 'auto' }} >
         <Row>
-          <Col lg={3} md={12} sm={12}>
+          <Col xs={12} md={12} lg={4}>
             <FileUpload />
           </Col>
-          <Col lg={9} md={12} sm={12}>
-            <Form>
-              <Row className="recipe-name-input">
-                <Col lg={4}  md={12} sm={12} className="m-3 pl-3">
+          <Col xs={12} md={12} lg={8}>
+            <Form className="form">
+              <Row className="mx-3">
+                <Col className="recipe-name mt-3 pl-2" xs={12} md={4} lg={4}>
                   <Form.Control input="true" className="recipe-name" placeholder="Vad heter ditt recept?" />
                 </Col>
-                <Col className="my-3" lg={4} md={12} sm={6}>
+                <Col className="mt-3 px-0" xs={6} md={4} lg={4}>
                   <CategoryChoices />
                 </Col>
-                <Col className="my-3" lg={4} md={12} sm={6}>
+                <Col className="mt-3 px-0" xs={6} md={4} lg={4}>
                   <CategoryChoices />
                 </Col>
               </Row>
 
-              <Row className="cooking-time-row my-3">
-
-                <Col lg={9} md={12} sm={12} className="pl-1">
+              <Row className="cooking-time-row mx-3">
+                <Col xs={2} md={2} className="mt-3 px-0">
                   <MdQueryBuilder />
-                  <Form.Control input="true" className="recipe-name pl-3" placeholder="Tillagningstiden i minuter..." />
+                </Col>
+                <Col xs={9} md={9} className="mt-3 px-0">
+                  <Form.Control input="true" className="recipe-name" placeholder="Tillagningstiden i minuter..." />
                 </Col>
               </Row>
+
               {this.state.ingredientRows}
-              <AddRecipeRowButton onClick={e => this.addRecipeRow()} />
+              <AddRecipeRowButton className="MdAddCircleOutline" onClick={() => this.addRecipeRow()} />
+
               {stepByStepRows}
-              <AddRecipeStepByStepAddRow onClick={e => this.addStepByStepRow()} />
+              <AddRecipeStepByStepAddRow className="MdAddCircleOutline" onClick={() => this.addStepByStepRow()} />
             </Form>
           </Col>
         </Row>
-      </Container>
+      </React.Fragment>
     )
   }
 }

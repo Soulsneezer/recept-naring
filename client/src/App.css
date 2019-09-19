@@ -31,30 +31,72 @@
   align-items: center;
 }
 
-.remove-row-button,
-.dropdown-button {
-  display: inline-flex;
+.recipe-button {
+  font-size: 20px;
+  border-radius: 20px;
 }
 
-.category-dropdown {
-  margin-right: 1rem;
+/*XXXXXXXXXXXXXXXXXXXXX BEGINNING OF MELLI's STYLING XXXXXXXXXXXXXXXXXXX*/
+.category-dropdown,
+.dropdown-units {
+  display: inline-flex;
   border-radius: 20px;
-  padding: 7px 10px;
-  font-size: 9px;
-  cursor: pointer;
-}
-.amount-input,
-.recipe-name,
-.list-group-item:last-child {
-  border-radius: 30px;
-	font-size: 9px;
-	cursor: text;
+  padding: 7px 7px;
+  font-size: 10px;
+  min-height: 30px;
+  min-width: 70px;
 }
 
 .dropdown-menu {
-  min-width: 30px;
+  font-size: 10px;
+  border-radius: 20px;
+  min-width: 60px;
+  align-items: center;
+}
+
+.recipe-name,
+.list-group-item:last-child {
+  display: inline-flex;
+  min-height: 30px;
+  min-width: 70px;
+  border-radius: 30px;
+  font-size: 10px;
+  cursor: text;
+}
+
+.MdRemoveCircleOutline,
+.MdAddCircleOutline {
   cursor: pointer;
 }
+
+@media only screen and (max-width: 400px) {
+  .category-dropdown,
+  .dropdown-units,
+  .dropdown,
+  .dropdown-button {
+    display: inline-flex;
+    border-radius: 20px;
+    padding: 7px 7px;
+    font-size: 9px;
+    min-height: 30px;
+    min-width: 55px;
+  }
+
+  .dropdown-menu {
+    font-size: 9px;
+  }
+
+  .recipe-name,
+  .list-group-item:last-child {
+    display: inline-flex;
+    border-radius: 30px;
+    font-size: 9px;
+		cursor: text;
+		min-height: 30px;
+    min-width: 55px;
+  }
+}
+/*XXXXXXXXXXXXXXXXXXXXX END OF MELLI's STYLING XXXXXXXXXXXXXXXXXXX*/
 
 @media only screen and (max-width: 400px) {
   .recipeButton {
@@ -95,21 +137,23 @@
   align-items: center;
 }
 .cameraIcon {
-  display: center;
+  display: flex;
   justify-content: center;
   padding: 10px;
+  align-items: center;
 }
+
 .recipeHeadline {
   margin-top: 20px;
   text-align: center;
   margin-right: 15px;
 }
+.btn-primary:hover {
+  background-color: grey;
+}
 
-.recipeHeadlineH2 {
-  font-family: "Parisienne", cursive;
-  font-size: 50px;
-  font-weight: bold;
-  text-align: center;
+.innerFoodCardContainer {
+  padding: 50px;
 }
 @media only screen and (max-width: 400px) {
   .recipeHeadlineH2 {
@@ -148,6 +192,7 @@
   background-position-y: center;
   background-position-x: 10px;
 }
+
 @media only screen and (max-width: 920px) {
   .search-input {
     height: 45px;

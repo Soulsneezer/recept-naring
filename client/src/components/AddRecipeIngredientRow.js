@@ -1,23 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Form, Col, Row } from 'react-bootstrap';
-import CategoryChoices from './CategoryChoices';
 import RemoveRowButton from './AddRecipeRemoveButton';
+import AddRecipeUnits from './AddRecipeUnits';
+
+const uuid4 = require('uuid/v4');
 
 const AddRecipeIngredientRow = (props) => {
+  const uuid = uuid4();
+
   return (
     <React.Fragment>
-      <Row className="mb-3">
-        <Col lg={2} md={4} sm={2}>
-          <Form.Control className="recipe-name pl-3 my-2 w-25" input="true" placeholder="mängden" />
+      <Row className="mx-3">
+        <Col xs={4} md={3} className="mt-2">
+          <Form.Control className="recipe-name pl-3" input="true" placeholder="mängden" />
         </Col>
-        <Col lg={2} md={2} sm={2}>
-          <CategoryChoices />
+        <Col xs={3} md={3} className="units-dropdown mt-2">
+          <AddRecipeUnits />
         </Col>
-        <Col lg={5} md={6} sm={7}>
-          <Form.Control className="recipe-name pl-3 my-2" input="true" placeholder="ingrediensen" />
+        <Col xs={4} md={4}>
+          <Form.Control className="recipe-name pl-3 mt-2" input="true" placeholder="ingrediensen" />
         </Col>
-        <Col>
-          <RemoveRowButton lg={2} md={2} sm={1} className="my-2" onClick={e => props.deleteMe(props.index)} />
+        <Col xs={1} md={2} className="MdARemoveCircleOutline mt-2">
+          <RemoveRowButton key={uuid} onClick={e => props.deleteMe(props.index)} />
         </Col>
       </Row>
     </React.Fragment>

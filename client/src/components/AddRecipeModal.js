@@ -22,7 +22,7 @@ export default function AddRecipeModal(props) {
         <AddRecipeForm />
       </Modal.Body>
       <Modal.Footer>
-        <Button className="recipeButton" variant="outline-secondary" onClick={props.onHide}>Lägg till</Button>
+        <Button className="recipe-button" variant="outline-secondary" onClick={props.onHide}>Lägg till</Button>
       </Modal.Footer>
     </Modal>
   );
