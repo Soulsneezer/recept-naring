@@ -13,9 +13,9 @@ export default function loginModal (props) {
         centered
     >
         <Modal.Header closeButton>
-        {/*<Modal.Title id="contained-modal-title-vcenter">
+        <Modal.Title id="contained-modal-title-vcenter">
             Logga in här 
-        </Modal.Title>*/}
+        </Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <LogInForm />

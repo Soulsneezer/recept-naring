@@ -10,7 +10,8 @@ class LogInForm extends React.Component{
             usernameErrorBox: 'none',
             passwordErrorBox: 'none',
             loginBox: 'block',
-            loggedInSucceededBox: 'none'
+            loggedInSucceededBox: 'none',
+            loginButtonText: 'Logga in'
         }
     }
 
@@ -105,11 +106,15 @@ class LogInForm extends React.Component{
 
                         <button 
                             type="submit"
-                            className="form-control"
-                            style={{width:'120px', margin:'auto', marginTop: '50px'}}
+                            className="form-control loginform-loginbutton"
+                            style={{width:'120px', margin:'auto', marginTop: '30px'}}
                         >
-                            Logga in
+                            {this.state.loginButtonText}
                         </button>
+
+                        <div style={{margin:'auto', textAlign:'center', paddingTop:'10px'}}>
+                            <a href="#" onClick={this.handleRegisterButton.bind(this)}>Inget konto? Skapa användare</a>
+                        </div>
 
                     </div>                      
                 </form>

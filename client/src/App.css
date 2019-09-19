@@ -205,15 +205,19 @@
 
 
 /*------- Login Page -------*/
-
-.close-modal-button{
-  float:right;
+.loginform-loginbutton{
+  background-color: #5cb85c;
+}
+.loginform-loginbutton:hover{
+  background-color: #3caf3c;
 }
 
-
-
-
 /*----- Footer ------*/
+
+.footer-component{
+  position:relative;
+  bottom:0;
+}
 
 footer .icon{
   width:30px;
@@ -241,7 +245,7 @@ footer .icons .icon{
     }
   }
 
-
+/*------------------------*/
 
 
 
