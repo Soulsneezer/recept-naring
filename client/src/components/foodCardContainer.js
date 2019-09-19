@@ -13,7 +13,7 @@ export default class FoodCardContainer extends Component {
   }
 
     // console.log(this.recipesFound)
-  }
+  
   render() {
     return (
       <React.Fragment>
