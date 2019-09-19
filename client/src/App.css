@@ -8,19 +8,19 @@
 .logo {
   padding-right: 5px;
 }
-.dropdown-menu {
+/* .dropdown-menu {
   width: 6px;
-}
-.dropdown-item {
+} */
+/* .dropdown-item {
   padding: 3px;
-}
-#dropdown-item-button {
+} */
+/* #dropdown-item-button {
   margin-right: 1rem;
   border-radius: 20px;
   border-color: black;
   padding: 7px 10px;
   font-size: 20px;
-}
+} */
 @media only screen and (max-width: 400px) {
   #dropdown-item-button {
     padding: 2px 10px;
@@ -95,18 +95,18 @@
 }
 
 .innerContainerUploadPhoto {
-	border: 0.5px solid #6e6d6d;
-	width: 90%;
-	margin: auto;
-	display: flex;
-	justify-content: center;
-	padding: 30px;
-	align-items: center;
+  border: 0.5px solid #6e6d6d;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  align-items: center;
 }
 .cameraIcon {
-	display: center;
-	justify-content: center;
-	padding: 10px;
+  display: center;
+  justify-content: center;
+  padding: 10px;
 }
 .recipeHeadline {
   margin-top: 20px;
@@ -200,7 +200,7 @@ body {
   overflow-x: hidden;
 }
 .show-recipe {
-	display: inline-block;
+  display: inline-block;
 }
 
 .container {
@@ -219,7 +219,6 @@ body {
     max-width: 500px;
   }
 }
-
 
 /*------- Login Page -------*/
 .row {
@@ -291,18 +290,18 @@ p {
   padding: 7px 10px;
   font-size: 20px;
 }
-/* .readRecipeImg {
+.readRecipeImg {
   background: url(`window.location.origin+/images/readRecipeImages/+${this.recipe.img}`)
     no-repeat right;
- background: url(./images/background-img1.jpg) no-repeat right; 
+  background: url(./images/background-img1.jpg) no-repeat right;
   height: 80vh;
   background-size: cover;
   background-position: center;
-} */
+}
 
 .font-styling {
   text-align: left !important;
-  max-width: 90%;
+  max-width: 80%;
 }
 .fat-list {
   list-style-type: none !important;
@@ -357,15 +356,9 @@ footer .icon {
   }
 }
 
-
-
-
-
-
-
 .card-button {
-  background-color: rgba(0,0,0,0.8);
-  color: rgb(254,254,254);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(254, 254, 254);
   border-radius: 0px 0px 3px 3px;
   margin-bottom: 0;
   border: none;
@@ -390,8 +383,8 @@ footer .icon {
   position: absolute;
   left: 0;
   bottom: 50px;
-  color: rgb(0,0,0);
-  background-color: rgba(254,254,254,0.7);
+  color: rgb(0, 0, 0);
+  background-color: rgba(254, 254, 254, 0.7);
   width: 100%;
   font-size: 20px;
   text-align: bottom;
@@ -409,26 +402,48 @@ footer .icon {
   box-shadow: 0px 5px 8px rgb(200, 200, 200);
   margin-bottom: 50px;
   position: relative;
-  margin-top: 3vh; 
+  margin-top: 3vh;
 }
 @-webkit-keyframes fade {
-  0% {opacity: 0.2;} 
-  50% {opacity: 1;}
-  100% {opacity:0.2;}
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
 }
 @-moz-keyframes fade {
-  0% {opacity: 0.2;} 
-  50% {opacity: 1;}
-  100% {opacity:0;}  
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes fade {
-  0% {opacity: 0.2;} 
-  100% {opacity: 1;}  
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @-o-keyframes fade {
-  0% {opacity: 0.2;} 
-  50% {opacity: 1;}
-  100%{opacity: 0.2;}
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
 }
 .container-inner {
   margin-bottom: 40px;
@@ -451,3 +466,24 @@ footer .icon {
   right: 0;
 }
 
+#dropdown-basic {
+  border-radius: 20px;
+  padding: 7px 10px;
+  font-size: 20px;
+}
+
+.dropdown-menu {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  min-width: 130px;
+  align-items: center;
+  padding-left: 32px;
+}
+
+.dropdown-item:hover {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #f8f9fa;
+  width: 20px;
+  /* padding: 10px; */
+}

@@ -5,51 +5,43 @@ export default class PersonChoices extends React.Component {
   constructor() {
     super();
     this.state = {
-      showMenu: false
+      showMenu: false,
+      myAlternative: ""
     };
-    this.showMenu = this.showMenu.bind(this);
-    this.closeMenu = this.closeMenu.bind(this);
+    this.dropDownAlternative = this.dropDownAlternative.bind(this);
   }
 
-  showMenu(event) {
-    event.preventDefault();
-
-    this.setState({ showMenu: true }, () => {
-      document.addEventListener("click", this.closeMenu);
-    });
-  }
-
-  closeMenu() {
-    this.setState({ showMenu: false }, () => {
-      document.removeEventListener("click", this.closeMenu);
+  dropDownAlternative(e) {
+    let myAlternative = e.target.id;
+    this.setState({
+      myAlternative: myAlternative
     });
   }
 
   render() {
     let choices = [];
-    let selector;
-    //method to select the number from the dropdown menu
+    //method to select the number of people from the dropdown menu
 
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 2; i <= 10; i++) {
       choices.push(i);
     }
     return (
-      <DropdownButton
-        className='offset-8'
-        onClick={this.showMenu}
-        variant='Secondary'
-        id='dropdown-item-button'
-        title='Personer'
-      >
-        {choices.map(i => (
-          <Dropdown.Item key={i} as='button'>
-            {i}
-          </Dropdown.Item>
-        ))}
-      </DropdownButton>
+      <Dropdown className='dropdown'>
+        <Dropdown.Toggle variant='outline-secondary' id='dropdown-basic'>
+          {this.state.myAlternative + " Personer"}
+        </Dropdown.Toggle>
+        <Dropdown.Menu className='dropdown-menu'>
+          {choices.map(i => (
+            <Dropdown.Item
+              className='ddd'
+              id={i}
+              onClick={this.dropDownAlternative}
+            >
+              {i}
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
     );
   }
 }
-
-// Someone else: <PersonChoices btnColor="blue"></PersonChoices>
-// I can read it from this.props

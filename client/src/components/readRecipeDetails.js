@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { Row, Col, Card, ListGroupItem, ListGroup } from "react-bootstrap";
+import {
+  ReactFragment,
+  Row,
+  Col,
+  Card,
+  ListGroupItem,
+  ListGroup
+} from "react-bootstrap";
 import REST from "../REST";
 import ReadRecipeNutrition from "./readRecipeNutrition";
 class Recipe extends REST {}
@@ -26,39 +33,25 @@ class ReadRecipeDetails extends Component {
         Salt: 3
       }
     };
-    this.getRecipe();
-  }
-  //componentDidMount() {}
-
-  async getRecipe() {
-    this.recipe = await Recipe.find(
-      `.findOne({_id: "5d80ae6cbfb4181b341ebdf3"})`
-    );
-    //console.log(this.recipe);
-    // let recipe = await Recipe.find(this.props._id);
-    console.log(this)
-
-    //console.log("this.recipe deatails", this.recipe);
   }
 
   render() {
     return (
       <React.Fragment>
         <Row className='mt-2'>
-          <h1>{this.recipe.name}</h1>
+          <h1>{this.props.name}</h1>
         </Row>
         <Row className='mt-2 font-styling'>
-          <p>{this.recipe.startText}</p>
+          <p>{this.props.startText}</p>
         </Row>
         <Row className='mt-4'>
-          <h3>Tag: {this.recipe.category}</h3>
+          <h3>Tag: {this.props.category}</h3>
         </Row>
         <Row className='mt-4'>
-          <h3> Tid: {this.recipe.time}min</h3>
+          <h3> Tid: {this.props.time} min</h3>
         </Row>
         <Row>
           <h3 className='mt-5'>Näring per portion </h3>
-          {/* <h5> Näring per portion </h5> */}
         </Row>
         <Row>
           {Object.keys(this.state.nutritions).map(key => (
