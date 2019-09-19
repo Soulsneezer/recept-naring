@@ -1,138 +1,260 @@
-import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.css";
-import FoodCardContainer from "./foodCardContainer.js"
-import REST from "../REST.js"
-import HomePageRecipeHeadline from "./homePageRecipeHeadline";
+import React, { Component } from 'react';
+import {
+  InputGroup,
+  FormControl,
+  Button,
+  Container,
+  Row,
+  Col,
+  Card,
+  DropdownButton,
+  Dropdown
+} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import FoodCardContainer from './foodCardContainer.js';
+import REST from '../REST.js';
+import HomePageBackground from './homePageBackground';
+import HomePageRecipeHeadline from './homePageRecipeHeadline';
 
-class Recipe extends REST { }
+class Recipez extends REST {}
+class Recipeswiththiscategory extends REST {}
+
 class HomePage extends Component {
+  constructor(props) {
+    super(props);
 
-	constructor(props) {
-		super(props);
-		this.test();
-		this.state = {
-			images: [
-				"url('/images/backgroundImages/background-img1.jpg')",
+    this.searchHandler = this.searchHandler.bind(this);
+    this.showMoreRecipes = this.showMoreRecipes.bind(this);
+    this.showMoreRecipeCategorys = this.showMoreRecipeCategorys.bind(this);
+    this.selectDropdownAlternative = this.selectDropdownAlternative.bind(this);
 
-				"url('/images/backgroundImages/chickenTaco.jpg')"
-				/*  "url('https://picsum.photos/200/300/?image=523')",
-				 "url('https://picsum.photos/200/300/?image=524')" */
-			],
-			// selectedImage: "url('https://picsum.photos/200/300/?image=523')"
-			selectedImage: "url('/images/backgroundImages/background-img1.jpg')"
+    this.state = {
+      recipes: [],
+      recipesCategory: [],
+      searchInput: '',
+      countRecipe: 4,
+      countCategory: 4,
+      recipesLength: 0,
+      recipesCategorysLength: 0,
+      myAlternative: 'Titel'
+    };
+  }
 
-		};
-	}
+  async searchHandler(e) {
+    let searchInput = e.target.value;
+    if (!searchInput) {
+      this.setState({
+        recipes: [],
+        countRecipe: 4,
+        recipesCategory: [],
+        countCategory: 4
+      });
+    }
+    this.setState({
+      searchInput: e.target.value
+    });
 
-	componentDidMount() {
-		setInterval(() => {
-			this.setState(prevState => {
-				return { selectedImage: prevState.selectedImage === this.state.images[0] ? this.state.images[1] : this.state.images[0] };
+    if (searchInput == 0) {
+      return;
+    }
+    if (searchInput) {
+      let recipes = await Recipez.find(searchInput);
+      let recipesLength = recipes.length;
 
-			});
-		}, 5000);
-	}
+      let recipesCategory = await Recipeswiththiscategory.find(searchInput);
+      let recipesCategorysLength = recipesCategory.length;
 
-	componentWillUnmount() {
-		clearInterval(this.interval);
-	}
-	async test() {
-		let recipe = new Recipe({
-			"name": "mells italiensk kycklinggryta med kokosnötter",
-			"category": [
-				"Enkelt",
-				"Kyckling",
-				"Snabbt",
-				"Vardagsmiddag"
-			],
-			"step": [
-				"Koka pastan enligt anvisningar på förpackningen.",
-				"Fräs kycklingen på medelvärme tills den får lite färg runt om i cirka 5 minuter. Salta och peppra.",
-				"Finhacka vitlöken och chilin och stek med kycklingen i cirka 2 minuter.",
-				"Krydda med timjan och oregano och häll i buljongen, grädden och kokta upp, dra till sidan och tillsätt parmesanen."
-			],
-			"ingredient": [
-				{
-					"name": " kycklinglårfiléer",
-					"qty": 8,
-					"type": "st"
-				},
-				{
-					"name": "flingsalt",
-					"qty": 1,
-					"type": "nypa"
-				},
-				{
-					"name": " svartpeppar",
-					"qty": 1,
-					"type": "nypa"
-				},
-				{
-					"name": " vitlök",
-					"qty": 1,
-					"type": "st"
-				},
-				{
-					"name": "chilifrukt",
-					"qty": 0.5,
-					"type": "st"
-				},
-				{
-					"name": "torkad timjan",
-					"qty": 1,
-					"type": "tsk"
-				},
-				{
-					"name": " torkad oregano",
-					"qty": 1,
-					"type": "tsk"
-				},
-				{
-					"name": "kycklingbuljong",
-					"qty": 3,
-					"type": "dl"
-				},
-				{
-					"name": " vispgrädde",
-					"qty": 1.5,
-					"type": "dl"
-				},
-				{
-					"name": "parmesan",
-					"qty": 1,
-					"type": "dl"
-				},
-				{
-					"name": "pasta",
-					"qty": 4,
-					"type": "port"
-				}
-			],
-			"img": "chickenParmesan.jpg",
-			"portion": 4,
-			"startText": "Italiensk kycklinggratäng med parmesan och örter som egentligen inte har något med Italien att göra, utan är vår version på italiensk mat på 90-talet. /Tareq"
-		})
-		console.log(await recipe.save())
-		let hittarEttRecept = await Recipe.find(
-			`.findOne({_id:'5d7948561ffa6d403e3c3976'})`
-		);
-		console.log(hittarEttRecept)
+      recipesCategory = recipesCategory.slice(0, this.state.countCategory);
+      recipes = recipes.slice(0, this.state.countRecipe);
 
-	}
+      this.setState({
+        recipes: recipes,
+        recipesLength: recipesLength,
+        recipesCategory: recipesCategory,
+        recipesCategorysLength: recipesCategorysLength
+      });
+    }
+  }
 
-	render() {
-		return (
-			<React.Fragment>
-				<div className="search-bar" style={{ backgroundImage: this.state.selectedImage }}>
-					<input className="form-control search-input" type="text" placeholder="Sök efter recept här..." aria-label="Sök efter recept här..." />
-				</div>
-				<div>
-					<HomePageRecipeHeadline />
-				</div>
-				<FoodCardContainer />
-			</React.Fragment>
-		);
-	}
+  async showMoreRecipes() {
+    this.state.countRecipe += 4;
+    let recipes = await Recipez.find(this.state.searchInput);
+    recipes = recipes.splice(0, this.state.countRecipe);
+
+    this.setState({
+      recipes: recipes,
+      countRecipe: this.state.countRecipe
+    });
+  }
+
+  async showMoreRecipeCategorys() {
+    this.state.countCategory += 4;
+    let recipesCategory = await Recipeswiththiscategory.find(
+      this.state.searchInput
+    );
+    recipesCategory = recipesCategory.splice(0, this.state.countCategory);
+
+    this.setState({
+      recipesCategory: recipesCategory,
+      countCategory: this.state.countCategory
+    });
+  }
+
+  selectDropdownAlternative(e) {
+    let myAlternative = e.target.id;
+    this.setState({
+      myAlternative: myAlternative
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <div className='search-bar'>
+          <HomePageBackground />
+          <InputGroup className='search-field'>
+            <FormControl
+              className='search-input'
+              onChange={this.searchHandler}
+              value={this.state.searchInput}
+              placeholder={`Sök recept efter:`}
+              aria-label={`Sök recept efter:`}
+            />
+          </InputGroup>
+          <DropdownButton
+            title={this.state.myAlternative}
+            className='dropdown-btn'
+            alignRight
+          >
+            <Dropdown.Item id='Titel' onClick={this.selectDropdownAlternative}>
+              Titel
+            </Dropdown.Item>
+            <Dropdown.Item
+              id='Kategori'
+              onClick={this.selectDropdownAlternative}
+            >
+              Kategori
+            </Dropdown.Item>
+          </DropdownButton>
+        </div>
+
+        {this.state.searchInput == 0 ? (
+          <div>
+            <HomePageRecipeHeadline />
+            <FoodCardContainer />
+          </div>
+        ) : this.state.myAlternative === 'Titel' ? (
+          this.state.recipes.length === 0 ? (
+            this.state.searchInput !== '' ? (
+              <div className='recipeHeadline'>
+                <Row className='m-0'>
+                  <Col>
+                    <h2 className='recipeHeadlineH2'>0 sökträffar på titel</h2>
+                  </Col>
+                </Row>
+                <Container className='container-outer'></Container>
+              </div>
+            ) : (
+              ''
+            )
+          ) : (
+            <div className='recipeHeadline'>
+              <Row className='m-0'>
+                <Col>
+                  <h2 className='recipeHeadlineH2'>Sökresultat på titel</h2>
+                </Col>
+              </Row>
+              <Container className='container-outer'>
+                <Row className='container-inner'>
+                  {this.state.recipes.map(recipe => (
+                    <div className='card-outer special' key={recipe._id}>
+                      <div className='card-inner'>
+                        <img
+                          className='card-img'
+                          src={require('../images/' + recipe.img)}
+                          alt={'En bild på ' + recipe.name}
+                        />
+                        <Card.Title className='card-title'>
+                          <h5 className='card-p'>{recipe.name}</h5>
+                        </Card.Title>
+                        <Button
+                          className='card-button'
+                          href={'/recipe/' + recipe._id}
+                        >
+                          Gå till recept
+                        </Button>
+                      </div>
+                    </div>
+                  ))}
+                </Row>
+                <Button
+                  className='show-more-btn'
+                  onClick={this.showMoreRecipes}
+                >
+                  {this.state.recipesLength <= this.state.countRecipe
+                    ? 'Inga fler recept'
+                    : 'Visa fler recept'}
+                </Button>
+              </Container>
+            </div>
+          )
+        ) : this.state.recipesCategory.length === 0 ? (
+          this.state.searchInput !== '' ? (
+            <div className='recipeHeadline'>
+              <Row className='m-0'>
+                <Col>
+                  <h2 className='recipeHeadlineH2'>0 sökträffar på kategori</h2>
+                </Col>
+              </Row>
+              <Container className='container-outer'></Container>
+            </div>
+          ) : (
+            ''
+          )
+        ) : (
+          <div className='recipeHeadline'>
+            <Row className='m-0'>
+              <Col>
+                <h2 className='recipeHeadlineH2'>Sökresultat på kategori</h2>
+              </Col>
+            </Row>
+            <Container className='container-outer'>
+              <Row className='container-inner'>
+                {this.state.recipesCategory.map(recipe => (
+                  <div className='card-outer special' key={recipe._id}>
+                    <div className='card-inner'>
+                      <img
+                        className='card-img'
+                        src={require('../images/' + recipe.img)}
+                        alt={'En bild på ' + recipe.name}
+                      />
+                      <Card.Title className='card-title'>
+                        <h5 className='card-p'>{recipe.name}</h5>
+                      </Card.Title>
+                      <Button
+                        className='card-button'
+                        href={'/recipe/' + recipe._id}
+                      >
+                        Gå till recept
+                      </Button>
+                    </div>
+                  </div>
+                ))}
+              </Row>
+              <Button
+                className='show-more-btn'
+                onClick={this.showMoreRecipeCategorys}
+              >
+                {this.state.recipesCategorysLength <= this.state.countCategory
+                  ? 'Inga fler recept'
+                  : 'Visa fler recept'}
+              </Button>
+            </Container>
+          </div>
+        )}
+      </div>
+    );
+  }
 }
 
 export default HomePage;

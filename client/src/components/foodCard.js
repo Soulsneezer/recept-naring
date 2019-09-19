@@ -10,6 +10,7 @@ export default class FoodCard extends Component {
     this.state = {};
   }
 
+
   render() {
     return (
       <Row>
