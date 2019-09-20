@@ -18,7 +18,7 @@ export default function AddRecipeModal(props) {
           Lägg till ett nytt recept här...
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body className="p-0">
         <AddRecipeForm />
       </Modal.Body>
       <Modal.Footer>

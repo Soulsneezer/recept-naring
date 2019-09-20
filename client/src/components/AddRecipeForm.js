@@ -73,26 +73,26 @@ class AddRecipeForm extends React.Component {
 
 
     return (
-      <Container className="mx-3">
+      <Container>
         <Row>
-          <Col xs={12} md={12} lg={4}>
+          <Col xs={12} md={12} lg={3}>
             <FileUpload />
           </Col>
-          <Col xs={12} md={12} lg={8}>
+          <Col xs={12} md={10} lg={9}>
             <Form className="form">
               <Row className="mt-3">
-                <Col className="recipe-name mt-3 pl-2" xs={10} md={11} lg={12}>
-                  <Form.Control input="true" className="recipe-name" placeholder="Vad heter ditt recept?" />
+                <Col className="recipe-name mt-3" xs={11} md={11} lg={11}>
+                  <Form.Control input="true" className="recipe-name pl-2" placeholder="Vad heter ditt recept?" />
                   <CategoryChoices />
                   <CategoryChoices />
                 </Col>
               </Row>
 
               <Row className="cooking-time-row mt-3">
-                <Col xs={1} md={1} className="px-0">
+                <Col xs={1} md={1} className="ml-3 px-0">
                   <MdQueryBuilder />
                 </Col>
-                <Col xs={6} md={8} lg={10} className="px-0">
+                <Col xs={10} md={10} lg={10} className="px-0 ml-4">
                   <Form.Control input="true" className="recipe-name" placeholder="Tillagningstiden i minuter..." />
                 </Col>
               </Row>
