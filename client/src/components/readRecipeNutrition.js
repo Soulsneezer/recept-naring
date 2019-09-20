@@ -5,7 +5,16 @@ class ReadRecipeNutrition extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.hej()
+    
   }
+  hej(){
+    console.log(this)
+  }
+  shouldComponentUpdate (nextProps) {
+    console.log(nextProps)
+    console.log(this.props)
+ }
   render() {
     let name = this.props.nutrientName;
     let value = this.props.nutrientValue;
