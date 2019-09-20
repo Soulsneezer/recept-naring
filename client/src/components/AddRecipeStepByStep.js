@@ -6,7 +6,7 @@ const AddRecipeStepByStep = () => {
   return (
     <React.Fragment>
       <Row className="mt-3">
-        <Col className="recipe-name my-2" xs={10} md={10} lg={10}>
+        <Col className="recipe-name mt-2" xs={10} md={10} lg={10}>
           <ListGroup as="ol">
             <ListGroup.Item as="li" className="list-group-item" input="text">Instruktioner..</ListGroup.Item>
           </ListGroup>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
 import { MdRemoveCircleOutline } from "react-icons/md";
 
 const RemoveRowButton = (props) => {

@@ -65,7 +65,8 @@ main {
   min-width: 70px;
 }
 
-.dropdown-menu {
+.units-dropdown-menu,
+.category-dropdown-menu {
   font-size: 10px;
   border-radius: 20px;
   min-width: 60px;

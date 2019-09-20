@@ -27,6 +27,7 @@ class AddRecipeForm extends React.Component {
     };
   }
 
+
   addRecipeRow() {
     let key = this.state.ingredientRows.length;
     const uuid = uuid4();
@@ -72,30 +73,26 @@ class AddRecipeForm extends React.Component {
 
 
     return (
-      <React.Fragment className="add-recipe my-3" style={{ width: 'auto' }} >
+      <Container className="mx-3">
         <Row>
           <Col xs={12} md={12} lg={4}>
             <FileUpload />
           </Col>
           <Col xs={12} md={12} lg={8}>
             <Form className="form">
-              <Row className="mx-3">
-                <Col className="recipe-name mt-3 pl-2" xs={12} md={4} lg={4}>
+              <Row className="mt-3">
+                <Col className="recipe-name mt-3 pl-2" xs={10} md={11} lg={12}>
                   <Form.Control input="true" className="recipe-name" placeholder="Vad heter ditt recept?" />
-                </Col>
-                <Col className="mt-3 px-0" xs={6} md={4} lg={4}>
                   <CategoryChoices />
-                </Col>
-                <Col className="mt-3 px-0" xs={6} md={4} lg={4}>
                   <CategoryChoices />
                 </Col>
               </Row>
 
-              <Row className="cooking-time-row mx-3">
-                <Col xs={2} md={2} className="mt-3 px-0">
+              <Row className="cooking-time-row mt-3">
+                <Col xs={1} md={1} className="px-0">
                   <MdQueryBuilder />
                 </Col>
-                <Col xs={9} md={9} className="mt-3 px-0">
+                <Col xs={6} md={8} lg={10} className="px-0">
                   <Form.Control input="true" className="recipe-name" placeholder="Tillagningstiden i minuter..." />
                 </Col>
               </Row>
@@ -105,10 +102,11 @@ class AddRecipeForm extends React.Component {
 
               {stepByStepRows}
               <AddRecipeStepByStepAddRow className="MdAddCircleOutline" onClick={() => this.addStepByStepRow()} />
+
             </Form>
           </Col>
         </Row>
-      </React.Fragment>
+      </Container>
     )
   }
 }

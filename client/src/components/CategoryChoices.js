@@ -3,19 +3,18 @@ import { InputGroup, Dropdown } from 'react-bootstrap'
 
 class CategoryChoices extends React.Component {
   constructor(props) {
-    super(props)
-
+    super(props);
 
   }
 
   render() {
     return ( 
-      <Dropdown className="category-dropdown-button px-0" onClick={e => this.setState({})}>
+      <Dropdown className="category-dropdown-button px-0 ml-3" onClick={e => this.setState({})}>
         <Dropdown.Toggle variant="outline-secondary" className="category-dropdown">
           Kategorier
       </Dropdown.Toggle>
 
-        <Dropdown.Menu className="dropdown-menu px-0">
+        <Dropdown.Menu className="category-dropdown-menu px-0">
           <InputGroup.Prepend>
             <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
             <Dropdown.Item className="px-1" href="#/action-1">Vegansk</Dropdown.Item>
@@ -71,7 +70,6 @@ class CategoryChoices extends React.Component {
       </Dropdown>
     )
   }
-
 }
 
 export default CategoryChoices;
