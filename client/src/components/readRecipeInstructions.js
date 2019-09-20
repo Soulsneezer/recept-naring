@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Card, ListGroupItem, ListGroup } from "react-bootstrap";
+import {ListGroupItem, ListGroup } from "react-bootstrap";
 import REST from "../REST";
 
 class Recipe extends REST {}

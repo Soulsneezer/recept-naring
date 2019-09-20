@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import {
-  ReactFragment,
-  Row,
-  Col,
-  Card,
-  ListGroupItem,
-  ListGroup
+  Row
 } from "react-bootstrap";
 import REST from "../REST";
 import ReadRecipeNutrition from "./readRecipeNutrition";
@@ -15,13 +10,14 @@ class ReadRecipeDetails extends Component {
   constructor(props) {
     super(props);
     Object.assign(this, props);
-    this.kcal = 0;
-    this.monoSaturatedFats = 0;
-    this.monoUnSaturatedFats = 0;
-    this.saturatedFats= 0;
-    this.prots = 0;
-    this.carbs = 0;
-    this.klar = false
+    this.nutes= {
+      Kcal: 0,
+      "Enkelmättat fett": 0,
+      "Enkelomättat fett": 0,
+      "Mättat fett": 0,
+      Protein: 0,
+      Kolhydrater: 0
+    }
 
     let fatDetails = () => {
       return {
@@ -60,19 +56,13 @@ class ReadRecipeDetails extends Component {
           prots += this.props.ingredient[i].nutrient.prots
           carbs += this.props.ingredient[i].nutrient.carbs
         }
-        kcal = kcal / this.props.portion
-        monoUnSaturatedFats = monoUnSaturatedFats / this.props.portion
-        monoSaturatedFats = monoSaturatedFats / this.props.portion
-        saturatedFats = saturatedFats / this.props.portion
-        prots = prots / this.props.portion
-        carbs = carbs / this.props.portion
+        this.nutes.Kcal = Math.round(kcal / this.props.portion)
+        this.nutes["Enkelomättat fett"] = Math.round(monoUnSaturatedFats / this.props.portion)
+        this.nutes["Enkelmättat fett"] = Math.round(monoSaturatedFats / this.props.portion)
+        this.nutes["Mättat fett"] = Math.round(saturatedFats / this.props.portion)
+        this.nutes.Protein = Math.round(prots / this.props.portion)
+        this.nutes.Kolhydrater = Math.round(carbs / this.props.portion)
 
-        this.kcal = kcal
-        this.monoUnSaturatedFats = monoUnSaturatedFats
-        this.monoSaturatedFats = monoSaturatedFats
-        this.saturatedFats = saturatedFats
-        this.prots = prots
-        this.carbs = carbs
         this.setState({state: this.state})
         this.klar = true
         console.log(this.carbs)
@@ -99,11 +89,12 @@ class ReadRecipeDetails extends Component {
         </Row>
         {this.klar ?
         <span>
-        {Object.keys(this.state.nutritions).map(key => (
+        {Object.keys(this.nutes).map(key => (
             <ReadRecipeNutrition
               key={key}
               nutrientName={key}
-              nutrientValue={this.state.nutritions[key]}
+              nutrientValue={this.nutes[key]}
+              prots={this.nutes}
             />
           ))}
           </span>
