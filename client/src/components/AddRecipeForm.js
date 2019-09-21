@@ -18,58 +18,64 @@ class AddRecipeForm extends React.Component {
     let ingredientRows = [];
 
     for (let i = 0; i < 3; i++) {
-      const uuid = uuid4();
-      ingredientRows.push(<AddRecipeIngredientRow key={uuid} index={uuid} deleteMe={() => this.deleteRecipeRow(i)} />)
+      const id = uuid4()
+      ingredientRows.push(<AddRecipeIngredientRow key={id} remove={id}  index={i} deleteMe={i => this.deleteRecipeRow(i)} />)
     }
+
+    let numberOfStepByStepRow = [];
+    for (let i = 0; i < 1; i++) {
+      const id = uuid4()
+      numberOfStepByStepRow.push(<AddRecipeStepByStep key={id} remove={id}  index={i} deleteMe={i => this.deleteStepByStepRow(i)} />)
+    }
+
     this.state = {
       ingredientRows: ingredientRows,
-      numberOfStepByStepRow: 1
+      numberOfStepByStepRow: numberOfStepByStepRow
     };
   }
 
 
   addRecipeRow() {
-    let key = this.state.ingredientRows.length;
-    const uuid = uuid4();
+    let i = this.state.ingredientRows.length;
+    const id = uuid4()
     this.setState({
       ingredientRows: [
         ...this.state.ingredientRows,
-        <AddRecipeIngredientRow key={uuid} index={uuid} deleteMe={() => this.deleteRecipeRow(key)} />
+        <AddRecipeIngredientRow key={id} remove={id} index={i} deleteMe={i => this.deleteRecipeRow(i)} />
       ]
     });
   }
 
-
   deleteRecipeRow(key) {
-    /*console.log(index)
-    console.log('k',this.state.ingredientRows.length, index, typeof index )
-    let modified = this.state.ingredientRows.slice().splice(index, 1);
-    console.log('l',modified.length)*/
-    const remainder = this.state.ingredientRows.filter((item, i) => i !== key)
-    console.log('key', key);
+    this.setState({ ingredientRows: this.state.ingredientRows.filter((item, i) => item.key !== key) });
+    
 
-    this.setState({ ingredientRows: remainder });
-    //this.setState({ numberOfIngredientsRow: this.state.numberOfIngredientsRow - i });
+   /*this.setState({ numberOfIngredientsRow: this.state.numberOfIngredientsRow - 1 });*/
   }
-
   addStepByStepRow() {
-    this.setState({ numberOfStepByStepRow: this.state.numberOfStepByStepRow + 1 });
+    //this.setState({ numberOfStepByStepRow: this.state.numberOfStepByStepRow + 1 });
+    let i = this.state.numberOfStepByStepRow.length;
+    const id = uuid4()
+    this.setState({
+      numberOfStepByStepRow: [
+        ...this.state.numberOfStepByStepRow,
+        <AddRecipeStepByStep key={id} remove={id} index={i} deleteMe={i => this.deleteStepByStepRow(i)} />
+      ]
+    });
   }
 
   deleteStepByStepRow(key) {
-    const remainder = this.state.numberOfStepByStepRow.filter((item, i) => i !== key)
+    this.setState({ numberOfStepByStepRow: this.state.numberOfStepByStepRow.filter((item, i) => item.key !== key) });
     console.log('key', key);
-
-    this.setState({ numberOfStepByStepRow: remainder });
   }
 
   render() {
 
     // make an empty array that  has as many empty elements as numberofinngredientrow
-    let stepByStepRows = [];
-    for (let j = 1; j <= this.state.numberOfStepByStepRow; j++) {
-      stepByStepRows.push(<AddRecipeStepByStep key={j} />)
-    }
+    // let stepByStepRows = [];
+    // for (let j = 1; j <= this.state.numberOfStepByStepRow; j++) {
+    //   stepByStepRows.push(<AddRecipeStepByStep key={j} />)
+    // }
 
 
     return (
@@ -100,7 +106,7 @@ class AddRecipeForm extends React.Component {
               {this.state.ingredientRows}
               <AddRecipeRowButton className="MdAddCircleOutline" onClick={() => this.addRecipeRow()} />
 
-              {stepByStepRows}
+              {this.state.numberOfStepByStepRow}
               <AddRecipeStepByStepAddRow className="MdAddCircleOutline" onClick={() => this.addStepByStepRow()} />
 
             </Form>

@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Form, Col, Row } from 'react-bootstrap';
 import RemoveRowButton from './AddRecipeRemoveButton';
 import AddRecipeUnits from './AddRecipeUnits';
+
+
+//import { MdQueryBuilder } from "react-icons/md";
+//import AddRecipeForm from "./AddRecipeForm";
 //import ingredients-icon from '../images/ingredients-icon.png';
 
 const uuid4 = require('uuid/v4');
@@ -14,7 +18,7 @@ class AddRecipeIngredientRow extends Component {
 
 
   render() {
-    const uuid = uuid4();
+    const id = uuid4();
 
     return (
       <React.Fragment>
@@ -29,7 +33,7 @@ class AddRecipeIngredientRow extends Component {
             <Form.Control className="recipe-name p-3 mt-2" input="true" placeholder="ingrediensen" />
           </Col>
           <Col xs={1} md={1} className="MdARemoveCircleOutline mt-2">
-            <RemoveRowButton key={uuid} onClick={e => this.props.deleteMe(this.props.index)} />
+            <RemoveRowButton key={id} onClick={() => this.props.deleteMe(this.props.remove)} />
           </Col>
         </Row>
       </React.Fragment>
