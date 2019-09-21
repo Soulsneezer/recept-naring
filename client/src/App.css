@@ -494,7 +494,7 @@ body {
   display: inline-block;
 }
 
-.container {
+/* .container {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -509,7 +509,7 @@ body {
   .container {
     max-width: 500px;
   }
-}
+} */
 
 /*------- Login Page -------*/
 .row {
@@ -609,6 +609,18 @@ p {
 .card-body {
   padding: 0px !important;
 }
+.read-recipe-img {
+  margin-top: 60px !important;
+  height: 70vh !important;
+  width: 100% !important;
+}
+/*------- still not sure about this part -------*/
+@media (min-width: 576px) {
+  .read-recipe-img {
+    margin-top: 0px;
+    height: 90vh;
+  }
+}
 
 /*------------------------------------- Read Recipe Page End -------------------------------------------*/
 
@@ -670,6 +682,11 @@ footer .icon {
 .card-inner {
   position: relative;
 }
+.card-img {
+  height: 200px;
+  width: 100%;
+  border-radius: 3px 3px 0px 0px;
+}
 .card-title {
   position: absolute;
   left: 0;
@@ -682,11 +699,7 @@ footer .icon {
   text-align: left;
   height: 60px;
 }
-.card-img {
-  height: 200px;
-  width: 100%;
-  border-radius: 3px 3px 0px 0px;
-}
+
 .container-outer {
   border: 1px solid rgb(200, 200, 200);
   border-radius: 3px 3px 3px 3px;
