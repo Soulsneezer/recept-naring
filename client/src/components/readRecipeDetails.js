@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import {
-  ReactFragment,
-  Row,
-  Col,
-  Card,
-  ListGroupItem,
-  ListGroup
-} from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import REST from "../REST";
 import ReadRecipeNutrition from "./readRecipeNutrition";
 import PersonChoices from "./PersonChoices";
@@ -70,7 +63,7 @@ class ReadRecipeDetails extends Component {
                 <Row className='mt-5 col-sm-12 md-ml-4'>
                   <h2>Näring per portion </h2>
                 </Row>
-                <Row className='col-sm-12  col-md-12 md-ml-4'>
+                <Row className='col-sm-12 sm-ml-4 col-md-12 md-ml-4'>
                   {Object.keys(this.state.nutritions).map(key => (
                     <ReadRecipeNutrition
                       key={key}

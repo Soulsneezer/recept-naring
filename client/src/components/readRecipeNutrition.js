@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Row, Col, Card, ListGroupItem, ListGroup } from "react-bootstrap";
+import React from "react";
+import { Card } from "react-bootstrap";
 
 class ReadRecipeNutrition extends React.Component {
   constructor(props) {

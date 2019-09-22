@@ -1,17 +1,8 @@
 import React, { Component } from "react";
-import PersonChoices from "./PersonChoices";
 import ReadRecipeDetails from "./readRecipeDetails";
 import ReadRecipeInstructions from "./readRecipeInstructions";
 import ReadRecipeIngredients from "./readRecipeIngredients";
-import ReadRecipeNutrition from "./readRecipeNutrition";
-import {
-  Container,
-  Col,
-  Row,
-  Dropdown,
-  DropdownButton,
-  Image
-} from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import REST from "../REST";
 
 class Recipe extends REST {}

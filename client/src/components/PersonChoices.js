@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Dropdown, DropdownButton } from "react-bootstrap";
+import React from "react";
+import { Dropdown } from "react-bootstrap";
 
 export default class PersonChoices extends React.Component {
   constructor() {
