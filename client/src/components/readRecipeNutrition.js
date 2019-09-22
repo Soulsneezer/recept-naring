@@ -21,8 +21,8 @@ class ReadRecipeNutrition extends React.Component {
         className='m-1 offset-3'
         style={{ display: "inline-block", width: "9rem" }}
       >
-        <Card.Text className='m-3 border-styling fat-list'>{name}</Card.Text>
-        <Card.Body>
+        <Card.Text className='m-2 border-styling fat-list'>{name}</Card.Text>
+        <Card.Body className='card-styling'>
           <ul className='fat-list'>
             {name !== "Fat" ? (
               <Card.Text className='fat-list'>

@@ -35,14 +35,14 @@ class ReadRecipe extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Container className='text-left fluid'>
         {this.recipe ? <ReadRecipeDetails {...this.recipe} /> : null}
         <Row className='mt-5'>
-          <Col className='col-md-3 mt-5'>
+          <Col className=' col-sm-12 col-md-3 mt-5'>
             <h3 className='mb-2 offset-1'> Ingredienser</h3>
             <ReadRecipeIngredients {...this.recipe} />
           </Col>
-          <Col className='col-md-9 mt-5'>
+          <Col className='col-sm-12 col-md-9 mt-5'>
             <h3 className='mb-2 offset-1'> Steg för steg</h3>
             <ReadRecipeInstructions {...this.recipe} />
           </Col>

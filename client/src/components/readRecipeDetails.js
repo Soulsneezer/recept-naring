@@ -39,38 +39,38 @@ class ReadRecipeDetails extends Component {
   render() {
     return (
       <React.Fragment>
-        <Row className='m-0'>
-          <Col className='col-md-4 col-sm-12'>
-            <img
-              className='card-img read-recipe-img'
-              src={require("../images/" + this.props.img)}
-              alt={"En bild på " + this.props.name}
-            />
-          </Col>
+        <Row className='mt-4'>
+          <img
+            className='col-sm-12 col-md-4 mt-2 card-img read-recipe-img'
+            src={require("../images/" + this.props.img)}
+            alt={"En bild på " + this.props.name}
+          />
 
-          <Col className='col-md-8'>
-            <Row className='m-0'>
-              <Col className='col-md-2 col-xs-12 offset-10'>
-                <PersonChoices {...this.recipe} />
-              </Col>
-              <Col className='col-md-10'>
-                {/* here I need to render all the details of the recipe */}
-                <Row className='m-0'>
+          <Col className='col-sm-12 col-md-8'>
+            <Row className='md-ml-4'>
+              <Row>
+                <Col className='col-sm-12 col-md-10'>
                   <h1>{this.props.name}</h1>
-                </Row>
+                </Col>
+                <Col className='col-sm-12 col-md-2'>
+                  <PersonChoices {...this.recipe} />
+                </Col>
+              </Row>
+              <Col className='col-sm-12 p-0 col-md-10'>
                 <Row className='m-0 font-styling'>
                   <p>{this.props.startText}</p>
                 </Row>
-                <Row className='mt-4'>
-                  <h3>Tag: {this.props.category}</h3>
+                <Row className='mt-4 col-sm-12 p-0 font-styling'>
+                  <h2>Kategori : </h2> <p> {this.props.category}</p>
                 </Row>
-                <Row className='mt-4'>
-                  <h3> Tid: {this.props.time} min</h3>
+                <Row className='mt-4 col-sm-12'>
+                  <h2> Tid :</h2>
+                  <p>{this.props.time} min</p>
                 </Row>
-                <Row>
-                  <h3 className='mt-5'>Näring per portion </h3>
+                <Row className='mt-5 col-sm-12 md-ml-4'>
+                  <h2>Näring per portion </h2>
                 </Row>
-                <Row>
+                <Row className='col-sm-12  col-md-12 md-ml-4'>
                   {Object.keys(this.state.nutritions).map(key => (
                     <ReadRecipeNutrition
                       key={key}
