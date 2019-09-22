@@ -56,11 +56,11 @@ class ReadRecipeDetails extends Component {
                 <Row className='mt-4 col-sm-12 p-0 font-styling'>
                   <h2>Kategori : </h2> <p> {this.props.category}</p>
                 </Row>
-                <Row className='mt-4 col-sm-12'>
-                  <h2> Tid :</h2>
+                <Row className='mt-4 p-0 col-sm-12 font-styling'>
+                  <h2>Tid :</h2>
                   <p>{this.props.time} min</p>
                 </Row>
-                <Row className='mt-5 col-sm-12 md-ml-4'>
+                <Row className='mt-5 col-sm-12 md-ml-4 p-0 font-styling'>
                   <h2>Näring per portion </h2>
                 </Row>
                 <Row className='col-sm-12 sm-ml-4 col-md-12 md-ml-4'>
