@@ -28,6 +28,10 @@ class ReadRecipe extends React.Component {
     this.setState({ state: this.state });
   }
 
+    handleChildClick(numberOfPersons){
+      this.setState({numberOfPersons: numberOfPersons});
+    }
+
   render() {
     return (
       <Container>
@@ -39,10 +43,13 @@ class ReadRecipe extends React.Component {
           <Col className='col-md-8'>
             <Row>
               <Col className='md-2 xs-12 offset-10'>
-                <PersonChoices {...this.recipe} />
+                <PersonChoices 
+                    {...this.recipe}
+                    onClick={e => this.handleChildClick(e)}
+                    />
               </Col>
               <Col className='md-10'>
-                {this.recipe ? <ReadRecipeDetails {...this.recipe} /> : null}
+                {this.recipe ? <ReadRecipeDetails {...this.recipe} numberOfPersons={this.state.numberOfPersons} /> : null}
               </Col>
             </Row>
           </Col>
@@ -50,7 +57,7 @@ class ReadRecipe extends React.Component {
         <Row className='mt-5'>
           <Col className='md-3 mt-5'>
             <h3 className='mb-2 offset-1'> Ingredienser</h3>
-            {this.recipe  ? <ReadRecipeIngredients ingredients={this.recipe.ingredient} /> : null}
+            {this.recipe  ? <ReadRecipeIngredients numberOfPersons={this.state.numberOfPersons} ingredients={this.recipe.ingredient} portion={this.recipe.portion} /> : null}
           </Col>
           <Col className='md-9 mt-5'>
             <h3 className='mb-2 offset-1'> Steg för steg</h3>

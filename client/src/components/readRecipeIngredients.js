@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import {ListGroup } from "react-bootstrap";
-import REST from "../REST";
-
-class Recipe extends REST {}
 
 class ReadRecipeIngredients extends Component {
   constructor(props) {
@@ -17,7 +14,7 @@ class ReadRecipeIngredients extends Component {
       <ListGroup>
         {this.props.ingredients.map((ing, i) => { 
           return(
-        <ListGroup.Item key={i}>{ing.qty} {ing.type} {ing.name}</ListGroup.Item>
+        <ListGroup.Item key={i}>{this.props.numberOfPersons ? ing.qty / this.props.portion * this.props.numberOfPersons : ing.qty / this.props.portion  * this.props.portion} {ing.type} {ing.name}</ListGroup.Item>
         )}
     )
     }

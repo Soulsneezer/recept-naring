@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {
-  Row
+  Row,
+  Col
 } from "react-bootstrap";
 import REST from "../REST";
 import ReadRecipeNutrition from "./readRecipeNutrition";
@@ -36,7 +37,6 @@ class ReadRecipeDetails extends Component {
         Salt: 3
       }
     };
-
   }
   componentDidMount(){
     this.hej()
@@ -47,25 +47,70 @@ class ReadRecipeDetails extends Component {
         let monoUnSaturatedFats = 0;
         let saturatedFats = 0;
         let prots = 0;
-        let carbs = 0;
-        for(let i in this.props.ingredient){
-          kcal += this.props.ingredient[i].nutrient.kcal
-          monoUnSaturatedFats += this.props.ingredient[i].nutrient.monoUnSaturatedFats
-          monoSaturatedFats += this.props.ingredient[i].nutrient.monoSaturatedFats
-          saturatedFats += this.props.ingredient[i].nutrient.saturatedFats
-          prots += this.props.ingredient[i].nutrient.prots
-          carbs += this.props.ingredient[i].nutrient.carbs
+        let carbs = 0;        
+     
+       let converter = (name, qty, unit) =>{
+          const unitsToGram = {
+            kg: 1000,
+            hg: 100,
+            g: 1,
+            mg: 0.001,
+            // approximate (see exceptions below)
+            l: 1000,
+            dl: 100,
+            cl: 10,
+            ml: 1,
+            tsk: 5,
+            krm: 1,
+            nypa: 1,
+            // very approximate
+            // (although rather true for eggs, tomatoes, bell peppers etc)
+            st: 60
+            // we miss all those small ones.. kryddmått etc.
+          }
+         
+          const exceptions = [
+            { baseUnit: 'l', nameHas: 'mjöl', modifier: 0.6 },
+            { baseUnit: 'l', nameHas: 'olja', modifier: 0.9 },
+            { baseUnit: 'st', nameHas: 'kycklinglår', modifier: 1 },
+            { baseUnit: 'st', nameHas: 'kyckling', modifier: 1200 / unitsToGram.st },
+            { baseUnit: 'st', nameHas: 'lax', modifier: 3000 / unitsToGram.st }
+          ];
+         
+          // get the conversion factor from toGram
+          let factor = unitsToGram[unit];
+         
+          // change it if any exception applies
+          for (let x of exceptions) {
+            if (unit.includes(x.baseUnit) && name.includes(x.nameHas)) {
+              factor *= x.modifier;
+              break;
+            }
+          }
+         
+          return factor * qty;
         }
+        for(let i in this.props.ingredient){
+          console.log(this.props.ingredient[i])
+          let asdf = converter(this.props.ingredient[i].name ,this.props.ingredient[i].qty , this.props.ingredient[i].type )
+          console.log(asdf)
+            console.log(kcal += this.props.ingredient[i].nutrient.kcal / 100 * asdf)
+            kcal += this.props.ingredient[i].nutrient.kcal / 100 * asdf
+            monoUnSaturatedFats += this.props.ingredient[i].nutrient.monoUnSaturatedFats / 100 * asdf
+            monoSaturatedFats += this.props.ingredient[i].nutrient.monoSaturatedFats / 100 * asdf
+            saturatedFats += this.props.ingredient[i].nutrient.saturatedFats / 100 * asdf
+            prots += this.props.ingredient[i].nutrient.prots / 100 * asdf
+            carbs += this.props.ingredient[i].nutrient.carbs / 100 * asdf
+        }
+
         this.nutes.Kcal = Math.round(kcal / this.props.portion)
         this.nutes["Enkelomättat fett"] = Math.round(monoUnSaturatedFats / this.props.portion)
         this.nutes["Enkelmättat fett"] = Math.round(monoSaturatedFats / this.props.portion)
         this.nutes["Mättat fett"] = Math.round(saturatedFats / this.props.portion)
         this.nutes.Protein = Math.round(prots / this.props.portion)
         this.nutes.Kolhydrater = Math.round(carbs / this.props.portion)
-
         this.setState({state: this.state})
-        this.klar = true
-        console.log(this.carbs)
+        this.render()
       }
 
   render() {
@@ -84,11 +129,13 @@ class ReadRecipeDetails extends Component {
           <h3> Tid: {this.props.time} min</h3>
         </Row>
         <Row>
+          <Col>
           <h3 className='mt-5'>Näring per portion </h3>
+          </Col>
         <Row> 
         </Row>
-        {this.klar ?
-        <span>
+        <Row>
+        <Col>
         {Object.keys(this.nutes).map(key => (
             <ReadRecipeNutrition
               key={key}
@@ -97,8 +144,8 @@ class ReadRecipeDetails extends Component {
               prots={this.nutes}
             />
           ))}
-          </span>
-          : null}
+          </Col>
+          </Row>
         </Row>
       </React.Fragment>
     );

@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import {ListGroupItem, ListGroup } from "react-bootstrap";
-import REST from "../REST";
-
-class Recipe extends REST {}
 
 class ReadRecipeInstructions extends Component {
   constructor(props) {

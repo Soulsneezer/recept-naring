@@ -4,17 +4,9 @@ import { Card } from "react-bootstrap";
 class ReadRecipeNutrition extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-    this.hej()
-    
+    this.state = {};    
   }
-  hej(){
-    console.log(this)
-  }
-  shouldComponentUpdate (nextProps) {
-    console.log(nextProps)
-    console.log(this.props)
- }
+
   render() {
     let name = this.props.nutrientName;
     let value = this.props.nutrientValue;
@@ -22,13 +14,12 @@ class ReadRecipeNutrition extends React.Component {
     // from the parent component so instead we are
     // sending a function, that when called returns an object
     if (typeof value === "function") {
-      console.log(this.props)
       value = value();
     }
 
     return (
       <Card
-        className='m-1 offset-3'
+        className='m-1 offset-1'
         style={{ display: "inline-block", width: "9rem" }}
       >
         <Card.Text className='m-3 border-styling fat-list'>{name}</Card.Text>
