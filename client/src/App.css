@@ -216,10 +216,11 @@ main {
   margin-bottom: 0;
 }
 @media only screen and (max-width: 400px) {
-  .recipeHeadlineH2 {
-    font-size: 15px;
-    text-align: center;
-  }
+	.recipeHeadlineH2 {
+		font-size: 15px;
+		text-align: center;
+		margin-top: 15px;
+	}
 }
 @media only screen and (max-width: 920px) {
   .recipeHeadlineH2 {
@@ -242,73 +243,83 @@ main {
 }
 
 .homePageBackgroundShow {
-  height: 30vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 2;
-  transition: 2s;
+	height: 30vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: 0.5s;
+	opacity: 1;
 }
 .search-field {
   width: 40%;
 }
-
-.dropdown-btn > .btn-primary {
-  height: 55px;
-  color: rgb(0, 0, 0);
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgb(148, 148, 148);
-  border-left: none;
-  border-radius: 0 30px 30px 0;
-  margin-bottom: 0;
-  font-size: 25px;
-  text-align: center;
-  color: rgb(92, 92, 92);
-  width: 160px;
-  backdrop-filter: blur(3px);
+.dropdown-toggle {
+	font-family: 'Roboto';
+}
+.dropdown-item {
+	font-family: 'Roboto';
+	border-radius: 10px 10px 10px 10px;
+}
+.dropdown-btn > .btn-success {
+	height: 55px;
+	color: rgb(0, 0, 0);
+	background-color: rgba(255, 255, 255, 0.7);
+	border: 1px solid rgb(148, 148, 148);
+	border-left: none;
+	border-radius: 0 30px 30px 0;
+	margin-bottom: 0;
+	font-size: 25px;
+	text-align: center;
+	color: rgb(92, 92, 92);
+	width: 160px;
+	backdrop-filter: blur(3px);
+}
+.dropdown-menu {
+	border-radius: 0 0 20px 20px;
 }
 .search-input {
-  z-index: 1;
-  height: 55px;
-  border-radius: 30px 0 0 30px;
-  font-size: 25px;
-  padding-left: 60px;
-  backdrop-filter: blur(3px);
-  border: 1px solid rgb(148, 148, 148);
-  background: url(./images/magnifying-glass.svg) rgba(255, 255, 255, 0.7);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position-y: center;
-  background-position-x: 10px;
+	font-family: 'Roboto';
+	z-index: 1;
+	height: 55px;
+	border-radius: 30px 0 0 30px;
+	font-size: 25px;
+	padding-left: 60px;
+	backdrop-filter: blur(3px);
+	border: 1px solid rgb(148, 148, 148);
+	background: url(./images/magnifying-glass.svg) rgba(255, 255, 255, 0.7);
+	background-repeat: no-repeat;
+	background-size: 30px;
+	background-position-y: center;
+	background-position-x: 10px;
 }
 
 @media only screen and (max-width: 920px) {
-  .search-input {
-    height: 45px;
-  }
-  .search-bar {
-    height: 20vh;
-    background-size: 100%;
-  }
-  .homePageBackgroundShow {
-    height: 20vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 2;
-    transition: 2s;
-  }
-  .recipeHeadlineH2 {
-    margin-top: 10px;
-  }
+	.search-input {
+		height: 45px;
+	}
+	.search-bar {
+		height: 20vh;
+		background-size: 100%;
+	}
+	.homePageBackgroundShow {
+		height: 20vh;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: 0.5s;
+		opacity: 1;
+	}
+	.recipeHeadlineH2 {
+		margin-top: 20px;
+	}
 }
 @media only screen and (max-width: 760px) {
   .search-input {
@@ -317,36 +328,36 @@ main {
     width: 60%;
     font-size: 16px;
 
-    background-size: 20px;
-    border: 1px solid rgb(148, 148, 148);
-  }
-  .search-bar {
-    height: 15vh;
-    background-size: 100%;
-  }
-  .homePageBackgroundShow {
-    height: 15vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 2;
-    transition: 2s;
-  }
-  .recipeHeadlineH2 {
-    margin-top: 10px;
-    font-size: 30px;
-  }
-  .logoHeader {
-    font-size: 20px;
-  }
-  .navbar-logo {
-    width: 40px;
-    height: 40px;
-  }
+		background-size: 20px;
+		border: 1px solid rgb(148, 148, 148);
+	}
+	.search-bar {
+		height: 15vh;
+		background-size: 100%;
+	}
+	.homePageBackgroundShow {
+		height: 15vh;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: 0.5s;
+		opacity: 1;
+	}
+	.recipeHeadlineH2 {
+		margin-top: 10px;
+		font-size: 30px;
+	}
+	.logoHeader {
+		font-size: 20px;
+	}
+	.navbar-logo {
+		width: 40px;
+		height: 40px;
+	}
 }
 
 .show-recipe {
@@ -369,73 +380,74 @@ main {
   background-position-x: 10px;
 }
 @media only screen and (max-width: 920px) {
-  .search-input {
-    height: 45px;
-  }
-  .search-bar {
-    height: 20vh;
-    background-size: 100%;
-  }
-  .dropdown-btn > .btn-primary {
-    height: 45px;
-    width: 150px;
-  }
+	.search-input {
+		height: 45px;
+	}
+	.search-bar {
+		height: 20vh;
+		background-size: 100%;
+	}
+	.dropdown-btn > .btn-success {
+		height: 45px;
+		width: 150px;
+	}
 }
 @media only screen and (max-width: 760px) {
-  .search-field {
-    width: 50%;
-  }
-  .search-input {
-    height: 35px;
-    padding-left: 40px;
-    font-size: 16px;
-    background-size: 20px;
-    border: 1px solid rgb(148, 148, 148);
-  }
-  .search-bar {
-    height: 15vh;
-    background-size: 100%;
-  }
-  .dropdown-btn > .btn-primary {
-    height: 35px;
-    font-size: 16px;
-  }
+	.search-field {
+		width: 50%;
+	}
+	.search-input {
+		height: 35px;
+		padding-left: 40px;
+		font-size: 16px;
+		background-size: 20px;
+		border: 1px solid rgb(148, 148, 148);
+	}
+	.search-bar {
+		height: 15vh;
+		background-size: 100%;
+	}
+	.dropdown-btn > .btn-success {
+		height: 35px;
+		font-size: 16px;
+	}
 }
 .readRecipeImg {
   width: 100%;
   height: 80vh;
 }
 @media only screen and (max-width: 400px) {
-  .recipeButton {
-    padding: 2px 10px;
-    font-size: 15px;
-  }
-  .logInButton {
-    padding: 2px 15px;
-    font-size: 15px;
-  }
-  .personLogo {
-    height: 18px;
-    width: 18px;
-  }
-  .container-outer {
-    margin-top: 0 !important;
-  }
-  .dropdown-btn > .btn-primary {
-    width: 110px;
-  }
-  .card-h1 {
-    font-size: 32px;
-  }
+	.recipeButton {
+		padding: 2px 10px;
+		font-size: 15px;
+	}
+	.logInButton {
+		padding: 2px 15px;
+		font-size: 15px;
+	}
+	.personLogo {
+		height: 18px;
+		width: 18px;
+	}
+	.container-outer {
+		margin-top: 5px !important;
+	}
+	.dropdown-btn > .btn-success {
+		width: 110px;
+	}
+	.card-h1 {
+		font-size: 32px;
+	}
 }
 .card-button {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: rgb(254, 254, 254);
-  border-radius: 0px 0px 3px 3px;
-  margin-bottom: 0;
-  border: none;
-  width: 100%;
-  font-size: 20px;
+	font-family: 'Roboto';
+	background-color: rgba(0, 0, 0, 0.8);
+	color: rgb(254, 254, 254);
+	border-radius: 0px 0px 3px 3px;
+	margin-bottom: 0;
+	border: none;
+	width: 100%;
+	font-size: 20px;
 }
 .card-outer {
   display: inline-block;
@@ -524,22 +536,24 @@ main {
   justify-content: center;
 }
 .card-p {
-  margin-left: 10px;
+	margin-left: 10px;
+	font-family: 'Roboto';
 }
 .card-h1 {
   margin-bottom: 20px;
   margin-top: 10px;
 }
 .show-more-btn {
-  position: absolute;
-  bottom: -20px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  border-radius: 20px;
-  background-color: rgb(92, 184, 92);
-  border: 1px solid rgb(84, 118, 71);
+	font-family: 'Roboto';
+	position: absolute;
+	bottom: -20px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	border-radius: 20px;
+	background-color: rgb(92, 184, 92);
+	border: 1px solid rgb(84, 118, 71);
 }
 .show-recipe {
   display: inline-block;
@@ -547,11 +561,31 @@ main {
 
 /*------- Login Page -------*/
 
-.close-modal-button {
-  float: right;
+.login-component{
+	font-family:'Roboto';
+}
+
+.modal-body{
+	background-color:#E1F8E6;
+}
+.modal-headish{
+	background-color: #f8f9fa;
+}
+.modal-titlish{
+	font-family: 'Parisienne', cursive;
+	font-weight: bold;
+	text-align: center;
+}
+
+.loginform-loginbutton{
+	border-radius: 20px;
 }
 
 /*----- Footer ------*/
+
+.footer-component{
+	font-family: 'Roboto';
+}
 
 footer .icon {
   width: 30px;
@@ -575,4 +609,9 @@ footer .icon {
   footer p {
     font-size: 12px;
   }
+}
+
+.uploadCameraIcon {
+	display: center;
+	justify-content: center;
 }

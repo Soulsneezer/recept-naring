@@ -36,7 +36,8 @@ function startWebServer() {
   const models = {
       Makronutrients: require('./models/Makronutrient.js'),
       Recipes: require('./models/Recipe.js'),
-      Uploads: require('./models/Upload.js')
+      Uploads: require('./models/Upload.js'),
+      Scrapes: require('./models/Scrape.js')
   };
 
   // create all necessary rest routes for the models
