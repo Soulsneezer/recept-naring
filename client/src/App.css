@@ -486,3 +486,8 @@ footer .icon {
 		font-size: 12px;
 	}
 }
+
+.uploadCameraIcon {
+	display: center;
+	justify-content: center;
+}
