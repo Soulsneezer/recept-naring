@@ -54,7 +54,7 @@ class HomePage extends Component {
       searchInput: e.target.value
     });
 
-    if (searchInput == 0) {
+    if (searchInput === 0 || searchInput == 0) {
       return;
     }
     if (searchInput) {
@@ -117,21 +117,22 @@ class HomePage extends Component {
               className='search-input'
               onChange={this.searchHandler}
               value={this.state.searchInput}
-              placeholder={`Sök recept efter:`}
-              aria-label={`Sök recept efter:`}
+              placeholder="Sök recept efter:"
+              aria-label="Sökfält"
             />
           </InputGroup>
           <DropdownButton
             title={this.state.myAlternative}
             className='dropdown-btn'
             alignRight
+            aria-label="knapp för drop-down"
           >
-            <Dropdown.Item id='Titel' onClick={this.selectDropdownAlternative}>
+            <Dropdown.Item id='Titel' onClick={this.selectDropdownAlternative} aria-label="drop-down-alternativ: titel">
               Titel
             </Dropdown.Item>
             <Dropdown.Item
               id='Kategori'
-              onClick={this.selectDropdownAlternative}
+              onClick={this.selectDropdownAlternative} aria-label="drop-down-alternativ: kategori"
             >
               Kategori
             </Dropdown.Item>
@@ -168,7 +169,7 @@ class HomePage extends Component {
                 <Row className='container-inner'>
                   {this.state.recipes.map(recipe => (
                     <div className='card-outer special' key={recipe._id}>
-                      <div className='card-inner'>
+                      <div className='card-inner' aria-label="ett visningskort på recept">
                         <img
                           className='card-img'
                           src={require('../images/' + recipe.img)}
@@ -180,6 +181,7 @@ class HomePage extends Component {
                         <Button
                           className='card-button'
                           href={'/recipe/' + recipe._id}
+                          aria-label="knapp för att gå till recept"
                         >
                           Gå till recept
                         </Button>
@@ -190,6 +192,7 @@ class HomePage extends Component {
                 <Button
                   className='show-more-btn'
                   onClick={this.showMoreRecipes}
+                  aria-label="knapp för att visa fler recept"
                 >
                   {this.state.recipesLength <= this.state.countRecipe
                     ? 'Inga fler recept'
@@ -222,7 +225,7 @@ class HomePage extends Component {
               <Row className='container-inner'>
                 {this.state.recipesCategory.map(recipe => (
                   <div className='card-outer special' key={recipe._id}>
-                    <div className='card-inner'>
+                    <div className='card-inner' aria-label="ett visningskort på recept">
                       <img
                         className='card-img'
                         src={require('../images/' + recipe.img)}
@@ -234,6 +237,7 @@ class HomePage extends Component {
                       <Button
                         className='card-button'
                         href={'/recipe/' + recipe._id}
+                        aria-label="knapp för att gå till recept"
                       >
                         Gå till recept
                       </Button>
@@ -244,6 +248,7 @@ class HomePage extends Component {
               <Button
                 className='show-more-btn'
                 onClick={this.showMoreRecipeCategorys}
+                aria-label="knapp för att visa fler recept"
               >
                 {this.state.recipesCategorysLength <= this.state.countCategory
                   ? 'Inga fler recept'
