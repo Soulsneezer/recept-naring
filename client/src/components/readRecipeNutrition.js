@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 class ReadRecipeNutrition extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};    
+    this.state = {};
   }
 
   render() {
@@ -19,27 +19,15 @@ class ReadRecipeNutrition extends React.Component {
 
     return (
       <Card
-        className='m-1 col-md-2 col-sm-2'
+        className='m-2 col-md-3 col-sm-2'
         style={{ display: "inline-block" }}
       >
-        <Card.Text className='border-styling fat-list'>{name}</Card.Text>
+        <Card.Text className='border-styling fat-list m-2'>{name}</Card.Text>
         <Card.Body>
-          <ul className='fat-list'>
-            {name !== "Fat" ? (
-              <Card.Text className='fat-list'>
-                {value}
-                {name !== "Kcal" ? " g" : ""}
-              </Card.Text>
-            ) : (
-              <Card.Text className='fat-list'>
-                {Object.keys(value).map(key => (
-                  <li className='test' key={key}>
-                    {key} {value[key]} g
-                  </li>
-                ))}
-              </Card.Text>
-            )}
-          </ul>
+          <Card.Text className='fat-list'>
+            {value}
+            {name !== "Kcal" ? " g" : ""}
+          </Card.Text>
         </Card.Body>
       </Card>
     );

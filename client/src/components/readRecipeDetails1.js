@@ -3,9 +3,8 @@ import { Row, Col } from "react-bootstrap";
 import REST from "../REST";
 import ReadRecipeNutrition from "./readRecipeNutrition";
 import PersonChoices from "./PersonChoices";
-class Recipe extends REST {}
 
-class ReadRecipeDetails1 extends Component {
+class ReadRecipeDetails extends Component {
   constructor(props) {
     super(props);
     Object.assign(this, props);
@@ -33,41 +32,45 @@ class ReadRecipeDetails1 extends Component {
     return (
       <React.Fragment>
         <Row className='mt-4'>
-          <img
-            className='col-sm-12 col-md-4 mt-2 card-img read-recipe-img'
-            src={require("../images/" + this.props.img)}
-            alt={"En bild på " + this.props.name}
-          />
-
+          <Col className='col-sm-12 col-md-4 mt-2'>
+            <img
+              className='card-img read-recipe-img'
+              src={require("../images/" + this.props.img)}
+              alt={"En bild på " + this.props.name}
+            />
+          </Col>
           <Col className='col-sm-12 col-md-8'>
-            <Row>
-              <Col className='col-sm-12 col-md-10'>
-                <h1>{this.props.name}</h1>
+            <Row className='offset-1'>
+              <Col className='col-sm-12 col-md-8'>
+                <h4>{this.props.name}</h4>
               </Col>
-              <Col className='col-sm-12 col-md-2'>
+              <Col className='offset-2 col-sm-12 col-md-2'>
                 <PersonChoices {...this.recipe} />
               </Col>
+            </Row>
+            <Row className='offset-1'>
               <Col className='col-sm-12 col-md-10'>
                 <p>{this.props.startText}</p>
-                <div className='mt-4 col-sm-12'>
-                  <h4>Kategori : </h4> <p> {this.props.category}</p>
-                </div>
-                <Row className='mt-4 col-sm-12'>
-                  <h4>Tid :</h4>
-                  <p>{this.props.time} min</p>
-                </Row>
-                <Row className='mt-5 col-sm-12 md-ml-4'>
-                  <h4>Näring per portion </h4>
-                </Row>
-                <Row className='col-sm-12 sm-ml-4 col-md-12 md-ml-4'>
-                  {Object.keys(this.state.nutritions).map(key => (
-                    <ReadRecipeNutrition
-                      key={key}
-                      nutrientName={key}
-                      nutrientValue={this.state.nutritions[key]}
-                    />
-                  ))}
-                </Row>
+                <h4>Kategori: </h4>
+                <p> {this.props.category}</p>
+              </Col>
+              <Col className='pt-4 col-sm-12'>
+                <h4>Tid:</h4>
+                <p>{this.props.time} min</p>
+              </Col>
+            </Row>
+            <Row className='offset-1 pt-4'>
+              <Col>
+                <h4>Näring per portion </h4>
+              </Col>
+              <Col className='col-md-12 col-sm-12'>
+                {Object.keys(this.state.nutritions).map(key => (
+                  <ReadRecipeNutrition
+                    key={key}
+                    nutrientName={key}
+                    nutrientValue={this.state.nutritions[key]}
+                  />
+                ))}
               </Col>
             </Row>
           </Col>
@@ -77,4 +80,4 @@ class ReadRecipeDetails1 extends Component {
   }
 }
 
-export default ReadRecipeDetails1;
+export default ReadRecipeDetails;
