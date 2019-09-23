@@ -139,7 +139,7 @@ class HomePage extends Component {
           </DropdownButton>
         </div>
 
-        {this.state.searchInput === 0 ? (
+        {this.state.searchInput == 0 ? (
           <div>
             <HomePageRecipeHeadline />
             <FoodCardContainer />
@@ -160,50 +160,49 @@ class HomePage extends Component {
               )
           ) : (
 
-            <div className='recipeHeadline'>
-              <Row className='m-0'>
-                <Col>
-                  <h2 className='recipeHeadlineH2'>Sökresultat på titel</h2>
-                </Col>
-              </Row>
-              <Container className='container-outer'>
-                <Row className='container-inner'>
-                  {this.state.recipes.map(recipe => (
-                    <div className='card-outer special' key={recipe._id}>
-                      <div className='card-inner' aria-label="ett visningskort på recept">
-                        <img
-                          className='card-img'
-                          src={require('../images/' + recipe.img)}
-                          alt={'En bild på ' + recipe.name}
-                        />
-                        <Card.Title className='card-title'>
-                          <h5 className='card-p'>{recipe.name}</h5>
-                        </Card.Title>
-                        <Button
-                          className='card-button'
-                          href={'/recipe/' + recipe._id}
-                          aria-label="knapp för att gå till recept"
-                        >
-                          Gå till recept
+              <div className='recipeHeadline'>
+                <Row className='m-0'>
+                  <Col>
+                    <h2 className='recipeHeadlineH2'>Sökresultat på titel</h2>
+                  </Col>
+                </Row>
+                <Container className='container-outer'>
+                  <Row className='container-inner'>
+                    {this.state.recipes.map(recipe => (
+                      <div className='card-outer special' key={recipe._id}>
+                        <div className='card-inner' aria-label="ett visningskort på recept">
+                          <img
+                            className='card-img'
+                            src={require('../images/' + recipe.img)}
+                            alt={'En bild på ' + recipe.name}
+                          />
+                          <Card.Title className='card-title'>
+                            <h5 className='card-p'>{recipe.name}</h5>
+                          </Card.Title>
+                          <Button
+                            className='card-button'
+                            href={'/recipe/' + recipe._id}
+                            aria-label="knapp för att gå till recept"
+                          >
+                            Gå till recept
 
                         </Button>
                         </div>
                       </div>
-                    </div>
-                  ))}
-                </Row>
-                <Button
-                  className='show-more-btn'
-                  onClick={this.showMoreRecipes}
-                  aria-label="knapp för att visa fler recept"
-                >
-                  {this.state.recipesLength <= this.state.countRecipe
-                    ? 'Inga fler recept'
-                    : 'Visa fler recept'}
-                </Button>
-              </Container>
-            </div>
-          )
+                    ))}
+                  </Row>
+                  <Button
+                    className='show-more-btn'
+                    onClick={this.showMoreRecipes}
+                    aria-label="knapp för att visa fler recept"
+                  >
+                    {this.state.recipesLength <= this.state.countRecipe
+                      ? 'Inga fler recept'
+                      : 'Visa fler recept'}
+                  </Button>
+                </Container>
+              </div>
+            )
 
         ) : this.state.recipesCategory.length === 0 ? (
           this.state.searchInput !== '' ? (
@@ -219,48 +218,48 @@ class HomePage extends Component {
               ''
             )
         ) : (
-          <div className='recipeHeadline'>
-            <Row className='m-0'>
-              <Col>
-                <h2 className='recipeHeadlineH2'>Sökresultat på kategori</h2>
-              </Col>
-            </Row>
-            <Container className='container-outer'>
-              <Row className='container-inner'>
-                {this.state.recipesCategory.map(recipe => (
-                  <div className='card-outer special' key={recipe._id}>
-                    <div className='card-inner' aria-label="ett visningskort på recept">
-                      <img
-                        className='card-img'
-                        src={require('../images/' + recipe.img)}
-                        alt={'En bild på ' + recipe.name}
-                      />
-                      <Card.Title className='card-title'>
-                        <h5 className='card-p'>{recipe.name}</h5>
-                      </Card.Title>
-                      <Button
-                        className='card-button'
-                        href={'/recipe/' + recipe._id}
-                        aria-label="knapp för att gå till recept"
-                      >
-                        Gå till recept
+                <div className='recipeHeadline'>
+                  <Row className='m-0'>
+                    <Col>
+                      <h2 className='recipeHeadlineH2'>Sökresultat på kategori</h2>
+                    </Col>
+                  </Row>
+                  <Container className='container-outer'>
+                    <Row className='container-inner'>
+                      {this.state.recipesCategory.map(recipe => (
+                        <div className='card-outer special' key={recipe._id}>
+                          <div className='card-inner' aria-label="ett visningskort på recept">
+                            <img
+                              className='card-img'
+                              src={require('../images/' + recipe.img)}
+                              alt={'En bild på ' + recipe.name}
+                            />
+                            <Card.Title className='card-title'>
+                              <h5 className='card-p'>{recipe.name}</h5>
+                            </Card.Title>
+                            <Button
+                              className='card-button'
+                              href={'/recipe/' + recipe._id}
+                              aria-label="knapp för att gå till recept"
+                            >
+                              Gå till recept
                       </Button>
-                    </div>
-                  </div>
-                ))}
-              </Row>
-              <Button
-                className='show-more-btn'
-                onClick={this.showMoreRecipeCategorys}
-                aria-label="knapp för att visa fler recept"
-              >
-                {this.state.recipesCategorysLength <= this.state.countCategory
-                  ? 'Inga fler recept'
-                  : 'Visa fler recept'}
-              </Button>
-            </Container>
-          </div>
-        )}
+                          </div>
+                        </div>
+                      ))}
+                    </Row>
+                    <Button
+                      className='show-more-btn'
+                      onClick={this.showMoreRecipeCategorys}
+                      aria-label="knapp för att visa fler recept"
+                    >
+                      {this.state.recipesCategorysLength <= this.state.countCategory
+                        ? 'Inga fler recept'
+                        : 'Visa fler recept'}
+                    </Button>
+                  </Container>
+                </div>
+              )}
       </div>
     );
   }
