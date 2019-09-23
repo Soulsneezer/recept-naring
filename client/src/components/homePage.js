@@ -42,6 +42,7 @@ class HomePage extends Component {
 
   async searchHandler(e) {
     let searchInput = e.target.value;
+    searchInput = searchInput.trim();
     if (!searchInput) {
       this.setState({
         recipes: [],
@@ -53,10 +54,6 @@ class HomePage extends Component {
     this.setState({
       searchInput: e.target.value
     });
-
-    if (searchInput === 0 || searchInput == 0) {
-      return;
-    }
     if (searchInput) {
       let recipes = await Recipez.find(searchInput);
       let recipesLength = recipes.length;
@@ -139,7 +136,7 @@ class HomePage extends Component {
           </DropdownButton>
         </div>
 
-        {this.state.searchInput == 0 ? (
+        {this.state.searchInput === '' ? (
           <div>
             <HomePageRecipeHeadline />
             <FoodCardContainer />
