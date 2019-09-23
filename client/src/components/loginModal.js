@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Modal } from 'react-bootstrap';
-import LogInForm from './loginForm.js';
+import LogInForm from './loginForm.js'; 
 
 
 export default function loginModal(props) {
@@ -12,17 +12,14 @@ export default function loginModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>
-        {/*<Modal.Title id="contained-modal-title-vcenter">
+        <Modal.Header closeButton className="modal-headish">
+        <Modal.Title id="contained-modal-title-vcenter" className="modal-titlish">
             Logga in här 
-        </Modal.Title>*/}
-      </Modal.Header>
-      <Modal.Body>
-        <LogInForm />
-      </Modal.Body>
-      {/*<Modal.Footer>
-        <Button className="recipeButton center-block" variant="outline-secondary" onClick={props.onHide}>Lägg till</Button>
-        </Modal.Footer>*/}
+        </Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="modal-body">
+            <LogInForm />
+        </Modal.Body>
     </Modal>
 
   );

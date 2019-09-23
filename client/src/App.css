@@ -460,11 +460,31 @@ main {
 
 /*------- Login Page -------*/
 
-.close-modal-button {
-	float: right;
+.login-component{
+	font-family:'Roboto';
+}
+
+.modal-body{
+	background-color:#E1F8E6;
+}
+.modal-headish{
+	background-color: #f8f9fa;
+}
+.modal-titlish{
+	font-family: 'Parisienne', cursive;
+	font-weight: bold;
+	text-align: center;
+}
+
+.loginform-loginbutton{
+	border-radius: 20px;
 }
 
 /*----- Footer ------*/
+
+.footer-component{
+	font-family: 'Roboto';
+}
 
 footer .icon {
 	width: 30px;
@@ -488,4 +508,9 @@ footer .icon {
 	footer p {
 		font-size: 12px;
 	}
+}
+
+.uploadCameraIcon {
+	display: center;
+	justify-content: center;
 }

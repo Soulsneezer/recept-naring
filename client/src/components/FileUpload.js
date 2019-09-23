@@ -39,14 +39,20 @@ class FileUpload extends Component {
             <Fragment>
                 <div className="innerContainerUploadPhoto" sm={8} md={8} lg={8}>
                     <Container style={{ width: 'auto' }}>
-                        <img className="cameraIcon" src={Camera} height="100" width="100" alt="Camera Logo" />
+                        <Row className="uploadCameraIcon">
+                            <img className="cameraIcon" src={Camera} height="100" width="100" alt="Camera Logo" />
+                        </Row>
                         <form>
-                            <div className="custom-file mb-4">
-                                <input type="file" className="custom-file-input" id="customFile" onChange=
-                                    {this.onChangeHandler} />
-                                <label className="custom-file-label" htmlFor="customFile"></label>
-                            </div>
-                            <button type="button" className="btn btn-success btn-block" aria-label="Knapp för att ladda upp en bild" onClick={this.onClickHandler}>ladda upp</button>
+                            <Row>
+                                <div className="custom-file mb-4">
+                                    <input type="file" className="custom-file-input" id="customFile" onChange=
+                                        {this.onChangeHandler} />
+                                    <label className="custom-file-label" htmlFor="customFile"></label>
+                                </div>
+                            </Row>
+                            <Row>
+                                <button type="button" className="btn btn-success btn-block" onClick={this.onClickHandler}>ladda upp</button>
+                            </Row>
                         </form>
                     </Container>
                 </div>
