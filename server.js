@@ -5,7 +5,7 @@ const CreateRestRoutes = require('./CreateRestRoutes');
 
 // Connect to db
 let dbName = "Makronutrient";
-mongoose.connect(`mongodb://localhost/${dbName}`);
+mongoose.connect(`mongodb://localhost/${dbName}`, { useNewUrlParser: true });
 global.db = mongoose.connection;
 db.on('error', () => console.log('Could not connect to DB'));
 db.once('open', () => {

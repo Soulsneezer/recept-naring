@@ -3,36 +3,26 @@ import { Form, Col, Row } from 'react-bootstrap';
 import RemoveRowButton from './AddRecipeRemoveButton';
 import AddRecipeUnits from './AddRecipeUnits';
 
-
-//import { MdQueryBuilder } from "react-icons/md";
-//import AddRecipeForm from "./AddRecipeForm";
-//import ingredients-icon from '../images/ingredients-icon.png';
-
 const uuid4 = require('uuid/v4');
 
 class AddRecipeIngredientRow extends Component {
-  constructor(props){
-    super(props);
-
-  }
-
-
+ 
   render() {
     const id = uuid4();
 
     return (
       <React.Fragment>
         <Row className="mt-3">
-          <Col xs={5} md={3} lg={4} className="mt-2">
-            <Form.Control className="recipe-name pl-3" input="true" aria-label="amount" placeholder="mängden" />
+          <Col xs={5} sm={6} md={3} lg={3} className="mt-2 pr-0">
+            <Form.Control className="recipe-name" input="true" aria-label="amount" placeholder="mängden" />
           </Col>
-          <Col xs={5} md={3} lg={3} className="units-dropdown mt-2">
+          <Col xs={5} sm={4} md={3} lg={2} className="units-dropdown mt-2 pr-0">
             <AddRecipeUnits />
           </Col>
-          <Col xs={10} md={5} lg={4}>
-            <Form.Control className="recipe-name p-3 mt-2" input="true" placeholder="ingrediensen" />
+          <Col xs={10} sm={10} md={5} lg={6} className="mt-2">
+            <Form.Control className="recipe-name" input="true" placeholder="ingrediensen" />
           </Col>
-          <Col xs={1} md={1} className="MdARemoveCircleOutline mt-2">
+          <Col xs={1}  md={1} className="MdARemoveCircleOutline mt-2">
             <RemoveRowButton key={id} onClick={() => this.props.deleteMe(this.props.remove)} />
           </Col>
         </Row>

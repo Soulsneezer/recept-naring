@@ -19,7 +19,7 @@ class AddRecipeUnits extends React.Component {
         });
     }
     render() {
-        
+
 
         return (
             <React.Fragment>
@@ -33,7 +33,7 @@ class AddRecipeUnits extends React.Component {
                         {this.state.mySelection}
                     </Dropdown.Toggle>
                     <Dropdown.Menu className="units-dropdown-menu">
-                    
+
                         <Dropdown.Item
                             className="dropdown-link"
                             href="#/action-1"
