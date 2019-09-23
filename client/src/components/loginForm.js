@@ -10,8 +10,7 @@ class LogInForm extends React.Component{
             usernameErrorBox: 'none',
             passwordErrorBox: 'none',
             loginBox: 'block',
-            loggedInSucceededBox: 'none',
-            loginButtonText: 'Logga in'
+            loggedInSucceededBox: 'none'
         }
     }
 
@@ -19,14 +18,12 @@ class LogInForm extends React.Component{
         await this.setState({
             username: e.target.value
         });
-        console.log(this.state.username);
     }
     
     async onChangePassword(e){
         await this.setState({
             password: e.target.value
         });
-        console.log(this.state.password);
     }
 
     async onSubmit(e){
@@ -71,7 +68,7 @@ class LogInForm extends React.Component{
 
     render(){
         return (
-            <div>
+            <div className="login-component">
                 <form onSubmit={this.onSubmit.bind(this)}>
 
                     <div className="form-group login-box" style={{display:this.state.loginBox}}>
@@ -90,7 +87,7 @@ class LogInForm extends React.Component{
                             </p>
                         </div>
 
-                        <label>Lösenord:</label>
+                        <label className="mt-3">Lösenord:</label>
                         <input
                             type="password"
                             className="form-control"
@@ -106,21 +103,17 @@ class LogInForm extends React.Component{
 
                         <button 
                             type="submit"
-                            className="form-control loginform-loginbutton"
+                            className="form-control loginform-loginbutton btn-outline-secondary"
                             style={{width:'120px', margin:'auto', marginTop: '30px'}}
                         >
-                            {this.state.loginButtonText}
+                            Logga in
                         </button>
-
-                        <div style={{margin:'auto', textAlign:'center', paddingTop:'10px'}}>
-                            <a href="#" onClick={this.handleRegisterButton.bind(this)}>Inget konto? Skapa användare</a>
-                        </div>
 
                     </div>                      
                 </form>
 
                 <div className="login-succeeded-box" style={{display: this.state.loggedInSucceededBox}}>
-                <h4> Du är nu inloggad som <span style={{color:'green'}}> {this.state.username} </span> </h4>
+                <h4> Inloggad som <span style={{color:'green'}}> {this.state.username} </span> </h4>
                 <h3 style={{color:'red'}}> Obs! Inloggning under utveckling </h3>
                 </div>
 
