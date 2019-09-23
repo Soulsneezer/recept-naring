@@ -120,6 +120,7 @@ main {
 	.recipeHeadlineH2 {
 		font-size: 15px;
 		text-align: center;
+		margin-top: 15px;
 	}
 }
 @media only screen and (max-width: 920px) {
@@ -157,7 +158,12 @@ main {
 .search-field {
 	width: 40%;
 }
-
+.dropdown-toggle {
+	font-family: 'Roboto';
+}
+.dropdown-item {
+	font-family: 'Roboto';
+}
 .dropdown-btn > .btn-primary {
 	height: 55px;
 	color: rgb(0, 0, 0);
@@ -173,6 +179,7 @@ main {
 	backdrop-filter: blur(3px);
 }
 .search-input {
+	font-family: 'Roboto';
 	z-index: 1;
 	height: 55px;
 	border-radius: 30px 0 0 30px;
@@ -207,7 +214,7 @@ main {
 		opacity: 1;
 	}
 	.recipeHeadlineH2 {
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 }
 @media only screen and (max-width: 760px) {
@@ -319,7 +326,7 @@ main {
 		width: 18px;
 	}
 	.container-outer {
-		margin-top: 0 !important;
+		margin-top: 5px !important;
 	}
 	.dropdown-btn > .btn-primary {
 		width: 110px;
@@ -329,6 +336,7 @@ main {
 	}
 }
 .card-button {
+	font-family: 'Roboto';
 	background-color: rgba(0, 0, 0, 0.8);
 	color: rgb(254, 254, 254);
 	border-radius: 0px 0px 3px 3px;
@@ -425,12 +433,14 @@ main {
 }
 .card-p {
 	margin-left: 10px;
+	font-family: 'Roboto';
 }
 .card-h1 {
 	margin-bottom: 20px;
 	margin-top: 10px;
 }
 .show-more-btn {
+	font-family: 'Roboto';
 	position: absolute;
 	bottom: -20px;
 	margin-left: auto;
@@ -495,4 +505,9 @@ footer .icon {
 	footer p {
 		font-size: 12px;
 	}
+}
+
+.uploadCameraIcon {
+	display: center;
+	justify-content: center;
 }
