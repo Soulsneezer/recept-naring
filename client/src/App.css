@@ -450,6 +450,13 @@ main {
 .login-component{
 	font-family:'Roboto';
 }
+
+.modal-body{
+	background-color:#E1F8E6;
+}
+.modal-headish{
+	background-color:#f8f9fa;
+}
 .modal-titlish{
 	font-family: 'Parisienne', cursive;
 	font-weight: bold;

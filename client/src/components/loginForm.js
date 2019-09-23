@@ -81,7 +81,7 @@ class LogInForm extends React.Component{
                         >                       
                         </input>
                         <div className="username-error-box" style={{display: this.state.usernameErrorBox}}>
-                            <p style={{color:'red',fontSize:'11px'}}>
+                            <p style={{color:'red',fontSize:'11px', marginTop:'5px'}}>
                                 Användarnamn får bara innehålla bokstäver och siffror, 
                                 samt måste vara minst 6 tecken långt !
                             </p>
@@ -95,7 +95,7 @@ class LogInForm extends React.Component{
                         >
                         </input>
                         <div className="password-error-box" style={{display: this.state.passwordErrorBox}}>
-                            <p style={{color:'red',fontSize:'11px'}}>
+                            <p style={{color:'red',fontSize:'11px', marginTop:'5px'}}>
                                 Lösenord får bara innehålla bokstäver och siffror, 
                                 samt måste vara minst 6 tecken långt !
                             </p>
@@ -103,7 +103,7 @@ class LogInForm extends React.Component{
 
                         <button 
                             type="submit"
-                            className="form-control loginform-loginbutton btn-outline-secondary"
+                            className="form-control loginform-loginbutton btn-outline-success"
                             style={{width:'120px', margin:'auto', marginTop: '30px'}}
                         >
                             Logga in
@@ -112,9 +112,9 @@ class LogInForm extends React.Component{
                     </div>                      
                 </form>
 
-                <div className="login-succeeded-box" style={{display: this.state.loggedInSucceededBox}}>
-                <h4> Inloggad som <span style={{color:'green'}}> {this.state.username} </span> </h4>
-                <h3 style={{color:'red'}}> Obs! Inloggning under utveckling </h3>
+                <div className="login-succeeded-box" style={{display: this.state.loggedInSucceededBox, height:'240px'}}>
+                <p> Inloggad som <span style={{color:'green'}}> {this.state.username} </span> </p>
+                <h5 style={{color:'red'}}> Obs! Inloggning under utveckling </h5>
                 </div>
 
             </div>           
