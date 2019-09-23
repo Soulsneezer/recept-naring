@@ -164,7 +164,7 @@ main {
 .dropdown-item {
 	font-family: 'Roboto';
 }
-.dropdown-btn > .btn-primary {
+.dropdown-btn > .btn-success {
 	height: 55px;
 	color: rgb(0, 0, 0);
 	background-color: rgba(255, 255, 255, 0.7);
@@ -177,6 +177,9 @@ main {
 	color: rgb(92, 92, 92);
 	width: 160px;
 	backdrop-filter: blur(3px);
+}
+.dropdown-menu {
+	border-radius: 0 0 20px 20px;
 }
 .search-input {
 	font-family: 'Roboto';
@@ -283,7 +286,7 @@ main {
 		height: 20vh;
 		background-size: 100%;
 	}
-	.dropdown-btn > .btn-primary {
+	.dropdown-btn > .btn-success {
 		height: 45px;
 		width: 150px;
 	}
@@ -303,7 +306,7 @@ main {
 		height: 15vh;
 		background-size: 100%;
 	}
-	.dropdown-btn > .btn-primary {
+	.dropdown-btn > .btn-success {
 		height: 35px;
 		font-size: 16px;
 	}
@@ -328,7 +331,7 @@ main {
 	.container-outer {
 		margin-top: 5px !important;
 	}
-	.dropdown-btn > .btn-primary {
+	.dropdown-btn > .btn-success {
 		width: 110px;
 	}
 	.card-h1 {

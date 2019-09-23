@@ -123,6 +123,7 @@ class HomePage extends Component {
             className='dropdown-btn'
             alignRight
             aria-label="knapp för drop-down"
+            variant="success"
           >
             <Dropdown.Item id='Titel' onClick={this.selectDropdownAlternative} aria-label="drop-down-alternativ: titel">
               Titel
