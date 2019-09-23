@@ -4,8 +4,9 @@ import { Card } from "react-bootstrap";
 class ReadRecipeNutrition extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {};    
   }
+
   render() {
     let name = this.props.nutrientName;
     let value = this.props.nutrientValue;

@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Card, ListGroupItem, ListGroup } from "react-bootstrap";
-import REST from "../REST";
-
-class Recipe extends REST {}
+import {ListGroupItem, ListGroup } from "react-bootstrap";
 
 class ReadRecipeInstructions extends Component {
   constructor(props) {
@@ -10,9 +7,14 @@ class ReadRecipeInstructions extends Component {
     this.state = {};
     this.recipe = {};
   }
-
+ 
   render() {
-    return <p>List of ReadRecipeInstructions should show here</p>;
+    return( <ListGroup>
+      {this.props.steps.map((step, i)=>{
+        return <ListGroupItem key={i}>{i + 1}: {step} </ListGroupItem>
+      })}
+    </ListGroup>
+  )
   }
 }
 
