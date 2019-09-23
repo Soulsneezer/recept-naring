@@ -28,13 +28,13 @@ class ReadRecipe extends React.Component {
     return (
       <Container className='text-left fluid'>
         {this.recipe ? <ReadRecipeDetails {...this.recipe} /> : null}
-        <Row className='mt-5'>
-          <Col className=' col-sm-12 col-md-3 mt-5'>
-            <h3 className='mb-2 offset-1'> Ingredienser</h3>
+        <Row className='mt-3'>
+          <Col className='col-sm-12 col-md-4'>
+            <h4 className='mb-2'> Ingredienser</h4>
             <ReadRecipeIngredients {...this.recipe} />
           </Col>
-          <Col className='col-sm-12 col-md-9 mt-5'>
-            <h3 className='mb-2 offset-1'> Steg för steg</h3>
+          <Col className='col-sm-12 col-md-8'>
+            <h4 className='mb-2'> Steg för steg</h4>
             <ReadRecipeInstructions {...this.recipe} />
           </Col>
         </Row>

@@ -18,11 +18,11 @@ class ReadRecipeNutrition extends React.Component {
 
     return (
       <Card
-        className='m-1 offset-3'
-        style={{ display: "inline-block", width: "9rem" }}
+        className='m-1 col-md-2 col-sm-2'
+        style={{ display: "inline-block" }}
       >
-        <Card.Text className='m-2 border-styling fat-list'>{name}</Card.Text>
-        <Card.Body className='card-styling'>
+        <Card.Text className='border-styling fat-list'>{name}</Card.Text>
+        <Card.Body>
           <ul className='fat-list'>
             {name !== "Fat" ? (
               <Card.Text className='fat-list'>
@@ -30,13 +30,13 @@ class ReadRecipeNutrition extends React.Component {
                 {name !== "Kcal" ? " g" : ""}
               </Card.Text>
             ) : (
-              <div>
+              <Card.Text className='fat-list'>
                 {Object.keys(value).map(key => (
-                  <li className='m-t-3 fat-list' key={key}>
+                  <li className='test' key={key}>
                     {key} {value[key]} g
                   </li>
                 ))}
-              </div>
+              </Card.Text>
             )}
           </ul>
         </Card.Body>
