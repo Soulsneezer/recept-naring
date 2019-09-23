@@ -18,14 +18,12 @@ class LogInForm extends React.Component{
         await this.setState({
             username: e.target.value
         });
-        console.log(this.state.username);
     }
     
     async onChangePassword(e){
         await this.setState({
             password: e.target.value
         });
-        console.log(this.state.password);
     }
 
     async onSubmit(e){
@@ -70,7 +68,7 @@ class LogInForm extends React.Component{
 
     render(){
         return (
-            <div>
+            <div className="login-component">
                 <form onSubmit={this.onSubmit.bind(this)}>
 
                     <div className="form-group login-box" style={{display:this.state.loginBox}}>
@@ -83,30 +81,30 @@ class LogInForm extends React.Component{
                         >                       
                         </input>
                         <div className="username-error-box" style={{display: this.state.usernameErrorBox}}>
-                            <p style={{color:'red',fontSize:'11px'}}>
+                            <p style={{color:'red',fontSize:'11px',marginTop:'5px'}}>
                                 Användarnamn får bara innehålla bokstäver och siffror, 
-                                samt måste vara minst sex tecken långt !
+                                samt måste vara minst 6 tecken långt !
                             </p>
                         </div>
 
-                        <label>Lösenord:</label>
+                        <label className="mt-3">Lösenord:</label>
                         <input
-                            type="text"
+                            type="password"
                             className="form-control"
                             onChange={this.onChangePassword.bind(this)}
                         >
                         </input>
                         <div className="password-error-box" style={{display: this.state.passwordErrorBox}}>
-                            <p style={{color:'red',fontSize:'11px'}}>
+                            <p style={{color:'red',fontSize:'11px',marginTop:'5px'}}>
                                 Lösenord får bara innehålla bokstäver och siffror, 
-                                samt måste vara minst sex tecken långt !
+                                samt måste vara minst 6 tecken långt !
                             </p>
                         </div>
 
                         <button 
                             type="submit"
-                            className="form-control"
-                            style={{width:'120px', margin:'auto', marginTop: '50px'}}
+                            className="form-control loginform-loginbutton btn-outline-success"
+                            style={{width:'120px', margin:'auto', marginTop: '30px'}}
                         >
                             Logga in
                         </button>
@@ -115,8 +113,8 @@ class LogInForm extends React.Component{
                 </form>
 
                 <div className="login-succeeded-box" style={{display: this.state.loggedInSucceededBox}}>
-                <h4> Du är nu inloggad som <span style={{color:'green'}}> {this.state.username} </span> </h4>
-                <h3 style={{color:'red'}}> Obs! Inloggning under utveckling </h3>
+                <p> Inloggad som <span style={{color:'green'}}> {this.state.username} </span> </p>
+                <h5 style={{color:'red'}}> Obs! Inloggning under utveckling </h5>
                 </div>
 
             </div>           
