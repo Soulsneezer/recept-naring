@@ -27,7 +27,11 @@ class HomePageBackground extends Component {
                 selectedImage: this.state.images[this.state.countImg]
             })
 
-            this.state.countImg++;
+            this.setState(prev => {
+                return {
+                    count: prev.countImg++,
+                };
+            });
 
             if (this.state.countImg === 5) {
                 this.setState({

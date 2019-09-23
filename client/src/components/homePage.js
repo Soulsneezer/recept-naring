@@ -16,8 +16,8 @@ import REST from '../REST.js';
 import HomePageBackground from './homePageBackground';
 import HomePageRecipeHeadline from './homePageRecipeHeadline';
 
-class Recipez extends REST {}
-class Recipeswiththiscategory extends REST {}
+class Recipez extends REST { }
+class Recipeswiththiscategory extends REST { }
 
 class HomePage extends Component {
   constructor(props) {
@@ -139,7 +139,7 @@ class HomePage extends Component {
           </DropdownButton>
         </div>
 
-        {this.state.searchInput == 0 ? (
+        {this.state.searchInput === 0 ? (
           <div>
             <HomePageRecipeHeadline />
             <FoodCardContainer />
@@ -156,9 +156,10 @@ class HomePage extends Component {
                 <Container className='container-outer'></Container>
               </div>
             ) : (
-              ''
-            )
+                ''
+              )
           ) : (
+
             <div className='recipeHeadline'>
               <Row className='m-0'>
                 <Col>
@@ -184,7 +185,9 @@ class HomePage extends Component {
                           aria-label="knapp för att gå till recept"
                         >
                           Gå till recept
+
                         </Button>
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -201,6 +204,7 @@ class HomePage extends Component {
               </Container>
             </div>
           )
+
         ) : this.state.recipesCategory.length === 0 ? (
           this.state.searchInput !== '' ? (
             <div className='recipeHeadline'>
@@ -212,8 +216,8 @@ class HomePage extends Component {
               <Container className='container-outer'></Container>
             </div>
           ) : (
-            ''
-          )
+              ''
+            )
         ) : (
           <div className='recipeHeadline'>
             <Row className='m-0'>
