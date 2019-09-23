@@ -46,7 +46,7 @@ class FileUpload extends Component {
                                     {this.onChangeHandler} />
                                 <label className="custom-file-label" htmlFor="customFile"></label>
                             </div>
-                            <button type="button" className="btn btn-success btn-block" onClick={this.onClickHandler}>ladda upp</button>
+                            <button type="button" className="btn btn-success btn-block" aria-label="Knapp för att ladda upp en bild" onClick={this.onClickHandler}>ladda upp</button>
                         </form>
                     </Container>
                 </div>
