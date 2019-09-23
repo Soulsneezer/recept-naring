@@ -163,6 +163,7 @@ main {
 }
 .dropdown-item {
 	font-family: 'Roboto';
+	border-radius: 10px 10px 10px 10px;
 }
 .dropdown-btn > .btn-success {
 	height: 55px;
