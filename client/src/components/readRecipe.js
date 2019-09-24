@@ -41,7 +41,7 @@ class ReadRecipe extends React.Component {
               />
             ) : null}
           </Col>
-          <Col className="sm-offset-1 col-md-7 col-sm-11 mt-5">
+          <Col className=" col-md-7 col-sm-11 mt-5">
             <h3 className="mb-3"> Steg för steg</h3>
             {this.recipe.step ? (
               <ReadRecipeInstructions steps={this.recipe.step} />

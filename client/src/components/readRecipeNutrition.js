@@ -19,7 +19,7 @@ class ReadRecipeNutrition extends React.Component {
 
     return (
       <Card
-        className="m-2 col-md-3 col-sm-4"
+        className="m-2 col-xs-3 col-sm-3 col-md-3"
         style={{ display: "inline-block" }}
       >
         <Card.Text className="border-styling card-styling m-2">{name}</Card.Text>

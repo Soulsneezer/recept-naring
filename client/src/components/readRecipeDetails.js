@@ -131,48 +131,51 @@ class ReadRecipeDetails extends Component {
   render() {
     return (
       <React.Fragment>
-        <Row className='mt-4'>
-          <Col className='col-xs-12 col-sm-12 col-md-4'>
+        <Row>
+          <Col xs={12} sm={12} md={12} lg={4}>
             <div
-              className='card-img read-recipe-img'
+              className="card-img read-recipe-img"
               label={this.props.name}
               style={{
                 backgroundImage:
-                  'url("../images/recipeImages/' + this.props.img + '")'
+                'url("../images/recipeImages/' + this.props.img + '")'
               }}
             ></div>
           </Col>
-          <Col className='col-xs-12 col-sm-12 col-md-8'>
-            <Row className='offset-1 read-recipe-row'>
-              <Col className='col-sm-12 col-md-8 recipe-name order-md-12 order-2'>
-                <h3>{this.props.name}</h3>
+          <Col xs={12} sm={12} md={12} lg={8}>
+            <Row className="offset-1">
+              <Col className="pt-4 col-sm-12 col-md-8 recipe-name order-md-12 order-2">
+                <h4>{this.props.name}</h4>
               </Col>
-              <Col className='pt-2 col-md-4 col-sm-12 order-md-12 order-1'>
+              <Col className="pt-4 col-md-4 col-sm-12 order-md-12 order-1">
+              {/* <Col pt-2 sm={12} md={{span: 4, order: 12}} order-1> */}
                 <PersonChoices {...this.recipe} />
               </Col>
             </Row>
-            <Row className='offset-1 pt-2'>
-              <Col className='col-sm-12 col-md-10 pt-2'>
-                <p label="kort beskrivning av receptet">{this.props.startText}</p>
-                <div className='d-inline-block pt-5'>
-                  <img src={tagIcon} className='mr-2 d-inline-block' alt="kategorier" />
-                  <h5 lable="kategorier" className='d-inline-block'>
+            <Row className="offset-1 pt-2">
+              <Col className="col-sm-12 col-md-12 pt-2">
+                <p xs={12} sm={12} md={12}
+                 label="kort beskrivning av receptet">{this.props.startText}</p>
+                 </Col>
+                <div className="col-sm-12 col-md-12 d-inline-block pt-5">
+                  <img src={tagIcon} className="mr-2 d-inline-block" alt="kategorier" />
+                  <h5 lable="kategorier" className="d-inline-block">
                     {this.props.category.join(", ")}
                   </h5>
                 </div>
-              </Col>
-              <Col className='pt-5 col-sm-12 d-inline-block pt-5'>
-                <img src={clockIcon} className='mr-2 d-inline-block icon' alt="beräknad tid" />
-                <h5 className='d-inline-block'> {this.props.time} min</h5>
+              <Col className="pt-5 col-sm-12 d-inline-block pt-5">
+                <img src={clockIcon} className="mr-2 d-inline-block icon" alt="beräknad tid" />
+                <h5 className="d-inline-block"> {this.props.time} min</h5>
               </Col>
             </Row>
-            <Row className='offset-1 pt-4'>
+            <Row className="offset-1 pt-4">
               <Col>
-                <h4 className='mt-5'>Näring per portion </h4>
+                <h5 className="mt-5" xs={{ span: 12, offset: 0 }} sm={{ span: 12, offset: 0 }}
+                >Näring per portion </h5>
               </Col>
             </Row>
             <Row>
-              <Col className='offset-1 col-md-12 col-sm-12'>
+              <Col className="offset-1 col-md-11">
                 {Object.keys(this.nutes).map(key => (
                   <ReadRecipeNutrition
                     key={key}
