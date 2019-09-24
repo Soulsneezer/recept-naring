@@ -1,9 +1,8 @@
 import React from "react";
-import PersonChoices from "./PersonChoices";
 import ReadRecipeDetails from "./readRecipeDetails";
 import ReadRecipeInstructions from "./readRecipeInstructions";
 import ReadRecipeIngredients from "./readRecipeIngredients";
-import { Container, Col, Row, Image } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import REST from "../REST";
 
 class Recipe extends REST {}
@@ -15,13 +14,11 @@ class ReadRecipe extends React.Component {
   }
   async loadFromUrl() {
     let data = await Recipe.find(
-      `.find({_id:'${this.props.match.params.id}'})`
+      `.find({_id:"${this.props.match.params.id}"})`
     );
     this.recipe = data.pop();
-    console.log(this.recipe.img);
     this.setState({
       state: this.state,
-      image: this.recipe.img
     });
   }
 
@@ -31,11 +28,11 @@ class ReadRecipe extends React.Component {
 
   render() {
     return (
-      <Container className='text-left fluid'>
+      <Container className="text-left fluid container-fluid">
         {this.recipe ? <ReadRecipeDetails {...this.recipe} /> : null}
-        <Row className='mt-5'>
-          <Col className='md-3 mt-5'>
-            <h3 className='mb-2 offset-1'> Ingredienser</h3>
+        <Row className="mt-5">
+          <Col className="col-md-4 col-sm-11 sm-offset-1 mt-5">
+            <h3 className="mb-3"> Ingredienser</h3>
             {this.recipe ? (
               <ReadRecipeIngredients
                 numberOfPersons={this.state.numberOfPersons}
@@ -44,8 +41,8 @@ class ReadRecipe extends React.Component {
               />
             ) : null}
           </Col>
-          <Col className='md-9 mt-5'>
-            <h3 className='mb-2 offset-1'> Steg för steg</h3>
+          <Col className="sm-offset-1 col-md-7 col-sm-11 mt-5">
+            <h3 className="mb-3"> Steg för steg</h3>
             {this.recipe.step ? (
               <ReadRecipeInstructions steps={this.recipe.step} />
             ) : null}

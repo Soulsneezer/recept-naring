@@ -10,7 +10,7 @@ class ReadRecipeNutrition extends React.Component {
   render() {
     let name = this.props.nutrientName;
     let value = this.props.nutrientValue;
-    // a hack for fat because we can't send an object
+    // a hack for fat because we can"t send an object
     // from the parent component so instead we are
     // sending a function, that when called returns an object
     if (typeof value === "function") {
@@ -19,12 +19,12 @@ class ReadRecipeNutrition extends React.Component {
 
     return (
       <Card
-        className='m-2 col-md-3 col-sm-2'
+        className="m-2 col-md-3 col-sm-4"
         style={{ display: "inline-block" }}
       >
-        <Card.Text className='border-styling fat-list m-2'>{name}</Card.Text>
+        <Card.Text className="border-styling card-styling m-2">{name}</Card.Text>
         <Card.Body>
-          <Card.Text className='fat-list'>
+          <Card.Text className="card-styling">
             {value}
             {name !== "Kcal" ? " g" : ""}
           </Card.Text>

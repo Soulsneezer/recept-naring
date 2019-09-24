@@ -295,10 +295,7 @@
     font-size: 16px;
   }
 }
-.readRecipeImg {
-  width: 100%;
-  height: 80vh;
-}
+
 @media only screen and (max-width: 400px) {
   .recipeButton {
     padding: 2px 10px;
@@ -470,11 +467,14 @@ footer .icon {
     font-size: 12px;
   }
 }
-/*-----------------------------------Read Recipe Style ---------------------------------*/
-.fat-list {
+/*------- Login Page -------*/
+
+/*------- Read Recipe Style ----------*/
+.card-styling {
   text-align: center !important;
   list-style-type: none !important;
   padding: 0px !important;
+  font-size: 14px;
 }
 
 .border-styling {
@@ -489,49 +489,20 @@ footer .icon {
   background-position: center;
 }
 
-@media (min-width: 577px) and (max-width: 641px) {
+@media (min-width: 0px) and (max-width: 768px) {
   .read-recipe-img {
     height: 50vh !important;
   }
 }
 
-@media (max-width: 575.98px) {
-  .dropdown,
-  h1 {
-    padding-left: 20px;
-    margin: 20px 5px;
-    font-size: 1.2em;
-  }
-}
-@media (max-width: 575.98px) {
-  .recipe-btn {
-    margin-left: 0rem;
-    margin-right: 1rem;
-    font-size: 16px !important;
-  }
-}
-@media (max-width: 575.98px) {
-  .dropdown-menu {
-    font-size: 14px !important;
-    width: 20px !important;
+@media (min-width: 577px) and (max-width: 641px) {
+  .recipe-name {
+   padding-top: 20px!important;
   }
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .dropdown,
-  h1 {
-    padding-left: 60px;
-    font-size: 1.3em;
-  }
-}
-.test {
-  font-size: 10px;
-  width: 10rem;
-}
+/*------- Read Recipe Style End ----------*/
 
-/*------------------------------------- Read Recipe Page End -------------------------------------------*/
-
-/*------- Login Page -------*/
 
 .close-modal-button {
   float: right;

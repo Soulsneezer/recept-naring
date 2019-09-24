@@ -28,17 +28,17 @@ export default class PersonChoices extends React.Component {
       choices.push(i);
     }
     return (
-      <Dropdown className='dropdown'>
+      <Dropdown className="dropdown" alignRight>
         <Dropdown.Toggle
-          className='recipe-btn'
-          variant='outline-secondary'
-          id='dropdown-basic'
+          className="recipe-btn"
+          variant="outline-secondary"
+          id="dropdown-basic"
         >
           {this.state.myAlternative + " Personer"}
         </Dropdown.Toggle>
-        <Dropdown.Menu className='dropdown-menu'>
+        <Dropdown.Menu className="dropdown-menu">
           {choices.map(i => (
-            <Dropdown.Item id={i} onClick={this.dropDownAlternative}>
+            <Dropdown.Item id={i} key={i} onClick={this.dropDownAlternative}>
               {i}
             </Dropdown.Item>
           ))}
