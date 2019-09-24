@@ -62,17 +62,17 @@ class AddRecipeStepByStep extends Component {
                 onKeyDown={this.handleKeyPress}
               />
               <InputGroup.Append>
-                <Button className="add-instruction" xs={10} md={10} lg={11} variant="outline-success" onClick={() => this.handleSubmit()}>OK</Button>
+                <Button className="add-instruction" xs={10} md={10} lg={11} variant="outline-success" aria-label="en knapp för att lägga till en instruktiont" onClick={() => this.handleSubmit()}>OK</Button>
               </InputGroup.Append>
             </InputGroup>
           </Col>
         </Row>
         <Row>
           <Col className="recipe-name mt-2" xs={10} md={10} lg={11}>
-            <ListGroup>
+            <ListGroup aria-label="en lista för instruktionerna">
               {this.state.instructions.map((item, i) => (
-                <ListGroupItem className="recipe-name" remove={id} key={item.id}>{i + 1}. {item.text}
-                  {<Button className="delete-instruction" value={item} variant="outline-danger" onClick={() => this.onDelete(item.id)}>Delete</Button>}
+                <ListGroupItem className="recipe-instruction" remove={id} key={item.id}>{i + 1}. {item.text}
+                  {<Button className="delete-instruction" value={this.item} variant="outline-danger" aria-label="en knapp för att radera en instruktion" onClick={() => this.onDelete(item.id)}>Delete</Button>}
                 </ListGroupItem>
               ))}
             </ListGroup>

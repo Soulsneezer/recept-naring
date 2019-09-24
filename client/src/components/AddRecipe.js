@@ -15,7 +15,7 @@ class AddRecipe extends Component {
 
     return (
       <ButtonToolbar>
-        <Button className="recipeButton" variant="outline-secondary" onClick={() => this.setState({ modalShow: true })}>
+        <Button className="recipeButton" aria-label="knapp i navigeringen som öppna en modal" variant="outline-secondary" onClick={() => this.setState({ modalShow: true })}>
           Skapa ett nytt recept
         </Button>
 

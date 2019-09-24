@@ -1,5 +1,5 @@
-import React from 'react';
-import { InputGroup, Dropdown } from 'react-bootstrap'
+import React from "react";
+import { InputGroup, Dropdown } from "react-bootstrap"
 
 class CategoryChoices extends React.Component {
   constructor(props) {
@@ -23,6 +23,7 @@ class CategoryChoices extends React.Component {
       <React.Fragment>
         <Dropdown
           className="category-dropdown-button"
+          aria-label="en dropdown knapp för att välja matkategori"
           title={this.state.mySelection}>
           <Dropdown.Toggle
             variant="outline-secondary"
@@ -35,10 +36,11 @@ class CategoryChoices extends React.Component {
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
-                className="px-1"
+                className="category-dropdown-item px-1"
                 href="#/action-1"
+                aria-label="vegansk kategori"
                 eventKey="1"
-                id='vegansk'
+                id="vegansk"
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Vegansk</Dropdown.Item>
             </InputGroup.Prepend>
@@ -47,10 +49,11 @@ class CategoryChoices extends React.Component {
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
-                className="px-1"
+                className="category-dropdown-item px-1"
                 href="#/action-2"
+                aria-label="vegetarisk kategori"
                 eventKey="1"
-                id='vegetarisk'
+                id="vegetarisk"
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Vegetarisk</Dropdown.Item>
             </InputGroup.Prepend>
@@ -58,10 +61,11 @@ class CategoryChoices extends React.Component {
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
-                className="px-1"
+                className="category-dropdown-item px-1"
                 href="#/action-3"
+                aria-label="fisk kategori"
                 eventKey="1"
-                id='fisk'
+                id="fisk"
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Fisk</Dropdown.Item>
             </InputGroup.Prepend>
@@ -69,10 +73,11 @@ class CategoryChoices extends React.Component {
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
-                className="px-1"
+                className="category-dropdown-item px-1"
                 href="#/action-4"
+                aria-label="kött kategori"
                 eventKey="1"
-                id='kött'
+                id="kött"
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Kött</Dropdown.Item>
             </InputGroup.Prepend>
@@ -80,10 +85,11 @@ class CategoryChoices extends React.Component {
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
-                className="px-1"
+                className="category-dropdown-item px-1"
                 href="#/action-5"
+                aria-label="förrätt kategori"
                 eventKey="1"
-                id='förrätt'
+                id="förrätt"
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Förrätt</Dropdown.Item>
             </InputGroup.Prepend>
@@ -91,10 +97,11 @@ class CategoryChoices extends React.Component {
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
-                className="px-1"
+                className="category-dropdown-item px-1"
                 href="#/action-6"
+                aria-label="huvudrätt kategori"
                 eventKey="1"
-                id='huvudrätt'
+                id="huvudrätt"
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Huvudrätt</Dropdown.Item>
             </InputGroup.Prepend>
@@ -102,10 +109,11 @@ class CategoryChoices extends React.Component {
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
-                className="px-1"
+                className="category-dropdown-item px-1"
                 href="#/action-7"
+                aria-label="efterrätt kategori"
                 eventKey="1"
-                id='efterrätt'
+                id="efterrätt"
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Efterrätt</Dropdown.Item>
             </InputGroup.Prepend>
@@ -113,10 +121,11 @@ class CategoryChoices extends React.Component {
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
-                className="px-1"
+                className="category-dropdown-item px-1"
                 href="#/action-8"
+                aria-label="glutenfri kategori"
                 eventKey="1"
-                id='glutenfri'
+                id="glutenfri"
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Glutenfri</Dropdown.Item>
             </InputGroup.Prepend>
@@ -124,10 +133,11 @@ class CategoryChoices extends React.Component {
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
-                className="px-1"
+                className="category-dropdown-item px-1"
                 href="#/action-9"
+                aria-label="laktosfri kategori"
                 eventKey="1"
-                id='laktosfri'
+                id="laktosfri"
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Laktosfri</Dropdown.Item>
             </InputGroup.Prepend>
@@ -135,10 +145,11 @@ class CategoryChoices extends React.Component {
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
-                className="px-1"
+                className="category-dropdown-item px-1"
                 href="#/action-10"
+                aria-label="bakverk kategori"
                 eventKey="1"
-                id='bakverk'
+                id="bakverk"
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Bakverk</Dropdown.Item>
             </InputGroup.Prepend>

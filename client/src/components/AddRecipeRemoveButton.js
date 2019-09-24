@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdRemoveCircleOutline } from "react-icons/md";
+import { MdRemoveCircleOutline } from 'react-icons/md';
 
 const RemoveRowButton = (props) => {
   return (

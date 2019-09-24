@@ -53,12 +53,6 @@ class AddRecipeForm extends React.Component {
     });
   }
 
-  // deleteStepByStepRow(key) {
-  //   this.setState({
-  //     numberOfStepByStepRow: this.state.numberOfStepByStepRow.filter((item, i) => item.key !== key)
-  //   });
-  // }
-
   render() {
 
     return (
@@ -68,10 +62,10 @@ class AddRecipeForm extends React.Component {
             <FileUpload />
           </Col>
           <Col xs={12} md={12} lg={8} className="mt-3">
-            <Form className="form px-4">
+            <Form className="form px-4" aria-label="Ett formulär för att lägga till ett recept">
               <Row>
-                <Col className="mt-3 pr-0" xs={11} sm={11} md={5} lg={5}>
-                  <Form.Control input="true" className="recipe-name" placeholder="Vad heter ditt recept?" />
+                <Col className="mt-3 pr-0" xs={11} sm={11} md={5} lg={4}>
+                  <Form.Control input="true" className="recipe-name" placeholder="Vad heter ditt recept?" aria-label="Vad heter ditt recept?" />
                 </Col>
                 <Col className="mt-3 pr-0 pl-2 ml-2" xs={12} sm={11} md={6} lg={6}>
                   <CategoryChoices />
@@ -80,16 +74,16 @@ class AddRecipeForm extends React.Component {
               </Row>
 
               <Row className="cooking-time-row mt-3">
-                <Col xs={1} md={1}>
-                  <MdQueryBuilder />
+                <Col md={1}>
+                  <MdQueryBuilder aria-label="en klocka ikon" />
                 </Col>
-                <Col xs={9} md={9} lg={10} className="px-1">
-                  <Form.Control input="true" className="recipe-name ml-1" placeholder="Tillagningstiden i minuter..." />
+                <Col xs={4} md={5} lg={4} className="pl-3">
+                  <Form.Control input="true" className="recipe-name" placeholder="Tillagningstiden i minuter..." aria-label="Tillagningstiden i minuter" />
                 </Col>
               </Row>
 
               {this.state.ingredientRows}
-              <AddRecipeRowButton className="MdAddCircleOutline" onClick={() => this.addRecipeRow()} />
+              <AddRecipeRowButton className="MdAddCircleOutline" aria-label="knapp för att lägga till en rad för ingredienser" onClick={() => this.addRecipeRow()} />
 
               {this.state.numberOfStepByStepRow}
             </Form>
