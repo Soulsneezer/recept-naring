@@ -15,8 +15,9 @@ class logIn extends React.Component {
           className="logInButton" 
           variant="outline-secondary" 
           onClick={() => this.setState({ modalShow: true })}
+          aria-label="logga in"
         > 
-          <img className="personLogo" src={LogInUser} height="30" width="30" alt="person-Logo" />
+          <img className="personLogo" src={LogInUser} height="30" width="30" alt="person ikon" />
           Logga in
         </Button>
         <LoginModal

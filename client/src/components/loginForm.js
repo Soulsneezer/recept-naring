@@ -65,7 +65,7 @@ class LogInForm extends React.Component{
           <div className="form-group login-box" style={{display:this.state.loginBox}}>
 
 						<label>Användarnamn:</label>
-            <input type="text" className="form-control" onChange={this.onChangeUserName.bind(this)}></input>
+            <input type="text" className="form-control" aria-label="skriv ditt användarnamn" onChange={this.onChangeUserName.bind(this)}></input>
             <div className="username-error-box" style={{display: this.state.usernameErrorBox}}>
               <p style={{color:'red',fontSize:'11px',marginTop:'5px'}}>
                 Användarnamn får bara innehålla bokstäver och siffror, 
@@ -74,7 +74,7 @@ class LogInForm extends React.Component{
             </div>
 
             <label className="mt-3">Lösenord:</label>
-            <input type="password" className="form-control" onChange={this.onChangePassword.bind(this)}></input>
+            <input type="password" className="form-control" aria-label="skriv ditt lösenord" onChange={this.onChangePassword.bind(this)}></input>
           	<div className="password-error-box" style={{display: this.state.passwordErrorBox}}>
               <p style={{color:'red',fontSize:'11px',marginTop:'5px'}}>
               	Lösenord får bara innehålla bokstäver och siffror, 
@@ -82,7 +82,7 @@ class LogInForm extends React.Component{
               </p>
             </div>
 
-    	      <button type="submit" className="form-control loginform-loginbutton btn-outline-success"
+    	      <button type="submit" className="form-control loginform-loginbutton btn-outline-success" aria-label="logga in"
 										style={{width:'120px', margin:'auto', marginTop: '30px'}}>
               Logga in
             </button>
