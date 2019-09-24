@@ -1,13 +1,41 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import FoodCard from './foodCard.js'
-import { Col, Row, Container } from 'react-bootstrap';
+import { Col, Row, Container, Button } from 'react-bootstrap';
+import REST from '../REST.js';
+
+class Recipe extends REST{}
 
 export default class FoodCardContainer extends Component {
   constructor(props) {
     super(props);
     Object.assign(this, props);
-    this.state = {};
+    this.state = {
+      recipes: [],
+      countRecipe: 4,
+      recipesLength: 0
+    };
+  }
+
+  async componentDidMount() {
+    let recipes = await Recipe.find();
+    let recipesLength = recipes.length;
+    this.setState({
+      recipes: recipes,
+      recipesLength: recipesLength
+    })
+    console.log(recipes)
+  }
+
+  async showMoreRecipes() {
+    this.state.countRecipe += 4;
+    let recipes = await Recipe.find();
+    recipes = recipes.splice(0, this.state.countRecipe);
+
+    this.setState({
+      recipes: recipes,
+      countRecipe: this.state.countRecipe
+    });
   }
 
   
@@ -15,15 +43,20 @@ export default class FoodCardContainer extends Component {
     return (
       <React.Fragment>
         <Container>
-          <div className="foodCardContainer">
-            <Row>
-              <Col sm={8} md={8} lg={8}>
-                <div className="innerFoodCardContainer">
-                  <FoodCard />
-                </div>
-              </Col>
-            </Row>
+          <div className="foodCardContainer container-outer">
+            {this.state.recipes.map(recipe => (
+              <FoodCard recipe={recipe}/>
+            ))}
           </div>
+          {/* <Button
+            className='show-more-btn'
+            onClick={this.showMoreRecipes}
+            aria-label="knapp för att visa fler recept"
+          >
+            {this.state.recipesLength <= this.state.countRecipe
+              ? 'Inga fler recept'
+              : 'Visa fler recept'}
+          </Button> */}
         </Container>
       </React.Fragment>
     );
