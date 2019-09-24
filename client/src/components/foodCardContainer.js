@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import FoodCard from './foodCard.js'
-import { Container } from 'react-bootstrap';
+import { Container, Col, Button } from 'react-bootstrap';
 import REST from '../REST.js';
 
-class Recipe extends REST{}
+class Recipe extends REST { }
 
 export default class FoodCardContainer extends Component {
   constructor(props) {
@@ -13,13 +13,14 @@ export default class FoodCardContainer extends Component {
     this.state = {
       recipes: [],
       countRecipe: 4,
-      recipesLength: 0
+      recipesLength: 4
     };
+    this.showMoreRecipes = this.showMoreRecipes.bind(this);
   }
 
   async componentDidMount() {
     let recipes = await Recipe.find();
-    let recipesLength = recipes.length;
+    let recipesLength = recipes.splice(0, 4);
     this.setState({
       recipes: recipes,
       recipesLength: recipesLength
@@ -37,25 +38,28 @@ export default class FoodCardContainer extends Component {
     });
   }
 
-  
+
+
   render() {
     return (
       <React.Fragment>
         <Container>
           <div className="foodCardContainer container-outer">
             {this.state.recipes.map(recipe => (
-              <FoodCard key={recipe._id} recipe={recipe}/>
+              <FoodCard key={recipe._id} recipe={recipe} />
             ))}
           </div>
-          {/* <Button
-            className='show-more-btn'
-            onClick={this.showMoreRecipes}
-            aria-label="knapp för att visa fler recept"
-          >
-            {this.state.recipesLength <= this.state.countRecipe
-              ? 'Inga fler recept'
-              : 'Visa fler recept'}
-          </Button> */}
+          <Col>
+            {<Button
+              className='show-more-btn'
+              onClick={this.showMoreRecipes}
+              aria-label="knapp för att visa fler recept"
+            >
+              {this.state.recipesLength <= this.state.countRecipe
+                ? 'Inga fler recept'
+                : 'Visa fler recept'}
+            </Button>}
+          </Col>
         </Container>
       </React.Fragment>
     );

@@ -46,7 +46,7 @@ main {
 	background-color: grey;
 }
 .innerFoodCardContainer {
-	/* padding: 50px; */
+	padding: 50px;
 }
 
 @media only screen and (max-width: 400px) {
@@ -387,7 +387,8 @@ main {
 	padding-left: 20px;
 	padding-top: 5px;
 }
-.card-img, .card-img-top {
+.card-img,
+.card-img-top {
 	height: 200px;
 	width: 100%;
 	border-radius: 3px 3px 0px 0px;
@@ -475,29 +476,29 @@ main {
 
 /*------- Login Page -------*/
 
-.login-component{
-	font-family:'Roboto';
+.login-component {
+	font-family: 'Roboto';
 }
 
-.modal-body{
-	background-color:#E1F8E6;
+.modal-body {
+	background-color: #e1f8e6;
 }
-.modal-headish{
+.modal-headish {
 	background-color: #f8f9fa;
 }
-.modal-titlish{
+.modal-titlish {
 	font-family: 'Parisienne', cursive;
 	font-weight: bold;
 	text-align: center;
 }
 
-.loginform-loginbutton{
+.loginform-loginbutton {
 	border-radius: 20px;
 }
 
 /*----- Footer ------*/
 
-.footer-component{
+.footer-component {
 	font-family: 'Roboto';
 }
 
