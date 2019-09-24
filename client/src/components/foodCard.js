@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import { Card, Row, Col } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 
 export default class FoodCard extends Component {
@@ -14,7 +14,6 @@ export default class FoodCard extends Component {
 
 
   render() {
-    console.log(this.props.recipe)
     return (
       <div className="show-recipe">
         <Card sm={4} md={7} lg={6} xl={6} style={{ width: 'auto' }}>

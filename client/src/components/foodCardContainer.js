@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import FoodCard from './foodCard.js'
-import { Col, Row, Container, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import REST from '../REST.js';
 
 class Recipe extends REST{}
@@ -24,7 +24,6 @@ export default class FoodCardContainer extends Component {
       recipes: recipes,
       recipesLength: recipesLength
     })
-    console.log(recipes)
   }
 
   async showMoreRecipes() {
@@ -45,7 +44,7 @@ export default class FoodCardContainer extends Component {
         <Container>
           <div className="foodCardContainer container-outer">
             {this.state.recipes.map(recipe => (
-              <FoodCard recipe={recipe}/>
+              <FoodCard key={recipe._id} recipe={recipe}/>
             ))}
           </div>
           {/* <Button
