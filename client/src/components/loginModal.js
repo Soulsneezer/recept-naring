@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Modal } from 'react-bootstrap';
 import LogInForm from './loginForm.js'; 
-
 
 export default function loginModal(props) {
   return (
@@ -12,16 +10,15 @@ export default function loginModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-        <Modal.Header closeButton className="modal-headish">
+      <Modal.Header closeButton className="modal-headish">
         <Modal.Title id="contained-modal-title-vcenter" className="modal-titlish">
-            Logga in här 
+          Logga in här 
         </Modal.Title>
-        </Modal.Header>
-        <Modal.Body className="modal-body">
-            <LogInForm />
-        </Modal.Body>
+      </Modal.Header>
+      <Modal.Body className="modal-body">
+        <LogInForm />
+      </Modal.Body>
     </Modal>
-
   );
 }
 
