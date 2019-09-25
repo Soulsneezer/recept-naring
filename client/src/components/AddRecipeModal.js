@@ -22,7 +22,7 @@ export default function AddRecipeModal(props) {
       <Modal.Body>
         <AddRecipeForm />
         <Row className="my-3">
-          <Col xs={{ col: 3, offset: 8 }} sm={{ col: 3, offset: 8 }} md={{ col: 4, offset: 8 }} lg={{ col: 3, offset: 9 }}>
+          <Col xs={{ col: 4, offset: 8 }} sm={{ col: 4, offset: 8 }} md={{ col: 4, offset: 8 }} lg={{ col: 2, offset: 9 }}>
             <Button
               className="recipe-button align-right"
               variant="outline-success"

@@ -63,10 +63,16 @@ class AddRecipeForm extends React.Component {
             <FileUpload />
           </Col>
           <Col xs={12} md={12} lg={8} className="mt-3">
-            <Form className="form px-4" aria-label="formulär för att lägga till ett recept">
+            <Form
+              className="form px-4"
+              aria-label="formulär för att lägga till ett recept">
               <Row>
                 <Col className="mt-3" xs={12} sm={12} md={5} lg={5}>
-                  <Form.Control input="true" className="recipe-name" placeholder="Vad heter ditt recept?" aria-labelledby="Vad heter ditt recept?" />
+                  <Form.Control
+                    input="true"
+                    className="recipe-name"
+                    placeholder="Vad heter ditt recept?"
+                    aria-labelledby="Vad heter ditt recept?" />
                 </Col>
                 <Col className="cat-btn mt-3" xs={3} sm={3} md={3} lg={3}>
                   <CategoryChoices />

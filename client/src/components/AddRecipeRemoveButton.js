@@ -4,7 +4,9 @@ import { MdRemoveCircleOutline } from 'react-icons/md';
 const RemoveRowButton = (props) => {
   return (
     <React.Fragment>
-      <MdRemoveCircleOutline className="MdRemoveCircleOutline" onClick={props.onClick} />
+      <MdRemoveCircleOutline
+        className="MdRemoveCircleOutline"
+        onClick={props.onClick} />
     </React.Fragment>
   );
 }
