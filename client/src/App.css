@@ -1,80 +1,214 @@
-@import url('https://fonts.googleapis.com/css?family=Gayathri&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Gayathri&display=swap");
 
 .App {
-	text-align: center;
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 main {
-	flex: 1;
+  flex: 1;
 }
 .navbar {
-	background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 .logo {
-	padding-right: 5px;
+  padding-right: 5px;
 }
 .logoHeader {
-	font-family: 'Parisienne', cursive;
-	font-size: 40px;
-	font-weight: bold;
+  font-family: "Parisienne", cursive;
+  font-size: 40px;
+  font-weight: bold;
 }
 .recipeButton {
-	margin-right: 1rem;
-	border-radius: 20px;
-	padding: 7px 10px;
-	font-size: 20px;
+  margin-right: 1rem;
+  border-radius: 20px;
+  padding: 7px 10px;
+  font-size: 20px;
 }
 .logInButton {
-	padding: 7px 35px;
-	font-size: 20px;
-	border-radius: 20px;
+  padding: 7px 35px;
+  font-size: 20px;
+  border-radius: 20px;
 }
 .navButtons {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .personLogo {
-	height: 22px;
-	width: 22px;
-	margin-right: 10px;
+  height: 22px;
+  width: 22px;
+  margin-right: 10px;
 }
 
 .btn-primary:hover {
-	background-color: grey;
+  background-color: grey;
 }
 .innerFoodCardContainer {
-	padding: 50px;
+  padding: 50px;
+}
+
+.recipe-button {
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXX BEGINNING OF MELLI's STYLING XXXXXXXXXXXXXXXXXXX*/
+#contained-modal-title-vcenter {
+  font-family: "Parisienne", cursive;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+}
+
+.modal-body {
+  background-color: #e1f8e6;
+  font-family: "Roboto";
+}
+
+.person-choices-btn,
+.dropdown-units,
+.category-dropdown {
+  font-family: "Roboto";
+  border-radius: 15px;
+  font-size: 11px;
+}
+
+.category-dropdown-button {
+  display: inline;
+  margin-right: 8px;
+  font-size: 11px;
+}
+
+.person-choices-dropdown-menu,
+.units-dropdown-menu,
+.category-dropdown-menu {
+  font-family: "Roboto";
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  align-items: center;
+  font-size: 11px;
+  min-width: 60px;
+}
+#clock-icon {
+  display: inline-flex;
+}
+
+.recipe-name,
+.list-group-item {
+  font-family: "Roboto";
+  display: inline;
+  min-height: 33px;
+  border-radius: 10px;
+  font-size: 11px;
+  cursor: text;
+}
+
+.MdRemoveCircleOutline,
+.MdAddCircleOutline {
+  cursor: pointer;
+}
+
+.add-instructions-input {
+  display: inline;
+  cursor: text;
+  min-height: 33px;
+  font-size: 11px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.add-instruction {
+  display: inline;
+  min-height: 33px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+.delete-instruction {
+  font-size: 11px;
+  max-height: 33px;
+  margin-left: 3px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+}
+#recipe-instruction {
+  font-size: 11px;
+}
+
+@media only screen and (min-width: 992px) {
+  .recipe-name {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
-	.recipeButton {
-		padding: 2px 10px;
-		font-size: 15px;
-	}
-	.logInButton {
-		padding: 2px 15px;
-		font-size: 15px;
-	}
-	.personLogo {
-		height: 18px;
-		width: 18px;
-		margin-right: 3px;
-	}
-	.logoHeader {
-		font-family: 'Parisienne', cursive;
-		font-size: 20px;
-		font-weight: bold;
-	}
+  .recipe-button,
+  .category-dropdown,
+  .dropdown-units,
+  .dropdown,
+  .dropdown-button {
+    display: inline;
+    padding: 7px 10px;
+    font-size: 9px;
+  }
+
+  .cat-btn {
+    padding-left: 8px;
+  }
+
+  .person-choices-btn,
+  .add-instructions-input,
+  .recipe-button {
+    font-size: 9px;
+  }
+
+  .dropdown-menu {
+    font-size: 9px;
+  }
+
+  .recipe-name,
+  .list-group-item {
+    display: inline;
+    font-size: 9px;
+    cursor: text;
+  }
 }
+/*XXXXXXXXXXXXXXXXXXXXXX END OF MELLIS STYLING XXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+@media only screen and (max-width: 400px) {
+  .recipeButton {
+    padding: 2px 10px;
+    font-size: 15px;
+  }
+  .logInButton {
+    padding: 2px 15px;
+    font-size: 15px;
+  }
+  .personLogo {
+    height: 18px;
+    width: 18px;
+    margin-right: 3px;
+  }
+  .logoHeader {
+    font-family: "Parisienne", cursive;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
 @media only screen and (max-width: 300px) {
-	.logoHeader {
-		font-family: 'Parisienne', cursive;
-		font-size: 20px;
-		font-weight: bold;
-	}
+  .logoHeader {
+    font-family: "Parisienne", cursive;
+    font-size: 20px;
+    font-weight: bold;
+  }
 }
 .foodCardContainer {
 	margin-top: 5px;
@@ -85,303 +219,307 @@ main {
 	-webkit-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
 	-moz-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
 	box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+
 }
 .innerFoodCardContainer {
-	padding: 30px;
+  padding: 30px;
 }
 .innerContainerUploadPhoto {
-	border: 0.5px solid #6e6d6d;
-	width: 90%;
-	margin: auto;
-	display: flex;
-	justify-content: center;
-	padding: 30px;
-	align-items: center;
+  border: 0.5px solid #6e6d6d;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  align-items: center;
 }
 .cameraIcon {
-	display: center;
-	justify-content: center;
-	padding: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
 }
+
 .recipeHeadline {
-	margin-top: 5px;
-	text-align: center;
-	display: center;
-	justify-content: center;
+  margin-top: 5px;
+  text-align: center;
+  display: center;
+  justify-content: center;
 }
 .recipeHeadlineH2 {
-	font-family: 'Parisienne', cursive;
-	font-size: 50px;
-	font-weight: bold;
-	text-align: center;
-	display: center;
-	justify-content: center;
-	margin-top: 30px;
-	margin-bottom: 0;
+  font-family: "Parisienne", cursive;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  display: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 @media only screen and (max-width: 400px) {
-	.recipeHeadlineH2 {
-		font-size: 15px;
-		text-align: center;
-		margin-top: 15px;
-	}
+  .recipeHeadlineH2 {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+  }
 }
 @media only screen and (max-width: 920px) {
-	.recipeHeadlineH2 {
-		font-size: 40px;
-		text-align: center;
-	}
+  .recipeHeadlineH2 {
+    font-size: 40px;
+    text-align: center;
+  }
 }
 .search-bar {
-	background: url(./images/background-img1.jpg);
-	height: 30vh;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  background: url(./images/background-img1.jpg);
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .logoHeader {
-	font-family: 'Parisienne', cursive;
-	font-size: 30px;
-	font-weight: bold;
+  font-family: "Parisienne", cursive;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .homePageBackgroundShow {
-	height: 30vh;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	background-repeat: no-repeat;
-	background-size: cover;
-	transition: 0.5s;
-	opacity: 1;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.5s;
+  opacity: 1;
 }
 .search-field {
-	width: 40%;
+  width: 40%;
 }
 .dropdown-toggle {
-	font-family: 'Roboto';
+  font-family: "Roboto";
 }
 .dropdown-item {
-	font-family: 'Roboto';
-	border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
 }
 .dropdown-btn > .btn-success {
-	height: 55px;
-	color: rgb(0, 0, 0);
-	background-color: rgba(255, 255, 255, 0.7);
-	border: 1px solid rgb(148, 148, 148);
-	border-left: none;
-	border-radius: 0 30px 30px 0;
-	margin-bottom: 0;
-	font-size: 25px;
-	text-align: center;
-	color: rgb(92, 92, 92);
-	width: 160px;
-	backdrop-filter: blur(3px);
+  height: 55px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgb(148, 148, 148);
+  border-left: none;
+  border-radius: 0 30px 30px 0;
+  margin-bottom: 0;
+  font-size: 25px;
+  text-align: center;
+  color: rgb(92, 92, 92);
+  width: 160px;
+  backdrop-filter: blur(3px);
 }
 .dropdown-menu {
-	border-radius: 0 0 20px 20px;
+  border-radius: 0 0 20px 20px;
 }
 .search-input {
-	font-family: 'Roboto';
-	z-index: 1;
-	height: 55px;
-	border-radius: 30px 0 0 30px;
-	font-size: 25px;
-	padding-left: 60px;
-	backdrop-filter: blur(3px);
-	border: 1px solid rgb(148, 148, 148);
-	background: url(./images/magnifying-glass.svg) rgba(255, 255, 255, 0.7);
-	background-repeat: no-repeat;
-	background-size: 30px;
-	background-position-y: center;
-	background-position-x: 10px;
+  font-family: "Roboto";
+  z-index: 1;
+  height: 55px;
+  border-radius: 30px 0 0 30px;
+  font-size: 25px;
+  padding-left: 60px;
+  backdrop-filter: blur(3px);
+  border: 1px solid rgb(148, 148, 148);
+  background: url(./images/magnifying-glass.svg) rgba(255, 255, 255, 0.7);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-y: center;
+  background-position-x: 10px;
 }
+
 @media only screen and (max-width: 920px) {
-	.search-input {
-		height: 45px;
-	}
-	.search-bar {
-		height: 20vh;
-		background-size: 100%;
-	}
-	.homePageBackgroundShow {
-		height: 20vh;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: absolute;
-		background-repeat: no-repeat;
-		background-size: cover;
-		transition: 0.5s;
-		opacity: 1;
-	}
-	.recipeHeadlineH2 {
-		margin-top: 20px;
-	}
+  .search-input {
+    height: 45px;
+  }
+  .search-bar {
+    height: 20vh;
+    background-size: 100%;
+  }
+  .homePageBackgroundShow {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+    opacity: 1;
+  }
+  .recipeHeadlineH2 {
+    margin-top: 20px;
+  }
 }
 @media only screen and (max-width: 760px) {
-	.search-input {
-		height: 35px;
-		padding-left: 40px;
-		width: 60%;
-		font-size: 16px;
+  .search-input {
+    height: 35px;
+    padding-left: 40px;
+    width: 60%;
+    font-size: 16px;
 
-		background-size: 20px;
-		border: 1px solid rgb(148, 148, 148);
-	}
-	.search-bar {
-		height: 15vh;
-		background-size: 100%;
-	}
-	.homePageBackgroundShow {
-		height: 15vh;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: absolute;
-		background-repeat: no-repeat;
-		background-size: cover;
-		transition: 0.5s;
-		opacity: 1;
-	}
-	.recipeHeadlineH2 {
-		margin-top: 10px;
-		font-size: 30px;
-	}
-	.logoHeader {
-		font-size: 20px;
-	}
-	.navbar-logo {
-		width: 40px;
-		height: 40px;
-	}
+    background-size: 20px;
+    border: 1px solid rgb(148, 148, 148);
+  }
+  .search-bar {
+    height: 15vh;
+    background-size: 100%;
+  }
+  .homePageBackgroundShow {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+    opacity: 1;
+  }
+  .recipeHeadlineH2 {
+    margin-top: 10px;
+    font-size: 30px;
+  }
+  .logoHeader {
+    font-size: 20px;
+  }
+  .navbar-logo {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .show-recipe {
-	display: inline-block;
+  display: inline-block;
 }
 
 .search-input {
-	z-index: 1;
-	height: 55px;
-	border-radius: 30px 0 0 30px;
-	font-size: 25px;
-	padding-left: 60px;
-	backdrop-filter: blur(3px);
-	border: 1px solid rgb(148, 148, 148);
+  z-index: 1;
+  height: 55px;
+  border-radius: 30px 0 0 30px;
+  font-size: 25px;
+  padding-left: 60px;
+  backdrop-filter: blur(3px);
+  border: 1px solid rgb(148, 148, 148);
 
-	background: url(./images/magnifying-glass.svg) rgba(255, 255, 255, 0.7);
-	background-repeat: no-repeat;
-	background-size: 30px;
-	background-position-y: center;
-	background-position-x: 10px;
+  background: url(./images/magnifying-glass.svg) rgba(255, 255, 255, 0.7);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-y: center;
+  background-position-x: 10px;
 }
 @media only screen and (max-width: 920px) {
-	.search-input {
-		height: 45px;
-	}
-	.search-bar {
-		height: 20vh;
-		background-size: 100%;
-	}
-	.dropdown-btn > .btn-success {
-		height: 45px;
-		width: 150px;
-	}
+  .search-input {
+    height: 45px;
+  }
+  .search-bar {
+    height: 20vh;
+    background-size: 100%;
+  }
+  .dropdown-btn > .btn-success {
+    height: 45px;
+    width: 150px;
+  }
 }
 @media only screen and (max-width: 760px) {
-	.search-field {
-		width: 50%;
-	}
-	.search-input {
-		height: 35px;
-		padding-left: 40px;
-		font-size: 16px;
-		background-size: 20px;
-		border: 1px solid rgb(148, 148, 148);
-	}
-	.search-bar {
-		height: 15vh;
-		background-size: 100%;
-	}
-	.dropdown-btn > .btn-success {
-		height: 35px;
-		font-size: 16px;
-	}
+  .search-field {
+    width: 50%;
+  }
+  .search-input {
+    height: 35px;
+    padding-left: 40px;
+    font-size: 16px;
+    background-size: 20px;
+    border: 1px solid rgb(148, 148, 148);
+  }
+  .search-bar {
+    height: 15vh;
+    background-size: 100%;
+  }
+  .dropdown-btn > .btn-success {
+    height: 35px;
+    font-size: 16px;
+  }
 }
 .readRecipeImg {
-	width: 100%;
-	height: 80vh;
+  width: 100%;
+  height: 80vh;
 }
 @media only screen and (max-width: 400px) {
-	.recipeButton {
-		padding: 2px 10px;
-		font-size: 15px;
-	}
-	.logInButton {
-		padding: 2px 15px;
-		font-size: 15px;
-	}
-	.personLogo {
-		height: 18px;
-		width: 18px;
-	}
-	.container-outer {
-		margin-top: 5px !important;
-	}
-	.dropdown-btn > .btn-success {
-		width: 110px;
-	}
-	.card-h1 {
-		font-size: 32px;
-	}
+  .recipeButton {
+    padding: 2px 10px;
+    font-size: 15px;
+  }
+  .logInButton {
+    padding: 2px 15px;
+    font-size: 15px;
+  }
+  .personLogo {
+    height: 18px;
+    width: 18px;
+  }
+  .container-outer {
+    margin-top: 5px !important;
+  }
+  .dropdown-btn > .btn-success {
+    width: 110px;
+  }
+  .card-h1 {
+    font-size: 32px;
+  }
 }
 .card-button {
-	font-family: 'Roboto';
-	background-color: rgba(0, 0, 0, 0.8);
-	color: rgb(254, 254, 254);
-	border-radius: 0px 0px 3px 3px;
-	margin-bottom: 0;
-	border: none;
-	width: 100%;
-	font-size: 20px;
+  font-family: "Roboto";
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(254, 254, 254);
+  border-radius: 0px 0px 3px 3px;
+  margin-bottom: 0;
+  border: none;
+  width: 100%;
+  font-size: 20px;
 }
 .card-outer {
-	display: inline-block;
-	width: 250px;
-	margin: 6px;
+  display: inline-block;
+  width: 250px;
+  margin: 6px;
 
-	animation: fade ease-out 1s;
-	-webkit-animation: fade ease-out 1s;
-	-moz-animation: fade ease-out 1s;
-	-o-animation: fade ease-out 1s;
-	-ms-animation: fade ease-out 1s;
+  animation: fade ease-out 1s;
+  -webkit-animation: fade ease-out 1s;
+  -moz-animation: fade ease-out 1s;
+  -o-animation: fade ease-out 1s;
+  -ms-animation: fade ease-out 1s;
 }
 .card-inner {
-	position: relative;
+  position: relative;
 }
 .card-text {
 	font-family: 'Roboto';
 	text-align: left;
 }
 .card-title {
-	position: absolute;
-	left: 0;
-	bottom: 50px;
-	color: rgb(0, 0, 0);
-	background-color: rgba(254, 254, 254, 0.7);
-	width: 100%;
-	font-size: 20px;
-	text-align: bottom;
-	text-align: left;
-	height: 60px;
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(254, 254, 254, 0.7);
+  width: 100%;
+  font-size: 20px;
+  text-align: bottom;
+  text-align: left;
+  height: 60px;
 }
+
 .card-title-h5 {
 	font-family: 'Roboto';
 	margin-bottom: 36px;
@@ -397,79 +535,79 @@ main {
 	border-radius: 3px 3px 0px 0px;
 }
 .container-outer {
-	border: 1px solid rgb(200, 200, 200);
-	border-radius: 3px 3px 3px 3px;
-	box-shadow: 0px 5px 8px rgb(200, 200, 200);
-	margin-bottom: 50px;
-	position: relative;
-	margin-top: 5px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0px 5px 8px rgb(200, 200, 200);
+  margin-bottom: 50px;
+  position: relative;
+  margin-top: 5px;
 }
 @-webkit-keyframes fade {
-	0% {
-		opacity: 0.2;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0.2;
-	}
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
 }
 @-moz-keyframes fade {
-	0% {
-		opacity: 0.2;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes fade {
-	0% {
-		opacity: 0.2;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @-o-keyframes fade {
-	0% {
-		opacity: 0.2;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0.2;
-	}
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
 }
 .container-inner {
-	margin-bottom: 40px;
-	margin-top: 15px;
-	display: flex;
-	justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
 }
 .card-p {
-	margin-left: 10px;
-	font-family: 'Roboto';
+  margin-left: 10px;
+  font-family: "Roboto";
 }
 .card-h1 {
-	margin-bottom: 20px;
-	margin-top: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 .show-more-btn {
-	font-family: 'Roboto';
-	position: absolute;
-	bottom: -20px;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
-	border-radius: 20px;
-	background-color: rgb(92, 184, 92);
-	border: 1px solid rgb(84, 118, 71);
+  font-family: "Roboto";
+  position: absolute;
+  bottom: -20px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  border-radius: 20px;
+  background-color: rgb(92, 184, 92);
+  border: 1px solid rgb(84, 118, 71);
 }
 .show-recipe {
 	display: inline-block;
@@ -480,6 +618,23 @@ main {
 /*------- Login Page -------*/
 
 .login-component {
+  font-family: "Roboto";
+}
+
+.modal-body {
+  background-color: #e1f8e6;
+}
+.modal-headish {
+  background-color: #f8f9fa;
+}
+.modal-titlish {
+  font-family: "Parisienne", cursive;
+  font-weight: bold;
+  text-align: center;
+}
+
+.loginform-loginbutton {
+  border-radius: 20px;
 	font-family: 'Roboto';
 }
 
@@ -497,39 +652,40 @@ main {
 
 .loginform-loginbutton {
 	border-radius: 20px;
+
 }
 
 /*----- Footer ------*/
 
 .footer-component {
-	font-family: 'Roboto';
+  font-family: 'Roboto';
 }
 
 footer .icon {
-	width: 30px;
-	height: 30px;
-	cursor: pointer;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 @media (min-width: 577px) and (max-width: 641px) {
-	footer .icon {
-		width: 26px;
-		height: 26px;
-	}
+  footer .icon {
+    width: 26px;
+    height: 26px;
+  }
 }
 @media (max-width: 576px) {
-	footer .icons .icon {
-		display: block;
-		padding-top: 5px;
-	}
+  footer .icons .icon {
+    display: block;
+    padding-top: 5px;
+  }
 }
 @media (max-width: 322px) {
-	footer p {
-		font-size: 12px;
-	}
+  footer p {
+    font-size: 12px;
+  }
 }
 
 .uploadCameraIcon {
-	display: center;
-	justify-content: center;
+  display: center;
+  justify-content: center;
 }
