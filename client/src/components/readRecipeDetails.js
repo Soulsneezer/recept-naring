@@ -153,8 +153,8 @@ class ReadRecipeDetails extends Component {
               </Col>
             </Row>
             <Row className="offset-1 pt-2">
-              <Col className="col-sm-12 col-md-12 pt-2">
-                <p xs={12} sm={12} md={12}
+              <Col xs={{span:11, offset:0}} sm={{span:10, offset:0}} md={12} className="col-sm-12 col-md-12 pt-2">
+                <p 
                  label="kort beskrivning av receptet">{this.props.startText}</p>
                  </Col>
                 <div className="col-sm-12 col-md-12 d-inline-block pt-5">
@@ -170,12 +170,13 @@ class ReadRecipeDetails extends Component {
             </Row>
             <Row className="offset-1 pt-4">
               <Col>
-                <h5 className="mt-5" xs={{ span: 12, offset: 0 }} sm={{ span: 12, offset: 0 }}
-                >Näring per portion </h5>
+                <h5 className="pt-5" xs={{ span: 10, offset: 0 }} sm={{ span: 10, offset: 0 }}>
+                   Näring per portion 
+                </h5>
               </Col>
             </Row>
             <Row>
-              <Col className="offset-1 col-md-11">
+              <Col xs={{span:8, offset:1,}} className="offset-1 col-md-11">
                 {Object.keys(this.nutes).map(key => (
                   <ReadRecipeNutrition
                     key={key}
