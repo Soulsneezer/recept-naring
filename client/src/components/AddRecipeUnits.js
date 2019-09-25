@@ -26,7 +26,7 @@ class AddRecipeUnits extends React.Component {
                 <Dropdown
                     title={this.state.mySelection}
                     className="dropdown-units p-0"
-                    aria-label="dropdown knapp för måttenheter"
+                    aria-label="dropdown för måttenheter"
                 >
                     <Dropdown.Toggle
                         className="dropdown-units pl-2"

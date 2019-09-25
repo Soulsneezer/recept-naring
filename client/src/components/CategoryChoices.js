@@ -30,8 +30,6 @@ class CategoryChoices extends React.Component {
             className="category-dropdown">
             {this.state.mySelection}
           </Dropdown.Toggle>
-
-
           <Dropdown.Menu className="category-dropdown-menu">
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
@@ -44,8 +42,6 @@ class CategoryChoices extends React.Component {
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Vegansk</Dropdown.Item>
             </InputGroup.Prepend>
-
-
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
@@ -57,7 +53,6 @@ class CategoryChoices extends React.Component {
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Vegetarisk</Dropdown.Item>
             </InputGroup.Prepend>
-
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
@@ -69,7 +64,6 @@ class CategoryChoices extends React.Component {
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Fisk</Dropdown.Item>
             </InputGroup.Prepend>
-
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
@@ -81,7 +75,6 @@ class CategoryChoices extends React.Component {
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Kött</Dropdown.Item>
             </InputGroup.Prepend>
-
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
@@ -93,7 +86,6 @@ class CategoryChoices extends React.Component {
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Förrätt</Dropdown.Item>
             </InputGroup.Prepend>
-
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
@@ -105,7 +97,6 @@ class CategoryChoices extends React.Component {
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Huvudrätt</Dropdown.Item>
             </InputGroup.Prepend>
-
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
@@ -117,7 +108,6 @@ class CategoryChoices extends React.Component {
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Efterrätt</Dropdown.Item>
             </InputGroup.Prepend>
-
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
@@ -129,7 +119,6 @@ class CategoryChoices extends React.Component {
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Glutenfri</Dropdown.Item>
             </InputGroup.Prepend>
-
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
@@ -141,7 +130,6 @@ class CategoryChoices extends React.Component {
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Laktosfri</Dropdown.Item>
             </InputGroup.Prepend>
-
             <InputGroup.Prepend>
               <InputGroup.Checkbox className="category-checkbox" aria-label="Checkbox" />
               <Dropdown.Item
@@ -153,7 +141,6 @@ class CategoryChoices extends React.Component {
                 value={this.mySelection}
                 onClick={e => this.selectedDropdown(e)}>Bakverk</Dropdown.Item>
             </InputGroup.Prepend>
-
           </Dropdown.Menu>
         </Dropdown>
       </React.Fragment>

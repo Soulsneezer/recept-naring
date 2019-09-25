@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Form, Col, Row } from 'react-bootstrap';
 import CategoryChoices from './CategoryChoices';
+import PersonChoices from './PersonChoices';
 import FileUpload from './FileUpload';
 import AddRecipeIngredientRow from './AddRecipeIngredientRow';
 import AddRecipeRowButton from './AddRecipeRowButton';
@@ -62,34 +63,40 @@ class AddRecipeForm extends React.Component {
             <FileUpload />
           </Col>
           <Col xs={12} md={12} lg={8} className="mt-3">
-            <Form className="form px-4" aria-label="Ett formulär för att lägga till ett recept">
+            <Form className="form px-4" aria-label="formulär för att lägga till ett recept">
               <Row>
-                <Col className="mt-3 pr-0" xs={11} sm={11} md={5} lg={4}>
-                  <Form.Control input="true" className="recipe-name" placeholder="Vad heter ditt recept?" aria-label="Vad heter ditt recept?" />
+                <Col className="mt-3" xs={12} sm={12} md={5} lg={5}>
+                  <Form.Control input="true" className="recipe-name" placeholder="Vad heter ditt recept?" aria-labelledby="Vad heter ditt recept?" />
                 </Col>
-                <Col className="mt-3 pr-0 pl-2 ml-2" xs={12} sm={11} md={6} lg={6}>
+                <Col className="cat-btn mt-3" xs={3} sm={3} md={3} lg={3}>
                   <CategoryChoices />
-                  <CategoryChoices />
+                </Col>
+                <Col className="mt-3 ml-2" xs={3} sm={3} md={3} lg={3}>
+                  <PersonChoices />
                 </Col>
               </Row>
 
-              <Row className="cooking-time-row mt-3">
-                <Col md={1}>
-                  <MdQueryBuilder aria-label="en klocka ikon" />
+              <Row className="mt-3">
+                <Col className="mt-3" xs={1} sm={1} md={1}>
+                  <MdQueryBuilder id="clock-icon" aria-label="klocka ikon" />
                 </Col>
-                <Col xs={4} md={5} lg={4} className="pl-3">
-                  <Form.Control input="true" className="recipe-name" placeholder="Tillagningstiden i minuter..." aria-label="Tillagningstiden i minuter" />
+                <Col className="mt-3 pl-3" xs={9} sm={10} md={10} lg={10}>
+                  <Form.Control
+                    input="true"
+                    className="recipe-name"
+                    placeholder="Tillagningstiden i minuter..."
+                    aria-labelledby="Tillagningstiden i minuter" />
                 </Col>
               </Row>
 
               {this.state.ingredientRows}
-              <AddRecipeRowButton className="MdAddCircleOutline" aria-label="knapp för att lägga till en rad för ingredienser" onClick={() => this.addRecipeRow()} />
+              <AddRecipeRowButton className="MdAddCircleOutline" aria-label="ikon för lägga till en rad för ingredienser" onClick={() => this.addRecipeRow()} />
 
               {this.state.numberOfStepByStepRow}
             </Form>
           </Col>
         </Row>
-      </Container>
+      </Container >
     )
   }
 }

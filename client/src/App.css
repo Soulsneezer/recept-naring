@@ -55,6 +55,12 @@ main {
 }
 
 /*XXXXXXXXXXXXXXXXXXXXX BEGINNING OF MELLI's STYLING XXXXXXXXXXXXXXXXXXX*/
+#contained-modal-title-vcenter {
+  font-family: "Parisienne", cursive;
+  font-size: 35px;
+  font-weight: bold;
+}
+
 .modal-header {
   background-color: #f8f9fa;
 }
@@ -64,37 +70,41 @@ main {
   font-family: "Roboto";
 }
 
+.person-choices-btn,
 .dropdown-units,
 .category-dropdown {
-  border-radius: 20px;
-  font-size: 10px;
-  min-width: 70px;
+  font-family: "Roboto";
+  border-radius: 15px;
+  font-size: 11px;
 }
 
 .category-dropdown-button {
   display: inline;
-  margin-right: 16px;
+  margin-right: 8px;
+  font-size: 11px;
 }
 
-.dropdown-item.active {
-background:rgb(122, 120, 120);
-}
-
+.person-choices-dropdown-menu,
 .units-dropdown-menu,
 .category-dropdown-menu {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  font-family: "Roboto";
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   align-items: center;
+  font-size: 11px;
   min-width: 60px;
-  background: rgb(245, 240, 240);
+}
+#clock-icon {
+  display: inline-flex;
 }
 
 .recipe-name,
 .list-group-item {
+  font-family: "Roboto";
   display: inline;
-  min-height: 31px;
-  border-radius: 30px;
-  font-size: 10px;
+  min-height: 33px;
+  border-radius: 10px;
+  font-size: 11px;
   cursor: text;
 }
 
@@ -106,49 +116,56 @@ background:rgb(122, 120, 120);
 .add-instructions-input {
   display: inline;
   cursor: text;
-  min-height: 31px;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-}
-.recipe-instruction {
-  border-radius: 30px;
-}
-
-.delete-instruction {
-  font-size: 10px;
-  max-height: 31px;
-  margin-left: 3px;
-  border-radius: 20px;
+  min-height: 33px;
+  font-size: 11px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .add-instruction {
   display: inline;
-  border-radius: 20px;
+  min-height: 33px;
+  border-radius: 10px;
+  font-size: 11px;
 }
 
-#contained-modal-title-vcenter {
-  font-family: "Parisienne", cursive;
-  font-size: 40px;
-  font-weight: bold;
+.delete-instruction {
+  font-size: 11px;
+  max-height: 33px;
+  margin-left: 3px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+}
+#recipe-instruction {
+  font-size: 11px;
 }
 
 @media only screen and (min-width: 992px) {
-  recipe-name {
+  .recipe-name {
     padding-left: 13px;
     padding-right: 13px;
   }
 }
 
 @media only screen and (max-width: 400px) {
+  .recipe-button,
   .category-dropdown,
   .dropdown-units,
   .dropdown,
   .dropdown-button {
-    background-color: #f8f9fa;
-    color: black;
     display: inline;
-    border-radius: 20px;
     padding: 7px 10px;
+    font-size: 9px;
+  }
+
+  .cat-btn {
+    padding-left: 8px;
+  }
+
+  .person-choices-btn,
+  .add-instructions-input,
+  .recipe-button {
     font-size: 9px;
   }
 
@@ -159,7 +176,6 @@ background:rgb(122, 120, 120);
   .recipe-name,
   .list-group-item {
     display: inline;
-    border-radius: 30px;
     font-size: 9px;
     cursor: text;
   }
@@ -282,7 +298,6 @@ background:rgb(122, 120, 120);
   font-family: "Roboto";
 }
 .dropdown-item {
-  font-family: "Roboto";
   border-radius: 10px 10px 10px 10px;
 }
 .dropdown-btn > .btn-success {

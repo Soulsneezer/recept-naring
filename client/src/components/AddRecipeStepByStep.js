@@ -46,7 +46,7 @@ class AddRecipeStepByStep extends Component {
     return (
       <React.Fragment>
         <Row className="mt-3">
-          <Col className="recipe-name mt-2" xs={10} md={10} lg={11}>
+          <Col className="recipe-name mt-2" xs={12} md={12} lg={12}>
             <InputGroup className="mb-3 mt-2">
               <FormControl
                 className="add-instructions-input"
@@ -55,24 +55,39 @@ class AddRecipeStepByStep extends Component {
                 onChange={this.handleInputChange}
                 id={this.id}
                 onSubmit={this.handleSubmit}
-                placeholder="Instruktioner.."
-                aria-label="Skriv instruktioner här.."
-                aria-describedby="basic-ok"
+                placeholder="Skriv instruktionerna här.."
+                aria-labelledby="Skriv instruktionerna här.."
                 display="inline"
                 onKeyDown={this.handleKeyPress}
               />
               <InputGroup.Append>
-                <Button className="add-instruction" xs={10} md={10} lg={11} variant="outline-success" aria-label="en knapp för att lägga till en instruktiont" onClick={() => this.handleSubmit()}>OK</Button>
+                <Button
+                  className="add-instruction"
+                  variant="outline-success"
+                  aria-label="en knapp för att lägga till en instruktion"
+                  onClick={() => this.handleSubmit()}>OK
+                </Button>
               </InputGroup.Append>
             </InputGroup>
           </Col>
         </Row>
         <Row>
-          <Col className="recipe-name mt-2" xs={10} md={10} lg={11}>
+          <Col className="mt-2" xs={12} md={12} lg={12}>
             <ListGroup aria-label="en lista för instruktionerna">
               {this.state.instructions.map((item, i) => (
-                <ListGroupItem className="recipe-instruction" remove={id} key={item.id}>{i + 1}. {item.text}
-                  {<Button className="delete-instruction" value={this.item} variant="outline-danger" aria-label="en knapp för att radera en instruktion" onClick={() => this.onDelete(item.id)}>Delete</Button>}
+                <ListGroupItem
+                  style={{ display: "flex" }}
+                  id="recipe-instruction"
+                  remove={id}
+                  key={item.id}>{i + 1}. {item.text}
+                  {<Button
+                    style={{ marginLeft: "auto" }}
+                    className="delete-instruction"
+                    value={this.item}
+                    variant="outline-danger"
+                    aria-label="en knapp för att radera en instruktion"
+                    onClick={() => this.onDelete(item.id)}>Delete
+                  </Button>}
                 </ListGroupItem>
               ))}
             </ListGroup>
