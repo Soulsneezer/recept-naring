@@ -39,9 +39,9 @@ class ReadRecipeDetails extends Component {
     };
   }
   componentDidMount(){
-    this.hej()
+    this.countingCals()
   }
-      hej(){
+      countingCals(){
         let kcal = 0;
         let monoSaturatedFats = 0;
         let monoUnSaturatedFats = 0;
@@ -95,15 +95,13 @@ class ReadRecipeDetails extends Component {
           return factor * qty;
         }
         for(let i of this.props.ingredient){
-          console.log(i)
-          let asdf = converter(i.name , i.qty ,i.type )
-          kcal += i.nutrient.kcal / 100 * asdf
-          console.log(kcal)
-            monoUnSaturatedFats +=i.nutrient.monoUnSaturatedFats / 100 * asdf
-            monoSaturatedFats += i.nutrient.monoSaturatedFats / 100 * asdf
-            saturatedFats += i.nutrient.saturatedFats / 100 * asdf
-            prots += i.nutrient.prots / 100 * asdf
-            carbs += i.nutrient.carbs / 100 * asdf
+          let convertedNumbers = converter(i.name , i.qty ,i.type )
+          kcal += i.nutrient.kcal / 100 * convertedNumbers
+            monoUnSaturatedFats +=i.nutrient.monoUnSaturatedFats / 100 * convertedNumbers
+            monoSaturatedFats += i.nutrient.monoSaturatedFats / 100 * convertedNumbers
+            saturatedFats += i.nutrient.saturatedFats / 100 * convertedNumbers
+            prots += i.nutrient.prots / 100 * convertedNumbers
+            carbs += i.nutrient.carbs / 100 * convertedNumbers
         }
 
         this.nutes.Kcal = Math.round(kcal / this.props.portion)

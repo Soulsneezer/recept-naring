@@ -14,7 +14,7 @@ class ReadRecipeIngredients extends Component {
       <ListGroup>
         {this.props.ingredients.map((ing, i) => { 
           return(
-        <ListGroup.Item key={i}>{this.props.numberOfPersons ? ing.qty / this.props.portion * this.props.numberOfPersons : ing.qty / this.props.portion  * this.props.portion} {ing.type} {ing.name}</ListGroup.Item>
+        <ListGroup.Item key={i}>{ Math.round((this.props.numberOfPersons ? ing.qty / this.props.portion * this.props.numberOfPersons : ing.qty / this.props.portion  * this.props.portion) * 100 ) / 100} {ing.type} {ing.name}</ListGroup.Item>
         )}
     )
     }
