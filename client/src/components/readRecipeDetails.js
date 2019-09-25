@@ -131,8 +131,8 @@ class ReadRecipeDetails extends Component {
   render() {
     return (
       <React.Fragment>
-        <Row>
-          <Col xs={12} sm={12} md={12} lg={4}>
+        <Row className="mt-4">
+          <Col className="pt-4" xs={12} sm={12} md={12} lg={4}>
             <div
               className="card-img read-recipe-img"
               label={this.props.name}
@@ -143,29 +143,28 @@ class ReadRecipeDetails extends Component {
             ></div>
           </Col>
           <Col xs={12} sm={12} md={12} lg={8}>
-            <Row className="offset-1">
-              <Col className="pt-4 col-sm-12 col-md-8 recipe-name order-md-12 order-2">
+            <Row>
+              <Col xs={{span: 11, offset: 1, order: 2}} sm={{ span: 12, offset: 0, order: 2 }} md={{ span:7, offset: 1, order: 1 }} lg={{span: 7, offset: 1, order: 1}} className="align-right pt-4 recipe-name">
                 <h4>{this.props.name}</h4>
               </Col>
-              <Col className="pt-4 col-md-4 col-sm-12 order-md-12 order-1">
-              {/* <Col pt-2 sm={12} md={{span: 4, order: 12}} order-1> */}
-                <PersonChoices {...this.recipe} />
+              <Col xs={{span: 11, offset: 1, order: 1}} sm={{ span: 12, offset: 0, order: 1 }} md={{ span: 3, offset: 1, order: 2}} lg={{span: 3, order : 2 }} className="pt-4">
+                <PersonChoices {...this.recipe} /> 
               </Col>
             </Row>
-            <Row className="offset-1 pt-2">
-              <Col xs={{span:11, offset:0}} sm={{span:10, offset:0}} md={12} className="col-sm-12 col-md-12 pt-2">
-                <p 
+            <Row xs={12} sm={{span: 12, offset: 0}} md={{span: 12, offset: 0, order: 1}} lg={{span: 12, offset: 1}} className="offset-1 pt-2">
+              <Col xs={{span:11, offset:0}} sm={{span:10, offset:0}} md={{span:10, offset:0}} className="col-sm-12 col-md-12 pt-2">
+                <p md={8}
                  label="kort beskrivning av receptet">{this.props.startText}</p>
                  </Col>
-                <div className="col-sm-12 col-md-12 d-inline-block pt-5">
+                <div xs={12} sm={12} md={12} className=" pl-3 d-inline-block pt-5">
                   <img src={tagIcon} className="mr-2 d-inline-block" alt="kategorier" />
-                  <h5 lable="kategorier" className="d-inline-block">
+                  <h6 lable="kategorier" className="d-inline-block">
                     {this.props.category.join(", ")}
-                  </h5>
+                  </h6>
                 </div>
-              <Col className="pt-5 col-sm-12 d-inline-block pt-5">
+              <Col className="pt-5 col-sm-12 d-inline-block">
                 <img src={clockIcon} className="mr-2 d-inline-block icon" alt="beräknad tid" />
-                <h5 className="d-inline-block"> {this.props.time} min</h5>
+                <h6 className="d-inline-block"> {this.props.time} min</h6>
               </Col>
             </Row>
             <Row className="offset-1 pt-4">

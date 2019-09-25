@@ -31,8 +31,8 @@ class ReadRecipe extends React.Component {
       <Container className="text-left fluid container-fluid">
         {this.recipe ? <ReadRecipeDetails {...this.recipe} /> : null}
         <Row className="mt-5">
-          <Col xs={{span: 10, offset:1}}  md={{span: 5, offset:0}} className="col-md-4 col-sm-11 sm-offset-1 mt-5">
-            <h3 className="mb-3"> Ingredienser</h3>
+          <Col xs={{span: 10, offset:1}}  sm={{span: 3 , offset:1 }} md={{span: 4, offset:0}}className="pt-5">
+            <h3 pb-3> Ingredienser</h3>
             {this.recipe ? (
               <ReadRecipeIngredients
                 numberOfPersons={this.state.numberOfPersons}
@@ -41,8 +41,8 @@ class ReadRecipe extends React.Component {
               />
             ) : null}
           </Col>
-          <Col xs={{span: 10, offset:1 }} sm={{span: 11, offset:1 }} md={{span:10, offset:0}} className="col-sm-11 col-md-7 mt-5">
-            <h3 sm={{ span: 12, pb:3}}> Steg för steg</h3>
+          <Col xs={{span: 10, offset:1 }} sm={{span: 7, offset:1 }} md={{span:8, offset:0}} className="pt-5">
+            <h3 sm={{ span: 12}}> Steg för steg</h3>
             {this.recipe.step ? (
               <ReadRecipeInstructions steps={this.recipe.step} />
             ) : null}
