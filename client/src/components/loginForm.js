@@ -100,4 +100,3 @@ class LogInForm extends React.Component{
 }
     
 export default LogInForm;
-

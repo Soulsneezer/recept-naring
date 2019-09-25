@@ -599,8 +599,9 @@ main {
 }
 .show-more-btn {
   font-family: "Roboto";
-  position: absolute;
-  bottom: -20px;
+  position: center;
+  bottom: -10px;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -684,8 +685,194 @@ footer .icon {
     font-size: 12px;
   }
 }
+/*------- Login Page -------*/
 
 .uploadCameraIcon {
   display: center;
   justify-content: center;
+}
+
+/*------- Read Recipe Style ----------*/
+.card-styling {
+  text-align: center !important;
+  list-style-type: none !important;
+  padding: 0px !important;
+  font-size: 14px;
+}
+
+.border-styling {
+  border-bottom: 0.5px solid rgb(177, 175, 175);
+}
+
+.read-recipe-img {
+  height: 100% !important;
+  width: 100% !important;
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .read-recipe-img {
+    height: 50vh !important;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 641px) {
+  .recipe-name {
+   padding-top: 20px!important;
+  }
+}
+
+
+/*------- Read Recipe Style End ----------*/
+
+
+.close-modal-button {
+  float: right;
+}
+
+/*----- Footer ------*/
+
+footer .icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@media (min-width: 577px) and (max-width: 641px) {
+  footer .icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 576px) {
+  footer .icons .icon {
+    display: block;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 322px) {
+  footer p {
+    font-size: 12px;
+    border: solid orange 2px;
+  }
+}
+
+.card-button {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(254, 254, 254);
+  border-radius: 0px 0px 3px 3px;
+  margin-bottom: 0;
+  border: none;
+  width: 100%;
+  font-size: 20px;
+}
+.card-outer {
+  display: inline-block;
+  width: 250px;
+  margin: 6px;
+
+  animation: fade ease-out 1s;
+  -webkit-animation: fade ease-out 1s;
+  -moz-animation: fade ease-out 1s;
+  -o-animation: fade ease-out 1s;
+  -ms-animation: fade ease-out 1s;
+}
+.card-inner {
+  position: relative;
+}
+.card-img {
+  height: 200px;
+  width: 100%;
+  border-radius: 3px 3px 0px 0px;
+}
+.card-title {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(254, 254, 254, 0.7);
+  width: 100%;
+  font-size: 20px;
+  text-align: bottom;
+  text-align: left;
+  height: 60px;
+}
+
+.container-outer {
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0px 5px 8px rgb(200, 200, 200);
+  margin-bottom: 50px;
+  position: relative;
+  margin-top: 3vh;
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@-moz-keyframes fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+.container-inner {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+.card-p {
+  margin-left: 10px;
+}
+.card-h1 {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+#dropdown-basic {
+  border-radius: 20px;
+  padding: 7px 10px;
+  font-size: 20px;
+}
+
+.dropdown-menu {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  min-width: 70px;
+  align-items: center;
 }
