@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Form, Col, Row } from 'react-bootstrap';
 import CategoryChoices from './CategoryChoices';
-import PersonChoices from './PersonChoices';
+import PersonChoices from './AddRecipePersonChoices';
 import FileUpload from './FileUpload';
 import AddRecipeIngredientRow from './AddRecipeIngredientRow';
 import AddRecipeRowButton from './AddRecipeRowButton';
