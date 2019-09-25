@@ -2,6 +2,12 @@
 
 .App {
   text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1;
 }
 .navbar {
   background-color: #f5f5f5;
@@ -43,6 +49,139 @@
   padding: 50px;
 }
 
+.recipe-button {
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXX BEGINNING OF MELLI's STYLING XXXXXXXXXXXXXXXXXXX*/
+#contained-modal-title-vcenter {
+  font-family: "Parisienne", cursive;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+}
+
+.modal-body {
+  background-color: #e1f8e6;
+  font-family: "Roboto";
+}
+
+.person-choices-btn,
+.dropdown-units,
+.category-dropdown {
+  font-family: "Roboto";
+  border-radius: 15px;
+  font-size: 11px;
+}
+
+.category-dropdown-button {
+  display: inline;
+  margin-right: 8px;
+  font-size: 11px;
+}
+
+.person-choices-dropdown-menu,
+.units-dropdown-menu,
+.category-dropdown-menu {
+  font-family: "Roboto";
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  align-items: center;
+  font-size: 11px;
+  min-width: 60px;
+}
+#clock-icon {
+  display: inline-flex;
+}
+
+.recipe-name,
+.list-group-item {
+  font-family: "Roboto";
+  display: inline;
+  min-height: 33px;
+  border-radius: 10px;
+  font-size: 11px;
+  cursor: text;
+}
+
+.MdRemoveCircleOutline,
+.MdAddCircleOutline {
+  cursor: pointer;
+}
+
+.add-instructions-input {
+  display: inline;
+  cursor: text;
+  min-height: 33px;
+  font-size: 11px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.add-instruction {
+  display: inline;
+  min-height: 33px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+.delete-instruction {
+  font-size: 11px;
+  max-height: 33px;
+  margin-left: 3px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+}
+#recipe-instruction {
+  font-size: 11px;
+}
+
+@media only screen and (min-width: 992px) {
+  .recipe-name {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .recipe-button,
+  .category-dropdown,
+  .dropdown-units,
+  .dropdown,
+  .dropdown-button {
+    display: inline;
+    padding: 7px 10px;
+    font-size: 9px;
+  }
+
+  .cat-btn {
+    padding-left: 8px;
+  }
+
+  .person-choices-btn,
+  .add-instructions-input,
+  .recipe-button {
+    font-size: 9px;
+  }
+
+  .dropdown-menu {
+    font-size: 9px;
+  }
+
+  .recipe-name,
+  .list-group-item {
+    display: inline;
+    font-size: 9px;
+    cursor: text;
+  }
+}
+/*XXXXXXXXXXXXXXXXXXXXXX END OF MELLIS STYLING XXXXXXXXXXXXXXXXXXXXXXXXX*/
+
 @media only screen and (max-width: 400px) {
   .recipeButton {
     padding: 2px 10px;
@@ -63,6 +202,7 @@
     font-weight: bold;
   }
 }
+
 @media only screen and (max-width: 300px) {
   .logoHeader {
     font-family: "Parisienne", cursive;
@@ -71,11 +211,15 @@
   }
 }
 .foodCardContainer {
-  margin-top: 5px;
-  border: 0.1px solid #707070;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
-  box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+	margin-top: 5px;
+	margin-bottom: 0 !important;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	border: 0.1px solid #707070;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+	box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+
 }
 .innerFoodCardContainer {
   padding: 30px;
@@ -90,10 +234,12 @@
   align-items: center;
 }
 .cameraIcon {
-  display: center;
+  display: flex;
   justify-content: center;
   padding: 10px;
+  align-items: center;
 }
+
 .recipeHeadline {
   margin-top: 5px;
   text-align: center;
@@ -114,6 +260,7 @@
   .recipeHeadlineH2 {
     font-size: 15px;
     text-align: center;
+    margin-top: 15px;
   }
 }
 @media only screen and (max-width: 920px) {
@@ -145,14 +292,19 @@
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 2;
-  transition: 2s;
+  transition: 0.5s;
+  opacity: 1;
 }
 .search-field {
   width: 40%;
 }
-
-.dropdown-btn > .btn-primary {
+.dropdown-toggle {
+  font-family: "Roboto";
+}
+.dropdown-item {
+  border-radius: 10px 10px 10px 10px;
+}
+.dropdown-btn > .btn-success {
   height: 55px;
   color: rgb(0, 0, 0);
   background-color: rgba(255, 255, 255, 0.7);
@@ -166,7 +318,11 @@
   width: 160px;
   backdrop-filter: blur(3px);
 }
+.dropdown-menu {
+  border-radius: 0 0 20px 20px;
+}
 .search-input {
+  font-family: "Roboto";
   z-index: 1;
   height: 55px;
   border-radius: 30px 0 0 30px;
@@ -180,6 +336,7 @@
   background-position-y: center;
   background-position-x: 10px;
 }
+
 @media only screen and (max-width: 920px) {
   .search-input {
     height: 45px;
@@ -197,11 +354,11 @@
     position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 2;
-    transition: 2s;
+    transition: 0.5s;
+    opacity: 1;
   }
   .recipeHeadlineH2 {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 }
 @media only screen and (max-width: 760px) {
@@ -227,8 +384,8 @@
     position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 2;
-    transition: 2s;
+    transition: 0.5s;
+    opacity: 1;
   }
   .recipeHeadlineH2 {
     margin-top: 10px;
@@ -270,7 +427,7 @@
     height: 20vh;
     background-size: 100%;
   }
-  .dropdown-btn > .btn-primary {
+  .dropdown-btn > .btn-success {
     height: 45px;
     width: 150px;
   }
@@ -290,12 +447,15 @@
     height: 15vh;
     background-size: 100%;
   }
-  .dropdown-btn > .btn-primary {
+  .dropdown-btn > .btn-success {
     height: 35px;
     font-size: 16px;
   }
 }
-
+.readRecipeImg {
+  width: 100%;
+  height: 80vh;
+}
 @media only screen and (max-width: 400px) {
   .recipeButton {
     padding: 2px 10px;
@@ -310,9 +470,9 @@
     width: 18px;
   }
   .container-outer {
-    margin-top: 0 !important;
+    margin-top: 5px !important;
   }
-  .dropdown-btn > .btn-primary {
+  .dropdown-btn > .btn-success {
     width: 110px;
   }
   .card-h1 {
@@ -320,6 +480,7 @@
   }
 }
 .card-button {
+  font-family: "Roboto";
   background-color: rgba(0, 0, 0, 0.8);
   color: rgb(254, 254, 254);
   border-radius: 0px 0px 3px 3px;
@@ -342,6 +503,10 @@
 .card-inner {
   position: relative;
 }
+.card-text {
+	font-family: 'Roboto';
+	text-align: left;
+}
 .card-title {
   position: absolute;
   left: 0;
@@ -354,10 +519,20 @@
   text-align: left;
   height: 60px;
 }
-.card-img {
-  height: 200px;
-  width: 100%;
-  border-radius: 3px 3px 0px 0px;
+
+.card-title-h5 {
+	font-family: 'Roboto';
+	margin-bottom: 36px;
+	background-color: rgb(223, 223, 223);
+	padding-left: 20px;
+	padding-top: 5px;
+	bottom: 30px;
+}
+.card-img,
+.card-img-top {
+	height: 200px;
+	width: 100%;
+	border-radius: 3px 3px 0px 0px;
 }
 .container-outer {
   border: 1px solid rgb(200, 200, 200);
@@ -416,12 +591,14 @@
 }
 .card-p {
   margin-left: 10px;
+  font-family: "Roboto";
 }
 .card-h1 {
   margin-bottom: 20px;
   margin-top: 10px;
 }
 .show-more-btn {
+  font-family: "Roboto";
   position: absolute;
   bottom: -20px;
   margin-left: auto;
@@ -433,16 +610,56 @@
   border: 1px solid rgb(84, 118, 71);
 }
 .show-recipe {
-  display: inline-block;
+	display: inline-block;
+	width: 250px;
+	margin: 6px;
 }
 
 /*------- Login Page -------*/
 
-.close-modal-button {
-  float: right;
+.login-component {
+  font-family: "Roboto";
+}
+
+.modal-body {
+  background-color: #e1f8e6;
+}
+.modal-headish {
+  background-color: #f8f9fa;
+}
+.modal-titlish {
+  font-family: "Parisienne", cursive;
+  font-weight: bold;
+  text-align: center;
+}
+
+.loginform-loginbutton {
+  border-radius: 20px;
+	font-family: 'Roboto';
+}
+
+.modal-body {
+	background-color: #e1f8e6;
+}
+.modal-headish {
+	background-color: #f8f9fa;
+}
+.modal-titlish {
+	font-family: 'Parisienne', cursive;
+	font-weight: bold;
+	text-align: center;
+}
+
+.loginform-loginbutton {
+	border-radius: 20px;
+
 }
 
 /*----- Footer ------*/
+
+.footer-component {
+  font-family: 'Roboto';
+}
 
 footer .icon {
   width: 30px;
@@ -468,6 +685,11 @@ footer .icon {
   }
 }
 /*------- Login Page -------*/
+
+.uploadCameraIcon {
+  display: center;
+  justify-content: center;
+}
 
 /*------- Read Recipe Style ----------*/
 .card-styling {

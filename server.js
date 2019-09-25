@@ -5,7 +5,7 @@ const CreateRestRoutes = require('./CreateRestRoutes');
 
 // Connect to db
 let dbName = "Makronutrient";
-mongoose.connect(`mongodb://localhost/${dbName}`);
+mongoose.connect(`mongodb://localhost/${dbName}`, { useNewUrlParser: true });
 global.db = mongoose.connection;
 db.on('error', () => console.log('Could not connect to DB'));
 db.once('open', () => {
@@ -36,7 +36,8 @@ function startWebServer() {
   const models = {
       Makronutrients: require('./models/Makronutrient.js'),
       Recipes: require('./models/Recipe.js'),
-      Uploads: require('./models/Upload.js')
+      Uploads: require('./models/Upload.js'),
+      Scrapes: require('./models/Scrape.js')
   };
 
   // create all necessary rest routes for the models
