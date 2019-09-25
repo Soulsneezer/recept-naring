@@ -22,5 +22,4 @@ class ReadRecipeIngredients extends Component {
     );
   }
 }
-
 export default ReadRecipeIngredients;
