@@ -77,7 +77,7 @@ class ReadRecipeDetails extends Component {
         { baseUnit: 'st', nameHas: 'kyckling', modifier: 1200 / unitsToGram.st },
         { baseUnit: 'st', nameHas: 'lax', modifier: 3000 / unitsToGram.st }
       ];
-     
+    
       // get the conversion factor from toGram
       let factor = unitsToGram[unit];
      
@@ -116,13 +116,13 @@ class ReadRecipeDetails extends Component {
     return (
       <React.Fragment>
         <Row className="mt-4">
-          <Col className="pt-4" xs={12} sm={12} md={12} lg={4}>
+          <Col className="pt-4" xs={{span:12}} sm={{span:12}} md={{span:12}} lg={{span:4}}>
             <div
               className="card-img read-recipe-img"
               label={this.props.name}
               style={{
                 backgroundImage:
-                'url("../images/recipeImages/' + this.props.img + '")'
+                'url("../images/recipeImages/' + this.props.img +'")'
               }}
             ></div>
           </Col>
