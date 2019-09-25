@@ -1,12 +1,7 @@
 [
 	{
 		"name": "Krämig italiensk kycklinggratäng",
-		"category": [
-			"Enkelt",
-			"Kyckling",
-			"Snabbt",
-			"Vardagsmiddag"
-		],
+		"category": ["Enkelt", "Kyckling", "Snabbt", "Vardagsmiddag"],
 		"step": [
 			"Koka pastan enligt anvisningar på förpackningen.",
 			"Fräs kycklingen på medelvärme tills den får lite färg runt om i cirka 5 minuter. Salta och peppra.",
@@ -77,10 +72,7 @@
 	},
 	{
 		"name": "Pannkakor",
-		"category": [
-			"Enkelt",
-			"Snabbt"
-		],
+		"category": ["Enkelt", "Snabbt"],
 		"step": [
 			"Blanda mjöl och salt i en bunke. Vispa i hälften av mjölken och vispa till en slät smet. Vispa i resten av mjölken och äggen.",
 			"Smält smöret i stekpannan och vispa ner i smeten. Stek tunna pannkakor av smeten i en stek- eller pannkakspanna."
@@ -119,10 +111,7 @@
 	},
 	{
 		"name": "Nutellabollar",
-		"category": [
-			"Choklad",
-			"Fika"
-		],
+		"category": ["Choklad", "Fika"],
 		"step": [
 			"Vispa smör och socker fluffigt med elvisp. Häll i grädden och vispa på hög hastighet tills du har en fluffig och ljus smet, ca 2 minuter.",
 			"Tillsätt vaniljsocker, kakao, obóypulver, salt och nutella. Vispa ihop till en jämn smet.",
@@ -174,10 +163,7 @@
 	},
 	{
 		"name": "Fish and chips",
-		"category": [
-			"Enkelt",
-			"Snabbt"
-		],
+		"category": ["Enkelt", "Snabbt"],
 		"step": [
 			"Blanda nästan allt vetemjöl (ta undan lite att vända fiskbitarna i), maizena och bakpulver i en skål.",
 			"Finhacka dillen och blanda med öl och limesaft.",
@@ -252,10 +238,253 @@
 	},
 	{
 		"name": "Taco chicken nuggets i tortillabröd ",
-		"category": [
-			"Spicy",
-			"Fräscht"
+		"category": ["Spicy", "Fräscht"],
+		"step": [
+			"Tillbehör: Skölj salladen och lägg upp hela salladsblad på ett fat. Skölj och tärna gurka och tomater och lägg upp i skålar.",
+			"Taconuggets: Salta kycklingfiléerna lite lätt.",
+			"Vispa upp äggen i en djup tallrik. Blanda ströbröd med spiskummin, paprikapulver, oregano, salt och peppar på en tallrik. Vänd kycklingfiléerna först i äggen och sedan i ströbrödsblandningen.",
+			"Hetta upp oljan i en stekpanna och stek kycklingen ca 3-4 minuter på varje sida så att den får en knaprig och gyllenbrun stekyta. Kontrollera att de är helt genomstekta innan du serverar.",
+			"Montering: Fyll tortillabröden med sallad, kyckling, gurka, tomat, riven ost, gräddfil och tacosås. Vik ihop och ät."
 		],
+		"ingredient": [
+			{
+				"name": "kycklingfilé",
+				"qty": 700,
+				"type": "g"
+			},
+			{
+				"name": "ägg",
+				"qty": 2,
+				"type": "st"
+			},
+			{
+				"name": "ströbröd",
+				"qty": 2.5,
+				"type": "dl"
+			},
+			{
+				"name": "spiskummin",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "paprikapulver",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "oregano",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "tomat",
+				"qty": 2,
+				"type": "st"
+			},
+			{
+				"name": "gurka",
+				"qty": 1,
+				"type": "st"
+			},
+			{
+				"name": "salt",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "svartpeppar",
+				"qty": 3,
+				"type": "krm"
+			},
+			{
+				"name": "romansallad",
+				"qty": 0.5,
+				"type": "st"
+			},
+			{
+				"name": "gräddfil",
+				"qty": 2,
+				"type": "dl"
+			},
+			{
+				"name": "rapsolja",
+				"qty": 0.5,
+				"type": "dl"
+			}
+		],
+		"img": "chickenTaco.jpg",
+		"portion": 4,
+		"startText": "Hemmagjorda chicken nuggets med tacosmak som kommer göra succé vid matbordet!",
+		"time": 60
+	},
+	{
+		"name": "Taco chicken nuggets i tortillabröd ",
+		"category": ["Spicy", "Fräscht"],
+		"step": [
+			"Tillbehör: Skölj salladen och lägg upp hela salladsblad på ett fat. Skölj och tärna gurka och tomater och lägg upp i skålar.",
+			"Taconuggets: Salta kycklingfiléerna lite lätt.",
+			"Vispa upp äggen i en djup tallrik. Blanda ströbröd med spiskummin, paprikapulver, oregano, salt och peppar på en tallrik. Vänd kycklingfiléerna först i äggen och sedan i ströbrödsblandningen.",
+			"Hetta upp oljan i en stekpanna och stek kycklingen ca 3-4 minuter på varje sida så att den får en knaprig och gyllenbrun stekyta. Kontrollera att de är helt genomstekta innan du serverar.",
+			"Montering: Fyll tortillabröden med sallad, kyckling, gurka, tomat, riven ost, gräddfil och tacosås. Vik ihop och ät."
+		],
+		"ingredient": [
+			{
+				"name": "kycklingfilé",
+				"qty": 700,
+				"type": "g"
+			},
+			{
+				"name": "ägg",
+				"qty": 2,
+				"type": "st"
+			},
+			{
+				"name": "ströbröd",
+				"qty": 2.5,
+				"type": "dl"
+			},
+			{
+				"name": "spiskummin",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "paprikapulver",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "oregano",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "tomat",
+				"qty": 2,
+				"type": "st"
+			},
+			{
+				"name": "gurka",
+				"qty": 1,
+				"type": "st"
+			},
+			{
+				"name": "salt",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "svartpeppar",
+				"qty": 3,
+				"type": "krm"
+			},
+			{
+				"name": "romansallad",
+				"qty": 0.5,
+				"type": "st"
+			},
+			{
+				"name": "gräddfil",
+				"qty": 2,
+				"type": "dl"
+			},
+			{
+				"name": "rapsolja",
+				"qty": 0.5,
+				"type": "dl"
+			}
+		],
+		"img": "chickenTaco.jpg",
+		"portion": 4,
+		"startText": "Hemmagjorda chicken nuggets med tacosmak som kommer göra succé vid matbordet!",
+		"time": 60
+	},
+	{
+		"name": "Taco chicken nuggets i tortillabröd ",
+		"category": ["Spicy", "Fräscht"],
+		"step": [
+			"Tillbehör: Skölj salladen och lägg upp hela salladsblad på ett fat. Skölj och tärna gurka och tomater och lägg upp i skålar.",
+			"Taconuggets: Salta kycklingfiléerna lite lätt.",
+			"Vispa upp äggen i en djup tallrik. Blanda ströbröd med spiskummin, paprikapulver, oregano, salt och peppar på en tallrik. Vänd kycklingfiléerna först i äggen och sedan i ströbrödsblandningen.",
+			"Hetta upp oljan i en stekpanna och stek kycklingen ca 3-4 minuter på varje sida så att den får en knaprig och gyllenbrun stekyta. Kontrollera att de är helt genomstekta innan du serverar.",
+			"Montering: Fyll tortillabröden med sallad, kyckling, gurka, tomat, riven ost, gräddfil och tacosås. Vik ihop och ät."
+		],
+		"ingredient": [
+			{
+				"name": "kycklingfilé",
+				"qty": 700,
+				"type": "g"
+			},
+			{
+				"name": "ägg",
+				"qty": 2,
+				"type": "st"
+			},
+			{
+				"name": "ströbröd",
+				"qty": 2.5,
+				"type": "dl"
+			},
+			{
+				"name": "spiskummin",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "paprikapulver",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "oregano",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "tomat",
+				"qty": 2,
+				"type": "st"
+			},
+			{
+				"name": "gurka",
+				"qty": 1,
+				"type": "st"
+			},
+			{
+				"name": "salt",
+				"qty": 1,
+				"type": "tsk"
+			},
+			{
+				"name": "svartpeppar",
+				"qty": 3,
+				"type": "krm"
+			},
+			{
+				"name": "romansallad",
+				"qty": 0.5,
+				"type": "st"
+			},
+			{
+				"name": "gräddfil",
+				"qty": 2,
+				"type": "dl"
+			},
+			{
+				"name": "rapsolja",
+				"qty": 0.5,
+				"type": "dl"
+			}
+		],
+		"img": "chickenTaco.jpg",
+		"portion": 4,
+		"startText": "Hemmagjorda chicken nuggets med tacosmak som kommer göra succé vid matbordet!",
+		"time": 60
+	},
+	{
+		"name": "Taco chicken nuggets i tortillabröd ",
+		"category": ["Spicy", "Fräscht"],
 		"step": [
 			"Tillbehör: Skölj salladen och lägg upp hela salladsblad på ett fat. Skölj och tärna gurka och tomater och lägg upp i skålar.",
 			"Taconuggets: Salta kycklingfiléerna lite lätt.",

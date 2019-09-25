@@ -182,7 +182,7 @@ class HomePage extends Component {
                             href={'/recipe/' + recipe._id}
                             aria-label="knapp för att gå till recept"
                           >
-                            Gå till recept
+                            Klicka för recept
 
                         </Button>
                         </div>
