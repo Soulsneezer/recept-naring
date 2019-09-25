@@ -30,6 +30,7 @@ export default class PersonChoices extends React.Component {
     return (
       <Dropdown className="dropdown-person-choices">
         <Dropdown.Toggle
+          aria-label="en dropdown knapp för att välja matkategori"
           className="person-choices-btn"
           variant="outline-secondary"
         >

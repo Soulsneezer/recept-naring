@@ -24,7 +24,7 @@ export default function AddRecipeModal(props) {
         <Row className="my-3">
           <Col xs={{ col: 4, offset: 8 }} sm={{ col: 4, offset: 8 }} md={{ col: 4, offset: 8 }} lg={{ col: 2, offset: 9 }}>
             <Button
-              className="recipe-button align-right"
+              className="recipe-button"
               variant="outline-success"
               aria-label="lägga till receptet till databasen"
               onClick={props.onHide}>Lägg till</Button>

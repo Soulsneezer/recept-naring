@@ -180,6 +180,39 @@ main {
     cursor: text;
   }
 }
+
+@media only screen and (max-width: 320px) {
+  .recipe-button,
+  .category-dropdown,
+  .dropdown-units,
+  .dropdown,
+  .dropdown-button {
+    display: inline;
+    padding: 7px 10px;
+    font-size: 7px;
+  }
+
+  .cat-btn {
+    padding-left: 8px;
+  }
+
+  .person-choices-btn,
+  .add-instructions-input,
+  .recipe-button {
+    font-size: 7px;
+  }
+
+  .dropdown-menu {
+    font-size: 7px;
+  }
+
+  .recipe-name,
+  .list-group-item {
+    display: inline;
+    font-size: 7px;
+    cursor: text;
+  }
+}
 /*XXXXXXXXXXXXXXXXXXXXXX END OF MELLIS STYLING XXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 @media only screen and (max-width: 400px) {
