@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
 import ReadRecipeNutrition from "./readRecipeNutrition";
-import PersonChoices from "./PersonChoices";
 import tagIcon from "../images/icon-tag.png";
 import clockIcon from "../images/clock.png";
 
@@ -132,9 +131,7 @@ class ReadRecipeDetails extends Component {
               <Col xs={{span: 11, offset: 1, order: 2}} sm={{ span: 12, offset: 0, order: 2 }} md={{ span:7, offset: 1, order: 1 }} lg={{span: 7, offset: 1, order: 1}} className="align-right pt-4 recipe-name">
                 <h4>{this.props.name}</h4>
               </Col>
-              <Col xs={{span: 11, offset: 1, order: 1}} sm={{ span: 12, offset: 0, order: 1 }} md={{ span: 3, offset: 1, order: 2}} lg={{span: 3, order : 2 }} className="pt-4">
-                <PersonChoices {...this.recipe} /> 
-              </Col>
+            
             </Row>
             <Row xs={12} sm={{span: 12, offset: 0}} md={{span: 12, offset: 0, order: 1}} lg={{span: 12, offset: 1}} className="offset-1 pt-2">
               <Col xs={{span:11, offset:0}} sm={{span:10, offset:0}} md={{span:10, offset:0}} className="col-sm-12 col-md-12 pt-2">
