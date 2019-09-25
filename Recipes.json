@@ -170,7 +170,7 @@
 		  }
 	   ],
 	   "img": "chickenParmesan.jpg",
-	   "portion": 4,
+	   "portion": 6,
 	   "startText": "Italiensk kycklinggratäng med parmesan och örter som egentligen inte har något med Italien att göra, utan är vår version på italiensk mat på 90-talet. /Tareq",
 	   "time": 60
 	},
@@ -375,7 +375,7 @@
 		  }
 	   ],
 	   "img": "chocolatePops.jpg",
-	   "portion": 4,
+	   "portion": 8,
 	   "startText": "Underbart krämiga chokladbollar med nutella och oboy. Testa dessa och du kommer aldrig vilja baka några andra chokladbollar igen!",
 	   "time": 60
 	},
@@ -754,7 +754,7 @@
 		  }
 	   ],
 	   "img": "chickenTaco.jpg",
-	   "portion": 4,
+	   "portion": 6,
 	   "startText": "Hemmagjorda chicken nuggets med tacosmak som kommer göra succé vid matbordet!",
 	   "time": 60
 	}

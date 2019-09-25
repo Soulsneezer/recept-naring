@@ -61,8 +61,10 @@ class ReadRecipeDetails extends Component {
             cl: 10,
             ml: 1,
             tsk: 5,
+            msk: 15,
             krm: 1,
             nypa: 1,
+            port: 300,
             // very approximate
             // (although rather true for eggs, tomatoes, bell peppers etc)
             st: 60
@@ -72,7 +74,9 @@ class ReadRecipeDetails extends Component {
           const exceptions = [
             { baseUnit: 'l', nameHas: 'mjöl', modifier: 0.6 },
             { baseUnit: 'l', nameHas: 'olja', modifier: 0.9 },
-            { baseUnit: 'st', nameHas: 'kycklinglår', modifier: 1 },
+            { baseUnit: 'l', nameHas: 'havregryn', modifier: 0.6 },
+            { baseUnit: 'st', nameHas: 'kycklingfilé', modifier: 1500 / unitsToGram.st },
+            { baseUnit: 'st', nameHas: 'kycklinglår', modifier: 80 / unitsToGram.st },
             { baseUnit: 'st', nameHas: 'kyckling', modifier: 1200 / unitsToGram.st },
             { baseUnit: 'st', nameHas: 'lax', modifier: 3000 / unitsToGram.st }
           ];
@@ -87,20 +91,19 @@ class ReadRecipeDetails extends Component {
               break;
             }
           }
-         
+     
           return factor * qty;
         }
-        for(let i in this.props.ingredient){
-          console.log(this.props.ingredient[i])
-          let asdf = converter(this.props.ingredient[i].name ,this.props.ingredient[i].qty , this.props.ingredient[i].type )
-          console.log(asdf)
-            console.log(kcal += this.props.ingredient[i].nutrient.kcal / 100 * asdf)
-            kcal += this.props.ingredient[i].nutrient.kcal / 100 * asdf
-            monoUnSaturatedFats += this.props.ingredient[i].nutrient.monoUnSaturatedFats / 100 * asdf
-            monoSaturatedFats += this.props.ingredient[i].nutrient.monoSaturatedFats / 100 * asdf
-            saturatedFats += this.props.ingredient[i].nutrient.saturatedFats / 100 * asdf
-            prots += this.props.ingredient[i].nutrient.prots / 100 * asdf
-            carbs += this.props.ingredient[i].nutrient.carbs / 100 * asdf
+        for(let i of this.props.ingredient){
+          console.log(i)
+          let asdf = converter(i.name , i.qty ,i.type )
+          kcal += i.nutrient.kcal / 100 * asdf
+          console.log(kcal)
+            monoUnSaturatedFats +=i.nutrient.monoUnSaturatedFats / 100 * asdf
+            monoSaturatedFats += i.nutrient.monoSaturatedFats / 100 * asdf
+            saturatedFats += i.nutrient.saturatedFats / 100 * asdf
+            prots += i.nutrient.prots / 100 * asdf
+            carbs += i.nutrient.carbs / 100 * asdf
         }
 
         this.nutes.Kcal = Math.round(kcal / this.props.portion)
