@@ -211,11 +211,15 @@ main {
   }
 }
 .foodCardContainer {
-  margin-top: 5px;
-  border: 0.1px solid #707070;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
-  box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+	margin-top: 5px;
+	margin-bottom: 0 !important;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	border: 0.1px solid #707070;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+	box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+
 }
 .innerFoodCardContainer {
   padding: 30px;
@@ -499,6 +503,10 @@ main {
 .card-inner {
   position: relative;
 }
+.card-text {
+	font-family: 'Roboto';
+	text-align: left;
+}
 .card-title {
   position: absolute;
   left: 0;
@@ -511,10 +519,20 @@ main {
   text-align: left;
   height: 60px;
 }
-.card-img {
-  height: 200px;
-  width: 100%;
-  border-radius: 3px 3px 0px 0px;
+
+.card-title-h5 {
+	font-family: 'Roboto';
+	margin-bottom: 36px;
+	background-color: rgb(223, 223, 223);
+	padding-left: 20px;
+	padding-top: 5px;
+	bottom: 30px;
+}
+.card-img,
+.card-img-top {
+	height: 200px;
+	width: 100%;
+	border-radius: 3px 3px 0px 0px;
 }
 .container-outer {
   border: 1px solid rgb(200, 200, 200);
@@ -592,7 +610,9 @@ main {
   border: 1px solid rgb(84, 118, 71);
 }
 .show-recipe {
-  display: inline-block;
+	display: inline-block;
+	width: 250px;
+	margin: 6px;
 }
 
 /*------- Login Page -------*/
@@ -615,12 +635,30 @@ main {
 
 .loginform-loginbutton {
   border-radius: 20px;
+	font-family: 'Roboto';
+}
+
+.modal-body {
+	background-color: #e1f8e6;
+}
+.modal-headish {
+	background-color: #f8f9fa;
+}
+.modal-titlish {
+	font-family: 'Parisienne', cursive;
+	font-weight: bold;
+	text-align: center;
+}
+
+.loginform-loginbutton {
+	border-radius: 20px;
+
 }
 
 /*----- Footer ------*/
 
 .footer-component {
-  font-family: "Roboto";
+  font-family: 'Roboto';
 }
 
 footer .icon {
