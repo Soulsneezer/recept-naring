@@ -275,7 +275,26 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+	align-items: center;
+	position: relative;
+}
+.category-alternatives {
+	position: absolute;
+	z-index: 1;
+	bottom: 29%;
+}
+.category-alternatives > p {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	display: inline-block;
+	margin-bottom: 0;
+	padding: 3px 7px 3px 7px;
+	border-radius: 10px;
+	margin: 1px 2px 1px 2px;
+	cursor: pointer;
+}
+.p-search-alternatives {
+	font-size: 1.1em;
 }
 .logoHeader {
   font-family: "Parisienne", cursive;
@@ -359,7 +378,10 @@ main {
   }
   .recipeHeadlineH2 {
     margin-top: 20px;
-  }
+	}
+	.category-alternatives {
+		bottom: 25%;
+	}
 }
 @media only screen and (max-width: 760px) {
   .search-input {
@@ -397,7 +419,19 @@ main {
   .navbar-logo {
     width: 40px;
     height: 40px;
-  }
+	}
+}
+@media only screen and (max-width: 770px) {
+	.category-alternatives {
+		bottom: 15%;
+		font-size: 12px;
+		width: 415px;
+	}
+	.category-alternatives > p {
+		margin: 1px;
+		padding: 2px 3px 2px 3px;
+		border-radius: 10px;
+	}
 }
 
 .show-recipe {
@@ -477,7 +511,33 @@ main {
   }
   .card-h1 {
     font-size: 32px;
-  }
+	}
+	.category-alternatives {
+		bottom: 2%;
+		font-size: 8px;
+		width: 350px;
+	}
+	.category-alternatives > p {
+		padding: 1px 2px 1px 2px;
+		border-radius: 10px;		
+		margin: 0 2px 0 2px !important;
+		margin: 0;
+	}
+	.search-bar > .dropdown-btn {
+		padding-left: 0;
+	}
+}
+@media only screen and (max-width: 374px) {
+	.category-alternatives {
+		bottom: 1%;
+		font-size: 6px;
+		width: 215px;
+	}
+	.category-alternatives > p {
+		margin: 0 3px 0 3px;
+		padding: 1px 2px 1px 2px;
+		border-radius: 10px;
+	}
 }
 .card-button {
   font-family: "Roboto";
@@ -876,3 +936,4 @@ footer .icon {
   min-width: 70px;
   align-items: center;
 }
+
