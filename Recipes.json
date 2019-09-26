@@ -1,567 +1,761 @@
 [
 	{
-		"name": "Krämig italiensk kycklinggratäng",
-		"category": ["Enkelt", "Kyckling", "Snabbt", "Vardagsmiddag"],
-		"step": [
-			"Koka pastan enligt anvisningar på förpackningen.",
-			"Fräs kycklingen på medelvärme tills den får lite färg runt om i cirka 5 minuter. Salta och peppra.",
-			"Finhacka vitlöken och chilin och stek med kycklingen i cirka 2 minuter.",
-			"Krydda med timjan och oregano och häll i buljongen, grädden och kokta upp, dra till sidan och tillsätt parmesanen."
-		],
-		"ingredient": [
-			{
-				"name": " kycklinglårfiléer",
-				"qty": 8,
-				"type": "st"
-			},
-			{
-				"name": "flingsalt",
-				"qty": 1,
-				"type": "nypa"
-			},
-			{
-				"name": " svartpeppar",
-				"qty": 1,
-				"type": "nypa"
-			},
-			{
-				"name": " vitlök",
-				"qty": 1,
-				"type": "st"
-			},
-			{
-				"name": "chilifrukt",
-				"qty": 0.5,
-				"type": "st"
-			},
-			{
-				"name": "torkad timjan",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": " torkad oregano",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "kycklingbuljong",
-				"qty": 3,
-				"type": "dl"
-			},
-			{
-				"name": " vispgrädde",
-				"qty": 1.5,
-				"type": "dl"
-			},
-			{
-				"name": "parmesan",
-				"qty": 1,
-				"type": "dl"
-			},
-			{
-				"name": "pasta",
-				"qty": 4,
-				"type": "port"
-			}
-		],
-		"img": "chickenParmesan.jpg",
-		"portion": 4,
-		"startText": "Italiensk kycklinggratäng med parmesan och örter som egentligen inte har något med Italien att göra, utan är vår version på italiensk mat på 90-talet. /Tareq",
-		"time": 60
+	   "name": "Krämig italiensk kycklinggratäng",
+	   "category": [
+		  "Enkelt",
+		  "Kyckling",
+		  "Snabbt",
+		  "Vardagsmiddag"
+	   ],
+	   "step": [
+		  "Koka pastan enligt anvisningar på förpackningen.",
+		  "Fräs kycklingen på medelvärme tills den får lite färg runt om i cirka 5 minuter. Salta och peppra.",
+		  "Finhacka vitlöken och chilin och stek med kycklingen i cirka 2 minuter.",
+		  "Krydda med timjan och oregano och häll i buljongen, grädden och kokta upp, dra till sidan och tillsätt parmesanen."
+	   ],
+	   "ingredient": [
+		  {
+			 "name": " kycklinglårfiléer",
+			 "qty": 8,
+			 "type": "st",
+			 "nutrient": {
+				"carbs": 0,
+				"kcal": 114,
+				"monoSaturatedFats": 1.87,
+				"monoUnSaturatedFats": 0.57,
+				"prots": 19.6,
+				"salt": 0.22,
+				"saturatedFats": 1.25
+			 }
+		  },
+		  {
+			 "name": "salt",
+			 "qty": 1,
+			 "type": "nypa",
+			 "nutrient": {
+				"carbs": 0,
+				"kcal": 0,
+				"monoSaturatedFats": 0,
+				"monoUnSaturatedFats": 0,
+				"prots": 0,
+				"salt": 99,
+				"saturatedFats": 0
+			 }
+		  },
+		  {
+			 "name": " svartpeppar",
+			 "qty": 1,
+			 "type": "nypa",
+			 "nutrient": {
+				"carbs": 64,
+				"kcal": 280,
+				"monoSaturatedFats": 1.2,
+				"monoUnSaturatedFats": 1,
+				"prots": 11,
+				"salt": 99,
+				"saturatedFats": 1.1
+			 }
+		  },
+		  {
+			 "name": " vitlök",
+			 "qty": 1,
+			 "type": "st",
+			 "nutrient": {
+				"carbs": 31.1,
+				"kcal": 160,
+				"monoSaturatedFats": 0.01,
+				"monoUnSaturatedFats": 0.25,
+				"prots": 6.4,
+				"salt": 0.04,
+				"saturatedFats": 0.09
+			 }
+		  },
+		  {
+			 "name": "chilifrukt",
+			 "qty": 0.5,
+			 "type": "st",
+			 "nutrient": {
+				"carbs": 9.2,
+				"kcal": 47,
+				"monoSaturatedFats": 0.01,
+				"monoUnSaturatedFats": 0.11,
+				"prots": 2,
+				"salt": 0.02,
+				"saturatedFats": 0.04
+			 }
+		  },
+		  {
+			 "name": "torkad timjan",
+			 "qty": 1,
+			 "type": "tsk",
+			 "nutrient": {
+				"carbs": 64,
+				"kcal": 283,
+				"monoSaturatedFats": 2,
+				"monoUnSaturatedFats": 4,
+				"prots": 9,
+				"salt": 0.2,
+				"saturatedFats": 1.4
+			 }
+		  },
+		  {
+			 "name": " torkad oregano",
+			 "qty": 1,
+			 "type": "tsk",
+			 "nutrient": {
+				"carbs": 64,
+				"kcal": 306,
+				"monoSaturatedFats": 3,
+				"monoUnSaturatedFats": 3,
+				"prots": 11,
+				"salt": 0,
+				"saturatedFats": 4.3
+			 }
+		  },
+		  {
+			 "name": "hönsbuljong",
+			 "qty": 3,
+			 "type": "dl",
+			 "nutrient": {
+				"carbs": 32,
+				"kcal": 320,
+				"monoSaturatedFats": 8,
+				"monoUnSaturatedFats": 2.7,
+				"prots": 14,
+				"salt": 34.75,
+				"saturatedFats": 4.3
+			 }
+		  },
+		  {
+			 "name": " vispgrädde",
+			 "qty": 1.5,
+			 "type": "dl",
+			 "nutrient": {
+				"carbs": 3,
+				"kcal": 374,
+				"monoSaturatedFats": 9.98,
+				"monoUnSaturatedFats": 0.95,
+				"prots": 2.11,
+				"salt": 0.06,
+				"saturatedFats": 25.63
+			 }
+		  },
+		  {
+			 "name": "parmesan",
+			 "qty": 1,
+			 "type": "dl",
+			 "nutrient": {
+				"carbs": 3.8,
+				"kcal": 449,
+				"monoSaturatedFats": 7.74,
+				"monoUnSaturatedFats": 0.77,
+				"prots": 41.5,
+				"salt": 2.5,
+				"saturatedFats": 19.45
+			 }
+		  },
+		  {
+			 "name": "pasta",
+			 "qty": 4,
+			 "type": "port",
+			 "nutrient": {
+				"carbs": 71.9,
+				"kcal": 360,
+				"monoSaturatedFats": 0.17,
+				"monoUnSaturatedFats": 0.5,
+				"prots": 12.5,
+				"salt": 0.01,
+				"saturatedFats": 0.13
+			 }
+		  }
+	   ],
+	   "img": "chickenParmesan.jpg",
+	   "portion": 6,
+	   "startText": "Italiensk kycklinggratäng med parmesan och örter som egentligen inte har något med Italien att göra, utan är vår version på italiensk mat på 90-talet. /Tareq",
+	   "time": 60
 	},
 	{
-		"name": "Pannkakor",
-		"category": ["Enkelt", "Snabbt"],
-		"step": [
-			"Blanda mjöl och salt i en bunke. Vispa i hälften av mjölken och vispa till en slät smet. Vispa i resten av mjölken och äggen.",
-			"Smält smöret i stekpannan och vispa ner i smeten. Stek tunna pannkakor av smeten i en stek- eller pannkakspanna."
-		],
-		"ingredient": [
-			{
-				"name": "mjölk",
-				"qty": 6,
-				"type": "dl"
-			},
-			{
-				"name": " mjöl",
-				"qty": 2.5,
-				"type": "dl"
-			},
-			{
-				"name": "ägg",
-				"qty": 3,
-				"type": "st"
-			},
-			{
-				"name": "smör",
-				"qty": 3,
-				"type": "msk"
-			},
-			{
-				"name": "salt",
-				"qty": 0.5,
-				"type": "tsk"
-			}
-		],
-		"img": "pancakes.jpg",
-		"portion": 4,
-		"startText": "Gör traditionella tunna pannkakor genom att blanda mjöl, mjölk och ägg och lite salt till en jämn smet. Stek smeten till tunna och smarriga pannkakor och servera med en söt sylt.",
-		"time": 60
+	   "name": "Pannkakor",
+	   "category": [
+		  "Enkelt",
+		  "Snabbt"
+	   ],
+	   "step": [
+		  "Blanda mjöl och salt i en bunke. Vispa i hälften av mjölken och vispa till en slät smet. Vispa i resten av mjölken och äggen.",
+		  "Smält smöret i stekpannan och vispa ner i smeten. Stek tunna pannkakor av smeten i en stek- eller pannkakspanna."
+	   ],
+	   "ingredient": [
+		  {
+			 "name": "mjölk",
+			 "qty": 6,
+			 "type": "dl",
+			 "nutrient": {
+				"carbs": 4.7,
+				"kcal": 60,
+				"monoSaturatedFats": 0.75,
+				"monoUnSaturatedFats": 0.07,
+				"prots": 3.51,
+				"salt": 0.1,
+				"saturatedFats": 1.92
+			 }
+		  },
+		  {
+			 "name": "vetemjöl",
+			 "qty": 2.5,
+			 "type": "dl",
+			 "nutrient": {
+				"carbs": 72.4,
+				"kcal": 352,
+				"monoSaturatedFats": 0.16,
+				"monoUnSaturatedFats": 0.81,
+				"prots": 8.47,
+				"salt": 0,
+				"saturatedFats": 0.26
+			 }
+		  },
+		  {
+			 "name": "ägg",
+			 "qty": 3,
+			 "type": "st",
+			 "nutrient": {
+				"carbs": 0.4,
+				"kcal": 137,
+				"monoSaturatedFats": 3.97,
+				"monoUnSaturatedFats": 1.46,
+				"prots": 12.25,
+				"salt": 0.36,
+				"saturatedFats": 2.59
+			 }
+		  },
+		  {
+			 "name": "smör",
+			 "qty": 3,
+			 "type": "msk",
+			 "nutrient": {
+				"carbs": 0.5,
+				"kcal": 729,
+				"monoSaturatedFats": 19.1,
+				"monoUnSaturatedFats": 2.95,
+				"prots": 0.4,
+				"salt": 1.2,
+				"saturatedFats": 54.99
+			 }
+		  },
+		  {
+			 "name": "salt",
+			 "qty": 0.5,
+			 "type": "tsk",
+			 "nutrient": {
+				"carbs": 0,
+				"kcal": 0,
+				"monoSaturatedFats": 0,
+				"monoUnSaturatedFats": 0,
+				"prots": 0,
+				"salt": 99,
+				"saturatedFats": 0
+			 }
+		  }
+	   ],
+	   "img": "pancakes.jpeg",
+	   "portion": 4,
+	   "startText": "Gör traditionella tunna pannkakor genom att blanda mjöl, mjölk och ägg och lite salt till en jämn smet. Stek smeten till tunna och smarriga pannkakor och servera med en söt sylt.",
+	   "time": 60
 	},
 	{
-		"name": "Nutellabollar",
-		"category": ["Choklad", "Fika"],
-		"step": [
-			"Vispa smör och socker fluffigt med elvisp. Häll i grädden och vispa på hög hastighet tills du har en fluffig och ljus smet, ca 2 minuter.",
-			"Tillsätt vaniljsocker, kakao, obóypulver, salt och nutella. Vispa ihop till en jämn smet.",
-			"Tillsätt till sist havregryn och vispa på medelhög hastighet med elvispen. Meningen är att havregrynet ska krossas med elvispens hjälp.",
-			"Ställ sedan smeten i kylskåpet i minst 30 minuter.",
-			"Rulla till bollar och rulla sedan i t.ex. pärlsocker eller strössel och sätt på pinnar."
-		],
-		"ingredient": [
-			{
-				"name": "strösocker",
-				"qty": 2,
-				"type": "dl"
-			},
-			{
-				"name": " vispgrädde",
-				"qty": 1.5,
-				"type": "dl"
-			},
-			{
-				"name": "vaniljsocker",
-				"qty": 2,
-				"type": "tsk"
-			},
-			{
-				"name": "kakao",
-				"qty": 2.5,
-				"type": "msk"
-			},
-			{
-				"name": "oboypulver",
-				"qty": 6,
-				"type": "msk"
-			},
-			{
-				"name": "Nutella",
-				"qty": 2,
-				"type": "dl"
-			},
-			{
-				"name": "havregryn",
-				"qty": 15,
-				"type": "dl"
-			}
-		],
-		"img": "chocolatePops.jpg",
-		"portion": 4,
-		"startText": "Underbart krämiga chokladbollar med nutella och oboy. Testa dessa och du kommer aldrig vilja baka några andra chokladbollar igen!",
-		"time": 60
+	   "name": "Nutellabollar",
+	   "category": [
+		  "Choklad",
+		  "Fika"
+	   ],
+	   "step": [
+		  "Vispa smör och socker fluffigt med elvisp. Häll i grädden och vispa på hög hastighet tills du har en fluffig och ljus smet, ca 2 minuter.",
+		  "Tillsätt vaniljsocker, kakao, obóypulver, salt och nutella. Vispa ihop till en jämn smet.",
+		  "Tillsätt till sist havregryn och vispa på medelhög hastighet med elvispen. Meningen är att havregrynet ska krossas med elvispens hjälp.",
+		  "Ställ sedan smeten i kylskåpet i minst 30 minuter.",
+		  "Rulla till bollar och rulla sedan i t.ex. pärlsocker eller strössel och sätt på pinnar."
+	   ],
+	   "ingredient": [
+		  {
+			 "name": "socker",
+			 "qty": 2,
+			 "type": "dl",
+			 "nutrient": {
+				"carbs": 99.6,
+				"kcal": 405,
+				"monoSaturatedFats": 0,
+				"monoUnSaturatedFats": 0,
+				"prots": 0,
+				"salt": 0,
+				"saturatedFats": 0
+			 }
+		  },
+		  {
+			 "name": " vispgrädde",
+			 "qty": 1.5,
+			 "type": "dl",
+			 "nutrient": {
+				"carbs": 3,
+				"kcal": 374,
+				"monoSaturatedFats": 9.98,
+				"monoUnSaturatedFats": 0.95,
+				"prots": 2.11,
+				"salt": 0.06,
+				"saturatedFats": 25.63
+			 }
+		  },
+		  {
+			 "name": "vaniljsocker",
+			 "qty": 2,
+			 "type": "tsk",
+			 "nutrient": {
+				"carbs": 99,
+				"kcal": 396,
+				"monoSaturatedFats": 0,
+				"monoUnSaturatedFats": 0,
+				"prots": 0,
+				"salt": 0,
+				"saturatedFats": 0
+			 }
+		  },
+		  {
+			 "name": "kakao",
+			 "qty": 2.5,
+			 "type": "msk",
+			 "nutrient": {
+				"carbs": 87.7,
+				"kcal": 402,
+				"monoSaturatedFats": 0.83,
+				"monoUnSaturatedFats": 0.07,
+				"prots": 5.06,
+				"salt": 0.47,
+				"saturatedFats": 1.47
+			 }
+		  },
+		  {
+			 "name": "oboypulver",
+			 "qty": 6,
+			 "type": "msk",
+			 "nutrient": {
+				"carbs": 82,
+				"kcal": 370,
+				"monoSaturatedFats": 0.83,
+				"monoUnSaturatedFats": 0.17,
+				"prots": 4,
+				"salt": 0.47,
+				"saturatedFats": 3
+			 }
+		  },
+		  {
+			 "name": "nutella",
+			 "qty": 2,
+			 "type": "dl",
+			 "nutrient": {
+				"carbs": 56.9,
+				"kcal": 526,
+				"monoSaturatedFats": 15.79,
+				"monoUnSaturatedFats": 3.36,
+				"prots": 5.75,
+				"salt": 0.07,
+				"saturatedFats": 9.15
+			 }
+		  },
+		  {
+			 "name": "havregryn",
+			 "qty": 15,
+			 "type": "dl",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  }
+	   ],
+	   "img": "chocolatePops.jpg",
+	   "portion": 8,
+	   "startText": "Underbart krämiga chokladbollar med nutella och oboy. Testa dessa och du kommer aldrig vilja baka några andra chokladbollar igen!",
+	   "time": 60
 	},
 	{
-		"name": "Fish and chips",
-		"category": ["Enkelt", "Snabbt"],
-		"step": [
-			"Blanda nästan allt vetemjöl (ta undan lite att vända fiskbitarna i), maizena och bakpulver i en skål.",
-			"Finhacka dillen och blanda med öl och limesaft.",
-			"Häll försiktigt ner ölblandningen i mjölblandningen. Salta och peppra. Rör om och låt svälla i 20 minuter innan fritering.",
-			"Skär potatisarna på längden i jämna, centimetertjocka skivor och sen till 1/2 centimeter tjocka stavar.",
-			"Hetta upp oljan till 160 grader i en kastrull med höga kanter.",
-			"Vänd varje fiskbit först i mjöl och sedan i smeten. Fritera dem gyllenbruna, cirka 5-7 minuter.",
-			"Upprepa samma procedur med potatisen.",
-			"Servera, helst i en strut av tidningspapper, tillsammans med aioli och citron."
-		],
-		"ingredient": [
-			{
-				"name": "torsk",
-				"qty": 600,
-				"type": "g"
-			},
-			{
-				"name": "bakpotatis",
-				"qty": 4,
-				"type": "st"
-			},
-			{
-				"name": "bakpulver",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "maizena",
-				"qty": 1,
-				"type": "msk"
-			},
-			{
-				"name": "vetemjöl",
-				"qty": 2,
-				"type": "dl"
-			},
-			{
-				"name": "lime",
-				"qty": 2,
-				"type": "st"
-			},
-			{
-				"name": "dillkvist",
-				"qty": 2,
-				"type": "st"
-			},
-			{
-				"name": "salt",
-				"qty": 1,
-				"type": "nypa"
-			},
-			{
-				"name": "öl",
-				"qty": 1,
-				"type": "dl"
-			},
-			{
-				"name": "peppar",
-				"qty": 1,
-				"type": "nypa"
-			},
-			{
-				"name": "matolja",
-				"qty": 3,
-				"type": "dl"
-			}
-		],
-		"img": "fishNChip.jpg",
-		"portion": 4,
-		"startText": "Den här engelska klassikern är farligt god! Servera den i tidningspapper för att få den rätta känslan.",
-		"time": 60
+	   "name": "Fish and chips",
+	   "category": [
+		  "Enkelt",
+		  "Snabbt"
+	   ],
+	   "step": [
+		  "Blanda nästan allt vetemjöl (ta undan lite att vända fiskbitarna i), maizena och bakpulver i en skål.",
+		  "Finhacka dillen och blanda med öl och limesaft.",
+		  "Häll försiktigt ner ölblandningen i mjölblandningen. Salta och peppra. Rör om och låt svälla i 20 minuter innan fritering.",
+		  "Skär potatisarna på längden i jämna, centimetertjocka skivor och sen till 1/2 centimeter tjocka stavar.",
+		  "Hetta upp oljan till 160 grader i en kastrull med höga kanter.",
+		  "Vänd varje fiskbit först i mjöl och sedan i smeten. Fritera dem gyllenbruna, cirka 5-7 minuter.",
+		  "Upprepa samma procedur med potatisen.",
+		  "Servera, helst i en strut av tidningspapper, tillsammans med aioli och citron."
+	   ],
+	   "ingredient": [
+		  {
+			 "name": "torsk",
+			 "qty": 600,
+			 "type": "g",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "bakpotatis",
+			 "qty": 4,
+			 "type": "st",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "bakpulver",
+			 "qty": 1,
+			 "type": "tsk",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "maizena",
+			 "qty": 1,
+			 "type": "msk",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "vetemjöl",
+			 "qty": 2,
+			 "type": "dl",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "lime",
+			 "qty": 2,
+			 "type": "st",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "dill",
+			 "qty": 2,
+			 "type": "st",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "salt",
+			 "qty": 1,
+			 "type": "nypa",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "öl",
+			 "qty": 1,
+			 "type": "dl",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "peppar",
+			 "qty": 1,
+			 "type": "nypa",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "matolja",
+			 "qty": 3,
+			 "type": "dl",
+			 "nutrient": {
+				"carbs": 0,
+				"kcal": 900,
+				"monoSaturatedFats": 96,
+				"monoUnSaturatedFats": 3,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1
+			 }
+		  }
+	   ],
+	   "img": "fishNChip.jpg",
+	   "portion": 4,
+	   "startText": "Den här engelska klassikern är farligt god! Servera den i tidningspapper för att få den rätta känslan.",
+	   "time": 60
 	},
 	{
-		"name": "Taco chicken nuggets i tortillabröd ",
-		"category": ["Spicy", "Fräscht"],
-		"step": [
-			"Tillbehör: Skölj salladen och lägg upp hela salladsblad på ett fat. Skölj och tärna gurka och tomater och lägg upp i skålar.",
-			"Taconuggets: Salta kycklingfiléerna lite lätt.",
-			"Vispa upp äggen i en djup tallrik. Blanda ströbröd med spiskummin, paprikapulver, oregano, salt och peppar på en tallrik. Vänd kycklingfiléerna först i äggen och sedan i ströbrödsblandningen.",
-			"Hetta upp oljan i en stekpanna och stek kycklingen ca 3-4 minuter på varje sida så att den får en knaprig och gyllenbrun stekyta. Kontrollera att de är helt genomstekta innan du serverar.",
-			"Montering: Fyll tortillabröden med sallad, kyckling, gurka, tomat, riven ost, gräddfil och tacosås. Vik ihop och ät."
-		],
-		"ingredient": [
-			{
-				"name": "kycklingfilé",
-				"qty": 700,
-				"type": "g"
-			},
-			{
-				"name": "ägg",
-				"qty": 2,
-				"type": "st"
-			},
-			{
-				"name": "ströbröd",
-				"qty": 2.5,
-				"type": "dl"
-			},
-			{
-				"name": "spiskummin",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "paprikapulver",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "oregano",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "tomat",
-				"qty": 2,
-				"type": "st"
-			},
-			{
-				"name": "gurka",
-				"qty": 1,
-				"type": "st"
-			},
-			{
-				"name": "salt",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "svartpeppar",
-				"qty": 3,
-				"type": "krm"
-			},
-			{
-				"name": "romansallad",
-				"qty": 0.5,
-				"type": "st"
-			},
-			{
-				"name": "gräddfil",
-				"qty": 2,
-				"type": "dl"
-			},
-			{
-				"name": "rapsolja",
-				"qty": 0.5,
-				"type": "dl"
-			}
-		],
-		"img": "chickenTaco.jpg",
-		"portion": 4,
-		"startText": "Hemmagjorda chicken nuggets med tacosmak som kommer göra succé vid matbordet!",
-		"time": 60
-	},
-	{
-		"name": "Taco chicken nuggets i tortillabröd ",
-		"category": ["Spicy", "Fräscht"],
-		"step": [
-			"Tillbehör: Skölj salladen och lägg upp hela salladsblad på ett fat. Skölj och tärna gurka och tomater och lägg upp i skålar.",
-			"Taconuggets: Salta kycklingfiléerna lite lätt.",
-			"Vispa upp äggen i en djup tallrik. Blanda ströbröd med spiskummin, paprikapulver, oregano, salt och peppar på en tallrik. Vänd kycklingfiléerna först i äggen och sedan i ströbrödsblandningen.",
-			"Hetta upp oljan i en stekpanna och stek kycklingen ca 3-4 minuter på varje sida så att den får en knaprig och gyllenbrun stekyta. Kontrollera att de är helt genomstekta innan du serverar.",
-			"Montering: Fyll tortillabröden med sallad, kyckling, gurka, tomat, riven ost, gräddfil och tacosås. Vik ihop och ät."
-		],
-		"ingredient": [
-			{
-				"name": "kycklingfilé",
-				"qty": 700,
-				"type": "g"
-			},
-			{
-				"name": "ägg",
-				"qty": 2,
-				"type": "st"
-			},
-			{
-				"name": "ströbröd",
-				"qty": 2.5,
-				"type": "dl"
-			},
-			{
-				"name": "spiskummin",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "paprikapulver",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "oregano",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "tomat",
-				"qty": 2,
-				"type": "st"
-			},
-			{
-				"name": "gurka",
-				"qty": 1,
-				"type": "st"
-			},
-			{
-				"name": "salt",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "svartpeppar",
-				"qty": 3,
-				"type": "krm"
-			},
-			{
-				"name": "romansallad",
-				"qty": 0.5,
-				"type": "st"
-			},
-			{
-				"name": "gräddfil",
-				"qty": 2,
-				"type": "dl"
-			},
-			{
-				"name": "rapsolja",
-				"qty": 0.5,
-				"type": "dl"
-			}
-		],
-		"img": "chickenTaco.jpg",
-		"portion": 4,
-		"startText": "Hemmagjorda chicken nuggets med tacosmak som kommer göra succé vid matbordet!",
-		"time": 60
-	},
-	{
-		"name": "Taco chicken nuggets i tortillabröd ",
-		"category": ["Spicy", "Fräscht"],
-		"step": [
-			"Tillbehör: Skölj salladen och lägg upp hela salladsblad på ett fat. Skölj och tärna gurka och tomater och lägg upp i skålar.",
-			"Taconuggets: Salta kycklingfiléerna lite lätt.",
-			"Vispa upp äggen i en djup tallrik. Blanda ströbröd med spiskummin, paprikapulver, oregano, salt och peppar på en tallrik. Vänd kycklingfiléerna först i äggen och sedan i ströbrödsblandningen.",
-			"Hetta upp oljan i en stekpanna och stek kycklingen ca 3-4 minuter på varje sida så att den får en knaprig och gyllenbrun stekyta. Kontrollera att de är helt genomstekta innan du serverar.",
-			"Montering: Fyll tortillabröden med sallad, kyckling, gurka, tomat, riven ost, gräddfil och tacosås. Vik ihop och ät."
-		],
-		"ingredient": [
-			{
-				"name": "kycklingfilé",
-				"qty": 700,
-				"type": "g"
-			},
-			{
-				"name": "ägg",
-				"qty": 2,
-				"type": "st"
-			},
-			{
-				"name": "ströbröd",
-				"qty": 2.5,
-				"type": "dl"
-			},
-			{
-				"name": "spiskummin",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "paprikapulver",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "oregano",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "tomat",
-				"qty": 2,
-				"type": "st"
-			},
-			{
-				"name": "gurka",
-				"qty": 1,
-				"type": "st"
-			},
-			{
-				"name": "salt",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "svartpeppar",
-				"qty": 3,
-				"type": "krm"
-			},
-			{
-				"name": "romansallad",
-				"qty": 0.5,
-				"type": "st"
-			},
-			{
-				"name": "gräddfil",
-				"qty": 2,
-				"type": "dl"
-			},
-			{
-				"name": "rapsolja",
-				"qty": 0.5,
-				"type": "dl"
-			}
-		],
-		"img": "chickenTaco.jpg",
-		"portion": 4,
-		"startText": "Hemmagjorda chicken nuggets med tacosmak som kommer göra succé vid matbordet!",
-		"time": 60
-	},
-	{
-		"name": "Taco chicken nuggets i tortillabröd ",
-		"category": ["Spicy", "Fräscht"],
-		"step": [
-			"Tillbehör: Skölj salladen och lägg upp hela salladsblad på ett fat. Skölj och tärna gurka och tomater och lägg upp i skålar.",
-			"Taconuggets: Salta kycklingfiléerna lite lätt.",
-			"Vispa upp äggen i en djup tallrik. Blanda ströbröd med spiskummin, paprikapulver, oregano, salt och peppar på en tallrik. Vänd kycklingfiléerna först i äggen och sedan i ströbrödsblandningen.",
-			"Hetta upp oljan i en stekpanna och stek kycklingen ca 3-4 minuter på varje sida så att den får en knaprig och gyllenbrun stekyta. Kontrollera att de är helt genomstekta innan du serverar.",
-			"Montering: Fyll tortillabröden med sallad, kyckling, gurka, tomat, riven ost, gräddfil och tacosås. Vik ihop och ät."
-		],
-		"ingredient": [
-			{
-				"name": "kycklingfilé",
-				"qty": 700,
-				"type": "g"
-			},
-			{
-				"name": "ägg",
-				"qty": 2,
-				"type": "st"
-			},
-			{
-				"name": "ströbröd",
-				"qty": 2.5,
-				"type": "dl"
-			},
-			{
-				"name": "spiskummin",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "paprikapulver",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "oregano",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "tomat",
-				"qty": 2,
-				"type": "st"
-			},
-			{
-				"name": "gurka",
-				"qty": 1,
-				"type": "st"
-			},
-			{
-				"name": "salt",
-				"qty": 1,
-				"type": "tsk"
-			},
-			{
-				"name": "svartpeppar",
-				"qty": 3,
-				"type": "krm"
-			},
-			{
-				"name": "romansallad",
-				"qty": 0.5,
-				"type": "st"
-			},
-			{
-				"name": "gräddfil",
-				"qty": 2,
-				"type": "dl"
-			},
-			{
-				"name": "rapsolja",
-				"qty": 0.5,
-				"type": "dl"
-			}
-		],
-		"img": "chickenTaco.jpg",
-		"portion": 4,
-		"startText": "Hemmagjorda chicken nuggets med tacosmak som kommer göra succé vid matbordet!",
-		"time": 60
+	   "name": "Taco chicken nuggets i tortillabröd ",
+	   "category": [
+		  "Spicy",
+		  "Fräscht"
+	   ],
+	   "step": [
+		  "Tillbehör: Skölj salladen och lägg upp hela salladsblad på ett fat. Skölj och tärna gurka och tomater och lägg upp i skålar.",
+		  "Taconuggets: Salta kycklingfiléerna lite lätt.",
+		  "Vispa upp äggen i en djup tallrik. Blanda ströbröd med spiskummin, paprikapulver, oregano, salt och peppar på en tallrik. Vänd kycklingfiléerna först i äggen och sedan i ströbrödsblandningen.",
+		  "Hetta upp oljan i en stekpanna och stek kycklingen ca 3-4 minuter på varje sida så att den får en knaprig och gyllenbrun stekyta. Kontrollera att de är helt genomstekta innan du serverar.",
+		  "Montering: Fyll tortillabröden med sallad, kyckling, gurka, tomat, riven ost, gräddfil och tacosås. Vik ihop och ät."
+	   ],
+	   "ingredient": [
+		  {
+			 "name": "kycklingfilé",
+			 "qty": 700,
+			 "type": "g",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "ägg",
+			 "qty": 2,
+			 "type": "st",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "ströbröd",
+			 "qty": 2.5,
+			 "type": "dl",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "spiskummin",
+			 "qty": 1,
+			 "type": "tsk",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "paprikapulver",
+			 "qty": 1,
+			 "type": "tsk",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "oregano",
+			 "qty": 1,
+			 "type": "tsk",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "tomat",
+			 "qty": 2,
+			 "type": "st",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "gurka",
+			 "qty": 1,
+			 "type": "st",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "salt",
+			 "qty": 1,
+			 "type": "tsk",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "svartpeppar",
+			 "qty": 3,
+			 "type": "krm",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "romansallad",
+			 "qty": 0.5,
+			 "type": "st",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "gräddfil",
+			 "qty": 2,
+			 "type": "dl",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  },
+		  {
+			 "name": "rapsolja",
+			 "qty": 0.5,
+			 "type": "dl",
+			 "nutrient": {
+				"carbs": 60.5,
+				"kcal": 371,
+				"monoSaturatedFats": 2.6,
+				"monoUnSaturatedFats": 3.02,
+				"prots": 9.97,
+				"salt": 0,
+				"saturatedFats": 1.21
+			 }
+		  }
+	   ],
+	   "img": "chickenTaco.jpg",
+	   "portion": 6,
+	   "startText": "Hemmagjorda chicken nuggets med tacosmak som kommer göra succé vid matbordet!",
+	   "time": 60
 	}
-]
+ ]
