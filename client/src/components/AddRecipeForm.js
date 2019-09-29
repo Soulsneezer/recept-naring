@@ -67,33 +67,33 @@ class AddRecipeForm extends React.Component {
               className="form px-4"
               aria-label="formulär för att lägga till ett recept">
               <Row>
-                <Col className="mt-3" xs={12} sm={12} md={5} lg={5}>
+                <Col className="mt-3" xs={12} sm={12} md={12} lg={12}>
                   <Form.Control
                     input="true"
                     className="recipe-name"
                     placeholder="Vad heter ditt recept?"
                     aria-labelledby="Vad heter ditt recept?" />
                 </Col>
+              </Row>
+              <Row>
                 <Col className="cat-btn mt-3" xs={3} sm={3} md={3} lg={3}>
                   <CategoryChoices />
                 </Col>
-                <Col className="mt-3 ml-2" xs={3} sm={3} md={3} lg={3}>
+                <Col className="mt-3 ml-2" xs={8} sm={8} md={3} lg={3}>
                   <PersonChoices />
                 </Col>
-              </Row>
-
-              <Row className="mt-3">
-                <Col className="mt-3" xs={1} sm={1} md={1}>
+                <Col className="mt-3 mx-2" xs={1} sm={1}>
                   <MdQueryBuilder id="clock-icon" aria-label="klocka ikon" />
                 </Col>
-                <Col className="mt-3 pl-3" xs={9} sm={10} md={10} lg={10}>
+                <Col className="mt-3 px-0" xs={5} sm={4} md={4} lg={4}>
                   <Form.Control
                     input="true"
                     className="recipe-name"
-                    placeholder="Tillagningstiden i minuter..."
-                    aria-labelledby="Tillagningstiden i minuter" />
+                    placeholder="tillagningstid (min)"
+                    aria-labelledby="Ange tillagningstiden i minuter.." />
                 </Col>
               </Row>
+
 
               {this.state.ingredientRows}
               <AddRecipeRowButton className="MdAddCircleOutline" aria-label="ikon för lägga till en rad för ingredienser" onClick={() => this.addRecipeRow()} />
@@ -102,7 +102,7 @@ class AddRecipeForm extends React.Component {
             </Form>
           </Col>
         </Row>
-      </Container >
+      </Container>
     )
   }
 }

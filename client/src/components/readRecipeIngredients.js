@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {ListGroup } from "react-bootstrap";
+import { ListGroup } from "react-bootstrap";
 
 class ReadRecipeIngredients extends Component {
   constructor(props) {
@@ -7,17 +7,22 @@ class ReadRecipeIngredients extends Component {
     this.state = {};
     this.recipe = {};
   }
- 
+
 
   render() {
     return (
       <ListGroup>
-        {this.props.ingredients.map((ing, i) => { 
-          return(
-        <ListGroup.Item key={i}>{ Math.round((this.props.numberOfPersons ? ing.qty / this.props.portion * this.props.numberOfPersons : ing.qty / this.props.portion  * this.props.portion) * 100 ) / 100} {ing.type} {ing.name}</ListGroup.Item>
-        )}
-    )
-    }
+        {this.props.ingredients.map((ing, i) => {
+          return (
+            <ListGroup.Item
+              id="read-recipe-ingredients" key={i}>
+              {Math.round(
+                (this.props.numberOfPersons ? ing.qty / this.props.portion * this.props.numberOfPersons : ing.qty / this.props.portion * this.props.portion) * 100) / 100}
+              {ing.type}
+              {ing.name}
+            </ListGroup.Item>
+          )
+        })}
       </ListGroup>
     );
   }

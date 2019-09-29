@@ -35,18 +35,18 @@ class ReadRecipeDetails extends Component {
       }
     };
   }
-  componentDidMount(){
+  componentDidMount() {
     this.countingCals()
   }
-  countingCals(){
+  countingCals() {
     let kcal = 0;
     let monoSaturatedFats = 0;
     let monoUnSaturatedFats = 0;
     let saturatedFats = 0;
     let prots = 0;
-    let carbs = 0;        
- 
-   let converter = (name, qty, unit) =>{
+    let carbs = 0;
+
+    let converter = (name, qty, unit) => {
       const unitsToGram = {
         kg: 1000,
         hg: 100,
@@ -67,7 +67,7 @@ class ReadRecipeDetails extends Component {
         st: 60
         // we miss all those small ones.. kryddmått etc.
       }
-     
+
       const exceptions = [
         { baseUnit: 'l', nameHas: 'mjöl', modifier: 0.6 },
         { baseUnit: 'l', nameHas: 'olja', modifier: 0.9 },
@@ -77,10 +77,10 @@ class ReadRecipeDetails extends Component {
         { baseUnit: 'st', nameHas: 'kyckling', modifier: 1200 / unitsToGram.st },
         { baseUnit: 'st', nameHas: 'lax', modifier: 3000 / unitsToGram.st }
       ];
-    
+
       // get the conversion factor from toGram
       let factor = unitsToGram[unit];
-     
+
       // change it if any exception applies
       for (let x of exceptions) {
         if (unit.includes(x.baseUnit) && name.includes(x.nameHas)) {
@@ -88,17 +88,17 @@ class ReadRecipeDetails extends Component {
           break;
         }
       }
- 
+
       return factor * qty;
     }
-    for(let i of this.props.ingredient){
-      let convertedNumbers = converter(i.name , i.qty ,i.type )
+    for (let i of this.props.ingredient) {
+      let convertedNumbers = converter(i.name, i.qty, i.type)
       kcal += i.nutrient.kcal / 100 * convertedNumbers
-        monoUnSaturatedFats +=i.nutrient.monoUnSaturatedFats / 100 * convertedNumbers
-        monoSaturatedFats += i.nutrient.monoSaturatedFats / 100 * convertedNumbers
-        saturatedFats += i.nutrient.saturatedFats / 100 * convertedNumbers
-        prots += i.nutrient.prots / 100 * convertedNumbers
-        carbs += i.nutrient.carbs / 100 * convertedNumbers
+      monoUnSaturatedFats += i.nutrient.monoUnSaturatedFats / 100 * convertedNumbers
+      monoSaturatedFats += i.nutrient.monoSaturatedFats / 100 * convertedNumbers
+      saturatedFats += i.nutrient.saturatedFats / 100 * convertedNumbers
+      prots += i.nutrient.prots / 100 * convertedNumbers
+      carbs += i.nutrient.carbs / 100 * convertedNumbers
     }
 
     this.nutes.Kcal = Math.round(kcal / this.props.portion)
@@ -107,7 +107,7 @@ class ReadRecipeDetails extends Component {
     this.nutes["Mättat fett"] = Math.round(saturatedFats / this.props.portion)
     this.nutes.Protein = Math.round(prots / this.props.portion)
     this.nutes.Kolhydrater = Math.round(carbs / this.props.portion)
-    this.setState({state: this.state})
+    this.setState({ state: this.state })
     this.render()
   }
 
@@ -115,51 +115,53 @@ class ReadRecipeDetails extends Component {
   render() {
     return (
       <React.Fragment>
-        <Row className="mt-4">
-          <Col className="pt-4" xs={{span:12}} sm={{span:12}} md={{span:12}} lg={{span:4}}>
+        <Row className="row">
+          <Col className="mt-4" xs={12} md={12} lg={4}>
             <div
-              className="card-img read-recipe-img"
+              className="read-recipe-img"
               label={this.props.name}
               style={{
                 backgroundImage:
-                'url("../images/recipeImages/' + this.props.img +'")'
+                  'url("../images/recipeImages/' + this.props.img + '")'
               }}
             ></div>
           </Col>
           <Col xs={12} sm={12} md={12} lg={8}>
             <Row>
-              <Col xs={{span: 11, offset: 1, order: 2}} sm={{ span: 12, offset: 0, order: 2 }} md={{ span:7, offset: 1, order: 1 }} lg={{span: 7, offset: 1, order: 1}} className="align-right pt-4 recipe-name">
+              <Col xs={12} className="mt-3 ml-3 pl-0 read-recipe-name">
                 <h4>{this.props.name}</h4>
-              </Col>
-            
-            </Row>
-            <Row xs={12} sm={{span: 12, offset: 0}} md={{span: 12, offset: 0, order: 1}} lg={{span: 12, offset: 1}} className="offset-1 pt-2">
-              <Col xs={{span:11, offset:0}} sm={{span:10, offset:0}} md={{span:10, offset:0}} className="col-sm-12 col-md-12 pt-2">
-                <p md={8}
-                 label="kort beskrivning av receptet">{this.props.startText}</p>
-                 </Col>
-                <div xs={12} sm={12} md={12} className=" pl-3 d-inline-block pt-5">
-                  <img src={tagIcon} className="mr-2 d-inline-block" alt="kategorier" />
-                  <h6 lable="kategorier" className="d-inline-block">
-                    {this.props.category.join(", ")}
-                  </h6>
-                </div>
-              <Col className="pt-5 col-sm-12 d-inline-block">
-                <img src={clockIcon} className="mr-2 d-inline-block icon" alt="beräknad tid" />
-                <h6 className="d-inline-block"> {this.props.time} min</h6>
-              </Col>
-            </Row>
-            <Row className="offset-1 pt-4">
-              <Col>
-                <h5 className="pt-5" xs={{ span: 10, offset: 0 }} sm={{ span: 10, offset: 0 }}>
-                   Näring per portion 
-                </h5>
               </Col>
             </Row>
             <Row>
-              <Col xs={{span:11, offset:1,}} className="offset-1 col-md-11">
+              <Col xs={11} md={11} className="mt-2 ml-3 pl-0 pr-3 read-recipe-intro-text">
+                <p
+                  label="kort beskrivning av receptet">{this.props.startText}</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} sm={12} md={12} className="pt-5 pl-0 ml-3 d-inline-block">
+                <img src={tagIcon} className="d-inline-block mr-2" alt="kategorier" />
+                <h6 lable="kategorier" className="d-inline-block">
+                  {this.props.category.join(", ")}
+                </h6>
+              </Col>
+              <Col className="pt-5 pl-0 ml-3 col-sm-12 d-inline-block">
+                <img src={clockIcon} className="read-recipe-clock-icon mr-2 d-inline-block icon" alt="beräknad tid" />
+                <h6 className="d-inline-block"> {this.props.time} min</h6>
+              </Col>
+            </Row>
+            <Row className="pt-4">
+
+              <h5 className="pt-5 pl-3 mb-3">
+                Näring per portion
+                </h5>
+
+            </Row>
+            <Row>
+              <Col className="pl-0">
                 {Object.keys(this.nutes).map(key => (
                   <ReadRecipeNutrition
+                    id="read-recipe-nutrition"
                     key={key}
                     nutrientName={key}
                     nutrientValue={this.nutes[key]}
