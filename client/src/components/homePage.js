@@ -27,6 +27,7 @@ class HomePage extends Component {
     this.showMoreRecipes = this.showMoreRecipes.bind(this);
     this.showMoreRecipeCategorys = this.showMoreRecipeCategorys.bind(this);
     this.selectDropdownAlternative = this.selectDropdownAlternative.bind(this);
+    this.deliverCategoryToSearchBar = this.deliverCategoryToSearchBar.bind(this);
 
     this.state = {
       recipes: [],
@@ -36,7 +37,9 @@ class HomePage extends Component {
       countCategory: 4,
       recipesLength: 0,
       recipesCategorysLength: 0,
-      myAlternative: 'Titel'
+      myAlternative: 'Titel',
+      listOfCategories: ["vegansk","vegetarisk","fisk","kött","förrätt","huvudrätt","efterrätt","glutenfri","laktosfri","bakverk"],
+      showCategoriesAlternatives: false
     };
   }
 
@@ -99,9 +102,23 @@ class HomePage extends Component {
 
   selectDropdownAlternative(e) {
     let myAlternative = e.target.id;
+    if(myAlternative === 'Kategori') {
+      this.showCategoriesAlternatives = true;
+    }
+    else {this.showCategoriesAlternatives = false;}
     this.setState({
-      myAlternative: myAlternative
+      myAlternative: myAlternative,
+      showCategoriesAlternatives: this.showCategoriesAlternatives,
+      searchInput: ''
     });
+  }
+
+  deliverCategoryToSearchBar(e) {
+    this.myCategory = e.target.id;
+    this.setState({
+      searchInput: this.myCategory
+      }
+    )
   }
 
   render() {
@@ -124,17 +141,29 @@ class HomePage extends Component {
             alignRight
             aria-label="knapp för drop-down"
             variant="success"
-          >
+            >
             <Dropdown.Item id='Titel' onClick={this.selectDropdownAlternative} aria-label="drop-down-alternativ: titel">
               Titel
             </Dropdown.Item>
             <Dropdown.Item
               id='Kategori'
               onClick={this.selectDropdownAlternative} aria-label="drop-down-alternativ: kategori"
-            >
+              >
               Kategori
             </Dropdown.Item>
           </DropdownButton>
+          {this.state.showCategoriesAlternatives ? 
+            <div className="category-alternatives">
+              <p className="p-search-alternatives">
+                Sökbara alternativ:
+              </p>
+              {this.state.listOfCategories.map((category,i) => (
+                <p key={i} onClick={this.deliverCategoryToSearchBar} id={category}>
+                  {category}
+                </p>
+              ))}
+            </div>
+          : ''}
         </div>
 
         {this.state.searchInput === '' ? (
