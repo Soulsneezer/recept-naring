@@ -1,40 +1,40 @@
-import React from "react";
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import React, { Component } from "react";
+import { Navbar, Nav, Row, Col } from 'react-bootstrap';
 import Logo from '../images/logo.png';
+import AddRecipe from './AddRecipe';
+
+import LogIn from './logIn.js';
 
 
+class NavBar extends Component {
 
+  render() {
+    return (
+      <React.Fragment>
+        <Navbar bg="light" expand="lg">
+          <Row className="logo">
+            <Col xs={6} md={4}>
+              <img src={Logo} height="60" width="60" alt="Nav-Logo" className="navbar-logo"/>
+            </Col>
+          </Row>
+          <Navbar.Brand className='logoHeader' href="/">Recept & Näring</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ml-auto">
+              <Nav.Link href="/"></Nav.Link>
+              <div className="navButtons">
 
-const NavBar = () => {
+                <AddRecipe />
 
-  const navLogo = (
-    <span className="logo">
-      <a href="/">
-        <img src={Logo} height="30" width="30" alt="Nav-Logo" /></a>
-    </span>
-  );
+                <LogIn />
+              </div>
+            </Nav>
 
-  return (
-    <React.Fragment>
-      <Navbar bg="light" expand="lg">
-        {navLogo}
-        <Navbar.Brand href="/">Recept & Näring</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="/"></Nav.Link>
-            <Nav.Link href="/">Start</Nav.Link>
-            <Nav.Link href="/about">Om oss</Nav.Link>
-          </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Sök recept här..." className="mr-sm-2" />
-            <Button variant="outline-success">Sök</Button>
-          </Form>
-          <Nav.Link href="/login">Logga in</Nav.Link>
-        </Navbar.Collapse>
-      </Navbar>
-    </React.Fragment>
-  );
+          </Navbar.Collapse>
+        </Navbar>
+      </React.Fragment>
+    );
+  };
 };
 
 export default NavBar;
