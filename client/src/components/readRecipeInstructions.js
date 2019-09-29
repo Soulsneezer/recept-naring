@@ -10,8 +10,8 @@ class ReadRecipeInstructions extends Component {
  
   render() {
     return( <ListGroup>
-      {this.props.steps.map((step, i)=>{
-        return <ListGroupItem key={i}>{i + 1}: {step} </ListGroupItem>
+      {this.props.steps.map((step, i) => {
+        return <ListGroupItem id="read-recipe" key={i}>{i + 1}: {step} </ListGroupItem>
       })}
     </ListGroup>
   )

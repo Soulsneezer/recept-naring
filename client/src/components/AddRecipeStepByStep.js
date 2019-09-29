@@ -46,8 +46,9 @@ class AddRecipeStepByStep extends Component {
     return (
       <React.Fragment>
         <Row className="mt-3">
+          <p className="instruction-for-instruction pb-0">För att lägga till instruktionerna skriv ett steg i taget..</p>
           <Col className="recipe-name mt-2" xs={12} md={12} lg={12}>
-            <InputGroup className="mb-3 mt-2">
+            <InputGroup className="mb-3">
               <FormControl
                 className="add-instructions-input"
                 type="text"

@@ -54,6 +54,52 @@ main {
   border-radius: 20px;
 }
 
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX YASMIN"S STYLING XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+#read-recipe-ingredients,
+#read-recipe-nutrition,
+#read-recipe {
+  font-family: "Roboto";
+  font-size: 12px;
+}
+
+.read-recipe-clock-icon {
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+}
+
+.read-recipe-name {
+  font-size: 14px;
+}
+
+.card-styling {
+  text-align: center !important;
+  list-style-type: none !important;
+  padding: 0px !important;
+  font-size: 14px;
+}
+
+.border-styling {
+  border-bottom: 0.5px solid rgb(177, 175, 175);
+}
+
+.read-recipe-img {
+  height: 100% !important;
+  width: 100% !important;
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 996px) {
+  .read-recipe-img {
+    height: 50vh !important;
+  }
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX END OF YASMIN"S STYLING XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
 /*XXXXXXXXXXXXXXXXXXXXX BEGINNING OF MELLI's STYLING XXXXXXXXXXXXXXXXXXX*/
 #contained-modal-title-vcenter {
   font-family: "Parisienne", cursive;
@@ -68,6 +114,15 @@ main {
 .modal-body {
   background-color: #e1f8e6;
   font-family: "Roboto";
+}
+
+.modal-footer {
+  background-color: #e1f8e6;
+  font-family: "Roboto";
+  border: #e1f8e6;
+}
+.add-button-alert {
+  border-radius: 20px;
 }
 
 .person-choices-btn,
@@ -97,9 +152,8 @@ main {
 #clock-icon {
   display: inline-flex;
 }
-
-.recipe-name,
-.list-group-item {
+.tillagningstid,
+.recipe-name {
   font-family: "Roboto";
   display: inline;
   min-height: 33px;
@@ -111,6 +165,13 @@ main {
 .MdRemoveCircleOutline,
 .MdAddCircleOutline {
   cursor: pointer;
+}
+
+.instruction-for-instruction {
+  font-family: "Roboto";
+  font-size: 11px;
+  margin-bottom: 0;
+  margin-left: 1.3rem;
 }
 
 .add-instructions-input {
@@ -140,15 +201,20 @@ main {
 #recipe-instruction {
   font-size: 11px;
 }
-
+/* 
 @media only screen and (min-width: 992px) {
   .recipe-name {
-    padding-left: 13px;
-    padding-right: 13px;
+    padding-left: 0;
+    padding-right: 0;
   }
-}
+} */
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 425px) {
+  .tillagningstid,
+  .instruction-for-instruction {
+    font-size: 10px;
+  }
+
   .recipe-button,
   .category-dropdown,
   .dropdown-units,
@@ -159,10 +225,6 @@ main {
     font-size: 9px;
   }
 
-  .cat-btn {
-    padding-left: 8px;
-  }
-
   .person-choices-btn,
   .add-instructions-input,
   .recipe-button {
@@ -170,13 +232,45 @@ main {
   }
 
   .dropdown-menu {
-    font-size: 9px;
+    font-size: 8px;
   }
 
   .recipe-name,
-  .list-group-item {
+  #recipe-instruction {
     display: inline;
     font-size: 9px;
+    cursor: text;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .instruction-for-instruction {
+    font-size: 6px;
+  }
+
+  .recipe-button,
+  .category-dropdown,
+  .dropdown-units,
+  .dropdown,
+  .dropdown-button {
+    display: inline;
+    padding: 7px 10px;
+    font-size: 7px;
+  }
+
+  .person-choices-btn,
+  .add-instructions-input,
+  .recipe-button {
+    font-size: 7px;
+  }
+
+  .dropdown-menu {
+    font-size: 7px;
+  }
+
+  .recipe-name,
+  .list-group-item>#recipe-instruction {
+    font-size: 7px;
     cursor: text;
   }
 }
@@ -211,15 +305,14 @@ main {
   }
 }
 .foodCardContainer {
-	margin-top: 5px;
-	margin-bottom: 0 !important;
-	padding-top: 15px;
-	padding-bottom: 30px;
-	border: 0.1px solid #707070;
-	-webkit-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
-	-moz-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
-	box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
-
+  margin-top: 5px;
+  margin-bottom: 0 !important;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  border: 0.1px solid #707070;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
+  box-shadow: 10px 10px 5px 0px rgba(222, 215, 222, 1);
 }
 .innerFoodCardContainer {
   padding: 30px;
@@ -564,8 +657,8 @@ main {
   position: relative;
 }
 .card-text {
-	font-family: 'Roboto';
-	text-align: left;
+  font-family: "Roboto";
+  text-align: left;
 }
 .card-title {
   position: absolute;
@@ -581,18 +674,18 @@ main {
 }
 
 .card-title-h5 {
-	font-family: 'Roboto';
-	margin-bottom: 36px;
-	background-color: rgb(223, 223, 223);
-	padding-left: 20px;
-	padding-top: 5px;
-	bottom: 30px;
+  font-family: "Roboto";
+  margin-bottom: 36px;
+  background-color: rgb(223, 223, 223);
+  padding-left: 20px;
+  padding-top: 5px;
+  bottom: 30px;
 }
 .card-img,
 .card-img-top {
-	height: 200px;
-	width: 100%;
-	border-radius: 3px 3px 0px 0px;
+  height: 200px;
+  width: 100%;
+  border-radius: 3px 3px 0px 0px;
 }
 .container-outer {
   border: 1px solid rgb(200, 200, 200);
@@ -671,9 +764,9 @@ main {
   border: 1px solid rgb(84, 118, 71);
 }
 .show-recipe {
-	display: inline-block;
-	width: 250px;
-	margin: 6px;
+  display: inline-block;
+  width: 250px;
+  margin: 6px;
 }
 
 /*------- Login Page -------*/
@@ -696,30 +789,29 @@ main {
 
 .loginform-loginbutton {
   border-radius: 20px;
-	font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 .modal-body {
-	background-color: #e1f8e6;
+  background-color: #e1f8e6;
 }
 .modal-headish {
-	background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 .modal-titlish {
-	font-family: 'Parisienne', cursive;
-	font-weight: bold;
-	text-align: center;
+  font-family: "Parisienne", cursive;
+  font-weight: bold;
+  text-align: center;
 }
 
 .loginform-loginbutton {
-	border-radius: 20px;
-
+  border-radius: 20px;
 }
 
 /*----- Footer ------*/
 
 .footer-component {
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 footer .icon {
@@ -752,42 +844,6 @@ footer .icon {
   justify-content: center;
 }
 
-/*------- Read Recipe Style ----------*/
-.card-styling {
-  text-align: center !important;
-  list-style-type: none !important;
-  padding: 0px !important;
-  font-size: 14px;
-}
-
-.border-styling {
-  border-bottom: 0.5px solid rgb(177, 175, 175);
-}
-
-.read-recipe-img {
-  height: 100% !important;
-  width: 100% !important;
-  background-repeat: none;
-  background-size: cover;
-  background-position: center;
-}
-
-@media (min-width: 0px) and (max-width: 768px) {
-  .read-recipe-img {
-    height: 50vh !important;
-  }
-}
-
-@media (min-width: 577px) and (max-width: 641px) {
-  .recipe-name {
-   padding-top: 20px!important;
-  }
-}
-
-
-/*------- Read Recipe Style End ----------*/
-
-
 .close-modal-button {
   float: right;
 }
@@ -817,7 +873,6 @@ footer .icon {
 @media (max-width: 322px) {
   footer p {
     font-size: 12px;
-    border: solid orange 2px;
   }
 }
 

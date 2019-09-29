@@ -13,20 +13,21 @@ class AddRecipeIngredientRow extends Component {
     return (
       <React.Fragment>
         <Row className="mt-3" aria-label="tre ingrediensrader">
-          <Col xs={5} sm={6} md={3} lg={3} className="mt-2 pr-0">
+          <Col xs={4} sm={4} md={4} lg={4} className="mt-2 pr-0">
             <Form.Control
               className="recipe-name"
               input="true"
               aria-labelledby="mängden"
               placeholder="mängden" />
           </Col>
-          <Col xs={5} sm={4} md={3} lg={2} className="units-dropdown mt-2 pr-0">
+          <Col xs={5} sm={5} md={3} lg={2} className="units-dropdown mt-2 pr-0">
             <AddRecipeUnits />
           </Col>
-          <Col xs={10} sm={11} md={5} lg={6} className="mt-2">
+          <Col xs={10} sm={10} md={4} lg={5} className="mt-2">
             <Form.Control
               className="recipe-name"
-              input="true" placeholder="ingrediensen"
+              input="true" 
+              placeholder="ingrediensen"
               aria-labelledby="ingrediensen" />
           </Col>
           <Col xs={1} md={1} className="MdARemoveCircleOutline mt-2">
