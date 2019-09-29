@@ -85,7 +85,7 @@ class AddRecipeForm extends React.Component {
                 <Col className="mt-3 mx-2" xs={1} sm={1}>
                   <MdQueryBuilder id="clock-icon" aria-label="klocka ikon" />
                 </Col>
-                <Col className="mt-3 px-0" xs={5} sm={4} md={4} lg={4}>
+                <Col className="mt-3 pl-0 pr-1" xs={5} sm={4} md={4} lg={4}>
                   <Form.Control
                     input="true"
                     className="recipe-name"

@@ -23,7 +23,7 @@ class AddRecipeIngredientRow extends Component {
           <Col xs={5} sm={5} md={3} lg={2} className="units-dropdown mt-2 pr-0">
             <AddRecipeUnits />
           </Col>
-          <Col xs={10} sm={10} md={5} lg={5} className="mt-2">
+          <Col xs={10} sm={10} md={4} lg={5} className="mt-2">
             <Form.Control
               className="recipe-name"
               input="true" 
