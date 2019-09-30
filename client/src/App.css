@@ -201,13 +201,6 @@ main {
 #recipe-instruction {
   font-size: 11px;
 }
-/* 
-@media only screen and (min-width: 992px) {
-  .recipe-name {
-    padding-left: 0;
-    padding-right: 0;
-  }
-} */
 
 @media only screen and (max-width: 425px) {
   .tillagningstid,
